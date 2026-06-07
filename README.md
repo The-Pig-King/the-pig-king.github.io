@@ -6,12 +6,12 @@ A gaming and speedrunning focused website.
 
 ## Getting Started
 
-# Viewing the Website
+### Viewing the Website
 
 Visit the live website:
 https://the-pig-king.github.io
 
-# Running Locally
+### Running Locally
 
 1. Clone the repository:
 git clone https://github.com/The-Pig-King/the-pig-king.github.io.git
