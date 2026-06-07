@@ -3,13 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ThePigKing | Home</title>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/21d537d013.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <nav>
+        <div>
+          <a href="/" id="home">
+            <i class="fa-solid fa-house fa-xl"></i>
+          </a>
+        </div>
+      </nav>
+      <section class="flex-container">
+        <i class="fa-solid fa-house fa-xl"></i>
+        <h1>Home</h1>
+      </section>
+    </header>
+    <main>
+      <section class="games grid-container">
+        <div>
+          <a href="/pages/slime-rancher.html">
+            <img
+              src="/assets/images/games/slime-rancher-logo.png"
+              class="game-logo"
+              alt="Slime Rancher"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="/pages/slime-rancher-2.html">
+            <img
+              src="/assets/images/games/slime-rancher-2-logo.png"
+              class="game-logo"
+              alt="Slime Rancher 2"
+            />
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="flex-container">
+        <a href="https://www.youtube.com/@ThePigKing">
+          <i class="fa-brands fa-youtube fa-xl"></i>
+        </a>
+        <a href="https://github.com/The-Pig-King/the-pig-king.github.io">
+          <i class="fa-brands fa-github fa-xl"></i>
+        </a>
+        <p><span id="thepigking">ThePigKing</span> <span id="year"></span></p>
+      </section>
+    </footer>
+
+    <script src="/js/main.js"></script>
   </body>
 </html>

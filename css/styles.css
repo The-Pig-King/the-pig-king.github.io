@@ -1,15 +1,106 @@
+:root {
+  --frame-color: #2e2f36;
+  --main-color: #545454;
+  --background-color: #7d7d7d;
+
+  --thepigking-color: #feb6b7;
+}
+
+body.slime-rancher {
+  --main-color: #f285bd;
+  --background-color: #f285bd;
+}
+
+body.slime-rancher-2 {
+  --main-color: #f088ff;
+  --background-color: #f088ff;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background-color: var(--background-color);
+  color: white;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 main {
-  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.align-left {
+  justify-content: left;
+}
+
+/* Header */
+
+nav {
+  font-size: 1.3rem;
+  background-color: var(--main-color);
+  padding: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Footer */
+
+footer,
+header {
+  background-color: var(--frame-color);
+}
+
+footer section {
+  height: 60px;
+  width: 100%;
+  font-size: 130%;
+  background-color: var(--frame-color);
+}
+
+#thepigking {
+  color: var(--thepigking-color);
+}
+
+/* Index */
+
+.game-logo {
+  width: 100%;
+  max-width: 50rem;
 }
