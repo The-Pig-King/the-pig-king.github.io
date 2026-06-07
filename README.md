@@ -1,56 +1,36 @@
-# Project Title
+# the-pig-king.github.io
 
-Simple overview of use/purpose.
+A gaming and speedrunning focused website.
 
-## Description
-
-An in-depth paragraph about your project and overview of use.
+## Features
 
 ## Getting Started
 
-### Dependencies
+# Viewing the Website
 
-- Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-- ex. Windows 10
+Visit the live website:
+https://the-pig-king.github.io
 
-### Installing
+# Running Locally
 
-- How/where to download your program
-- Any modifications needed to be made to files/folders
+1. Clone the repository:
+git clone https://github.com/The-Pig-King/the-pig-king.github.io.git
 
-### Executing program
+2. Navigate to the project directory:
+cd the-pig-king.github.io
 
-- How to run the program
-- Step-by-step bullets
-
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-
-```
-command to run if program contains helper info
-```
+3. Open index.html in your browser or use a local development server.
 
 ## Authors
 
-Contributors names and contact info
-ex. [ThePigKing](https://github.com/The-Pig-King)
+[ThePigKing](https://github.com/The-Pig-King)
 
 ## Version History
 
-- 0.1
-  - Initial Release
-
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-
-- [example-name](example-link)
+Inspired by https://myekul.com
