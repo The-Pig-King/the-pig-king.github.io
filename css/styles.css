@@ -29,10 +29,6 @@ body.slime-rancher-2 {
   padding: 0;
 }
 
-html {
-  background-color: #2e2f36;
-}
-
 body {
   color: white;
   font-family: 'Inter', sans-serif;
@@ -143,6 +139,23 @@ header {
 .last-updated {
   display: none;
   align-self: end;
+}
+
+.under-frame {
+  display: flex;
+  justify-content: center;
+}
+
+.fan-content-policy {
+  text-align: center;
+  font-size: 0.7rem;
+  opacity: 0.5;
+  max-width: 50rem;
+  margin: 1rem;
+}
+
+.fan-content-policy a {
+  text-decoration: underline;
 }
 
 /* Index */

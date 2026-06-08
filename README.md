@@ -14,10 +14,10 @@ https://the-pig-king.github.io
 ### Running Locally
 
 1. Clone the repository:
-git clone https://github.com/The-Pig-King/the-pig-king.github.io.git
+   git clone https://github.com/The-Pig-King/the-pig-king.github.io.git
 
 2. Navigate to the project directory:
-cd the-pig-king.github.io
+   cd the-pig-king.github.io
 
 3. Open index.html in your browser or use a local development server.
 
@@ -33,4 +33,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Acknowledgments
 
-Inspired by https://myekul.com
+Inspirations:
+
+- https://myekul.com
+- https://bazaardb.gg/
