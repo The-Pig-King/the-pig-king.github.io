@@ -1,19 +1,17 @@
 :root {
   --frame-color: #2e2f36;
-  --main-color: #545454;
-  --background-color: #7d7d7d;
+  --main-color: #7d7d7d;
+  --background-color: #545454;
 
   --thepigking-color: #feb6b7;
 }
 
 body.slime-rancher {
   --main-color: #f285bd;
-  --background-color: #f285bd;
 }
 
 body.slime-rancher-2 {
   --main-color: #f088ff;
-  --background-color: #f088ff;
 }
 
 *,
@@ -64,9 +62,19 @@ a {
 }
 
 .icon {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   fill: white;
+
+  @media (min-width: 768px) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 /* Header */
@@ -74,12 +82,16 @@ a {
 nav {
   font-size: 1.3rem;
   background-color: var(--frame-color);
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+header section {
+  font-size: 0.7rem;
 }
 
 /* Footer */
@@ -90,8 +102,6 @@ header {
 }
 
 footer section {
-  height: 60px;
-  width: 100%;
   font-size: 130%;
   background-color: var(--frame-color);
 }
