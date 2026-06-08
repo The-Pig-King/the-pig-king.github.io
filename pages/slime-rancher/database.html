@@ -32,7 +32,15 @@
       </div>
     </header>
     <main>
-      <div class="cards" id="cards"></div>
+      <div class="category-bar">
+        <button class="category-btn" id="slimes-btn" data-category="slimes">
+          Slimes
+        </button>
+        <button class="category-btn" id="food-btn" data-category="food">
+          Food
+        </button>
+      </div>
+      <div class="card-container" id="card-container"></div>
     </main>
     <footer>
       <div class="frame-container footer-bar">
@@ -77,5 +85,6 @@
     </footer>
 
     <script src="/js/main.js"></script>
+    <script src="/js/database.js"></script>
   </body>
 </html>
