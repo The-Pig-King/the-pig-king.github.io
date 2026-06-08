@@ -3,6 +3,7 @@ const cards = {
     {
       name: 'Pink Slime',
       icon: '/assets/games/slime-rancher/slimes/regular/iconSlimePink.png',
+      plort: '/assets/games/slime-rancher/plorts/iconPlortPink.png',
     },
     {
       name: 'Rock Slime',
@@ -113,11 +114,13 @@ const filterCards = (category) => {
   const items = cards[category] ?? [];
 
   return items
-    .map(({ name, icon }) => {
+    .map(({ name, icon, plort }) => {
       return `
       <div class="card">
-        <img src="${icon}" alt="${name}" />
-        <h2>${name}</h2>
+        <img src="${icon}" alt="${name}" class="card-img-main" />
+        <h2 class="card-name">${name}</h2>
+        <h3 class="card-first-label">Plort:</h3>
+        <img src="${plort}" alt="${name} ${plort}" class="card-first-img" />
       </div>
     `;
     })

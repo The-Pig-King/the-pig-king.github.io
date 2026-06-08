@@ -27,22 +27,27 @@ body.slime-rancher-2 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+}
+
+html {
+  background-color: #2e2f36;
 }
 
 body {
-  min-height: 100vh;
-  background-color: var(--background-color);
   color: white;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
 
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  background-color: var(--background-color);
 }
 
 a {
@@ -52,7 +57,6 @@ a {
 
 .flex-container {
   display: flex;
-  margin: auto;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -71,8 +75,6 @@ a {
   height: 2rem;
   fill: white;
 }
-
-/* Header */
 
 .frame-container {
   display: grid;
@@ -105,26 +107,27 @@ a {
   justify-self: end;
 }
 
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
+/* Header */
 
-nav {
+header {
   font-size: 1.3rem;
   background-color: var(--frame-color);
+  position: sticky;
+  top: 0;
 }
 
-.header-title {
+.page-title {
   font-size: 0.7rem;
+  background-color: var(--main-color);
+  width: 100%;
 }
 
 /* Footer */
 
-footer,
-header {
-  background-color: var(--main-color);
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .footer-bar {
@@ -138,7 +141,7 @@ header {
 }
 
 .last-updated {
-  font-size: 0rem;
+  display: none;
   align-self: end;
 }
 
@@ -164,21 +167,41 @@ header {
 .card-container {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(min(10rem), 0.1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr));
   gap: 1rem;
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  display: grid;
+  grid-template-areas:
+    'card-img-main card-img-main card-img-main card-img-main'
+    'card-name card-name card-name card-name'
+    'first-label first-img second-label second-img';
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--frame-color);
-  border-radius: 5%;
 }
 
-.card img {
+.card-img-main {
+  grid-area: card-img-main;
   height: auto;
+  width: 100%;
+}
+
+.card-name {
+  grid-area: card-name;
+}
+
+.card-first-label {
+  grid-area: first-label;
+}
+
+.card-first-img {
+  grid-area: first-img;
+  height: auto;
+  width: 50%;
 }
 
 .category-btn {
@@ -202,6 +225,7 @@ header {
   }
 
   .last-updated {
+    display: block;
     font-size: 1rem;
   }
 }
