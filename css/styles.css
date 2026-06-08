@@ -14,12 +14,21 @@ body.slime-rancher-2 {
   --main-color: #f088ff;
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/InterVariable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 body {
@@ -142,8 +151,16 @@ header {
 }
 
 .last-updated {
-  font-size: 1rem;
+  font-size: 0rem;
   align-self: end;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.2rem;
+  }
 }
 
 /* Index */
