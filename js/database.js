@@ -39,6 +39,7 @@ const cards = [
       'the-moss-blanket',
       'the-ancient-ruins',
       'the-glass-desert',
+      'the-slimeulation',
     ],
   },
   {
@@ -51,25 +52,31 @@ const cards = [
       'the-indigo-quarry',
       'the-ancient-ruins',
       'the-glass-desert',
+      'the-slimeulation',
     ],
   },
   {
     name: 'Rad Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeRad.png',
     tags: ['slime', 'harmful'],
-    locations: ['the-indigo-quarry'],
+    locations: ['the-indigo-quarry', 'the-slimeulation'],
   },
   {
     name: 'Boom Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeBoom.png',
     tags: ['slime', 'harmful'],
-    locations: ['the-moss-blanket', 'the-indigo-quarry', 'the-glass-desert'],
+    locations: [
+      'the-moss-blanket',
+      'the-indigo-quarry',
+      'the-glass-desert',
+      'the-slimeulation',
+    ],
   },
   {
     name: 'Honey Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeHoney.png',
     tags: ['slime', 'docile'],
-    locations: ['the-moss-blanket'],
+    locations: ['the-moss-blanket', 'the-slimeulation'],
   },
   {
     name: 'Puddle Slime',
@@ -81,6 +88,7 @@ const cards = [
       'the-indigo-quarry',
       'the-ancient-ruins',
       'the-glass-desert',
+      'the-slimeulation',
     ],
   },
   {
@@ -93,7 +101,7 @@ const cards = [
     name: 'Hunter Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeHunter.png',
     tags: ['slime', 'docile'],
-    locations: ['the-moss-blanket', 'the-glass-desert'],
+    locations: ['the-moss-blanket', 'the-glass-desert', 'the-slimeulation'],
   },
   {
     name: 'Quantum Slime',
@@ -152,6 +160,7 @@ const cards = [
       'the-indigo-quarry',
       'the-ancient-ruins',
       'the-glass-desert',
+      'the-slimeulation',
     ],
   },
   {
@@ -164,6 +173,7 @@ const cards = [
       'the-indigo-quarry',
       'the-ancient-ruins',
       'the-glass-desert',
+      'the-slimeulation',
     ],
   },
   {
@@ -209,13 +219,14 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
     name: 'Oca Oca',
     icon: '/assets/games/slime-rancher/food//iconVeggieOcaOca.png',
     tags: ['food', 'veggie'],
-    locations: ['the-indigo-quarry'],
+    locations: ['the-indigo-quarry', 'the-slimeulation'],
   },
   {
     name: 'Heart Beet',
@@ -227,6 +238,7 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
@@ -239,7 +251,7 @@ const cards = [
     name: 'Odd Onion',
     icon: '/assets/games/slime-rancher/food//iconVeggieOnion.png',
     tags: ['food', 'veggie'],
-    locations: ['the-indigo-quarry'],
+    locations: ['the-indigo-quarry', 'the-slimeulation'],
   },
   {
     name: 'Gilded Ginger',
@@ -259,13 +271,14 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
     name: 'Mint Mango',
     icon: '/assets/games/slime-rancher/food//iconFruitMango.png',
     tags: ['food', 'fruit'],
-    locations: ['the-moss-blanket'],
+    locations: ['the-moss-blanket', 'the-slimeulation'],
   },
   {
     name: 'Cuberry',
@@ -277,6 +290,7 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
@@ -308,6 +322,7 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
@@ -322,6 +337,7 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
@@ -335,6 +351,7 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
@@ -348,6 +365,7 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
@@ -361,19 +379,20 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
     name: 'Briar Chickadoo',
     icon: '/assets/games/slime-rancher/food//iconBirdChickBriar.png',
     tags: ['food', 'future-meat'],
-    locations: ['the-moss-blanket'],
+    locations: ['the-moss-blanket', 'the-slimeulation'],
   },
   {
     name: 'Briar Hen',
     icon: '/assets/games/slime-rancher/food//iconBirdHenBriar.png',
     tags: ['food', 'meat'],
-    locations: ['the-moss-blanket'],
+    locations: ['the-moss-blanket', 'the-slimeulation'],
   },
   {
     name: 'Painted Chickadoo',
@@ -398,6 +417,7 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
@@ -411,6 +431,7 @@ const cards = [
       'the-ancient-ruins',
       'the-glass-desert',
       'the-wilds',
+      'the-slimeulation',
     ],
   },
   {
@@ -462,33 +483,53 @@ const cards = [
 const cardContainer = document.getElementById('card-container');
 
 const state = {
-  category: 'all',
-  filters: new Set(), // locations + future tags
+  typeFilters: new Set(),
+  locationFilters: new Set(),
+  typeMode: 'any',
+  locationMode: 'any',
 };
 
-const categoryBtns = document.querySelectorAll('.category-btn');
-const tagBtns = document.querySelectorAll('.tag-btn');
+const filterBtns = document.querySelectorAll('.filter-btn');
 
-categoryBtns.forEach((btn) => {
+const modeBtns = document.querySelectorAll('.mode-btn');
+
+modeBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    state.category = btn.dataset.category;
+    const group = btn.closest('.filter-bar').dataset.group;
+    const mode = btn.dataset.mode;
 
-    categoryBtns.forEach((b) => b.classList.remove('active'));
+    if (group === 'type') state.typeMode = mode;
+    if (group === 'location') state.locationMode = mode;
+
+    modeBtns.forEach((b) => {
+      if (b.closest('.filter-bar').dataset.group === group) {
+        b.classList.remove('active');
+      }
+    });
+
     btn.classList.add('active');
 
     updateUI();
   });
 });
 
-tagBtns.forEach((btn) => {
+filterBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
+    const group = btn.closest('.filter-bar').dataset.group;
     const value = btn.dataset.category;
 
-    if (state.filters.has(value)) {
-      state.filters.delete(value);
+    let set = new Set();
+    if (group === 'type') {
+      set = state.typeFilters;
+    } else if (group === 'location') {
+      set = state.locationFilters;
+    }
+
+    if (set.has(value)) {
+      set.delete(value);
       btn.classList.remove('active');
     } else {
-      state.filters.add(value);
+      set.add(value);
       btn.classList.add('active');
     }
 
@@ -500,23 +541,28 @@ const updateUI = () => {
   renderCards(filterCards());
 };
 
+const matchGroup = (cardValues, filters, mode) => {
+  if (filters.size === 0) return true;
+
+  const values = [...filters];
+
+  if (mode === 'any') {
+    return values.some((v) => cardValues?.includes(v));
+  }
+
+  return values.every((v) => cardValues?.includes(v));
+};
+
 const filterCards = () => {
   return cards.filter((card) => {
-    // category filter
-    const categoryMatch =
-      state.category === 'all' || card.tags.includes(state.category);
+    const typeOk = matchGroup(card.tags, state.typeFilters, state.typeMode);
+    const locationOk = matchGroup(
+      card.locations,
+      state.locationFilters,
+      state.locationMode
+    );
 
-    if (!categoryMatch) return false;
-
-    // other filters
-    for (const f of state.filters) {
-      const inTags = card.tags.includes(f);
-      const inLocations = card.locations?.includes(f);
-
-      if (!inTags && !inLocations) return false;
-    }
-
-    return true;
+    return typeOk && locationOk;
   });
 };
 
@@ -554,5 +600,4 @@ const renderCards = (items) => {
     .join('');
 };
 
-document.getElementById('all-btn').classList.add('active');
 renderCards(filterCards());

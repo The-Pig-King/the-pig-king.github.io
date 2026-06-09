@@ -201,16 +201,16 @@ header {
   flex-wrap: wrap;
 }
 
-.category-btn,
-.tag-btn {
+.filter-btn,
+.mode-btn {
   background-color: var(--frame-color);
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
   padding: 0.1rem;
   color: var(--btn-color, white);
 }
 
-.category-btn.active,
-.tag-btn.active {
+.filter-btn.active,
+.mode-btn.active {
   background-color: darkgreen;
   border: 0.15rem solid green;
 }
