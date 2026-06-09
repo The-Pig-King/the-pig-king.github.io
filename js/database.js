@@ -484,6 +484,9 @@ const tagGroups = {
   slime: 'type',
   food: 'type',
 
+  special: 'subtype',
+  event: 'subtype',
+
   docile: 'slime-type',
   harmful: 'slime-type',
   hostile: 'slime-type',
@@ -491,6 +494,7 @@ const tagGroups = {
   veggie: 'food-type',
   fruit: 'food-type',
   meat: 'food-type',
+  'future-meat': 'food-type',
   electricity: 'food-type',
 
   'the-ranch': 'location',

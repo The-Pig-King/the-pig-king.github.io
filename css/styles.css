@@ -11,6 +11,17 @@
   --special-color: yellow;
   --event-color: #ffacca;
 
+  --docile-color: white;
+  --harmful-color: red;
+  --hostile-color: black;
+
+  --veggie-color: #5b733d;
+  --fruit-color: #561e78;
+  --meat-color: #cfb287;
+  --future-meat-color: #fbde76;
+  --other-food-color: #1f7fb5;
+  --electricity-color: #ff9306;
+
   --the-ranch-color: #825235;
   --the-wilds-color: #f9bcda;
   --nimble-valley-color: #264f6a;
@@ -20,13 +31,6 @@
   --the-indigo-quarry-color: #9788bf;
   --the-ancient-ruins-color: #faf73e;
   --the-glass-desert-color: #dc9554;
-
-  --veggie-color: #5b733d;
-  --fruit-color: #561e78;
-  --meat-color: #cfb287;
-  --future-meat-color: #fbde76;
-  --other-food-color: #1f7fb5;
-  --electricity-color: #ff9306;
 }
 
 body.slime-rancher {
@@ -190,16 +194,21 @@ header {
 
 /* Database */
 
+.filters-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+}
+
 .filter-bar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
   margin: 0.5rem;
   gap: 0.5rem;
-  flex-wrap: wrap;
 }
 
 .filter-group {
@@ -224,23 +233,32 @@ header {
   border: 0.15rem solid green;
 }
 
-.btn-the-ranch {
-  --btn-color: var(--the-ranch-color);
-}
-.btn-the-wilds {
-  --btn-color: var(--the-wilds-color);
-}
-.btn-nimble-valley {
-  --btn-color: var(--nimble-valley-color);
-}
-.btn-the-simulation {
-  --btn-color: var(--the-slimeulation-color);
-}
 .btn-slime {
   --btn-color: var(--slime-color);
 }
 .btn-food {
   --btn-color: var(--food-color);
+}
+
+.btn-special {
+  --btn-color: var(--special-color);
+}
+.btn-event {
+  --btn-color: var(--event-color);
+}
+
+.btn-docile {
+  --btn-color: var(--docile-color);
+}
+.btn-harmful {
+  --btn-color: var(--harmful-color);
+}
+.btn-hostile {
+  --btn-color: var(--hostile-color);
+}
+
+.btn-the-ranch {
+  --btn-color: var(--the-ranch-color);
 }
 .btn-the-dry-reef {
   --btn-color: var(--the-dry-reef-color);
@@ -257,7 +275,13 @@ header {
 .btn-the-glass-desert {
   --btn-color: var(--the-glass-desert-color);
 }
-.btn-the-slimeulation {
+.btn-the-wilds {
+  --btn-color: var(--the-wilds-color);
+}
+.btn-nimble-valley {
+  --btn-color: var(--nimble-valley-color);
+}
+.btn-the-simulation {
   --btn-color: var(--the-slimeulation-color);
 }
 
@@ -331,6 +355,25 @@ header {
   --tag-color: var(--food-color);
 }
 
+.tag-special {
+  --tag-color: var(--special-color);
+  --tag-text: black;
+}
+.tag-event {
+  --tag-color: var(--event-color);
+}
+
+.tag-docile {
+  --tag-color: var(--docile-color);
+  --tag-text: black;
+}
+.tag-harmful {
+  --tag-color: var(--harmful-color);
+}
+.tag-hostile {
+  --tag-color: var(--hostile-color);
+}
+
 .tag-veggie {
   --tag-color: var(--veggie-color);
 }
@@ -344,31 +387,11 @@ header {
   --tag-color: var(--future-meat-color);
   --tag-text: black;
 }
-
 .tag-other {
   --tag-color: var(--other-food-color);
 }
 .tag-electricity {
   --tag-color: var(--electricity-color);
-}
-
-.tag-special {
-  --tag-color: var(--special-color);
-  --tag-text: black;
-}
-.tag-event {
-  --tag-color: var(--event-color);
-}
-
-.tag-docile {
-  --tag-color: white;
-  --tag-text: black;
-}
-.tag-harmful {
-  --tag-color: red;
-}
-.tag-hostile {
-  --tag-color: black;
 }
 
 .tag-the-ranch {

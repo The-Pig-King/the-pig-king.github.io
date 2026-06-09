@@ -32,95 +32,96 @@
       <div class="flex-container page-title">
         <h1>Database | Slime Rancher</h1>
       </div>
-      <div class="filter-bar" data-group="type">
-        <div class="filter-group">
-          <h2>Type</h2>
-          <button class="mode-btn active" data-mode="any">Any</button>
-          <button class="mode-btn" data-mode="all">All</button>
-          <button class="mode-btn" data-mode="exactly">Exactly</button>
+      <div class="filters-container">
+        <div class="filter-bar" data-group="type">
+          <div class="filter-group">
+            <h2>Type</h2>
+            <button class="mode-btn active" data-mode="any">Any</button>
+            <button class="mode-btn" data-mode="all">All</button>
+            <button class="mode-btn" data-mode="exactly">Exactly</button>
+          </div>
+          <div class="filter-group">
+            <button class="filter-btn btn-slime" data-category="slime">
+              Slime
+            </button>
+            <button class="filter-btn btn-food" data-category="food">
+              Food
+            </button>
+          </div>
         </div>
-        <div class="filter-group">
-          <button
-            class="filter-btn btn-slime"
-            id="slime-btn"
-            data-category="slime"
-          >
-            Slime
-          </button>
-          <button class="filter-btn btn-food" data-category="food">Food</button>
+        <div class="filter-bar" data-group="subtype">
+          <div class="filter-group">
+            <h2>Subtype</h2>
+            <button class="mode-btn active" data-mode="any">Any</button>
+            <button class="mode-btn" data-mode="all">All</button>
+            <button class="mode-btn" data-mode="exactly">Exactly</button>
+          </div>
+          <div class="filter-group">
+            <button class="filter-btn btn-special" data-category="special">
+              Special
+            </button>
+            <button class="filter-btn btn-event" data-category="event">
+              Event
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="filter-bar" data-group="location">
-        <div class="filter-group">
-          <h2>Location</h2>
-          <button class="mode-btn active" data-mode="any">Any</button>
-          <button class="mode-btn" data-mode="all">All</button>
-          <button class="mode-btn" data-mode="exactly">Exactly</button>
-        </div>
-        <div class="filter-group">
-          <button
-            class="filter-btn btn-the-ranch"
-            id="the-ranch-btn"
-            data-category="the-ranch"
-          >
-            The Ranch
-          </button>
-          <button
-            class="filter-btn btn-the-dry-reef"
-            id="the-dry-reef-btn"
-            data-category="the-dry-reef"
-          >
-            The Dry Reef
-          </button>
-          <button
-            class="filter-btn btn-the-moss-blanket"
-            id="the-moss-blanket-btn"
-            data-category="the-moss-blanket"
-          >
-            The Moss Blanket
-          </button>
-          <button
-            class="filter-btn btn-the-indigo-quarry"
-            id="the-indigo-quarry-btn"
-            data-category="the-indigo-quarry"
-          >
-            The Indigo Quarry
-          </button>
-          <button
-            class="filter-btn btn-the-ancient-ruins"
-            id="the-ancient-ruins-btn"
-            data-category="the-ancient-ruins"
-          >
-            The Ancient Ruins
-          </button>
-          <button
-            class="filter-btn btn-the-glass-desert"
-            id="the-glass-desert-btn"
-            data-category="the-glass-desert"
-          >
-            The Glass Desert
-          </button>
-          <button
-            class="filter-btn btn-the-wilds"
-            id="the-wilds-btn"
-            data-category="the-wilds"
-          >
-            The Wilds
-          </button>
-          <button
-            class="filter-btn btn-nimble-valley"
-            id="nimble-valley-btn"
-            data-category="nimble-valley"
-          >
-            Nimble Valley
-          </button>
-          <button
-            class="filter-btn btn-the-slimeulation"
-            id="the-slimeulation-btn"
-            data-category="the-slimeulation"
-          >
-            The Slimeulation
-          </button>
+        <div class="filter-bar" data-group="location">
+          <div class="filter-group">
+            <h2>Location</h2>
+            <button class="mode-btn active" data-mode="any">Any</button>
+            <button class="mode-btn" data-mode="all">All</button>
+            <button class="mode-btn" data-mode="exactly">Exactly</button>
+          </div>
+          <div class="filter-group">
+            <button class="filter-btn btn-the-ranch" data-category="the-ranch">
+              The Ranch
+            </button>
+            <button
+              class="filter-btn btn-the-dry-reef"
+              data-category="the-dry-reef"
+            >
+              The Dry Reef
+            </button>
+            <button
+              class="filter-btn btn-the-moss-blanket"
+              data-category="the-moss-blanket"
+            >
+              The Moss Blanket
+            </button>
+            <button
+              class="filter-btn btn-the-indigo-quarry"
+              data-category="the-indigo-quarry"
+            >
+              The Indigo Quarry
+            </button>
+            <button
+              class="filter-btn btn-the-ancient-ruins"
+              data-category="the-ancient-ruins"
+            >
+              The Ancient Ruins
+            </button>
+            <button
+              class="filter-btn btn-the-glass-desert"
+              data-category="the-glass-desert"
+            >
+              The Glass Desert
+            </button>
+            <button class="filter-btn btn-the-wilds" data-category="the-wilds">
+              The Wilds
+            </button>
+            <button
+              class="filter-btn btn-nimble-valley"
+              data-category="nimble-valley"
+            >
+              Nimble Valley
+            </button>
+            <button
+              class="filter-btn btn-the-slimeulation"
+              data-category="the-slimeulation"
+            >
+              The Slimeulation
+            </button>
+          </div>
         </div>
       </div>
       <div class="card-container" id="card-container"></div>
