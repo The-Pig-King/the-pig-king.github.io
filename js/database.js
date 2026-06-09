@@ -480,6 +480,43 @@ const cards = [
   },
 ];
 
+const tagGroups = {
+  slime: 'type',
+  food: 'type',
+
+  docile: 'slime-type',
+  harmful: 'slime-type',
+  hostile: 'slime-type',
+
+  veggie: 'food-type',
+  fruit: 'food-type',
+  meat: 'food-type',
+  electricity: 'food-type',
+
+  'the-ranch': 'location',
+  'the-dry-reef': 'location',
+  'the-moss-blanket': 'location',
+  'the-indigo-quarry': 'location',
+  'the-ancient-ruins': 'location',
+  'the-glass-desert': 'location',
+  'the-wilds': 'location',
+  'nimble-valley': 'location',
+  'the-slimeulation': 'location',
+};
+
+const groupTags = (tags = []) => {
+  const grouped = new Map();
+
+  for (const tag of tags) {
+    const group = tagGroups[tag] ?? 'other';
+
+    if (!grouped.has(group)) grouped.set(group, new Set());
+    grouped.get(group).add(tag);
+  }
+
+  return grouped;
+};
+
 const cardContainer = document.getElementById('card-container');
 
 const state = {
@@ -544,13 +581,34 @@ const updateUI = () => {
 const matchGroup = (cardValues, filters, mode) => {
   if (filters.size === 0) return true;
 
-  const values = [...filters];
+  const userFilters = [...filters];
 
   if (mode === 'any') {
-    return values.some((v) => cardValues?.includes(v));
+    return userFilters.some((v) => cardValues?.includes(v));
   }
 
-  return values.every((v) => cardValues?.includes(v));
+  if (mode === 'all') {
+    return userFilters.every((v) => cardValues?.includes(v));
+  }
+
+  if (mode === 'exactly') {
+    const selectedGroups = groupTags(userFilters);
+    const cardGroups = groupTags(cardValues);
+
+    for (const [group, selectedSet] of selectedGroups.entries()) {
+      const cardSet = cardGroups.get(group);
+
+      if (!cardSet) return false;
+
+      if (cardSet.size !== selectedSet.size) return false;
+
+      for (const v of selectedSet) {
+        if (!cardSet.has(v)) return false;
+      }
+    }
+
+    return true;
+  }
 };
 
 const filterCards = () => {
