@@ -114,7 +114,7 @@ const filterCards = (category) => {
   const items = cards[category] ?? [];
 
   return items
-    .map(({ name, icon, plort }) => {
+    .map(({ name, icon, ...rest }) => {
       return `
       <div class="card">
         <img src="${icon}" alt="${name}" class="card-img-main" />
