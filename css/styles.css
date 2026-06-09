@@ -180,21 +180,28 @@ header {
 .card-container {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: 1rem;
   margin: 1rem;
 }
 
 .card {
   display: grid;
-  grid-template-areas:
-    'card-img-main card-img-main card-img-main card-img-main'
-    'card-name card-name card-name card-name'
-    'first-label first-img second-label second-img';
-  align-items: center;
-  justify-content: center;
 
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    'card-img-main card-name'
+    'card-img-main card-tags'
+    'details details';
+
+  gap: 0.5rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+  border-radius: 5%;
   background-color: var(--frame-color);
+  padding: 0.5rem;
 }
 
 .card-img-main {
@@ -205,6 +212,7 @@ header {
 
 .card-name {
   grid-area: card-name;
+  font-size: 1rem;
 }
 
 .card-first-label {
