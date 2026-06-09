@@ -32,7 +32,10 @@
       <div class="flex-container page-title">
         <h1>Database | Slime Rancher</h1>
       </div>
-      <div class="category-bar">
+      <div class="filter-bar">
+        <button class="category-btn all-btn" id="all-btn" data-category="all">
+          All
+        </button>
         <button
           class="category-btn slime-btn"
           id="slime-btn"
@@ -41,6 +44,29 @@
           Slime
         </button>
         <button class="category-btn food-btn" data-category="food">Food</button>
+      </div>
+      <div class="filter-bar">
+        <button
+          class="tag-btn the-dry-reef-btn"
+          id="the-dry-reef-btn"
+          data-category="the-dry-reef"
+        >
+          The Dry Reef
+        </button>
+        <button
+          class="tag-btn the-moss-blanket-btn"
+          id="the-moss-blanket-btn"
+          data-category="the-moss-blanket"
+        >
+          The Moss Blanket
+        </button>
+        <button
+          class="tag-btn the-indigo-quarry-btn"
+          id="the-indigo-quarry-btn"
+          data-category="the-indigo-quarry"
+        >
+          The Indigo Quarry
+        </button>
       </div>
       <div class="card-container" id="card-container"></div>
     </main>
