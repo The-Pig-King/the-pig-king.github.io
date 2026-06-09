@@ -22,6 +22,13 @@ const cards = [
     name: 'Rock Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeRock.png',
     tags: ['slime', 'harmful'],
+    locations: [
+      'the-dry-reef',
+      'the-indigo-quarry',
+      'the-ancient-ruins',
+      'the-glass-desert',
+      'the-slimeulation',
+    ],
   },
   {
     name: 'Tabby Slime',
@@ -287,16 +294,72 @@ const cards = [
 
 const cardContainer = document.getElementById('card-container');
 
-const filterCategory = (category) => {
-  if (category === 'all') {
-    items = cards;
-  } else {
-    items = cards.filter((card) => {
-      return card.tags[0] === category;
-    });
+const state = {
+  category: 'all',
+  filters: new Set(), // locations + future tags
+};
+
+const categoryBtns = document.querySelectorAll('.category-btn');
+const tagBtns = document.querySelectorAll('.tag-btn');
+
+categoryBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    state.category = btn.dataset.category;
+
+    categoryBtns.forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    updateUI();
+  });
+});
+
+tagBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const value = btn.dataset.category;
+
+    if (state.filters.has(value)) {
+      state.filters.delete(value);
+      btn.classList.remove('active');
+    } else {
+      state.filters.add(value);
+      btn.classList.add('active');
+    }
+
+    updateUI();
+  });
+});
+
+const updateUI = () => {
+  renderCards(filterCards());
+};
+
+const filterCards = () => {
+  return cards.filter((card) => {
+    // category filter
+    const categoryMatch =
+      state.category === 'all' || card.tags.includes(state.category);
+
+    if (!categoryMatch) return false;
+
+    // other filters
+    for (const f of state.filters) {
+      const inTags = card.tags.includes(f);
+      const inLocations = card.locations?.includes(f);
+
+      if (!inTags && !inLocations) return false;
+    }
+
+    return true;
+  });
+};
+
+const renderCards = (items) => {
+  if (!items || items.length === 0) {
+    cardContainer.innerHTML = '';
+    return;
   }
 
-  return items
+  cardContainer.innerHTML = items
     .map(({ name, icon, tags, locations, ...rest }) => {
       return `
       <div class="card">
@@ -324,39 +387,5 @@ const filterCategory = (category) => {
     .join('');
 };
 
-const categoryBtns = document.querySelectorAll('.category-btn');
-const tagBtns = document.querySelectorAll('.tag-btn');
-
 document.getElementById('all-btn').classList.add('active');
-
-let activeCategory;
-const activeTags = [];
-
-categoryBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    if (btn.classList.contains('active')) {
-      return;
-    }
-    console.log('click');
-
-    activeCategory = btn.dataset.category;
-
-    categoryBtns.forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    cardContainer.innerHTML = filterCategory(btn.dataset.category);
-  });
-});
-
-cardContainer.innerHTML = filterCategory('all');
-
-tagBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    activeTags.push(btn.dataset.category);
-
-    tagBtns.forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    cardContainer.innerHTML = filterCategory(btn.dataset.category);
-  });
-});
+renderCards(filterCards());

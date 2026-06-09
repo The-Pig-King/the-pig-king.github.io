@@ -13,8 +13,8 @@
 
   --the-ranch-color: #825235;
   --the-wilds-color: #f9bcda;
-  --nimble-valley-color: #2e394c;
-  ---the-slimeulation-color: #8aadc8;
+  --nimble-valley-color: #264f6a;
+  --the-slimeulation-color: #8aadc8;
   --the-dry-reef-color: #ef5931;
   --the-moss-blanket-color: #73be27;
   --the-indigo-quarry-color: #9788bf;
@@ -198,32 +198,64 @@ header {
   width: 100%;
   margin: 0.5rem;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
-.category-btn {
+.category-btn,
+.tag-btn {
   background-color: var(--frame-color);
-  border: none;
+  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
   padding: 0.1rem;
-  color: white;
+  color: var(--btn-color, white);
 }
 
-.category-btn.active {
+.category-btn.active,
+.tag-btn.active {
   background-color: darkgreen;
   border: 0.15rem solid green;
 }
 
-.slime-btn {
-  color: var(--slime-color);
+.btn-the-ranch {
+  --btn-color: var(--the-ranch-color);
 }
-
-.food-btn {
-  color: var(--food-color);
+.btn-the-wilds {
+  --btn-color: var(--the-wilds-color);
+}
+.btn-nimble-valley {
+  --btn-color: var(--nimble-valley-color);
+}
+.btn-the-simulation {
+  --btn-color: var(--the-slimeulation-color);
+}
+.btn-slime {
+  --btn-color: var(--slime-color);
+}
+.btn-food {
+  --btn-color: var(--food-color);
+}
+.btn-the-dry-reef {
+  --btn-color: var(--the-dry-reef-color);
+}
+.btn-the-moss-blanket {
+  --btn-color: var(--the-moss-blanket-color);
+}
+.btn-the-indigo-quarry {
+  --btn-color: var(--the-indigo-quarry-color);
+}
+.btn-the-ancient-ruins {
+  --btn-color: var(--the-ancient-ruins-color);
+}
+.btn-the-glass-desert {
+  --btn-color: var(--the-glass-desert-color);
+}
+.btn-the-slimeulation {
+  --btn-color: var(--the-slimeulation-color);
 }
 
 .card-container {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 14rem));
   gap: 1rem;
   margin: 1rem;
 }
@@ -247,6 +279,8 @@ header {
   border-radius: 5%;
   background-color: var(--frame-color);
   padding: 0.5rem;
+
+  font-size: 1rem;
 }
 
 .card-img-main {
@@ -267,8 +301,9 @@ header {
 }
 
 .tag {
-  background-color: black;
-  padding: 0.2rem 0.2rem;
+  background-color: var(--tag-color, black);
+  color: var(--tag-text, white);
+  padding: 0.2rem;
   border-radius: 10%;
   font-size: 0.75rem;
   margin: 0.1rem;
@@ -281,97 +316,73 @@ header {
 }
 
 .tag-slime {
-  background-color: var(--slime-color);
+  --tag-color: var(--slime-color);
 }
-
-.tag-docile {
-  background-color: white;
-  color: black;
-}
-
-.tag-harmful {
-  background-color: red;
-  color: white;
-}
-
-.tag-hostile {
-  background-color: black;
-  color: white;
-}
-
 .tag-food {
-  background-color: var(--food-color);
+  --tag-color: var(--food-color);
 }
 
 .tag-veggie {
-  background-color: var(--veggie-color);
+  --tag-color: var(--veggie-color);
 }
-
 .tag-fruit {
-  background-color: var(--fruit-color);
+  --tag-color: var(--fruit-color);
 }
-
 .tag-meat {
-  background-color: var(--meat-color);
+  --tag-color: var(--meat-color);
 }
-
 .tag-future-meat {
-  background-color: var(--future-meat-color);
-  color: black;
+  --tag-color: var(--future-meat-color);
+  --tag-text: black;
 }
 
 .tag-other {
-  background-color: var(--other-food-color);
+  --tag-color: var(--other-food-color);
 }
-
 .tag-electricity {
-  background-color: var(--electricity-color);
+  --tag-color: var(--electricity-color);
 }
 
 .tag-special {
-  background-color: var(--special-color);
-  color: black;
+  --tag-color: var(--special-color);
+  --tag-text: black;
+}
+.tag-event {
+  --tag-color: var(--event-color);
 }
 
-.tag-event {
-  background-color: var(--event-color);
+.tag-docile {
+  --tag-color: white;
+  --tag-text: black;
+}
+.tag-harmful {
+  --tag-color: red;
+}
+.tag-hostile {
+  --tag-color: black;
 }
 
 .tag-the-ranch {
-  background-color: var(--the-ranch-color);
+  --tag-color: var(--the-ranch-color);
 }
-
-.tag-the-wilds {
-  background-color: var(--the-wilds-color);
-}
-
-.tag-nimble-valley {
-  background-color: var(--nimble-valley-color);
-}
-
 .tag-the-slimeulation {
-  background-color: var(---the-slimeulation-color);
+  --tag-color: var(--the-slimeulation-color);
 }
-
 .tag-the-dry-reef {
-  background-color: var(--the-dry-reef-color);
+  --tag-color: var(--the-dry-reef-color);
 }
-
 .tag-the-moss-blanket {
-  background-color: var(--the-moss-blanket-color);
+  --tag-color: var(--the-moss-blanket-color);
 }
-
 .tag-the-indigo-quarry {
-  background-color: var(--the-indigo-quarry-color);
+  --tag-color: var(--the-indigo-quarry-color);
 }
-
 .tag-the-ancient-ruins {
-  background-color: var(--the-ancient-ruins-color);
-  color: black;
+  --tag-color: var(--the-ancient-ruins-color);
+  --tag-text: black;
 }
-
 .tag-the-glass-desert {
-  background-color: var(--the-glass-desert-color);
+  --tag-color: var(--the-glass-desert-color);
 }
 
 /* Media Queries */
