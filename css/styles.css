@@ -18,7 +18,7 @@
   --the-dry-reef-color: #ef5931;
   --the-moss-blanket-color: #73be27;
   --the-indigo-quarry-color: #9788bf;
-  --the-ancient-ruins-color: #cce861;
+  --the-ancient-ruins-color: #faf73e;
   --the-glass-desert-color: #dc9554;
 
   --veggie-color: #5b733d;
@@ -364,6 +364,13 @@ header {
 
 .tag-the-ranch {
   --tag-color: var(--the-ranch-color);
+}
+.tag-nimble-valley {
+  --tag-color: var(--nimble-valley-color);
+}
+.tag-the-wilds {
+  --tag-color: var(--the-wilds-color);
+  --tag-text: black;
 }
 .tag-the-slimeulation {
   --tag-color: var(--the-slimeulation-color);
