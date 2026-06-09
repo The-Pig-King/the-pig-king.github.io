@@ -4,6 +4,29 @@
   --background-color: #545454;
 
   --thepigking-color: #feb6b7;
+
+  --slime-color: #e24164;
+  --food-color: #f85d18;
+
+  --special-color: yellow;
+  --event-color: #ffacca;
+
+  --the-ranch-color: #825235;
+  --the-wilds-color: #f9bcda;
+  --nimble-valley-color: #2e394c;
+  ---the-slimeulation-color: #8aadc8;
+  --the-dry-reef-color: #ef5931;
+  --the-moss-blanket-color: #73be27;
+  --the-indigo-quarry-color: #9788bf;
+  --the-ancient-ruins-color: #cce861;
+  --the-glass-desert-color: #dc9554;
+
+  --veggie-color: #5b733d;
+  --fruit-color: #561e78;
+  --meat-color: #cfb287;
+  --future-meat-color: #fbde76;
+  --other-food-color: #1f7fb5;
+  --electricity-color: #ff9306;
 }
 
 body.slime-rancher {
@@ -173,8 +196,28 @@ header {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 2rem;
+  margin: 1rem;
   gap: 1rem;
+}
+
+.category-btn {
+  background-color: var(--frame-color);
+  border: none;
+  padding: 0.1rem;
+  color: white;
+}
+
+.category-btn.active {
+  background-color: darkgreen;
+  border: 0.15rem solid green;
+}
+
+.slime-btn {
+  color: var(--slime-color);
+}
+
+.food-btn {
+  color: var(--food-color);
 }
 
 .card-container {
@@ -189,9 +232,11 @@ header {
   display: grid;
 
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-template-areas:
     'card-img-main card-name'
     'card-img-main card-tags'
+    'card-location-tags card-location-tags'
     'details details';
 
   gap: 0.5rem;
@@ -215,22 +260,118 @@ header {
   font-size: 1rem;
 }
 
-.card-first-label {
-  grid-area: first-label;
+.card-tags {
+  grid-area: card-tags;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.card-first-img {
-  grid-area: first-img;
-  height: auto;
-  width: 50%;
+.tag {
+  background-color: black;
+  padding: 0.2rem 0.2rem;
+  border-radius: 10%;
+  font-size: 0.75rem;
+  margin: 0.1rem;
 }
 
-.category-btn {
-  background-color: grey;
+.card-location-tags {
+  grid-area: card-location-tags;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.category-btn.active {
+.tag-slime {
+  background-color: var(--slime-color);
+}
+
+.tag-docile {
   background-color: white;
+  color: black;
+}
+
+.tag-harmful {
+  background-color: red;
+  color: white;
+}
+
+.tag-hostile {
+  background-color: black;
+  color: white;
+}
+
+.tag-food {
+  background-color: var(--food-color);
+}
+
+.tag-veggie {
+  background-color: var(--veggie-color);
+}
+
+.tag-fruit {
+  background-color: var(--fruit-color);
+}
+
+.tag-meat {
+  background-color: var(--meat-color);
+}
+
+.tag-future-meat {
+  background-color: var(--future-meat-color);
+  color: black;
+}
+
+.tag-other {
+  background-color: var(--other-food-color);
+}
+
+.tag-electricity {
+  background-color: var(--electricity-color);
+}
+
+.tag-special {
+  background-color: var(--special-color);
+  color: black;
+}
+
+.tag-event {
+  background-color: var(--event-color);
+}
+
+.tag-the-ranch {
+  background-color: var(--the-ranch-color);
+}
+
+.tag-the-wilds {
+  background-color: var(--the-wilds-color);
+}
+
+.tag-nimble-valley {
+  background-color: var(--nimble-valley-color);
+}
+
+.tag-the-slimeulation {
+  background-color: var(---the-slimeulation-color);
+}
+
+.tag-the-dry-reef {
+  background-color: var(--the-dry-reef-color);
+}
+
+.tag-the-moss-blanket {
+  background-color: var(--the-moss-blanket-color);
+}
+
+.tag-the-indigo-quarry {
+  background-color: var(--the-indigo-quarry-color);
+}
+
+.tag-the-ancient-ruins {
+  background-color: var(--the-ancient-ruins-color);
+  color: black;
+}
+
+.tag-the-glass-desert {
+  background-color: var(--the-glass-desert-color);
 }
 
 /* Media Queries */
