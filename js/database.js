@@ -710,9 +710,20 @@ styleBtns.forEach((btn) => {
   });
 });
 
+const advancedFilterBars = document.querySelectorAll('.advanced-filter-bar');
+
 const advancedFiltersBtn = document.querySelector('.advanced-filters-btn');
 advancedFiltersBtn.addEventListener('click', () => {
   advancedFiltersBtn.classList.toggle('active');
+  if (advancedFiltersBtn.classList.contains('active')) {
+    advancedFilterBars.forEach((advancedFilterBar) => {
+      advancedFilterBar.style.display = 'flex';
+    });
+  } else {
+    advancedFilterBars.forEach((advancedFilterBar) => {
+      advancedFilterBar.style.display = 'none';
+    });
+  }
 
   updateUI();
 });

@@ -221,6 +221,10 @@ header {
   margin: 0.5rem;
 }
 
+.advanced-filter-bar {
+  display: none;
+}
+
 .filter-group {
   display: flex;
   align-items: center;
