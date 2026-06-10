@@ -257,6 +257,22 @@ header {
   --btn-color: var(--hostile-color);
 }
 
+.btn-veggie {
+  --btn-color: var(--veggie-color);
+}
+.btn-fruit {
+  --btn-color: var(--fruit-color);
+}
+.btn-meat {
+  --btn-color: var(--meat-color);
+}
+.btn-future-meat {
+  --btn-color: var(--future-meat-color);
+}
+.btn-electricity {
+  --btn-color: var(--electricity-color);
+}
+
 .btn-the-ranch {
   --btn-color: var(--the-ranch-color);
 }

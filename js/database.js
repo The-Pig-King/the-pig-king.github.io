@@ -510,69 +510,44 @@ const tagGroups = {
 
 const groupTags = (tags = []) => {
   const grouped = new Map();
-
   for (const tag of tags) {
     const group = tagGroups[tag] ?? 'other';
-
     if (!grouped.has(group)) grouped.set(group, new Set());
     grouped.get(group).add(tag);
   }
-
   return grouped;
 };
 
-const cardContainer = document.getElementById('card-container');
+const filterBars = document.querySelectorAll('.filter-bar[data-group]');
 
-const state = {
-  typeFilters: new Set(),
-  locationFilters: new Set(),
-  typeMode: 'any',
-  locationMode: 'any',
-};
+const state = {};
+filterBars.forEach(({ dataset: { group } }) => {
+  state[group] = { filters: new Set(), mode: 'any' };
+});
 
-const filterBtns = document.querySelectorAll('.filter-btn');
-
-const modeBtns = document.querySelectorAll('.mode-btn');
-
-modeBtns.forEach((btn) => {
+document.querySelectorAll('.mode-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
     const group = btn.closest('.filter-bar').dataset.group;
-    const mode = btn.dataset.mode;
+    state[group].mode = btn.dataset.mode;
 
-    if (group === 'type') state.typeMode = mode;
-    if (group === 'location') state.locationMode = mode;
-
-    modeBtns.forEach((b) => {
-      if (b.closest('.filter-bar').dataset.group === group) {
-        b.classList.remove('active');
-      }
-    });
-
+    btn
+      .closest('.filter-bar')
+      .querySelectorAll('.mode-btn')
+      .forEach((b) => b.classList.remove('active'));
     btn.classList.add('active');
 
     updateUI();
   });
 });
 
-filterBtns.forEach((btn) => {
+document.querySelectorAll('.filter-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
     const group = btn.closest('.filter-bar').dataset.group;
     const value = btn.dataset.category;
+    const { filters } = state[group];
 
-    let set = new Set();
-    if (group === 'type') {
-      set = state.typeFilters;
-    } else if (group === 'location') {
-      set = state.locationFilters;
-    }
-
-    if (set.has(value)) {
-      set.delete(value);
-      btn.classList.remove('active');
-    } else {
-      set.add(value);
-      btn.classList.add('active');
-    }
+    filters.has(value) ? filters.delete(value) : filters.add(value);
+    btn.classList.toggle('active');
 
     updateUI();
   });
@@ -584,49 +559,33 @@ const updateUI = () => {
 
 const matchGroup = (cardValues, filters, mode) => {
   if (filters.size === 0) return true;
+  const active = [...filters];
 
-  const userFilters = [...filters];
-
-  if (mode === 'any') {
-    return userFilters.some((v) => cardValues?.includes(v));
-  }
-
-  if (mode === 'all') {
-    return userFilters.every((v) => cardValues?.includes(v));
-  }
+  if (mode === 'any') return active.some((v) => cardValues?.includes(v));
+  if (mode === 'all') return active.every((v) => cardValues?.includes(v));
 
   if (mode === 'exactly') {
-    const selectedGroups = groupTags(userFilters);
+    const selectedGroups = groupTags(active);
     const cardGroups = groupTags(cardValues);
-
-    for (const [group, selectedSet] of selectedGroups.entries()) {
+    for (const [group, selectedSet] of selectedGroups) {
       const cardSet = cardGroups.get(group);
-
-      if (!cardSet) return false;
-
-      if (cardSet.size !== selectedSet.size) return false;
-
-      for (const v of selectedSet) {
-        if (!cardSet.has(v)) return false;
-      }
+      if (!cardSet || cardSet.size !== selectedSet.size) return false;
+      for (const v of selectedSet) if (!cardSet.has(v)) return false;
     }
-
     return true;
   }
 };
 
-const filterCards = () => {
-  return cards.filter((card) => {
-    const typeOk = matchGroup(card.tags, state.typeFilters, state.typeMode);
-    const locationOk = matchGroup(
-      card.locations,
-      state.locationFilters,
-      state.locationMode
-    );
+const filterCards = () =>
+  cards.filter((card) =>
+    Object.entries(state).every(([group, { filters, mode }]) => {
+      // location group uses card.locations; everything else uses card.tags
+      const cardValues = group === 'location' ? card.locations : card.tags;
+      return matchGroup(cardValues, filters, mode);
+    })
+  );
 
-    return typeOk && locationOk;
-  });
-};
+const cardContainer = document.getElementById('card-container');
 
 const renderCards = (items) => {
   if (!items || items.length === 0) {
