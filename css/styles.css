@@ -19,8 +19,8 @@
   --fruit-color: #561e78;
   --meat-color: #cfb287;
   --future-meat-color: #fbde76;
-  --other-food-color: #1f7fb5;
   --electricity-color: #ff9306;
+  --other-color: #1f7fb5;
 
   --the-ranch-color: #825235;
   --the-wilds-color: #f9bcda;
@@ -272,6 +272,9 @@ header {
 .btn-electricity {
   --btn-color: var(--electricity-color);
 }
+.btn-other {
+  --btn-color: var(--other-color);
+}
 
 .btn-the-ranch {
   --btn-color: var(--the-ranch-color);
@@ -404,7 +407,7 @@ header {
   --tag-text: black;
 }
 .tag-other {
-  --tag-color: var(--other-food-color);
+  --tag-color: var(--other-color);
 }
 .tag-electricity {
   --tag-color: var(--electricity-color);
