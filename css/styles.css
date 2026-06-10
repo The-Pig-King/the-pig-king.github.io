@@ -202,7 +202,8 @@ header {
   gap: 1rem;
 }
 
-.filter-bar {
+.filter-bar,
+.style-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -211,7 +212,8 @@ header {
   gap: 0.5rem;
 }
 
-.filter-group {
+.filter-group,
+.style-group {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,7 +222,8 @@ header {
 }
 
 .filter-btn,
-.mode-btn {
+.mode-btn,
+.style-btn {
   background-color: var(--frame-color);
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
   padding: 0.1rem;
@@ -228,7 +231,8 @@ header {
 }
 
 .filter-btn.active,
-.mode-btn.active {
+.mode-btn.active,
+.style-btn.active {
   background-color: darkgreen;
   border: 0.15rem solid green;
 }

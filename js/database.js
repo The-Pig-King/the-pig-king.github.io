@@ -8,6 +8,8 @@ const cards = [
   {
     name: 'Pink Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimePink.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimePinkExotic.png',
     tags: ['slime', 'docile'],
     locations: [
       'the-dry-reef',
@@ -21,6 +23,8 @@ const cards = [
   {
     name: 'Rock Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeRock.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeRockExotic.png',
     tags: ['slime', 'harmful'],
     locations: [
       'the-dry-reef',
@@ -33,6 +37,8 @@ const cards = [
   {
     name: 'Tabby Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeTabby.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeTabbyExotic.png',
     tags: ['slime', 'docile'],
     locations: [
       'the-dry-reef',
@@ -45,6 +51,8 @@ const cards = [
   {
     name: 'Phosphor Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimePhosphor.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimePhosphorExotic.png',
     tags: ['slime', 'docile'],
     locations: [
       'the-dry-reef',
@@ -58,12 +66,16 @@ const cards = [
   {
     name: 'Rad Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeRad.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeRadExotic.png',
     tags: ['slime', 'harmful'],
     locations: ['the-indigo-quarry', 'the-slimeulation'],
   },
   {
     name: 'Boom Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeBoom.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeBoomExotic.png',
     tags: ['slime', 'harmful'],
     locations: [
       'the-moss-blanket',
@@ -75,12 +87,16 @@ const cards = [
   {
     name: 'Honey Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeHoney.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeHoneyExotic.png',
     tags: ['slime', 'docile'],
     locations: ['the-moss-blanket', 'the-slimeulation'],
   },
   {
     name: 'Puddle Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimePuddle.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimePuddleExotic.png',
     tags: ['slime', 'docile'],
     locations: [
       'the-dry-reef',
@@ -94,65 +110,87 @@ const cards = [
   {
     name: 'Crystal Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeCrystal.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeCrystalExotic.png',
     tags: ['slime', 'harmful'],
     locations: ['the-indigo-quarry'],
   },
   {
     name: 'Hunter Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeHunter.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeHunterExotic.png',
     tags: ['slime', 'docile'],
     locations: ['the-moss-blanket', 'the-glass-desert', 'the-slimeulation'],
   },
   {
     name: 'Quantum Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeQuantum.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeQuantumExotic.png',
     tags: ['slime', 'docile'],
     locations: ['the-ancient-ruins', 'the-glass-desert'],
   },
   {
     name: 'Fire Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeFire.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeFireExotic.png',
     tags: ['slime', 'harmful'],
     locations: ['the-glass-desert'],
   },
   {
     name: 'Dervish Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeDervish.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeDervishExotic.png',
     tags: ['slime', 'docile'],
     locations: ['the-glass-desert'],
   },
   {
     name: 'Tangle Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeTangle.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeTangleExotic.png',
     tags: ['slime', 'docile'],
     locations: ['the-glass-desert'],
   },
   {
     name: 'Mosaic Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeMosaic.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeMosaicExotic.png',
     tags: ['slime', 'harmful'],
     locations: ['the-glass-desert'],
   },
   {
     name: 'Saber Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeSaberSketch.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeSaberExotic.png',
     tags: ['slime', 'docile'],
   },
   {
     name: 'Quicksilver Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeQuicksilver.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeQuicksilverExotic.png',
     tags: ['slime', 'docile', 'harmful', 'special'],
     locations: ['nimble-valley'],
   },
   {
     name: 'Glitch Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeGlitch.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeGlitchExotic.png',
     tags: ['slime', 'docile', 'special'],
     locations: ['the-slimeulation'],
   },
   {
     name: 'Gold Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeGold.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeGoldExotic.png',
     tags: ['slime', 'docile', 'special'],
     locations: [
       'the-dry-reef',
@@ -166,6 +204,8 @@ const cards = [
   {
     name: 'Lucky Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeLucky.png',
+    'secret-style-icon':
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeLuckyExotic.png',
     tags: ['slime', 'docile', 'special'],
     locations: [
       'the-dry-reef',
@@ -553,6 +593,14 @@ document.querySelectorAll('.filter-btn').forEach((btn) => {
   });
 });
 
+const styleBtn = document.querySelector('.style-btn');
+
+styleBtn.addEventListener('click', () => {
+  styleBtn.classList.toggle('active');
+
+  updateUI();
+});
+
 const updateUI = () => {
   renderCards(filterCards());
 };
@@ -594,29 +642,35 @@ const renderCards = (items) => {
   }
 
   cardContainer.innerHTML = items
-    .map(({ name, icon, tags, locations, ...rest }) => {
+    .map((item) => {
       return `
       <div class="card">
-        <img src="${icon}" alt="${name}" class="card-img-main" />
-        <h2 class="card-name">${name}</h2>
-        <div class="card-tags">
-          ${(tags ?? [])
-            .map(
-              (tag) =>
-                `<span class="tag tag-${tag.toLowerCase()}">${titleCaseSlug(tag)}</span>`
-            )
-            .join('')}
+        <img src="${
+          styleBtn.classList.contains('active') && item['secret-style-icon']
+            ? item['secret-style-icon']
+            : item.icon
+        }" alt="${item.name}" class="card-img-main" />
+          <h2 class="card-name">${item.name}</h2>
+
+          <div class="card-tags">
+            ${(item.tags ?? [])
+              .map(
+                (tag) =>
+                  `<span class="tag tag-${tag.toLowerCase()}">${titleCaseSlug(tag)}</span>`
+              )
+              .join('')}
+          </div>
+
+          <div class="card-location-tags">
+            ${(item.locations ?? [])
+              .map(
+                (location) =>
+                  `<span class="tag tag-${location.toLowerCase()}">${titleCaseSlug(location)}</span>`
+              )
+              .join('')}
+          </div>
         </div>
-        <div class="card-location-tags">
-          ${(locations ?? [])
-            .map(
-              (location) =>
-                `<span class="tag tag-${location.toLowerCase()}">${titleCaseSlug(location)}</span>`
-            )
-            .join('')}
-        </div>
-      </div>
-    `;
+      `;
     })
     .join('');
 };
