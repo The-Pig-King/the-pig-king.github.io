@@ -593,12 +593,26 @@ document.querySelectorAll('.filter-btn').forEach((btn) => {
   });
 });
 
-const styleBtn = document.querySelector('.style-btn');
+const styleBtns = document.querySelectorAll('.style-btn');
 
-styleBtn.addEventListener('click', () => {
-  styleBtn.classList.toggle('active');
+const secretStyleBtn = document.querySelector('.btn-secret-style');
+const sr2StyleBtn = document.querySelector('.btn-sr2-style');
 
-  updateUI();
+styleBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+
+    if (
+      sr2StyleBtn.classList.contains('active') &&
+      secretStyleBtn.classList.contains('active')
+    ) {
+      secretStyleBtn.textContent = 'Radiant';
+    } else {
+      secretStyleBtn.textContent = 'Secret Style';
+    }
+
+    updateUI();
+  });
 });
 
 const updateUI = () => {
@@ -646,7 +660,8 @@ const renderCards = (items) => {
       return `
       <div class="card">
         <img src="${
-          styleBtn.classList.contains('active') && item['secret-style-icon']
+          secretStyleBtn.classList.contains('active') &&
+          item['secret-style-icon']
             ? item['secret-style-icon']
             : item.icon
         }" alt="${item.name}" class="card-img-main" />
