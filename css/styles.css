@@ -364,6 +364,7 @@ header {
   grid-template-rows: auto auto auto 1fr;
   grid-template-areas:
     'card-img-main card-name'
+    'card-img-main card-style-name'
     'card-img-main card-tags'
     'card-spawn-tags card-spawn-tags'
     'details details';

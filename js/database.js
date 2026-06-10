@@ -1,6 +1,7 @@
 const cards = [
   {
     name: 'Pink Slime',
+    'secret-style-name': 'Sparkly',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimePink.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimePinkExotic.png',
@@ -21,6 +22,7 @@ const cards = [
   },
   {
     name: 'Rock Slime',
+    'secret-style-name': 'Heavy Metal',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeRock.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeRockExotic.png',
@@ -39,6 +41,7 @@ const cards = [
   },
   {
     name: 'Tabby Slime',
+    'secret-style-name': 'Tiger',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeTabby.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeTabbyExotic.png',
@@ -57,6 +60,7 @@ const cards = [
   },
   {
     name: 'Phosphor Slime',
+    'secret-style-name': 'Angelic',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimePhosphor.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimePhosphorExotic.png',
@@ -77,6 +81,7 @@ const cards = [
   },
   {
     name: 'Rad Slime',
+    'secret-style-name': 'Radiant',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeRad.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeRadExotic.png',
@@ -85,6 +90,7 @@ const cards = [
   },
   {
     name: 'Boom Slime',
+    'secret-style-name': 'Arcane',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeBoom.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeBoomExotic.png',
@@ -102,6 +108,7 @@ const cards = [
   },
   {
     name: 'Honey Slime',
+    'secret-style-name': 'Royal Jelly',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeHoney.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeHoneyExotic.png',
@@ -114,6 +121,7 @@ const cards = [
   },
   {
     name: 'Puddle Slime',
+    'secret-style-name': 'Lilypad',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimePuddle.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimePuddleExotic.png',
@@ -133,6 +141,7 @@ const cards = [
   },
   {
     name: 'Crystal Slime',
+    'secret-style-name': 'Ruby Red',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeCrystal.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeCrystalExotic.png',
@@ -145,6 +154,7 @@ const cards = [
   },
   {
     name: 'Hunter Slime',
+    'secret-style-name': 'Cheshire',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeHunter.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeHunterExotic.png',
@@ -157,6 +167,7 @@ const cards = [
   },
   {
     name: 'Quantum Slime',
+    'secret-style-name': 'Monochrome',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeQuantum.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeQuantumExotic.png',
@@ -165,6 +176,7 @@ const cards = [
   },
   {
     name: 'Fire Slime',
+    'secret-style-name': 'Devilish',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeFire.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeFireExotic.png',
@@ -177,6 +189,7 @@ const cards = [
   },
   {
     name: 'Dervish Slime',
+    'secret-style-name': 'Nebula',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeDervish.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeDervishExotic.png',
@@ -189,6 +202,7 @@ const cards = [
   },
   {
     name: 'Tangle Slime',
+    'secret-style-name': 'Nightshade',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeTangle.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeTangleExotic.png',
@@ -201,6 +215,7 @@ const cards = [
   },
   {
     name: 'Mosaic Slime',
+    'secret-style-name': 'Shattered',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeMosaic.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeMosaicExotic.png',
@@ -209,6 +224,7 @@ const cards = [
   },
   {
     name: 'Saber Slime',
+    'secret-style-name': 'Pre-Jellasic',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeSaberSketch.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeSaberExotic.png',
@@ -220,6 +236,7 @@ const cards = [
   },
   {
     name: 'Quicksilver Slime',
+    'secret-style-name': 'Boomerang',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeQuicksilver.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeQuicksilverExotic.png',
@@ -228,6 +245,7 @@ const cards = [
   },
   {
     name: 'Glitch Slime',
+    'secret-style-name': 'Retro',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeGlitch.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeGlitchExotic.png',
@@ -236,6 +254,7 @@ const cards = [
   },
   {
     name: 'Gold Slime',
+    'secret-style-name': 'Gilded',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeGold.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeGoldExotic.png',
@@ -255,6 +274,7 @@ const cards = [
   },
   {
     name: 'Lucky Slime',
+    'secret-style-name': 'Guardian',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeLucky.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeLuckyExotic.png',
@@ -803,11 +823,11 @@ const renderCards = (items) => {
 
   cardContainer.innerHTML = items
     .map((item) => {
-      // Select card icon
       const isSecretStyleToggledOn =
         secretStyleBtn.classList.contains('toggledOn');
       const isSr2StyleToggledOn = sr2StyleBtn.classList.contains('toggledOn');
 
+      // Select style icon
       let iconSrc;
       if (
         isSecretStyleToggledOn &&
@@ -823,11 +843,26 @@ const renderCards = (items) => {
         iconSrc = item['icon'];
       }
 
+      // Select style name
+      let styleName;
+      if (
+        isSecretStyleToggledOn &&
+        isSr2StyleToggledOn &&
+        item['radiant-icon']
+      ) {
+        styleName = 'Radiant';
+      } else if (isSecretStyleToggledOn && item['secret-style-name']) {
+        styleName = item['secret-style-name'];
+      } else {
+        styleName = '';
+      }
+
       // Render cards
       return `
       <div class="card">
         <img src="${iconSrc}" alt="${item.name}" class="card-img-main" />
           <h2 class="card-name">${item.name}</h2>
+          <p class="card-style-name">${styleName}</p>
 
           <div class="card-tags">
             ${(item.tags ?? [])
