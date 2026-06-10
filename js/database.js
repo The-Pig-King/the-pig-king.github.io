@@ -680,8 +680,8 @@ modeBtns.forEach((btn) => {
     btn
       .closest('.filter-bar')
       .querySelectorAll('.mode-btn')
-      .forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
+      .forEach((b) => b.classList.remove('toggledOn'));
+    btn.classList.add('toggledOn');
 
     updateUI();
   });
@@ -695,7 +695,7 @@ filterBtns.forEach((btn) => {
     const { filters } = state[group];
 
     filters.has(value) ? filters.delete(value) : filters.add(value);
-    btn.classList.toggle('active');
+    btn.classList.toggle('toggledOn');
 
     updateUI();
   });
@@ -704,7 +704,7 @@ filterBtns.forEach((btn) => {
 const styleBtns = document.querySelectorAll('.style-btn');
 styleBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    btn.classList.toggle('active');
+    btn.classList.toggle('toggledOn');
 
     updateUI();
   });
@@ -714,8 +714,8 @@ const advancedFilterBars = document.querySelectorAll('.advanced-filter-bar');
 
 const advancedFiltersBtn = document.querySelector('.advanced-filters-btn');
 advancedFiltersBtn.addEventListener('click', () => {
-  advancedFiltersBtn.classList.toggle('active');
-  if (advancedFiltersBtn.classList.contains('active')) {
+  advancedFiltersBtn.classList.toggle('toggledOn');
+  if (advancedFiltersBtn.classList.contains('toggledOn')) {
     advancedFilterBars.forEach((advancedFilterBar) => {
       advancedFilterBar.style.display = 'flex';
     });
@@ -730,7 +730,23 @@ advancedFiltersBtn.addEventListener('click', () => {
 
 const resetFiltersBtn = document.querySelector('.reset-filters-btn');
 resetFiltersBtn.addEventListener('click', () => {
-  resetFiltersBtn.classList.toggle('active');
+  // Reset button visuals
+  filterBtns.forEach((btn) => {
+    btn.classList.remove('toggledOn');
+  });
+
+  modeBtns.forEach((btn) => {
+    btn.classList.remove('toggledOn');
+    if (btn.dataset.mode === 'any') {
+      btn.classList.add('toggledOn');
+    }
+  });
+
+  // Reset filters
+  Object.keys(state).forEach((group) => {
+    state[group].filters = new Set();
+    state[group].mode = 'any';
+  });
 
   updateUI();
 });
@@ -788,15 +804,20 @@ const renderCards = (items) => {
   cardContainer.innerHTML = items
     .map((item) => {
       // Select card icon
-      const isSecretStyleActive = secretStyleBtn.classList.contains('active');
-      const isSr2StyleActive = sr2StyleBtn.classList.contains('active');
+      const isSecretStyleToggledOn =
+        secretStyleBtn.classList.contains('toggledOn');
+      const isSr2StyleToggledOn = sr2StyleBtn.classList.contains('toggledOn');
 
       let iconSrc;
-      if (isSecretStyleActive && isSr2StyleActive && item['radiant-icon']) {
+      if (
+        isSecretStyleToggledOn &&
+        isSr2StyleToggledOn &&
+        item['radiant-icon']
+      ) {
         iconSrc = item['radiant-icon'];
-      } else if (isSr2StyleActive && item['sr2-icon']) {
+      } else if (isSr2StyleToggledOn && item['sr2-icon']) {
         iconSrc = item['sr2-icon'];
-      } else if (isSecretStyleActive && item['secret-style-icon']) {
+      } else if (isSecretStyleToggledOn && item['secret-style-icon']) {
         iconSrc = item['secret-style-icon'];
       } else {
         iconSrc = item['icon'];

@@ -246,7 +246,12 @@ header {
   border-color: var(--frame-color);
 }
 
-.btn.active {
+.reset-filters-btn:active {
+  background-color: darkred;
+  border: 0.15rem solid red;
+}
+
+.btn.toggledOn {
   background-color: darkgreen;
   border: 0.15rem solid green;
 }
