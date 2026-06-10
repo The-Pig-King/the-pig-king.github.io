@@ -213,28 +213,24 @@ header {
   gap: 1rem;
 }
 
-.filter-bar,
-.style-bar {
+.filter-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 0.5rem;
-  gap: 0.5rem;
 }
 
-.filter-group,
-.style-group {
+.filter-group {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
+  padding: 0.2em;
   flex-wrap: wrap;
 }
 
-.filter-btn,
-.mode-btn,
-.style-btn {
+.btn {
   background-color: var(--frame-color);
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
   padding: 0.1rem;
@@ -246,9 +242,7 @@ header {
   border-color: var(--frame-color);
 }
 
-.filter-btn.active,
-.mode-btn.active,
-.style-btn.active {
+.btn.active {
   background-color: darkgreen;
   border: 0.15rem solid green;
 }

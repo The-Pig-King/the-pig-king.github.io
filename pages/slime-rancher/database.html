@@ -32,19 +32,27 @@
       <div class="flex-container page-title">
         <h1>Database | Slime Rancher</h1>
       </div>
+      <div class="filter-container">
+        <div class="filter-bar">
+          <div class="filter-group">
+            <button class="btn advanced-filters-btn">Advanced Filters</button>
+            <button class="btn reset-filters-btn">Reset Filters</button>
+          </div>
+        </div>
+      </div>
       <div class="filters-container">
         <div class="filter-bar" data-group="type">
           <div class="filter-group">
             <h2>Type</h2>
-            <button class="mode-btn active" data-mode="any">Any</button>
-            <button class="mode-btn" data-mode="all">All</button>
-            <button class="mode-btn" data-mode="exactly">Exactly</button>
+            <button class="btn mode-btn active" data-mode="any">Any</button>
+            <button class="btn mode-btn" data-mode="all">All</button>
+            <button class="btn mode-btn" data-mode="exactly">Exactly</button>
           </div>
           <div class="filter-group">
-            <button class="filter-btn btn-slime" data-category="slime">
+            <button class="btn filter-btn btn-slime" data-category="slime">
               Slime
             </button>
-            <button class="filter-btn btn-food" data-category="food">
+            <button class="btn filter-btn btn-food" data-category="food">
               Food
             </button>
           </div>
@@ -52,15 +60,15 @@
         <div class="filter-bar" data-group="subtype">
           <div class="filter-group">
             <h2>Subtype</h2>
-            <button class="mode-btn active" data-mode="any">Any</button>
-            <button class="mode-btn" data-mode="all">All</button>
-            <button class="mode-btn" data-mode="exactly">Exactly</button>
+            <button class="btn mode-btn active" data-mode="any">Any</button>
+            <button class="btn mode-btn" data-mode="all">All</button>
+            <button class="btn mode-btn" data-mode="exactly">Exactly</button>
           </div>
           <div class="filter-group">
-            <button class="filter-btn btn-special" data-category="special">
+            <button class="btn filter-btn btn-special" data-category="special">
               Special
             </button>
-            <button class="filter-btn btn-event" data-category="event">
+            <button class="btn filter-btn btn-event" data-category="event">
               Event
             </button>
           </div>
@@ -68,18 +76,18 @@
         <div class="filter-bar" data-group="slime-type">
           <div class="filter-group">
             <h2>Slime Type</h2>
-            <button class="mode-btn active" data-mode="any">Any</button>
-            <button class="mode-btn" data-mode="all">All</button>
-            <button class="mode-btn" data-mode="exactly">Exactly</button>
+            <button class="btn mode-btn active" data-mode="any">Any</button>
+            <button class="btn mode-btn" data-mode="all">All</button>
+            <button class="btn mode-btn" data-mode="exactly">Exactly</button>
           </div>
           <div class="filter-group">
-            <button class="filter-btn btn-docile" data-category="docile">
+            <button class="btn filter-btn btn-docile" data-category="docile">
               Docile
             </button>
-            <button class="filter-btn btn-harmful" data-category="harmful">
+            <button class="btn filter-btn btn-harmful" data-category="harmful">
               Harmful
             </button>
-            <button class="filter-btn btn-hostile" data-category="hostile">
+            <button class="btn filter-btn btn-hostile" data-category="hostile">
               Hostile
             </button>
           </div>
@@ -87,33 +95,33 @@
         <div class="filter-bar" data-group="food-type">
           <div class="filter-group">
             <h2>Food Type</h2>
-            <button class="mode-btn active" data-mode="any">Any</button>
-            <button class="mode-btn" data-mode="all">All</button>
-            <button class="mode-btn" data-mode="exactly">Exactly</button>
+            <button class="btn mode-btn active" data-mode="any">Any</button>
+            <button class="btn mode-btn" data-mode="all">All</button>
+            <button class="btn mode-btn" data-mode="exactly">Exactly</button>
           </div>
           <div class="filter-group">
-            <button class="filter-btn btn-veggie" data-category="veggie">
+            <button class="btn filter-btn btn-veggie" data-category="veggie">
               Veggie
             </button>
-            <button class="filter-btn btn-fruit" data-category="fruit">
+            <button class="btn filter-btn btn-fruit" data-category="fruit">
               Fruit
             </button>
-            <button class="filter-btn btn-meat" data-category="meat">
+            <button class="btn filter-btn btn-meat" data-category="meat">
               Meat
             </button>
             <button
-              class="filter-btn btn-future-meat"
+              class="btn filter-btn btn-future-meat"
               data-category="future-meat"
             >
               Future Meat
             </button>
             <button
-              class="filter-btn btn-electricity"
+              class="btn filter-btn btn-electricity"
               data-category="electricity"
             >
               Electricity
             </button>
-            <button class="filter-btn btn-other" data-category="other">
+            <button class="btn filter-btn btn-other" data-category="other">
               Other
             </button>
           </div>
@@ -121,100 +129,106 @@
         <div class="filter-bar" data-group="spawn">
           <div class="filter-group">
             <h2>Spawn</h2>
-            <button class="mode-btn active" data-mode="any">Any</button>
-            <button class="mode-btn" data-mode="all">All</button>
-            <button class="mode-btn" data-mode="exactly">Exactly</button>
+            <button class="btn mode-btn active" data-mode="any">Any</button>
+            <button class="btn mode-btn" data-mode="all">All</button>
+            <button class="btn mode-btn" data-mode="exactly">Exactly</button>
           </div>
           <div class="filter-group">
-            <button class="filter-btn btn-the-ranch" data-category="the-ranch">
+            <button
+              class="btn filter-btn btn-the-ranch"
+              data-category="the-ranch"
+            >
               The Ranch
             </button>
             <button
-              class="filter-btn btn-ogdens-retreat"
+              class="btn filter-btn btn-ogdens-retreat"
               data-category="ogdens-retreat"
             >
               Ogden's Retreat
             </button>
             <button
-              class="filter-btn btn-mochis-manor"
+              class="btn filter-btn btn-mochis-manor"
               data-category="mochis-manor"
             >
               Mochi's Manor
             </button>
             <button
-              class="filter-btn btn-viktors-workshop"
+              class="btn filter-btn btn-viktors-workshop"
               data-category="viktors-workshop"
             >
               Viktor's Workshop
             </button>
             <button
-              class="filter-btn btn-the-dry-reef"
+              class="btn filter-btn btn-the-dry-reef"
               data-category="the-dry-reef"
             >
               The Dry Reef
             </button>
             <button
-              class="filter-btn btn-the-moss-blanket"
+              class="btn filter-btn btn-the-moss-blanket"
               data-category="the-moss-blanket"
             >
               The Moss Blanket
             </button>
             <button
-              class="filter-btn btn-the-indigo-quarry"
+              class="btn filter-btn btn-the-indigo-quarry"
               data-category="the-indigo-quarry"
             >
               The Indigo Quarry
             </button>
             <button
-              class="filter-btn btn-the-ancient-ruins"
+              class="btn filter-btn btn-the-ancient-ruins"
               data-category="the-ancient-ruins"
             >
               The Ancient Ruins
             </button>
             <button
-              class="filter-btn btn-the-glass-desert"
+              class="btn filter-btn btn-the-glass-desert"
               data-category="the-glass-desert"
             >
               The Glass Desert
             </button>
-            <button class="filter-btn btn-the-wilds" data-category="the-wilds">
+            <button
+              class="btn filter-btn btn-the-wilds"
+              data-category="the-wilds"
+            >
               The Wilds
             </button>
             <button
-              class="filter-btn btn-nimble-valley"
+              class="btn filter-btn btn-nimble-valley"
               data-category="nimble-valley"
             >
               Nimble Valley
             </button>
             <button
-              class="filter-btn btn-the-slimeulation"
+              class="btn filter-btn btn-the-slimeulation"
               data-category="the-slimeulation"
             >
               The Slimeulation
             </button>
             <button
-              class="filter-btn btn-the-slime-sea"
+              class="btn filter-btn btn-the-slime-sea"
               data-category="the-slime-sea"
             >
               The Slime Sea
             </button>
             <button
-              class="filter-btn btn-the-vaults"
+              class="btn filter-btn btn-the-vaults"
               data-category="the-vaults"
             >
               The Vaults
             </button>
           </div>
         </div>
-        <div class="style-bar">
-          <div class="style-group">
+        <div class="filter-bar">
+          <div class="filter-group">
             <h2>Style</h2>
           </div>
-          <div class="style-group">
-            <button class="style-btn btn-secret-style">
+          <div class="filter-group">
+            <button class="btn style-btn btn-secret-style">
               Secret Style / Radiant
             </button>
-            <button class="style-btn btn-sr2-style">Slime Rancher 2</button>
+            <button class="btn style-btn btn-sr2-style">Slime Rancher 2</button>
           </div>
         </div>
       </div>

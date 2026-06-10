@@ -671,7 +671,8 @@ filterBars.forEach(({ dataset: { group } }) => {
   state[group] = { filters: new Set(), mode: 'any' };
 });
 
-document.querySelectorAll('.mode-btn').forEach((btn) => {
+const modeBtns = document.querySelectorAll('.mode-btn');
+modeBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     const group = btn.closest('.filter-bar').dataset.group;
     state[group].mode = btn.dataset.mode;
@@ -686,7 +687,8 @@ document.querySelectorAll('.mode-btn').forEach((btn) => {
   });
 });
 
-document.querySelectorAll('.filter-btn').forEach((btn) => {
+const filterBtns = document.querySelectorAll('.filter-btn');
+filterBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     const group = btn.closest('.filter-bar').dataset.group;
     const value = btn.dataset.category;
@@ -700,16 +702,26 @@ document.querySelectorAll('.filter-btn').forEach((btn) => {
 });
 
 const styleBtns = document.querySelectorAll('.style-btn');
-
-const secretStyleBtn = document.querySelector('.btn-secret-style');
-const sr2StyleBtn = document.querySelector('.btn-sr2-style');
-
 styleBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     btn.classList.toggle('active');
 
     updateUI();
   });
+});
+
+const advancedFiltersBtn = document.querySelector('.advanced-filters-btn');
+advancedFiltersBtn.addEventListener('click', () => {
+  advancedFiltersBtn.classList.toggle('active');
+
+  updateUI();
+});
+
+const resetFiltersBtn = document.querySelector('.reset-filters-btn');
+resetFiltersBtn.addEventListener('click', () => {
+  resetFiltersBtn.classList.toggle('active');
+
+  updateUI();
 });
 
 const updateUI = () => {
@@ -751,6 +763,9 @@ const filterCards = () => {
 };
 
 const cardContainer = document.getElementById('card-container');
+
+const secretStyleBtn = document.querySelector('.btn-secret-style');
+const sr2StyleBtn = document.querySelector('.btn-sr2-style');
 
 const renderCards = (items) => {
   // No card matches
