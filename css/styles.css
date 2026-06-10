@@ -5,6 +5,11 @@
 
   --thepigking-color: #feb6b7;
 
+  --slime-rancher-color: #f285bd;
+  --slime-rancher-2-color: #f088ff;
+
+  --secret-style-color: #4a2988;
+
   --slime-color: #e24164;
   --food-color: #f85d18;
 
@@ -16,29 +21,35 @@
   --hostile-color: black;
 
   --veggie-color: #5b733d;
-  --fruit-color: #561e78;
+  --fruit-color: #83667a;
   --meat-color: #cfb287;
   --future-meat-color: #fbde76;
   --electricity-color: #ff9306;
   --other-color: #1f7fb5;
 
   --the-ranch-color: #825235;
-  --the-wilds-color: #f9bcda;
-  --nimble-valley-color: #264f6a;
-  --the-slimeulation-color: #8aadc8;
+  --ogdens-retreat-color: #d6c086;
+  --mochis-manor-color: #e89a11;
+  --viktors-workshop-color: #4da6d1;
   --the-dry-reef-color: #ef5931;
   --the-moss-blanket-color: #73be27;
   --the-indigo-quarry-color: #9788bf;
   --the-ancient-ruins-color: #faf73e;
   --the-glass-desert-color: #dc9554;
+  --the-wilds-color: #f9bcda;
+  --nimble-valley-color: #264f6a;
+  --the-slimeulation-color: #8aadc8;
+  --the-slime-sea-color: #4cde78;
+
+  --hobson-color: #d67d18;
 }
 
 body.slime-rancher {
-  --main-color: #f285bd;
+  --main-color: var(--slime-rancher-color);
 }
 
 body.slime-rancher-2 {
-  --main-color: #f088ff;
+  --main-color: var(--slime-rancher-2-color);
 }
 
 @font-face {
@@ -185,7 +196,7 @@ header {
   text-decoration: underline;
 }
 
-/* Index */
+/* Navigation Pages */
 
 .main-nav {
   width: 100%;
@@ -228,6 +239,11 @@ header {
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
   padding: 0.1rem;
   color: var(--btn-color, white);
+}
+
+.style-btn {
+  background-color: color-mix(in srgb, var(--frame-color) 70%, white);
+  border-color: var(--frame-color);
 }
 
 .filter-btn.active,
@@ -283,6 +299,15 @@ header {
 .btn-the-ranch {
   --btn-color: var(--the-ranch-color);
 }
+.btn-ogdens-retreat {
+  --btn-color: var(--ogdens-retreat-color);
+}
+.btn-mochis-manor {
+  --btn-color: var(--mochis-manor-color);
+}
+.btn-viktors-workshop {
+  --btn-color: var(--viktors-workshop-color);
+}
 .btn-the-dry-reef {
   --btn-color: var(--the-dry-reef-color);
 }
@@ -304,8 +329,21 @@ header {
 .btn-nimble-valley {
   --btn-color: var(--nimble-valley-color);
 }
-.btn-the-simulation {
+.btn-the-slimeulation {
   --btn-color: var(--the-slimeulation-color);
+}
+.btn-the-slime-sea {
+  --btn-color: var(--the-slime-sea-color);
+}
+.btn-the-vaults {
+  --btn-color: var(--hobson-color);
+}
+
+.btn-secret-style {
+  --btn-color: var(--secret-style-color);
+}
+.btn-sr2-style {
+  --btn-color: var(--slime-rancher-2-color);
 }
 
 .card-container {
@@ -324,7 +362,7 @@ header {
   grid-template-areas:
     'card-img-main card-name'
     'card-img-main card-tags'
-    'card-location-tags card-location-tags'
+    'card-spawn-tags card-spawn-tags'
     'details details';
 
   gap: 0.5rem;
@@ -365,8 +403,8 @@ header {
   margin: 0.1rem;
 }
 
-.card-location-tags {
-  grid-area: card-location-tags;
+.card-spawn-tags {
+  grid-area: card-spawn-tags;
   display: flex;
   flex-wrap: wrap;
 }
@@ -420,15 +458,14 @@ header {
 .tag-the-ranch {
   --tag-color: var(--the-ranch-color);
 }
-.tag-nimble-valley {
-  --tag-color: var(--nimble-valley-color);
+.tag-ogdens-retreat {
+  --tag-color: var(--ogdens-retreat-color);
 }
-.tag-the-wilds {
-  --tag-color: var(--the-wilds-color);
-  --tag-text: black;
+.tag-mochis-manor {
+  --tag-color: var(--mochis-manor-color);
 }
-.tag-the-slimeulation {
-  --tag-color: var(--the-slimeulation-color);
+.tag-viktors-workshop {
+  --tag-color: var(--viktors-workshop-color);
 }
 .tag-the-dry-reef {
   --tag-color: var(--the-dry-reef-color);
@@ -445,6 +482,22 @@ header {
 }
 .tag-the-glass-desert {
   --tag-color: var(--the-glass-desert-color);
+}
+.tag-the-wilds {
+  --tag-color: var(--the-wilds-color);
+  --tag-text: black;
+}
+.tag-nimble-valley {
+  --tag-color: var(--nimble-valley-color);
+}
+.tag-the-slimeulation {
+  --tag-color: var(--the-slimeulation-color);
+}
+.tag-the-slime-sea {
+  --tag-color: var(--the-slime-sea-color);
+}
+.tag-the-vaults {
+  --tag-color: var(--hobson-color);
 }
 
 /* Media Queries */
