@@ -637,6 +637,25 @@ const cards = [
   },
 ];
 
+// Give cards styles values based on icon presence
+cards.forEach((card) => {
+  if (!Object.hasOwn(card, 'styles')) {
+    card['styles'] = [];
+  }
+
+  if (card['secret-style-icon']) {
+    card.styles.push('secret');
+  }
+
+  if (card['sr2-icon']) {
+    card.styles.push('sr2');
+  }
+
+  if (card['radiant-icon']) {
+    card.styles.push('radiant');
+  }
+});
+
 const tagGroups = {
   slime: 'type',
   food: 'type',
@@ -668,6 +687,10 @@ const tagGroups = {
   'the-slimeulation': 'spawn',
   'the-slime-sea': 'spawn',
   'the-vaults': 'spawn',
+
+  secret: 'style',
+  sr2: 'style',
+  radiant: 'style',
 };
 
 const groupTags = (tags = []) => {
@@ -688,7 +711,10 @@ const filterBars = document.querySelectorAll('.filter-bar[data-group]');
 
 const state = {};
 filterBars.forEach(({ dataset: { group } }) => {
-  state[group] = { filters: new Set(), mode: 'any' };
+  state[group] = {
+    filters: new Set(),
+    mode: group === 'style' ? 'no-filter' : 'any',
+  };
 });
 
 const modeBtns = document.querySelectorAll('.mode-btn');
@@ -714,16 +740,14 @@ filterBtns.forEach((btn) => {
     const value = btn.dataset.category;
     const { filters } = state[group];
 
-    filters.has(value) ? filters.delete(value) : filters.add(value);
-    btn.classList.toggle('toggledOn');
+    const values =
+      group === 'style' && value === 'style' ? ['secret', 'radiant'] : [value];
 
-    updateUI();
-  });
-});
+    values.forEach((v) => {
+      console.log('values:', values, 'filters:', [...state.style.filters]);
+      filters.has(v) ? filters.delete(v) : filters.add(v);
+    });
 
-const styleBtns = document.querySelectorAll('.style-btn');
-styleBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
     btn.classList.toggle('toggledOn');
 
     updateUI();
@@ -752,20 +776,33 @@ const resetFiltersBtn = document.querySelector('.reset-filters-btn');
 resetFiltersBtn.addEventListener('click', () => {
   // Reset button visuals
   filterBtns.forEach((btn) => {
-    btn.classList.remove('toggledOn');
+    if (!btn.classList.contains('style-btn')) {
+      btn.classList.remove('toggledOn');
+    }
   });
 
   modeBtns.forEach((btn) => {
     btn.classList.remove('toggledOn');
-    if (btn.dataset.mode === 'any') {
-      btn.classList.add('toggledOn');
+
+    if (btn.closest('.filter-bar').dataset.group !== 'style') {
+      if (btn.dataset.mode === 'any') {
+        btn.classList.add('toggledOn'); // Turn on 'any' btn for non-style groups
+      }
+    } else {
+      if (btn.dataset.mode === 'no-filter') {
+        btn.classList.add('toggledOn'); // Turn on 'no-filter' btn for style group
+      }
     }
   });
 
-  // Reset filters
+  // Reset state
   Object.keys(state).forEach((group) => {
-    state[group].filters = new Set();
-    state[group].mode = 'any';
+    if (group !== 'style') {
+      state[group].filters = new Set();
+      state[group].mode = 'any';
+    } else {
+      state[group].mode = 'no-filter';
+    }
   });
 
   updateUI();
@@ -780,6 +817,7 @@ const matchGroup = (cardValues, filters, mode) => {
 
   const filtersArray = [...filters];
 
+  if (mode === 'no-filter') return true;
   if (mode === 'any') return filtersArray.some((v) => cardValues?.includes(v));
   if (mode === 'all') return filtersArray.every((v) => cardValues?.includes(v));
 
@@ -802,8 +840,14 @@ const matchGroup = (cardValues, filters, mode) => {
 const filterCards = () => {
   return cards.filter((card) =>
     Object.entries(state).every(([group, { filters, mode }]) => {
-      // spawn group uses card.spawns; everything else uses card.tags
-      const cardValues = group === 'spawn' ? card.spawns : card.tags;
+      let cardValues;
+      if (group === 'spawn') {
+        cardValues = card.spawns;
+      } else if (group === 'style') {
+        cardValues = card.styles;
+      } else {
+        cardValues = card.tags;
+      }
       return matchGroup(cardValues, filters, mode);
     })
   );
