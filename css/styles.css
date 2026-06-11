@@ -282,9 +282,76 @@ header {
 
 /* Navigation Pages */
 
-.main-nav {
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'slime-rancher'
+    'slime-rancher-navs'
+    'slime-rancher-2'
+    'slime-rancher-2-navs';
+
+  justify-items: center;
+}
+
+.home-grid img {
   width: 100%;
-  max-width: 50rem;
+  max-width: 30rem;
+  flex-wrap: wrap;
+}
+
+.home-group {
+  margin: 2rem;
+}
+
+.slime-rancher {
+  grid-area: slime-rancher;
+}
+
+.slime-rancher-2 {
+  grid-area: slime-rancher-2;
+}
+
+.slime-rancher-navs,
+.slime-rancher-2-navs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.slime-rancher-navs {
+  grid-area: slime-rancher-navs;
+}
+
+.slime-rancher-2-navs {
+  grid-area: slime-rancher-2-navs;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+
+  border-radius: 1rem;
+}
+
+.nav-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.slime-rancher-navs .nav-item {
+  background-color: var(--slime-rancher-color);
+}
+
+.slime-rancher-2-navs .nav-item {
+  background-color: var(--slime-rancher-2-color);
+}
+
+.nav-icon {
+  width: 3rem;
+  display: block;
 }
 
 /* Database */
@@ -689,6 +756,27 @@ header {
   .last-updated {
     display: block;
     font-size: 1rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'slime-rancher slime-rancher-2'
+      'slime-rancher-navs slime-rancher-2-navs';
+  }
+
+  .slime-rancher-navs,
+  .slime-rancher-2-navs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-icon {
+    width: 6rem;
+  }
+
+  .nav-name {
+    font-size: 2rem;
   }
 }
 
