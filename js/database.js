@@ -827,17 +827,19 @@ const renderCards = (items) => {
         secretStyleBtn.classList.contains('toggledOn');
       const isSr2StyleToggledOn = sr2StyleBtn.classList.contains('toggledOn');
 
+      const hasRadiantAndToggledOn =
+        isSecretStyleToggledOn && isSr2StyleToggledOn && item['radiant-icon'];
+      const hasSR2AndToggledOn = isSr2StyleToggledOn && item['sr2-icon'];
+      const hasSecretStyleAndToggledOn =
+        isSecretStyleToggledOn && item['secret-style-icon'];
+
       // Select style icon
       let iconSrc;
-      if (
-        isSecretStyleToggledOn &&
-        isSr2StyleToggledOn &&
-        item['radiant-icon']
-      ) {
+      if (hasRadiantAndToggledOn) {
         iconSrc = item['radiant-icon'];
-      } else if (isSr2StyleToggledOn && item['sr2-icon']) {
+      } else if (hasSR2AndToggledOn) {
         iconSrc = item['sr2-icon'];
-      } else if (isSecretStyleToggledOn && item['secret-style-icon']) {
+      } else if (hasSecretStyleAndToggledOn) {
         iconSrc = item['secret-style-icon'];
       } else {
         iconSrc = item['icon'];
@@ -845,25 +847,63 @@ const renderCards = (items) => {
 
       // Select style name
       let styleName;
-      if (
-        isSecretStyleToggledOn &&
-        isSr2StyleToggledOn &&
-        item['radiant-icon']
-      ) {
+      if (hasRadiantAndToggledOn) {
         styleName = 'Radiant';
+      } else if (hasSR2AndToggledOn) {
+        styleName = 'Slime Rancher 2';
       } else if (isSecretStyleToggledOn && item['secret-style-name']) {
         styleName = item['secret-style-name'];
       } else {
         styleName = '';
       }
 
+      let radiantVars = '';
+
+      // Random radiant gradient values
+      if (hasRadiantAndToggledOn) {
+        const baseColors = ['#f8f08a', '#f6c6e8', '#d8c9ff', '#8eefff'];
+
+        // Random Order
+        const colors = [...baseColors].sort(() => Math.random() - 0.5);
+
+        // Random stop positions
+        const p1 = 15 + Math.random() * 15; // 15–30
+        const p2 = p1 + 15 + Math.random() * 15; // 30–60
+        const p3 = p2 + 15 + Math.random() * 15; // 60–90
+
+        radiantVars = `
+          --angle:${Math.floor(Math.random() * 360)}deg;
+          --c1:${colors[0]};
+          --c2:${colors[1]};
+          --c3:${colors[2]};
+          --c4:${colors[3]};
+          --p1:${p1}%;
+          --p2:${p2}%;
+          --p3:${p3}%;
+        `;
+      }
+
+      className = '';
+      styleAttr = '';
+
+      if (hasRadiantAndToggledOn) {
+        // Distinguish Slime Rancher 2 "Radiant" styling from Rad Slime "Radiant" styling
+        className = 'style-radiant';
+        styleAttr = radiantVars;
+      } else if (hasSR2AndToggledOn) {
+        className = 'style-sr2';
+      } else {
+        className = styleName
+          ? 'secret-style-' + styleName.toLowerCase().replace(/\s+/g, '-')
+          : '';
+      }
+
       // Render cards
       return `
       <div class="card">
         <img src="${iconSrc}" alt="${item.name}" class="card-img-main" />
-          <h2 class="card-name">${item.name}</h2>
-          <p class="card-style-name">${styleName}</p>
-
+          <h2 class="card-name ${item.name.toLowerCase().replace(/\s+/g, '-')}">${item.name}</h2>
+          <p class="card-style-name ${className}" style="${styleAttr}">${styleName}</p>
           <div class="card-tags">
             ${(item.tags ?? [])
               .map(
