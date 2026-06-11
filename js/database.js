@@ -747,7 +747,6 @@ filterBtns.forEach((btn) => {
       group === 'style' && value === 'style' ? ['secret', 'radiant'] : [value];
 
     values.forEach((v) => {
-      console.log('values:', values, 'filters:', [...state.style.filters]);
       filters.has(v) ? filters.delete(v) : filters.add(v);
     });
 
@@ -811,8 +810,21 @@ resetFiltersBtn.addEventListener('click', () => {
   updateUI();
 });
 
+const updateURL = () => {
+  const params = new URLSearchParams();
+
+  Object.entries(state).forEach(([group, { mode, filters }]) => {
+    if (filters.size > 0) {
+      params.set(group, `${mode}:${[...filters].join(',')}`);
+    }
+  });
+
+  history.replaceState(null, '', `${location.pathname}?${params.toString()}`);
+};
+
 const updateUI = () => {
   renderCards(filterCards());
+  updateURL();
 };
 
 const matchGroup = (cardValues, filters, mode) => {
@@ -973,5 +985,44 @@ const renderCards = (items) => {
     })
     .join('');
 };
+
+const params = new URLSearchParams(location.search);
+
+for (const [group, value] of params.entries()) {
+  const [mode, filterString] = value.split(':');
+
+  // Set state
+  state[group].mode = mode;
+  state[group].filters = new Set(filterString.split(','));
+
+  // Set mode btn toggles
+  modeBtns.forEach((btn) => {
+    btn.classList.remove('toggledOn');
+
+    if (btn.closest('.filter-bar').dataset.group === group) {
+      if (btn.dataset.mode === mode) {
+        btn.classList.add('toggledOn');
+      }
+    }
+  });
+
+  // Set filter btn toggles
+  filterBtns.forEach((btn) => {
+    btn.classList.remove('toggledOn');
+
+    if (btn.closest('.filter-bar').dataset.group === group) {
+      if (state[group].filters.has(btn.dataset.category)) {
+        btn.classList.add('toggledOn');
+      } else if (btn.dataset.category === 'style') {
+        if (
+          state[group].filters.has('secret') ||
+          state[group].filters.has('radiant')
+        ) {
+          btn.classList.add('toggledOn');
+        }
+      }
+    }
+  });
+}
 
 renderCards(filterCards());
