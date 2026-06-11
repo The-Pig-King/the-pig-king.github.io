@@ -412,6 +412,7 @@ const cards = [
       'the-glass-desert',
       'the-wilds',
       'the-slimeulation',
+      'the-vaults',
     ],
   },
   {
@@ -602,6 +603,7 @@ const cards = [
     spawns: [
       'the-ranch',
       'mochis-manor',
+      'viktors-workshop',
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -609,6 +611,7 @@ const cards = [
       'the-glass-desert',
       'the-wilds',
       'the-slimeulation',
+      'the-vaults',
     ],
   },
   {

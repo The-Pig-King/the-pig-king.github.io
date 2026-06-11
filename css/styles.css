@@ -73,6 +73,14 @@ body.slime-rancher-2 {
   --main-color: var(--slime-rancher-2-color);
 }
 
+.slime-rancher-text {
+  color: var(--slime-rancher-color);
+}
+
+.slime-rancher-2-text {
+  color: var(--slime-rancher-2-color);
+}
+
 @font-face {
   font-family: 'Inter';
   src: url('/assets/fonts/InterVariable.woff2') format('woff2');
@@ -203,6 +211,17 @@ header {
 .under-frame {
   display: flex;
   justify-content: center;
+}
+
+.patch-notice {
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+.patch {
+  background-color: var(--background-color);
+  border: 0.1rem solid color-mix(in srgb, var(--background-color) 70%, white);
+  padding: 0.1rem;
 }
 
 .fan-content-policy {

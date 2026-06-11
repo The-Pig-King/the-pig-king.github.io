@@ -4,7 +4,7 @@ const startYear = 2026;
 const currentYear = new Date().getFullYear();
 
 year.textContent =
-  currentYear > startYear ? `${startYear} - ${currentYear}` : startYear;
+  currentYear > startYear ? `${startYear}-${currentYear}` : startYear;
 
 /* input-string to Input String */
 const titleCaseSlug = (str) => {
