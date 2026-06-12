@@ -811,15 +811,18 @@ resetFiltersBtn.addEventListener('click', () => {
 });
 
 const updateURL = () => {
-  const params = new URLSearchParams();
+  const parts = [];
 
+  // Build segments of the url
   Object.entries(state).forEach(([group, { mode, filters }]) => {
     if (filters.size > 0) {
-      params.set(group, `${mode}:${[...filters].join(',')}`);
+      parts.push(`${group}=${mode}:${[...filters].join(',')}`);
     }
   });
 
-  history.replaceState(null, '', `${location.pathname}?${params.toString()}`);
+  // Join the segments together to complete the url
+  const queryString = parts.length > 0 ? `?${parts.join('&')}` : '';
+  history.replaceState(null, '', `${location.pathname}${queryString}`);
 };
 
 const updateUI = () => {

@@ -8,6 +8,8 @@
   --slime-rancher-color: #f285bd;
   --slime-rancher-2-color: #f088ff;
 
+  --database-color: rgb(124, 119, 119);
+
   --secret-style-color: #4a2988;
 
   --slime-color: #e24164;
@@ -334,6 +336,10 @@ header {
   padding: 0 0.5rem;
 
   border-radius: 1rem;
+}
+
+.database {
+  fill: var(--database-color);
 }
 
 .nav-name {
