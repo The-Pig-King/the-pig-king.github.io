@@ -47,26 +47,26 @@
   --the-slime-sea-color: #4cde78;
   --the-vaults-color: #d67d18;
 
-  --secret-style-sparkly-color: #f65c83;
-  --secret-style-heavy-metal-color: #766e87;
-  --secret-style-tiger-color: #f66f01;
-  --secret-style-angelic-color: #d671cd;
-  --secret-style-radiant-color: #a3ee4f;
-  --secret-style-arcane-color: #ff2dae;
-  --secret-style-royal-jelly-color: #8523a6;
-  --secret-style-lilypad-color: #189f88;
-  --secret-style-ruby-red-color: #e1393f;
-  --secret-style-cheshire-color: #ee5583;
-  --secret-style-monochrome-color: #bab8c1;
-  --secret-style-devilish-color: #e867ff;
-  --secret-style-nebula-color: #2c6e90;
-  --secret-style-nightshade-color: #33a8a9;
-  --secret-style-shattered-color: #73eafe;
-  --secret-style-pre-jellasic-color: #b8bd65;
-  --secret-style-boomerang-color: #770000;
-  --secret-style-retro-color: #2668bd;
-  --secret-style-gilded-color: #f09325;
-  --secret-style-guardian-color: #ae2629;
+  --style-sparkly-color: #f65c83;
+  --style-heavy-metal-color: #766e87;
+  --style-tiger-color: #f66f01;
+  --style-angelic-color: #d671cd;
+  --style-radiant-color: #a3ee4f;
+  --style-arcane-color: #ff2dae;
+  --style-royal-jelly-color: #8523a6;
+  --style-lilypad-color: #189f88;
+  --style-ruby-red-color: #e1393f;
+  --style-cheshire-color: #ee5583;
+  --style-monochrome-color: #bab8c1;
+  --style-devilish-color: #e867ff;
+  --style-nebula-color: #2c6e90;
+  --style-nightshade-color: #33a8a9;
+  --style-shattered-color: #73eafe;
+  --style-pre-jellasic-color: #b8bd65;
+  --style-boomerang-color: #770000;
+  --style-retro-color: #2668bd;
+  --style-gilded-color: #f09325;
+  --style-guardian-color: #ae2629;
 
   --border-thin: 0.1rem solid;
 }
@@ -484,74 +484,11 @@ header {
 }
 
 .card-style-name {
+  color: var(--style-color, white);
+
   font-size: 0.8rem;
   font-weight: bold;
   margin-top: -0.5rem;
-}
-
-.card-style-name.secret-style-sparkly {
-  color: var(--secret-style-sparkly-color);
-}
-.card-style-name.secret-style-heavy-metal {
-  color: var(--secret-style-heavy-metal-color);
-}
-.card-style-name.secret-style-tiger {
-  color: var(--secret-style-tiger-color);
-}
-.card-style-name.secret-style-angelic {
-  color: var(--secret-style-angelic-color);
-}
-.card-style-name.secret-style-radiant {
-  color: var(--secret-style-radiant-color);
-}
-.card-style-name.secret-style-arcane {
-  color: var(--secret-style-arcane-color);
-}
-.card-style-name.secret-style-royal-jelly {
-  color: var(--secret-style-royal-jelly-color);
-}
-.card-style-name.secret-style-lilypad {
-  color: var(--secret-style-lilypad-color);
-}
-.card-style-name.secret-style-ruby-red {
-  color: var(--secret-style-ruby-red-color);
-}
-.card-style-name.secret-style-cheshire {
-  color: var(--secret-style-cheshire-color);
-}
-.card-style-name.secret-style-monochrome {
-  color: var(--secret-style-monochrome-color);
-}
-.card-style-name.secret-style-devilish {
-  color: var(--secret-style-devilish-color);
-}
-.card-style-name.secret-style-nebula {
-  color: var(--secret-style-nebula-color);
-}
-.card-style-name.secret-style-nightshade {
-  color: var(--secret-style-nightshade-color);
-}
-.card-style-name.secret-style-shattered {
-  color: var(--secret-style-shattered-color);
-}
-.card-style-name.secret-style-pre-jellasic {
-  color: var(--secret-style-pre-jellasic-color);
-}
-.card-style-name.secret-style-boomerang {
-  color: var(--secret-style-boomerang-color);
-}
-.card-style-name.secret-style-retro {
-  color: var(--secret-style-retro-color);
-}
-.card-style-name.secret-style-gilded {
-  color: var(--secret-style-gilded-color);
-}
-.card-style-name.secret-style-guardian {
-  color: var(--secret-style-guardian-color);
-}
-
-.card-style-name.style-sr2 {
-  color: var(--sr2-color);
 }
 
 .card-style-name.style-radiant {

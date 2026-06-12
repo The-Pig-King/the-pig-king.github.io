@@ -948,35 +948,35 @@ const cardContainer = document.getElementById('card-container');
 const secretStyleBtn = document.querySelector('.btn-secret-style');
 const sr2StyleBtn = document.querySelector('.btn-sr2-style');
 
-const renderCards = (items) => {
+const renderCards = (cards) => {
   // No card matches
-  if (!items || items.length === 0) {
+  if (!cards || cards.length === 0) {
     cardContainer.innerHTML = '';
     return;
   }
 
-  cardContainer.innerHTML = items
-    .map((item) => {
+  cardContainer.innerHTML = cards
+    .map((card) => {
       const isSecretStyleToggledOn =
         secretStyleBtn.classList.contains('toggledOn');
       const isSr2StyleToggledOn = sr2StyleBtn.classList.contains('toggledOn');
 
       const hasRadiantAndToggledOn =
-        isSecretStyleToggledOn && isSr2StyleToggledOn && item['radiant-icon'];
-      const hasSR2AndToggledOn = isSr2StyleToggledOn && item['sr2-icon'];
+        isSecretStyleToggledOn && isSr2StyleToggledOn && card['radiant-icon'];
+      const hasSR2AndToggledOn = isSr2StyleToggledOn && card['sr2-icon'];
       const hasSecretStyleAndToggledOn =
-        isSecretStyleToggledOn && item['secret-style-icon'];
+        isSecretStyleToggledOn && card['secret-style-icon'];
 
       // Select style icon
       let iconSrc;
       if (hasRadiantAndToggledOn) {
-        iconSrc = item['radiant-icon'];
+        iconSrc = card['radiant-icon'];
       } else if (hasSR2AndToggledOn) {
-        iconSrc = item['sr2-icon'];
+        iconSrc = card['sr2-icon'];
       } else if (hasSecretStyleAndToggledOn) {
-        iconSrc = item['secret-style-icon'];
+        iconSrc = card['secret-style-icon'];
       } else {
-        iconSrc = item['icon'];
+        iconSrc = card['icon'];
       }
 
       // Select style name
@@ -985,8 +985,8 @@ const renderCards = (items) => {
         styleName = 'Radiant';
       } else if (hasSR2AndToggledOn) {
         styleName = 'Slime Rancher 2';
-      } else if (isSecretStyleToggledOn && item['secret-style-name']) {
-        styleName = item['secret-style-name'];
+      } else if (isSecretStyleToggledOn && card['secret-style-name']) {
+        styleName = card['secret-style-name'];
       } else {
         styleName = '';
       }
@@ -1017,29 +1017,31 @@ const renderCards = (items) => {
         `;
       }
 
-      className = '';
       styleAttr = '';
+      radiantAttr = '';
+      classAttr = '';
 
       if (hasRadiantAndToggledOn) {
         // Distinguish Slime Rancher 2 "Radiant" styling from Rad Slime "Radiant" styling
-        className = 'style-radiant';
-        styleAttr = radiantVars;
+        radiantAttr = radiantVars;
+        classAttr = 'style-radiant';
       } else if (hasSR2AndToggledOn) {
-        className = 'style-sr2';
-      } else {
-        className = styleName
-          ? 'secret-style-' + styleName.toLowerCase().replace(/\s+/g, '-')
-          : '';
+        styleAttr = '--style-color: var(--sr2-color);';
+      } else if (hasSecretStyleAndToggledOn) {
+        styleAttr =
+          '--style-color: var(--style-' +
+          card['secret-style-name'].toLowerCase().replace(/\s+/g, '-') +
+          '-color);';
       }
 
       // Render cards
       return `
       <div class="card">
-        <img src="${iconSrc}" alt="${item.name}" class="card-img-main" />
-          <h2 class="card-name ${item.name.toLowerCase().replace(/\s+/g, '-')}">${item.name}</h2>
-          <p class="card-style-name ${className}" style="${styleAttr}">${styleName}</p>
+        <img src="${iconSrc}" alt="${card.name}" class="card-img-main" />
+          <h2 class="card-name ${card.name.toLowerCase().replace(/\s+/g, '-')}">${card.name}</h2>
+          <p class="card-style-name ${classAttr}" style="${styleAttr} ${radiantAttr}">${styleName}</p>
           <div class="card-tags">
-            ${(item.tags ?? [])
+            ${(card.tags ?? [])
               .map(
                 (tag) =>
                   `<span class="tag tag-${tag.toLowerCase()}" style="--tag-color: var(--${tag}-color)">${titleCaseSlug(tag)}</span>`
@@ -1048,7 +1050,7 @@ const renderCards = (items) => {
           </div>
 
           <div class="card-spawn-tags">
-            ${(item.spawns ?? [])
+            ${(card.spawns ?? [])
               .map(
                 (spawn) =>
                   `<span class="tag tag-${spawn.toLowerCase()}" style="--tag-color: var(--${spawn}-color)">${titleCaseSlug(spawn)}</span>`
