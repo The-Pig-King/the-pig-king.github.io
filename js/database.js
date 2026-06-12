@@ -970,7 +970,7 @@ const renderCards = (items) => {
             ${(item.tags ?? [])
               .map(
                 (tag) =>
-                  `<span class="tag tag-${tag.toLowerCase()}">${titleCaseSlug(tag)}</span>`
+                  `<span class="tag tag-${tag.toLowerCase()}" style="--tag-color: var(--${tag}-color)">${titleCaseSlug(tag)}</span>`
               )
               .join('')}
           </div>
@@ -979,7 +979,7 @@ const renderCards = (items) => {
             ${(item.spawns ?? [])
               .map(
                 (spawn) =>
-                  `<span class="tag tag-${spawn.toLowerCase()}">${titleCaseSlug(spawn)}</span>`
+                  `<span class="tag tag-${spawn.toLowerCase()}" style="--tag-color: var(--${spawn}-color)">${titleCaseSlug(spawn)}</span>`
               )
               .join('')}
           </div>
@@ -1027,5 +1027,17 @@ for (const [group, value] of params.entries()) {
     }
   });
 }
+
+// Apply filter button colors
+filterBtns.forEach((btn) => {
+  if (btn.dataset.category === 'style') {
+    btn.style.setProperty('--btn-color', `var(--secret-style-color)`);
+  } else {
+    btn.style.setProperty(
+      '--btn-color',
+      `var(--${btn.dataset.category}-color)`
+    );
+  }
+});
 
 renderCards(filterCards());

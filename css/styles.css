@@ -5,8 +5,8 @@
 
   --thepigking-color: #feb6b7;
 
-  --slime-rancher-color: #f285bd;
-  --slime-rancher-2-color: #f088ff;
+  --sr-color: #f285bd;
+  --sr2-color: #f088ff;
 
   --database-color: rgb(124, 119, 119);
 
@@ -42,8 +42,7 @@
   --nimble-valley-color: #264f6a;
   --the-slimeulation-color: #8aadc8;
   --the-slime-sea-color: #4cde78;
-
-  --hobson-color: #d67d18;
+  --the-vaults-color: #d67d18;
 
   --secret-style-sparkly-color: #f65c83;
   --secret-style-heavy-metal-color: #766e87;
@@ -68,19 +67,19 @@
 }
 
 body.slime-rancher {
-  --main-color: var(--slime-rancher-color);
+  --main-color: var(--sr-color);
 }
 
 body.slime-rancher-2 {
-  --main-color: var(--slime-rancher-2-color);
+  --main-color: var(--sr2-color);
 }
 
 .slime-rancher-text {
-  color: var(--slime-rancher-color);
+  color: var(--sr-color);
 }
 
 .slime-rancher-2-text {
-  color: var(--slime-rancher-2-color);
+  color: var(--sr2-color);
 }
 
 @font-face {
@@ -348,11 +347,11 @@ header {
 }
 
 .slime-rancher-navs .nav-item {
-  background-color: var(--slime-rancher-color);
+  background-color: var(--sr-color);
 }
 
 .slime-rancher-2-navs .nav-item {
-  background-color: var(--slime-rancher-2-color);
+  background-color: var(--sr2-color);
 }
 
 .nav-icon {
@@ -411,99 +410,6 @@ header {
 .btn.toggledOn {
   background-color: darkgreen;
   border: 0.15rem solid green;
-}
-
-.btn-slime {
-  --btn-color: var(--slime-color);
-}
-.btn-food {
-  --btn-color: var(--food-color);
-}
-
-.btn-special {
-  --btn-color: var(--special-color);
-}
-.btn-event {
-  --btn-color: var(--event-color);
-}
-
-.btn-docile {
-  --btn-color: var(--docile-color);
-}
-.btn-harmful {
-  --btn-color: var(--harmful-color);
-}
-.btn-hostile {
-  --btn-color: var(--hostile-color);
-}
-
-.btn-veggie {
-  --btn-color: var(--veggie-color);
-}
-.btn-fruit {
-  --btn-color: var(--fruit-color);
-}
-.btn-meat {
-  --btn-color: var(--meat-color);
-}
-.btn-future-meat {
-  --btn-color: var(--future-meat-color);
-}
-.btn-electricity {
-  --btn-color: var(--electricity-color);
-}
-.btn-other {
-  --btn-color: var(--other-color);
-}
-
-.btn-the-ranch {
-  --btn-color: var(--the-ranch-color);
-}
-.btn-ogdens-retreat {
-  --btn-color: var(--ogdens-retreat-color);
-}
-.btn-mochis-manor {
-  --btn-color: var(--mochis-manor-color);
-}
-.btn-viktors-workshop {
-  --btn-color: var(--viktors-workshop-color);
-}
-.btn-the-dry-reef {
-  --btn-color: var(--the-dry-reef-color);
-}
-.btn-the-moss-blanket {
-  --btn-color: var(--the-moss-blanket-color);
-}
-.btn-the-indigo-quarry {
-  --btn-color: var(--the-indigo-quarry-color);
-}
-.btn-the-ancient-ruins {
-  --btn-color: var(--the-ancient-ruins-color);
-}
-.btn-the-glass-desert {
-  --btn-color: var(--the-glass-desert-color);
-}
-.btn-the-wilds {
-  --btn-color: var(--the-wilds-color);
-}
-.btn-nimble-valley {
-  --btn-color: var(--nimble-valley-color);
-}
-.btn-the-slimeulation {
-  --btn-color: var(--the-slimeulation-color);
-}
-.btn-the-slime-sea {
-  --btn-color: var(--the-slime-sea-color);
-}
-.btn-the-vaults {
-  --btn-color: var(--hobson-color);
-}
-
-.btn-secret-style {
-  --btn-color: var(--secret-style-color);
-}
-.btn-sr2-style {
-  --btn-color: var(--slime-rancher-2-color);
 }
 
 .card-container {
@@ -617,7 +523,7 @@ header {
 }
 
 .card-style-name.style-sr2 {
-  color: var(--slime-rancher-2-color);
+  color: var(--sr2-color);
 }
 
 .card-style-name.style-radiant {
@@ -650,101 +556,24 @@ header {
   margin: 0.1rem;
 }
 
+.tag-docile {
+  color: black;
+}
+.tag-special {
+  color: black;
+}
+
+.tag-the-ancient-ruins {
+  color: black;
+}
+.tag-the-wilds {
+  color: black;
+}
+
 .card-spawn-tags {
   grid-area: card-spawn-tags;
   display: flex;
   flex-wrap: wrap;
-}
-
-.tag-slime {
-  --tag-color: var(--slime-color);
-}
-.tag-food {
-  --tag-color: var(--food-color);
-}
-
-.tag-special {
-  --tag-color: var(--special-color);
-  --tag-text: black;
-}
-.tag-event {
-  --tag-color: var(--event-color);
-}
-
-.tag-docile {
-  --tag-color: var(--docile-color);
-  --tag-text: black;
-}
-.tag-harmful {
-  --tag-color: var(--harmful-color);
-}
-.tag-hostile {
-  --tag-color: var(--hostile-color);
-}
-
-.tag-veggie {
-  --tag-color: var(--veggie-color);
-}
-.tag-fruit {
-  --tag-color: var(--fruit-color);
-}
-.tag-meat {
-  --tag-color: var(--meat-color);
-}
-.tag-future-meat {
-  --tag-color: var(--future-meat-color);
-  --tag-text: black;
-}
-.tag-other {
-  --tag-color: var(--other-color);
-}
-.tag-electricity {
-  --tag-color: var(--electricity-color);
-}
-
-.tag-the-ranch {
-  --tag-color: var(--the-ranch-color);
-}
-.tag-ogdens-retreat {
-  --tag-color: var(--ogdens-retreat-color);
-}
-.tag-mochis-manor {
-  --tag-color: var(--mochis-manor-color);
-}
-.tag-viktors-workshop {
-  --tag-color: var(--viktors-workshop-color);
-}
-.tag-the-dry-reef {
-  --tag-color: var(--the-dry-reef-color);
-}
-.tag-the-moss-blanket {
-  --tag-color: var(--the-moss-blanket-color);
-}
-.tag-the-indigo-quarry {
-  --tag-color: var(--the-indigo-quarry-color);
-}
-.tag-the-ancient-ruins {
-  --tag-color: var(--the-ancient-ruins-color);
-  --tag-text: black;
-}
-.tag-the-glass-desert {
-  --tag-color: var(--the-glass-desert-color);
-}
-.tag-the-wilds {
-  --tag-color: var(--the-wilds-color);
-  --tag-text: black;
-}
-.tag-nimble-valley {
-  --tag-color: var(--nimble-valley-color);
-}
-.tag-the-slimeulation {
-  --tag-color: var(--the-slimeulation-color);
-}
-.tag-the-slime-sea {
-  --tag-color: var(--the-slime-sea-color);
-}
-.tag-the-vaults {
-  --tag-color: var(--hobson-color);
 }
 
 /* Media Queries */
