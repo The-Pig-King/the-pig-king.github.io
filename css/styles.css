@@ -10,6 +10,9 @@
 
   --database-color: rgb(124, 119, 119);
 
+  --toggled-on-color: darkgreen;
+  --reset-color: darkred;
+
   --secret-style-color: #4a2988;
 
   --slime-color: #e24164;
@@ -352,9 +355,15 @@ header {
 .slime-rancher-navs .nav-item {
   background-color: var(--sr-color);
 }
+.slime-rancher-navs .nav-item:hover {
+  background-color: color-mix(in srgb, var(--sr-color) 80%, white);
+}
 
 .slime-rancher-2-navs .nav-item {
   background-color: var(--sr2-color);
+}
+.slime-rancher-2-navs .nav-item:hover {
+  background-color: color-mix(in srgb, var(--sr2-color) 80%, white);
 }
 
 .nav-icon {
@@ -414,14 +423,21 @@ header {
   border-color: var(--frame-color);
 }
 
-.reset-filters-btn:active {
-  background-color: darkred;
+.reset-filters-btn:active:hover {
+  background-color: var(--reset-color);
   border: var(--border-thin) red;
 }
 
 .btn.toggledOn {
-  background-color: darkgreen;
+  background-color: var(--toggled-on-color);
   border: var(--border-thin) green;
+}
+
+.btn:hover {
+  background-color: color-mix(in srgb, var(--frame-color) 80%, white);
+}
+.btn.toggledOn:hover {
+  background-color: color-mix(in srgb, var(--toggled-on-color) 90%, white);
 }
 
 .card-container {
