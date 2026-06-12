@@ -64,6 +64,8 @@
   --secret-style-retro-color: #2668bd;
   --secret-style-gilded-color: #f09325;
   --secret-style-guardian-color: #ae2629;
+
+  --border-thin: 0.1rem solid;
 }
 
 body.slime-rancher {
@@ -265,7 +267,8 @@ header {
 
 .patch {
   background-color: var(--background-color);
-  border: 0.1rem solid color-mix(in srgb, var(--background-color) 70%, white);
+  border: var(--border-thin)
+    color-mix(in srgb, var(--background-color) 70%, white);
   padding: 0.1rem;
 }
 
@@ -392,7 +395,7 @@ header {
 
 .btn {
   background-color: var(--frame-color);
-  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
+  border: var(--border-thin) color-mix(in srgb, var(--frame-color) 70%, white);
   padding: 0.1rem;
   color: var(--btn-color, white);
 }
@@ -404,12 +407,12 @@ header {
 
 .reset-filters-btn:active {
   background-color: darkred;
-  border: 0.15rem solid red;
+  border: var(--border-thin) red;
 }
 
 .btn.toggledOn {
   background-color: darkgreen;
-  border: 0.15rem solid green;
+  border: var(--border-thin) green;
 }
 
 .card-container {
@@ -437,7 +440,7 @@ header {
   justify-items: center;
   text-align: center;
 
-  border-radius: 5%;
+  border-radius: 1rem;
   background-color: var(--frame-color);
   padding: 0.5rem;
 
@@ -550,8 +553,9 @@ header {
 .tag {
   background-color: var(--tag-color, black);
   color: var(--tag-text, white);
+  border: var(--border-thin) color-mix(in srgb, var(--tag-color) 70%, white);
   padding: 0.2rem;
-  border-radius: 10%;
+  border-radius: 1rem;
   font-size: 0.75rem;
   margin: 0.1rem;
 }
