@@ -720,6 +720,62 @@ filterBars.forEach(({ dataset: { group } }) => {
   };
 });
 
+const sortSelect = document.getElementById('sort-select');
+sortSelect.addEventListener('change', () => {
+  updateUI();
+});
+
+const sortDirection = document.getElementById('sort-direction-btn');
+sortDirection.addEventListener('click', () => {
+  const mode = sortDirection.dataset.mode;
+  if (mode === 'ascending') {
+    sortDirection.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M278.6 438.6L182.6 534.6C170.1 547.1 149.8 547.1 137.3 534.6L41.3 438.6C28.8 426.1 28.8 405.8 41.3 393.3C53.8 380.8 74.1 380.8 86.6 393.3L128 434.7L128 128C128 110.3 142.3 96 160 96C177.7 96 192 110.3 192 128L192 434.7L233.4 393.3C245.9 380.8 266.2 380.8 278.7 393.3C291.2 405.8 291.2 426.1 278.7 438.6zM352 544C334.3 544 320 529.7 320 512C320 494.3 334.3 480 352 480L384 480C401.7 480 416 494.3 416 512C416 529.7 401.7 544 384 544L352 544zM352 416C334.3 416 320 401.7 320 384C320 366.3 334.3 352 352 352L448 352C465.7 352 480 366.3 480 384C480 401.7 465.7 416 448 416L352 416zM352 288C334.3 288 320 273.7 320 256C320 238.3 334.3 224 352 224L512 224C529.7 224 544 238.3 544 256C544 273.7 529.7 288 512 288L352 288zM352 160C334.3 160 320 145.7 320 128C320 110.3 334.3 96 352 96L576 96C593.7 96 608 110.3 608 128C608 145.7 593.7 160 576 160L352 160z"/></svg>';
+    sortDirection.dataset.mode = 'descending';
+  } else {
+    sortDirection.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M352 96C334.3 96 320 110.3 320 128C320 145.7 334.3 160 352 160L384 160C401.7 160 416 145.7 416 128C416 110.3 401.7 96 384 96L352 96zM352 224C334.3 224 320 238.3 320 256C320 273.7 334.3 288 352 288L448 288C465.7 288 480 273.7 480 256C480 238.3 465.7 224 448 224L352 224zM352 352C334.3 352 320 366.3 320 384C320 401.7 334.3 416 352 416L512 416C529.7 416 544 401.7 544 384C544 366.3 529.7 352 512 352L352 352zM352 480C334.3 480 320 494.3 320 512C320 529.7 334.3 544 352 544L576 544C593.7 544 608 529.7 608 512C608 494.3 593.7 480 576 480L352 480zM182.6 105.4C170.1 92.9 149.8 92.9 137.3 105.4L41.3 201.4C28.8 213.9 28.8 234.2 41.3 246.7C53.8 259.2 74.1 259.2 86.6 246.7L128 205.3L128 512C128 529.7 142.3 544 160 544C177.7 544 192 529.7 192 512L192 205.3L233.4 246.7C245.9 259.2 266.2 259.2 278.7 246.7C291.2 234.2 291.2 213.9 278.7 201.4L182.7 105.4z"/></svg>';
+    sortDirection.dataset.mode = 'ascending';
+  }
+
+  updateUI();
+});
+
+const sortCards = (cards) => {
+  let sortedCards;
+  switch (sortSelect.value) {
+    case 'automatic':
+      sortedCards = cards;
+      break;
+    case 'name':
+      sortedCards = cards.sort((card1, card2) => {
+        return card1.name > card2.name;
+      });
+      break;
+    case 'tag-count':
+      sortedCards = cards.sort((card1, card2) => {
+        return card1.tags.length < card2.tags.length;
+      });
+      break;
+    case 'location-count':
+      sortedCards = cards.sort((card1, card2) => {
+        let card1LocationsLength;
+        let card2LocationsLength;
+        Object.hasOwn(card1, 'spawns')
+          ? (card1LocationsLength = card1.spawns.length)
+          : (card1LocationsLength = 0);
+        Object.hasOwn(card2, 'spawns')
+          ? (card2LocationsLength = card2.spawns.length)
+          : (card2LocationsLength = 0);
+        return card1LocationsLength < card2LocationsLength;
+      });
+      break;
+  }
+  return sortDirection.dataset.mode === 'ascending'
+    ? sortedCards
+    : sortedCards.reverse();
+};
+
 const modeBtns = document.querySelectorAll('.mode-btn');
 modeBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -868,7 +924,7 @@ const updateUI = () => {
   const resultsCount = filteredCards.length;
 
   renderResultsCount(resultsCount);
-  renderCards(filteredCards);
+  renderCards(sortCards(filteredCards));
   updateURL();
 };
 

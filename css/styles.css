@@ -414,7 +414,7 @@ header {
 .btn {
   background-color: var(--frame-color);
   border: var(--border-thin) color-mix(in srgb, var(--frame-color) 70%, white);
-  padding: 0.1rem;
+  padding: 0.2rem;
   color: var(--btn-color, white);
 }
 
@@ -438,6 +438,11 @@ header {
 }
 .btn.toggledOn:hover {
   background-color: color-mix(in srgb, var(--toggled-on-color) 90%, white);
+}
+
+.sort-direction-btn svg {
+  width: 1rem;
+  fill: white;
 }
 
 .card-container {
