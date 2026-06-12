@@ -774,11 +774,19 @@ advancedFiltersBtn.addEventListener('click', () => {
   updateUI();
 });
 
-const resetFiltersBtn = document.querySelector('.reset-filters-btn');
+const resetFiltersBtn = document.getElementById('reset-filters-btn');
 resetFiltersBtn.addEventListener('click', () => {
+  const isNoFilterOn = document
+    .getElementById('no-filter')
+    .classList.contains('toggledOn');
+
   // Reset button visuals
   filterBtns.forEach((btn) => {
-    if (!btn.classList.contains('style-btn')) {
+    if (
+      !btn.classList.contains('style-btn') ||
+      !btn.classList.contains('style-btn') ||
+      !isNoFilterOn
+    ) {
       btn.classList.remove('toggledOn');
     }
   });
@@ -786,20 +794,20 @@ resetFiltersBtn.addEventListener('click', () => {
   modeBtns.forEach((btn) => {
     btn.classList.remove('toggledOn');
 
-    if (btn.closest('.filter-bar').dataset.group !== 'style') {
-      if (btn.dataset.mode === 'any') {
-        btn.classList.add('toggledOn'); // Turn on 'any' btn for non-style groups
-      }
-    } else {
+    if (btn.closest('.filter-bar').dataset.group === 'style') {
       if (btn.dataset.mode === 'no-filter') {
         btn.classList.add('toggledOn'); // Turn on 'no-filter' btn for style group
+      }
+    } else {
+      if (btn.dataset.mode === 'any') {
+        btn.classList.add('toggledOn'); // Turn on 'any' btn for non-style groups
       }
     }
   });
 
   // Reset state
   Object.keys(state).forEach((group) => {
-    if (group !== 'style') {
+    if (group !== 'style' || !isNoFilterOn) {
       state[group].filters = new Set();
       state[group].mode = 'any';
     } else {
@@ -808,6 +816,54 @@ resetFiltersBtn.addEventListener('click', () => {
   });
 
   updateUI();
+});
+
+const resetGroupFiltersBtns = document.querySelectorAll(
+  '.reset-group-filters-btn'
+);
+resetGroupFiltersBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const isNoFilterOn = document
+      .getElementById('no-filter')
+      .classList.contains('toggledOn');
+    const group = btn.closest('.filter-bar').dataset.group;
+
+    if (group === 'style' && state.style.mode === 'no-filter') {
+      return;
+    }
+
+    // Reset button visuals
+    filterBtns.forEach((filterBtn) => {
+      if (filterBtn.closest('.filter-bar').dataset.group === group) {
+        filterBtn.classList.remove('toggledOn');
+      }
+    });
+
+    modeBtns.forEach((modeBtn) => {
+      if (modeBtn.closest('.filter-bar').dataset.group === group) {
+        modeBtn.classList.remove('toggledOn');
+        if (modeBtn.closest('.filter-bar').dataset.group === 'style') {
+          if (modeBtn.dataset.mode === 'no-filter') {
+            modeBtn.classList.add('toggledOn'); // Turn on 'no-filter' btn for style group
+          }
+        } else {
+          if (modeBtn.dataset.mode === 'any') {
+            modeBtn.classList.add('toggledOn'); // Turn on 'any' btn for non-style groups
+          }
+        }
+      }
+    });
+
+    // Reset state
+    if (group !== 'style' || !isNoFilterOn) {
+      state[group].filters = new Set();
+      state[group].mode = 'any';
+    } else {
+      state[group].mode = 'no-filter';
+    }
+
+    updateUI();
+  });
 });
 
 const updateURL = () => {
