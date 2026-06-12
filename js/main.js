@@ -13,3 +13,5 @@ const titleCaseSlug = (str) => {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 };
+
+const originalDocumentTitle = document.title;

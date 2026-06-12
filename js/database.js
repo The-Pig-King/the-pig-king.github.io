@@ -826,8 +826,24 @@ const updateURL = () => {
 };
 
 const updateUI = () => {
-  renderCards(filterCards());
+  const filteredCards = filterCards();
+  const resultsCount = filteredCards.length;
+
+  renderResultsCount(resultsCount);
+  renderCards(filteredCards);
   updateURL();
+};
+
+const renderResultsCount = (resultsCount) => {
+  document.title =
+    originalDocumentTitle
+      .split(' ')
+      .filter((e) => e !== '-' && e !== 'ThePigKing')
+      .join(' ') +
+    ` - ${resultsCount} Results - ` +
+    'ThePigKing';
+
+  document.getElementById('resultsCount').textContent = resultsCount;
 };
 
 const matchGroup = (cardValues, filters, mode) => {
@@ -1040,4 +1056,4 @@ filterBtns.forEach((btn) => {
   }
 });
 
-renderCards(filterCards());
+updateUI();

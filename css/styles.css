@@ -393,6 +393,15 @@ header {
   flex-wrap: wrap;
 }
 
+.top-group {
+  gap: 0.5rem 2rem;
+  background-color: var(--main-color);
+}
+
+.resultsCount {
+  font-weight: bold;
+}
+
 .btn {
   background-color: var(--frame-color);
   border: var(--border-thin) color-mix(in srgb, var(--frame-color) 70%, white);
