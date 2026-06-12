@@ -747,16 +747,19 @@ const sortCards = (cards) => {
     case 'automatic':
       sortedCards = cards;
       break;
+
     case 'name':
       sortedCards = cards.sort((card1, card2) => {
         return card1.name > card2.name;
       });
       break;
+
     case 'tag-count':
       sortedCards = cards.sort((card1, card2) => {
-        return card1.tags.length < card2.tags.length;
+        return card1.tags.length - card2.tags.length;
       });
       break;
+
     case 'location-count':
       sortedCards = cards.sort((card1, card2) => {
         let card1LocationsLength;
@@ -767,7 +770,7 @@ const sortCards = (cards) => {
         Object.hasOwn(card2, 'spawns')
           ? (card2LocationsLength = card2.spawns.length)
           : (card2LocationsLength = 0);
-        return card1LocationsLength < card2LocationsLength;
+        return card1LocationsLength - card2LocationsLength;
       });
       break;
   }
