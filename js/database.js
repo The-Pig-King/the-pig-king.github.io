@@ -300,13 +300,6 @@ const cards = [
     locations: ['the-slimeulation'],
   },
   {
-    name: 'Gordo Slime',
-    icon: '/assets/games/slime-rancher/slimes/regular/iconGordoPedia.png',
-    'sr2-icon':
-      '/assets/games/slime-rancher-2/slimes/regular/iconGordoPedia.png',
-    tags: ['slime', 'special', 'common', 'docile'],
-  },
-  {
     name: 'Party Gordo',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimePartyGordo.png',
     tags: ['slime', 'special', 'event', 'rare', 'docile'],
@@ -340,6 +333,86 @@ const cards = [
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeTarr.png',
     tags: ['slime', 'common', 'hostile'],
     locations: ['the-slimeulation'],
+  },
+  {
+    name: 'Pink Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoPink.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gordos/iconGordoPink.png',
+    tags: ['gordo', 'common', 'docile'],
+  },
+  {
+    name: 'Phosphor Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoPhosphor.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gordos/iconGordoPhosphor.png',
+    tags: ['gordo', 'common', 'docile'],
+  },
+  {
+    name: 'Tabby Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoTabby.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gordos/iconGordoTabby.png',
+    tags: ['gordo', 'common', 'docile'],
+  },
+  {
+    name: 'Honey Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoHoney.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gordos/iconGordoHoney.png',
+    tags: ['gordo', 'common', 'docile'],
+  },
+  {
+    name: 'Hunter Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoHunter.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gordos/iconGordoHunter.png',
+    tags: ['gordo', 'common', 'docile'],
+  },
+  {
+    name: 'Rock Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoRock.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gordos/iconGordoRock.png',
+    tags: ['gordo', 'common', 'harmful'],
+  },
+  {
+    name: 'Rad Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoRad.png',
+    tags: ['gordo', 'common', 'harmful'],
+  },
+  {
+    name: 'Crystal Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoCrystal.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gordos/iconGordoCrystal.png',
+    tags: ['gordo', 'common', 'harmful'],
+  },
+  {
+    name: 'Boom Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoBoom.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gordos/iconGordoBoom.png',
+    tags: ['gordo', 'common', 'harmful'],
+  },
+  {
+    name: 'Quantum Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoQuantum.png',
+    tags: ['gordo', 'common', 'docile'],
+  },
+  {
+    name: 'Dervish Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoDervish.png',
+    'sr2-icon': 'missing-icon',
+    tags: ['gordo', 'common', 'docile'],
+  },
+  {
+    name: 'Tangle Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoTangle.png',
+    'sr2-icon': 'missing-icon',
+    tags: ['gordo', 'common', 'docile'],
+  },
+  {
+    name: 'Mosaic Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoMosaic.png',
+    tags: ['gordo', 'common', 'docile'],
+  },
+  {
+    name: 'Gold Gordo',
+    icon: '/assets/games/slime-rancher/gordos/iconGordoGold.png',
+    tags: ['gordo', 'rare', 'docile'],
   },
   {
     name: 'Carrot',
@@ -1247,6 +1320,7 @@ cards.forEach((card) => {
 
 const tagGroups = {
   slime: 'type',
+  gordo: 'type',
   food: 'type',
   resource: 'type',
   toy: 'type',
