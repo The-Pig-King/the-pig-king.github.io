@@ -56,6 +56,8 @@
   --drill-color: #fd566a;
   --apiary-color: #94ff7a;
   --pump-color: #54b1fa;
+  --range-exchange-color: #000d56;
+  --echo-net-color: #ece1b5;
 
   --style-sparkly-color: #f65c83;
   --style-heavy-metal-color: #766e87;
@@ -550,6 +552,9 @@ header {
   color: black;
 }
 .tag-common {
+  color: black;
+}
+.tag-echo-net {
   color: black;
 }
 

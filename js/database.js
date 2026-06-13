@@ -734,7 +734,31 @@ const cards = [
   {
     name: 'Manifold Cube',
     icon: '/assets/games/slime-rancher/resources/iconCraftManifoldCube.png',
-    tags: ['resource', 'common', 'viktors-workshop'],
+    tags: ['resource', 'common', 'range-exchange'],
+  },
+  {
+    name: 'Red Echo',
+    icon: '/assets/games/slime-rancher/resources/iconEchoRed.png',
+    tags: ['resource', 'common', 'drill', 'apiary', 'pump', 'echo-net'],
+    locations: ['the-ancient-ruins'],
+  },
+  {
+    name: 'Blue Echo',
+    icon: '/assets/games/slime-rancher/resources/iconEchoBlue.png',
+    tags: ['resource', 'common', 'drill', 'apiary', 'pump', 'echo-net'],
+    locations: ['the-ancient-ruins'],
+  },
+  {
+    name: 'Green Echo',
+    icon: '/assets/games/slime-rancher/resources/iconEchoGreen.png',
+    tags: ['resource', 'common', 'drill', 'apiary', 'pump', 'echo-net'],
+    locations: ['the-ancient-ruins'],
+  },
+  {
+    name: 'Gold Echo',
+    icon: '/assets/games/slime-rancher/resources/iconEchoGold.png',
+    tags: ['resource', 'uncommon', 'drill', 'apiary', 'pump', 'echo-net'],
+    locations: ['the-ancient-ruins'],
   },
 ];
 
@@ -797,7 +821,8 @@ const tagGroups = {
   drill: 'resource-type',
   apiary: 'resource-type',
   pump: 'resource-type',
-  'viktors-workshop': 'resource-type',
+  'range-exchange': 'resource-type',
+  'echo-net': 'resource-type',
 
   secret: 'style',
   sr2: 'style',
