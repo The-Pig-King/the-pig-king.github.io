@@ -1142,8 +1142,11 @@ resetFiltersBtns.forEach((btn) => {
 
     // Reset state
     if (isGroupButton) {
+      console.log(isNoFilterOn);
+      group === 'style'
+        ? (state[group].mode = 'no-filter')
+        : (state[group].mode = 'any');
       state[group].filters = new Set();
-      state[group].mode = 'any';
     } else {
       Object.keys(state).forEach((group) => {
         if (group === 'style' && isNoFilterOn) {
