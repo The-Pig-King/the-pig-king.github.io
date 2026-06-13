@@ -232,7 +232,7 @@ const cards = [
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeSaber.png',
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeSaber.png',
-    tags: ['slime', 'unobtainable', 'docile'],
+    tags: ['slime', 'extinct', 'docile'],
   },
   {
     name: 'Quicksilver Slime',
@@ -767,7 +767,7 @@ const tagGroups = {
   common: 'rarity',
   uncommon: 'rarity',
   rare: 'rarity',
-  unobtainable: 'rarity',
+  extinct: 'rarity',
 
   docile: 'slime-type',
   harmful: 'slime-type',
