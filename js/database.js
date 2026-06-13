@@ -1248,9 +1248,14 @@ cards.forEach((card) => {
 const tagGroups = {
   slime: 'type',
   food: 'type',
+  resource: 'type',
+  toy: 'type',
+  chime: 'type',
+  ornament: 'type',
 
   special: 'subtype',
   event: 'subtype',
+  dlc: 'subtype',
 
   common: 'rarity',
   uncommon: 'rarity',
@@ -1267,6 +1272,12 @@ const tagGroups = {
   'future-meat': 'food-type',
   electricity: 'food-type',
 
+  drill: 'resource-type',
+  apiary: 'resource-type',
+  pump: 'resource-type',
+  'range-exchange': 'resource-type',
+  'echo-net': 'resource-type',
+
   'the-ranch': 'location',
   'ogdens-retreat': 'location',
   'mochis-manor': 'location',
@@ -1281,12 +1292,6 @@ const tagGroups = {
   'the-slimeulation': 'location',
   'the-slime-sea': 'location',
   'the-vaults': 'location',
-
-  drill: 'resource-type',
-  apiary: 'resource-type',
-  pump: 'resource-type',
-  'range-exchange': 'resource-type',
-  'echo-net': 'resource-type',
 
   secret: 'style',
   sr2: 'style',
@@ -1340,40 +1345,40 @@ sortDirection.addEventListener('click', () => {
 
 const sortCards = (cards) => {
   let sortedCards;
+  const direction = sortDirection.dataset.mode;
+
   switch (sortSelect.value) {
     case 'automatic':
-      sortedCards = cards;
-      break;
+      return direction === 'ascending' ? cards : cards.reverse();
 
     case 'name':
-      sortedCards = cards.sort((card1, card2) => {
-        return card1.name > card2.name;
+      sortedCards = cards.sort((a, b) => {
+        return a.name > b.name;
       });
-      break;
+      return direction === 'ascending' ? sortedCards : sortedCards.reverse();
 
     case 'tag-count':
-      sortedCards = cards.sort((card1, card2) => {
-        return card1.tags.length - card2.tags.length;
+      return cards.sort((a, b) => {
+        return direction === 'ascending'
+          ? a.tags.length - b.tags.length
+          : b.tags.length - a.tags.length;
       });
-      break;
 
     case 'location-count':
-      sortedCards = cards.sort((card1, card2) => {
-        let card1LocationsLength;
-        let card2LocationsLength;
-        Object.hasOwn(card1, 'locations')
-          ? (card1LocationsLength = card1.locations.length)
-          : (card1LocationsLength = 0);
-        Object.hasOwn(card2, 'locations')
-          ? (card2LocationsLength = card2.locations.length)
-          : (card2LocationsLength = 0);
-        return card1LocationsLength - card2LocationsLength;
+      return cards.sort((a, b) => {
+        let aLength;
+        let bLength;
+        Object.hasOwn(a, 'locations')
+          ? (aLength = a.locations.length)
+          : (aLength = 0);
+        Object.hasOwn(b, 'locations')
+          ? (bLength = b.locations.length)
+          : (bLength = 0);
+        return direction === 'ascending'
+          ? aLength - bLength
+          : bLength - aLength;
       });
-      break;
   }
-  return sortDirection.dataset.mode === 'ascending'
-    ? sortedCards
-    : sortedCards.reverse();
 };
 
 const modeBtns = document.querySelectorAll('.mode-btn');
