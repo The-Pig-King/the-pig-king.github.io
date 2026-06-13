@@ -10,7 +10,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimePink.png',
     tags: ['slime', 'docile'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -31,7 +31,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeRock.png',
     tags: ['slime', 'harmful'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-indigo-quarry',
       'the-ancient-ruins',
@@ -50,7 +50,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeTabby.png',
     tags: ['slime', 'docile'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-ancient-ruins',
@@ -69,7 +69,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimePhosphor.png',
     tags: ['slime', 'docile'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -86,7 +86,7 @@ const cards = [
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeRadExotic.png',
     tags: ['slime', 'harmful'],
-    spawns: ['the-indigo-quarry', 'the-slimeulation'],
+    locations: ['the-indigo-quarry', 'the-slimeulation'],
   },
   {
     name: 'Boom Slime',
@@ -99,7 +99,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeBoom.png',
     tags: ['slime', 'harmful'],
-    spawns: [
+    locations: [
       'the-moss-blanket',
       'the-indigo-quarry',
       'the-glass-desert',
@@ -117,7 +117,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimehoney.png',
     tags: ['slime', 'docile'],
-    spawns: ['the-moss-blanket', 'the-slimeulation'],
+    locations: ['the-moss-blanket', 'the-slimeulation'],
   },
   {
     name: 'Puddle Slime',
@@ -130,7 +130,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimePuddle.png',
     tags: ['slime', 'docile'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -150,7 +150,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeCrystal.png',
     tags: ['slime', 'harmful'],
-    spawns: ['the-indigo-quarry'],
+    locations: ['the-indigo-quarry'],
   },
   {
     name: 'Hunter Slime',
@@ -163,7 +163,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeHunter.png',
     tags: ['slime', 'docile'],
-    spawns: ['the-moss-blanket', 'the-glass-desert', 'the-slimeulation'],
+    locations: ['the-moss-blanket', 'the-glass-desert', 'the-slimeulation'],
   },
   {
     name: 'Quantum Slime',
@@ -172,7 +172,7 @@ const cards = [
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeQuantumExotic.png',
     tags: ['slime', 'docile'],
-    spawns: ['the-ancient-ruins', 'the-glass-desert'],
+    locations: ['the-ancient-ruins', 'the-glass-desert'],
   },
   {
     name: 'Fire Slime',
@@ -185,7 +185,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeFire.png',
     tags: ['slime', 'harmful'],
-    spawns: ['the-glass-desert'],
+    locations: ['the-glass-desert'],
   },
   {
     name: 'Dervish Slime',
@@ -198,7 +198,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeDervish.png',
     tags: ['slime', 'docile'],
-    spawns: ['the-glass-desert'],
+    locations: ['the-glass-desert'],
   },
   {
     name: 'Tangle Slime',
@@ -211,7 +211,7 @@ const cards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeTangle.png',
     tags: ['slime', 'docile'],
-    spawns: ['the-glass-desert'],
+    locations: ['the-glass-desert'],
   },
   {
     name: 'Mosaic Slime',
@@ -220,7 +220,7 @@ const cards = [
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeMosaicExotic.png',
     tags: ['slime', 'harmful'],
-    spawns: ['the-glass-desert'],
+    locations: ['the-glass-desert'],
   },
   {
     name: 'Saber Slime',
@@ -241,7 +241,7 @@ const cards = [
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeQuicksilverExotic.png',
     tags: ['slime', 'docile', 'harmful', 'special'],
-    spawns: ['nimble-valley'],
+    locations: ['nimble-valley'],
   },
   {
     name: 'Glitch Slime',
@@ -250,7 +250,7 @@ const cards = [
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeGlitchExotic.png',
     tags: ['slime', 'docile', 'special'],
-    spawns: ['the-slimeulation'],
+    locations: ['the-slimeulation'],
   },
   {
     name: 'Gold Slime',
@@ -261,7 +261,7 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeGold.png',
     tags: ['slime', 'docile', 'special'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -281,7 +281,7 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeLucky.png',
     tags: ['slime', 'docile', 'special'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -297,7 +297,7 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/slimes/regular/iconLargoPedia.png',
     tags: ['slime', 'docile', 'harmful'],
-    spawns: ['the-slimeulation'],
+    locations: ['the-slimeulation'],
   },
   {
     name: 'Gordo Slime',
@@ -322,7 +322,7 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/slimes/regular/iconFeralPedia.png',
     tags: ['slime', 'hostile'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -339,14 +339,14 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeTarr.png',
     tags: ['slime', 'hostile'],
-    spawns: ['the-slimeulation'],
+    locations: ['the-slimeulation'],
   },
   {
     name: 'Carrot',
     icon: '/assets/games/slime-rancher/food//iconVeggieCarrot.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconVeggieCarrot.png',
     tags: ['food', 'veggie'],
-    spawns: [
+    locations: [
       'the-ranch',
       'ogdens-retreat',
       'the-dry-reef',
@@ -362,14 +362,14 @@ const cards = [
     name: 'Oca Oca',
     icon: '/assets/games/slime-rancher/food//iconVeggieOcaOca.png',
     tags: ['food', 'veggie'],
-    spawns: ['the-indigo-quarry', 'the-slimeulation'],
+    locations: ['the-indigo-quarry', 'the-slimeulation'],
   },
   {
     name: 'Heart Beet',
     icon: '/assets/games/slime-rancher/food//iconVeggieBeet.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconVeggieBeet.png',
     tags: ['food', 'veggie'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-indigo-quarry',
       'the-ancient-ruins',
@@ -382,27 +382,27 @@ const cards = [
     name: 'Silver Parsnip',
     icon: '/assets/games/slime-rancher/food//iconVeggieParsnip.png',
     tags: ['food', 'veggie'],
-    spawns: ['the-glass-desert'],
+    locations: ['the-glass-desert'],
   },
   {
     name: 'Odd Onion',
     icon: '/assets/games/slime-rancher/food//iconVeggieOnion.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconVeggieOnion.png',
     tags: ['food', 'veggie'],
-    spawns: ['the-indigo-quarry', 'the-slimeulation'],
+    locations: ['the-indigo-quarry', 'the-slimeulation'],
   },
   {
     name: 'Gilded Ginger',
     icon: '/assets/games/slime-rancher/food//iconVeggieGinger.png',
     tags: ['food', 'veggie'],
-    spawns: ['the-glass-desert'],
+    locations: ['the-glass-desert'],
   },
   {
     name: 'Pogo Fruit',
     icon: '/assets/games/slime-rancher/food//iconFruitPogo.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconFruitPogo.png',
     tags: ['food', 'fruit'],
-    spawns: [
+    locations: [
       'the-ranch',
       'ogdens-retreat',
       'the-dry-reef',
@@ -420,14 +420,14 @@ const cards = [
     icon: '/assets/games/slime-rancher/food//iconFruitMango.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconFruitMango.png',
     tags: ['food', 'fruit'],
-    spawns: ['the-moss-blanket', 'the-slimeulation'],
+    locations: ['the-moss-blanket', 'the-slimeulation'],
   },
   {
     name: 'Cuberry',
     icon: '/assets/games/slime-rancher/food//iconFruitCuberry.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconFruitCuberry.png',
     tags: ['food', 'fruit'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-ancient-ruins',
@@ -441,27 +441,27 @@ const cards = [
     name: 'Phase Lemon',
     icon: '/assets/games/slime-rancher/food//iconFruitLemon.png',
     tags: ['food', 'fruit'],
-    spawns: ['viktors-workshop', 'the-ancient-ruins'],
+    locations: ['viktors-workshop', 'the-ancient-ruins'],
   },
   {
     name: 'Prickle Pear',
     icon: '/assets/games/slime-rancher/food//iconFruitPear.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconFruitPear.png',
     tags: ['food', 'fruit'],
-    spawns: ['the-glass-desert'],
+    locations: ['the-glass-desert'],
   },
   {
     name: 'Kookadoba',
     icon: '/assets/games/slime-rancher/food//iconFruitKookadoba.png',
     tags: ['food', 'fruit'],
-    spawns: ['the-wilds'],
+    locations: ['the-wilds'],
   },
   {
     name: 'Chickadoo',
     icon: '/assets/games/slime-rancher/food//iconBirdChick.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdChick.png',
     tags: ['food', 'future-meat'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -476,7 +476,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/food//iconBirdHen.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHen.png',
     tags: ['food', 'meat'],
-    spawns: [
+    locations: [
       'the-ranch',
       'the-dry-reef',
       'the-moss-blanket',
@@ -492,7 +492,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/food//iconBirdRooster.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdRooster.png',
     tags: ['food', 'meat'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -507,7 +507,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/food//iconBirdChickStony.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdChickStony.png',
     tags: ['food', 'future-meat'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -522,7 +522,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/food//iconBirdHenStony.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHenStony.png',
     tags: ['food', 'meat'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -536,7 +536,7 @@ const cards = [
     name: 'Briar Chickadoo',
     icon: '/assets/games/slime-rancher/food//iconBirdChickBriar.png',
     tags: ['food', 'future-meat'],
-    spawns: ['the-moss-blanket', 'the-slimeulation'],
+    locations: ['the-moss-blanket', 'the-slimeulation'],
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdChickBriar.png',
   },
   {
@@ -544,28 +544,28 @@ const cards = [
     icon: '/assets/games/slime-rancher/food//iconBirdHenBriar.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHenBriar.png',
     tags: ['food', 'meat'],
-    spawns: ['the-moss-blanket', 'the-slimeulation'],
+    locations: ['the-moss-blanket', 'the-slimeulation'],
   },
   {
     name: 'Painted Chickadoo',
     icon: '/assets/games/slime-rancher/food//iconBirdChickPainted.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdChickPainted.png',
     tags: ['food', 'future-meat'],
-    spawns: ['the-glass-desert'],
+    locations: ['the-glass-desert'],
   },
   {
     name: 'Painted Hen',
     icon: '/assets/games/slime-rancher/food//iconBirdHenPainted.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHenPainted.png',
     tags: ['food', 'meat'],
-    spawns: ['the-glass-desert'],
+    locations: ['the-glass-desert'],
   },
   {
     name: 'Elder Hen',
     icon: '/assets/games/slime-rancher/food//iconBirdHenElder.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHenElder.png',
     tags: ['food', 'meat'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -580,7 +580,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/food//iconBirdRoosterElder.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdRoosterElder.png',
     tags: ['food', 'meat'],
-    spawns: [
+    locations: [
       'the-dry-reef',
       'the-moss-blanket',
       'the-indigo-quarry',
@@ -600,7 +600,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/food//iconWater.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconWater.png',
     tags: ['food', 'other'],
-    spawns: [
+    locations: [
       'the-ranch',
       'mochis-manor',
       'viktors-workshop',
@@ -622,21 +622,119 @@ const cards = [
   },
   {
     name: 'Spark Shot',
-    icon: '/assets/games/slime-rancher/food//iconValleyAmmo1.png',
+    icon: '/assets/games/slime-rancher/food/iconValleyAmmo1.png',
     tags: ['food', 'electricity'],
-    spawns: ['nimble-valley'],
+    locations: ['nimble-valley'],
   },
   {
     name: 'Thunderclap',
-    icon: '/assets/games/slime-rancher/food//iconValleyAmmo2.png',
+    icon: '/assets/games/slime-rancher/food/iconValleyAmmo2.png',
     tags: ['food', 'electricity'],
-    spawns: ['nimble-valley'],
+    locations: ['nimble-valley'],
   },
   {
     name: 'Static Clinger',
-    icon: '/assets/games/slime-rancher/food//iconValleyAmmo4.png',
+    icon: '/assets/games/slime-rancher/food/iconValleyAmmo4.png',
     tags: ['food', 'electricity'],
-    spawns: ['nimble-valley'],
+    locations: ['nimble-valley'],
+  },
+  {
+    name: 'Jellystone',
+    icon: '/assets/games/slime-rancher/resources/iconCraftJellyStone.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/resources/iconCraftJellyStone.png',
+    tags: ['resource', 'drill'],
+  },
+  {
+    name: 'Slime Fossil',
+    icon: '/assets/games/slime-rancher/resources/iconCraftSlimeFossil.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/resources/iconCraftSlimeFossil.png',
+    tags: ['resource', 'drill'],
+  },
+  {
+    name: 'Strange Diamond',
+    icon: '/assets/games/slime-rancher/resources/iconCraftStrangeDiamond.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/resources/iconCraftStrangeDiamond.png',
+    tags: ['resource', 'drill'],
+  },
+  {
+    name: 'Indigonium',
+    icon: '/assets/games/slime-rancher/resources/iconCraftIndigonium.png',
+    tags: ['resource', 'drill'],
+  },
+  {
+    name: 'Glass Shard',
+    icon: '/assets/games/slime-rancher/resources/iconCraftGlassShard.png',
+    tags: ['resource', 'drill'],
+  },
+  {
+    name: 'Buzz Wax',
+    icon: '/assets/games/slime-rancher/resources/iconCraftBuzzWax.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/resources/iconCraftBuzzWax.png',
+    tags: ['resource', 'apiary'],
+  },
+  {
+    name: 'Hexacomb',
+    icon: '/assets/games/slime-rancher/resources/iconCraftHexacomb.png',
+    tags: ['resource', 'apiary'],
+  },
+  {
+    name: 'Royal Jelly',
+    icon: '/assets/games/slime-rancher/resources/iconCraftRoyalJelly.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/resources/iconCraftRoyalJelly.png',
+    tags: ['resource', 'apiary'],
+  },
+  {
+    name: 'Wild Honey',
+    icon: '/assets/games/slime-rancher/resources/iconCraftWildHoney.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/resources/iconCraftWildHoney.png',
+    tags: ['resource', 'apiary'],
+  },
+  {
+    name: 'Pepper Jam',
+    icon: '/assets/games/slime-rancher/resources/iconCraftPepperJam.png',
+    tags: ['resource', 'apiary'],
+  },
+  {
+    name: 'Primordy Oil',
+    icon: '/assets/games/slime-rancher/resources/iconCraftPrimordyOil.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/resources/iconCraftPrimordyOil.png',
+    tags: ['resource', 'pump'],
+  },
+  {
+    name: 'Spiral Steam',
+    icon: '/assets/games/slime-rancher/resources/iconCraftSpiralSteam.png',
+    tags: ['resource', 'pump'],
+  },
+  {
+    name: 'Lava Dust',
+    icon: '/assets/games/slime-rancher/resources/iconCraftLavaDust.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/resources/iconCraftLavaDust.png',
+    tags: ['resource', 'pump'],
+  },
+  {
+    name: 'Deep Brine',
+    icon: '/assets/games/slime-rancher/resources/iconCraftDeepBrine.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/resources/iconCraftDeepBrine.png',
+    tags: ['resource', 'pump'],
+  },
+  {
+    name: 'Silky Sand',
+    icon: '/assets/games/slime-rancher/resources/iconCraftSilkySand.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/resources/iconCraftSilkySand.png',
+    tags: ['resource', 'pump'],
+  },
+  {
+    name: 'Manifold Cube',
+    icon: '/assets/games/slime-rancher/resources/iconCraftManifoldCube.png',
+    tags: ['resource', 'viktors-workshop'],
   },
 ];
 
@@ -676,20 +774,25 @@ const tagGroups = {
   'future-meat': 'food-type',
   electricity: 'food-type',
 
-  'the-ranch': 'spawn',
-  'ogdens-retreat': 'spawn',
-  'mochis-manor': 'spawn',
-  'viktors-workshop': 'spawn',
-  'the-dry-reef': 'spawn',
-  'the-moss-blanket': 'spawn',
-  'the-indigo-quarry': 'spawn',
-  'the-ancient-ruins': 'spawn',
-  'the-glass-desert': 'spawn',
-  'the-wilds': 'spawn',
-  'nimble-valley': 'spawn',
-  'the-slimeulation': 'spawn',
-  'the-slime-sea': 'spawn',
-  'the-vaults': 'spawn',
+  'the-ranch': 'location',
+  'ogdens-retreat': 'location',
+  'mochis-manor': 'location',
+  'viktors-workshop': 'location',
+  'the-dry-reef': 'location',
+  'the-moss-blanket': 'location',
+  'the-indigo-quarry': 'location',
+  'the-ancient-ruins': 'location',
+  'the-glass-desert': 'location',
+  'the-wilds': 'location',
+  'nimble-valley': 'location',
+  'the-slimeulation': 'location',
+  'the-slime-sea': 'location',
+  'the-vaults': 'location',
+
+  drill: 'resource-type',
+  apiary: 'resource-type',
+  pump: 'resource-type',
+  'viktors-workshop': 'resource-type',
 
   secret: 'style',
   sr2: 'style',
@@ -764,11 +867,11 @@ const sortCards = (cards) => {
       sortedCards = cards.sort((card1, card2) => {
         let card1LocationsLength;
         let card2LocationsLength;
-        Object.hasOwn(card1, 'spawns')
-          ? (card1LocationsLength = card1.spawns.length)
+        Object.hasOwn(card1, 'locations')
+          ? (card1LocationsLength = card1.locations.length)
           : (card1LocationsLength = 0);
-        Object.hasOwn(card2, 'spawns')
-          ? (card2LocationsLength = card2.spawns.length)
+        Object.hasOwn(card2, 'locations')
+          ? (card2LocationsLength = card2.locations.length)
           : (card2LocationsLength = 0);
         return card1LocationsLength - card2LocationsLength;
       });
@@ -972,8 +1075,8 @@ const filterCards = () => {
   return cards.filter((card) =>
     Object.entries(state).every(([group, { filters, mode }]) => {
       let cardValues;
-      if (group === 'spawn') {
-        cardValues = card.spawns;
+      if (group === 'location') {
+        cardValues = card.locations;
       } else if (group === 'style') {
         cardValues = card.styles;
       } else {
@@ -1090,11 +1193,11 @@ const renderCards = (cards) => {
               .join('')}
           </div>
 
-          <div class="card-spawn-tags">
-            ${(card.spawns ?? [])
+          <div class="card-location-tags">
+            ${(card.locations ?? [])
               .map(
-                (spawn) =>
-                  `<span class="tag tag-${spawn.toLowerCase()}" style="--tag-color: var(--${spawn}-color)">${titleCaseSlug(spawn)}</span>`
+                (location) =>
+                  `<span class="tag tag-${location.toLowerCase()}" style="--tag-color: var(--${location}-color)">${titleCaseSlug(location)}</span>`
               )
               .join('')}
           </div>

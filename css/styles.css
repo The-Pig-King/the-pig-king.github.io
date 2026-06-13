@@ -17,6 +17,7 @@
 
   --slime-color: #e24164;
   --food-color: #f85d18;
+  --resource-color: #515ac2;
 
   --special-color: yellow;
   --event-color: #ffacca;
@@ -35,7 +36,7 @@
   --the-ranch-color: #825235;
   --ogdens-retreat-color: #d6c086;
   --mochis-manor-color: #e89a11;
-  --viktors-workshop-color: #4da6d1;
+  --viktors-workshop-color: #34edcc;
   --the-dry-reef-color: #ef5931;
   --the-moss-blanket-color: #73be27;
   --the-indigo-quarry-color: #9788bf;
@@ -46,6 +47,10 @@
   --the-slimeulation-color: #8aadc8;
   --the-slime-sea-color: #4cde78;
   --the-vaults-color: #d67d18;
+
+  --drill-color: #fd566a;
+  --apiary-color: #94ff7a;
+  --pump-color: #54b1fa;
 
   --style-sparkly-color: #f65c83;
   --style-heavy-metal-color: #766e87;
@@ -462,7 +467,7 @@ header {
     'card-img-main card-name'
     'card-img-main card-style-name'
     'card-img-main card-tags'
-    'card-spawn-tags card-spawn-tags'
+    'card-location-tags card-location-tags'
     'details details';
 
   gap: 0.5rem;
@@ -541,8 +546,8 @@ header {
   color: black;
 }
 
-.card-spawn-tags {
-  grid-area: card-spawn-tags;
+.card-location-tags {
+  grid-area: card-location-tags;
   display: flex;
   flex-wrap: wrap;
 }
