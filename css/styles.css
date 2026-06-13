@@ -20,6 +20,7 @@
   --resource-color: #515ac2;
   --toy-color: #ffdb48;
   --chime-color: #c3e7ff;
+  --ornament-color: #5ca876;
 
   --special-color: yellow;
   --event-color: #ffacca;
@@ -28,7 +29,7 @@
   --common-color: white;
   --uncommon-color: green;
   --rare-color: purple;
-  --extinct-color: black;
+  --unobtainable-color: black;
 
   --docile-color: lightgreen;
   --harmful-color: red;

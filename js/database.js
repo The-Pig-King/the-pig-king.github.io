@@ -232,7 +232,7 @@ const cards = [
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeSaber.png',
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeSaber.png',
-    tags: ['slime', 'extinct', 'docile'],
+    tags: ['slime', 'unobtainable', 'docile'],
   },
   {
     name: 'Quicksilver Slime',
@@ -944,6 +944,286 @@ const cards = [
     icon: '/assets/games/slime-rancher/chimes/iconEchoNote13.png',
     tags: ['chime', 'event', 'common'],
   },
+  {
+    name: 'Pink Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentPink.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Phosphor Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentPhos.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Tabby Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentTabby.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Boom Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentBoom.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Rad Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentRad.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Honey Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentHoney.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Quantum Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentQuantum.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Hunter Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentHunter.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Puddle Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentPuddle.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Dervish Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentDervish.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Tangle Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentTangle.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Mosaic Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentMosaic.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Tarr Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentTarr.png',
+    tags: ['ornament', 'event', 'rare'],
+  },
+  {
+    name: 'Lucky Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentLucky.png',
+    tags: ['ornament', 'event', 'rare'],
+  },
+  {
+    name: 'Gold Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentGold.png',
+    tags: ['ornament', 'event', 'rare'],
+  },
+  {
+    name: '7Zee Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnament7z.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Victory Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentCheevo.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Newbuck Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentNewbuck.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Cloudy Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentCloud.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Starry Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentStar.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Rock Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentRock.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Crystal Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentCrystal.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Fire Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentFire.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Quicksilver Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentQuicksilver.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Briar Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentHenBriar.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Elder Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentHenElder.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Hen Hen Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentHenHen.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Painted Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentHenPainted.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Stony Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentHenStony.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Handlebar Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentMustache.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Lovely Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentHeart.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Party Gordo Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentParty.png',
+    tags: ['ornament', 'event', 'rare'],
+  },
+  {
+    name: 'Rainbow Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentRainbow.png',
+    tags: ['ornament', 'event', 'rare'],
+  },
+  {
+    name: 'Green Stripey Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentStripesGreen.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Purple Stripey Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentStripesPurple.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Jack Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentJack.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Clover Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentClover.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Snowflake Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentSnowflake.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Buzzy Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentBuzzy.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Drone Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentDrone.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Sleepy Drone Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentDroneSleepy.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Ducky Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentDucky.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Fireflower Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentFireflower.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Glitch Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentGlitch.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Pink? Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentImposter.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Tabby? Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentImposterTabby.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Slime Moon Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentSlimeMoon.png',
+    tags: ['ornament', 'event', 'unobtainable'],
+  },
+  {
+    name: 'Stego Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentStego.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Blue Stripey Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentStripesBlue.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Red Stripey Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentStripesRed.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Teal Stripey Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentStripesTeal.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Sunny Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentSunny.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Tarr Lantern Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentTarrLantern.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Treefox Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentTreefox.png',
+    tags: ['ornament', 'event', 'unobtainable'],
+  },
+  {
+    name: 'Twinkle Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentTwinkle.png',
+    tags: ['ornament', 'event', 'common'],
+  },
+  {
+    name: 'Wildflower Ornament',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentWildflower.png',
+    tags: ['ornament', 'event', 'common'],
+  },
 ];
 
 // Give cards styles values based on icon presence
@@ -975,7 +1255,7 @@ const tagGroups = {
   common: 'rarity',
   uncommon: 'rarity',
   rare: 'rarity',
-  extinct: 'rarity',
+  unobtainable: 'rarity',
 
   docile: 'slime-type',
   harmful: 'slime-type',
