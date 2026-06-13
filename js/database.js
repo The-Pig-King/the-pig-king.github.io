@@ -760,6 +760,125 @@ const cards = [
     tags: ['resource', 'uncommon', 'drill', 'apiary', 'pump', 'echo-net'],
     locations: ['the-ancient-ruins'],
   },
+  {
+    name: 'Beach Ball',
+    icon: '/assets/games/slime-rancher/toys/iconToyBeechBall.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyBeachBall.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Big Rock',
+    icon: '/assets/games/slime-rancher/toys/iconToyBigRock.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyBigRock.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Yarn Ball',
+    icon: '/assets/games/slime-rancher/toys/iconToyYarnBall.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyYarnBall.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Night Light',
+    icon: '/assets/games/slime-rancher/toys/iconToyNightLight.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyNightLight.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Power Cell',
+    icon: '/assets/games/slime-rancher/toys/iconToyPowerCell.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Bomb Ball',
+    icon: '/assets/games/slime-rancher/toys/iconToyBomb.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyBomb.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Buzzy Bee',
+    icon: '/assets/games/slime-rancher/toys/iconToyBuzzBee.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyBuzzyBee.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Rubber Ducky',
+    icon: '/assets/games/slime-rancher/toys/iconToyDuck.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyRubberDucky.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Octo Buddy',
+    icon: '/assets/games/slime-rancher/toys/iconToyBOctoBuddy.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Crystal Ball',
+    icon: '/assets/games/slime-rancher/toys/iconToyCrystalBall.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyCrystalBall.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Stuffed Chicken',
+    icon: '/assets/games/slime-rancher/toys/iconToyStuffedChicken.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyStuffedChicken.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Puzzle Cube',
+    icon: '/assets/games/slime-rancher/toys/iconToyPuzzleBox.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Disco Ball',
+    icon: '/assets/games/slime-rancher/toys/iconToyDiscoBall.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Gyro Top',
+    icon: '/assets/games/slime-rancher/toys/iconToyGyroTop.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyGyroTop.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Sol Mate',
+    icon: '/assets/games/slime-rancher/toys/iconToySolBuddy.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToySolMate.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Charcoal Brick',
+    icon: '/assets/games/slime-rancher/toys/iconToyBrickette.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyCharcoalBrick.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Stego Buddy',
+    icon: '/assets/games/slime-rancher/toys/iconToyStegoBuddy.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyStegoBuddy.png',
+    tags: ['toy', 'common'],
+  },
+  {
+    name: 'Treasure Chest',
+    icon: '/assets/games/slime-rancher/toys/iconToyTreasureChest.png',
+    tags: ['toy', 'dlc', 'common'],
+  },
+  {
+    name: 'Bop Goblin',
+    icon: '/assets/games/slime-rancher/toys/iconToyBopGoblin.png',
+    tags: ['toy', 'dlc', 'common'],
+  },
+  {
+    name: 'Beeper Bot',
+    icon: '/assets/games/slime-rancher/toys/iconToyscifi.png',
+    tags: ['toy', 'dlc', 'common'],
+  },
+  {
+    name: 'Mudball',
+    icon: '/assets/games/slime-rancher/toys/SaberSlimeMudball.png',
+    tags: ['toy', 'common'],
+    locations: ['the-wilds'],
+  },
 ];
 
 // Give cards styles values based on icon presence
@@ -1218,7 +1337,7 @@ const renderCards = (cards) => {
             ${(card.tags ?? [])
               .map(
                 (tag) =>
-                  `<span class="tag tag-${tag.toLowerCase()}" style="--tag-color: var(--${tag}-color)">${titleCaseSlug(tag)}</span>`
+                  `<span class="tag tag-${tag.toLowerCase()}" style="--tag-color: var(--${tag}-color)">${tag === 'dlc' ? tag.toUpperCase() : titleCaseSlug(tag)}</span>`
               )
               .join('')}
           </div>

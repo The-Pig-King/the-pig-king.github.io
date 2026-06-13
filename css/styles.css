@@ -18,9 +18,11 @@
   --slime-color: #e24164;
   --food-color: #f85d18;
   --resource-color: #515ac2;
+  --toy-color: #ffdb48;
 
   --special-color: yellow;
   --event-color: #ffacca;
+  --dlc-color: #ee8822;
 
   --common-color: white;
   --uncommon-color: green;
@@ -555,6 +557,9 @@ header {
   color: black;
 }
 .tag-echo-net {
+  color: black;
+}
+.tag-toy {
   color: black;
 }
 
