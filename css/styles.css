@@ -22,7 +22,11 @@
   --special-color: yellow;
   --event-color: #ffacca;
 
-  --docile-color: white;
+  --common-color: white;
+  --uncommon-color: green;
+  --rare-color: purple;
+
+  --docile-color: lightgreen;
   --harmful-color: red;
   --hostile-color: black;
 
@@ -538,11 +542,13 @@ header {
 .tag-special {
   color: black;
 }
-
 .tag-the-ancient-ruins {
   color: black;
 }
 .tag-the-wilds {
+  color: black;
+}
+.tag-common {
   color: black;
 }
 

@@ -162,7 +162,7 @@ const cards = [
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeHunter.png',
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeHunter.png',
-    tags: ['slime', 'common', 'docile'],
+    tags: ['slime', 'uncommon', 'docile'],
     locations: ['the-moss-blanket', 'the-glass-desert', 'the-slimeulation'],
   },
   {
@@ -368,7 +368,7 @@ const cards = [
     name: 'Heart Beet',
     icon: '/assets/games/slime-rancher/food//iconVeggieBeet.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconVeggieBeet.png',
-    tags: ['food', 'veggie'],
+    tags: ['food', 'veggie', 'common'],
     locations: [
       'the-dry-reef',
       'the-indigo-quarry',
@@ -543,7 +543,7 @@ const cards = [
     name: 'Briar Hen',
     icon: '/assets/games/slime-rancher/food//iconBirdHenBriar.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHenBriar.png',
-    tags: ['food', 'meat'],
+    tags: ['food', 'meat', 'common'],
     locations: ['the-moss-blanket', 'the-slimeulation'],
   },
   {
