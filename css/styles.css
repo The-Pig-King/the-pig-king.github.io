@@ -19,6 +19,7 @@
   --food-color: #f85d18;
   --resource-color: #515ac2;
   --toy-color: #ffdb48;
+  --chime-color: #c3e7ff;
 
   --special-color: yellow;
   --event-color: #ffacca;
@@ -560,6 +561,9 @@ header {
   color: black;
 }
 .tag-toy {
+  color: black;
+}
+.tag-chime {
   color: black;
 }
 

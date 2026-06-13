@@ -879,6 +879,71 @@ const cards = [
     tags: ['toy', 'common'],
     locations: ['the-wilds'],
   },
+  {
+    name: 'Chime C',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote1.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime C#',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote2.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime D',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote3.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime D#',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote4.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime E',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote5.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime F',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote6.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime F#',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote7.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime G',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote8.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime G#',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote9.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime A',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote10.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime A#',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote11.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime B',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote12.png',
+    tags: ['chime', 'event', 'common'],
+  },
+  {
+    name: 'Chime C^',
+    icon: '/assets/games/slime-rancher/chimes/iconEchoNote13.png',
+    tags: ['chime', 'event', 'common'],
+  },
 ];
 
 // Give cards styles values based on icon presence
