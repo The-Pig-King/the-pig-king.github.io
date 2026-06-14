@@ -2197,6 +2197,10 @@ const renderCards = (cards) => {
 
 const params = new URLSearchParams(location.search);
 
+// Reset button toggles
+modeBtns.forEach((btn) => btn.classList.remove('toggledOn'));
+filterBtns.forEach((btn) => btn.classList.remove('toggledOn'));
+
 for (const [group, value] of params.entries()) {
   const [mode, filterString] = value.split(':');
 
@@ -2206,8 +2210,6 @@ for (const [group, value] of params.entries()) {
 
   // Set mode btn toggles
   modeBtns.forEach((btn) => {
-    btn.classList.remove('toggledOn');
-
     if (btn.closest('.filter-bar').dataset.group === group) {
       if (btn.dataset.mode === mode) {
         btn.classList.add('toggledOn');
@@ -2217,8 +2219,6 @@ for (const [group, value] of params.entries()) {
 
   // Set filter btn toggles
   filterBtns.forEach((btn) => {
-    btn.classList.remove('toggledOn');
-
     if (btn.closest('.filter-bar').dataset.group === group) {
       if (state[group].filters.has(btn.dataset.category)) {
         btn.classList.add('toggledOn');
@@ -2233,6 +2233,21 @@ for (const [group, value] of params.entries()) {
     }
   });
 }
+
+// Set default buttons
+Object.keys(state).forEach((group) => {
+  const hasParam = params.has(group);
+  if (!hasParam) {
+    modeBtns.forEach((btn) => {
+      if (btn.closest('.filter-bar').dataset.group === group) {
+        const defaultMode = group === 'style' ? 'no-filter' : 'any';
+        if (btn.dataset.mode === defaultMode) {
+          btn.classList.add('toggledOn');
+        }
+      }
+    });
+  }
+});
 
 // Apply filter button colors
 filterBtns.forEach((btn) => {
