@@ -27,6 +27,7 @@
   --upgrade-color: black;
   --zone-color: #29b0fb;
   --gadget-color: #6b6e68;
+  --misc-color: white;
 
   --special-color: yellow;
   --event-color: #ffacca;
@@ -552,7 +553,6 @@ header {
   padding: 0.2rem;
   border-radius: 1rem;
   font-size: 0.75rem;
-  margin: 0 auto;
 }
 
 .tag-docile {
@@ -582,6 +582,9 @@ header {
 .tag-warp-tech {
   color: black;
 }
+.tag-misc {
+  color: black;
+}
 
 .card-location-tags {
   grid-area: card-location-tags;
@@ -607,6 +610,10 @@ header {
   flex-wrap: wrap;
   gap: 4px;
   padding: 4px 0 4px 8px;
+}
+
+.location-tag {
+  margin: 0 auto;
 }
 
 /* Media Queries */
