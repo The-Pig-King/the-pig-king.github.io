@@ -620,6 +620,9 @@ const cards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortGold.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortGold.png',
     tags: ['plort', 'rare'],
+    locations: {
+      'treasure-pod': ['the-glass-desert', 'the-vaults'],
+    },
   },
   {
     name: 'Pink Gordo',
@@ -1398,6 +1401,7 @@ const cards = [
       '/assets/games/slime-rancher-2/resources/iconCraftSlimeFossil.png',
     tags: ['resource', 'uncommon', 'drill'],
     locations: {
+      'treasure-pod': ['the-indigo-quarry', 'the-ancient-ruins'],
       gadget: [
         'the-ranch',
         'ogdens-retreat',
@@ -1420,6 +1424,12 @@ const cards = [
       '/assets/games/slime-rancher-2/resources/iconCraftStrangeDiamond.png',
     tags: ['resource', 'rare', 'drill'],
     locations: {
+      'treasure-pod': [
+        'the-ranch',
+        'ogdens-retreat',
+        'the-indigo-quarry',
+        'the-ancient-ruins',
+      ],
       gadget: [
         'the-ranch',
         'ogdens-retreat',
@@ -1440,6 +1450,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/resources/iconCraftIndigonium.png',
     tags: ['resource', 'common', 'drill'],
     locations: {
+      'treasure-pod': ['the-indigo-quarry', 'the-ancient-ruins'],
       gadget: ['the-indigo-quarry'],
     },
   },
@@ -1477,6 +1488,12 @@ const cards = [
     icon: '/assets/games/slime-rancher/resources/iconCraftHexacomb.png',
     tags: ['resource', 'uncommon', 'apiary'],
     locations: {
+      'treasure-pod': [
+        'the-ranch',
+        'ogdens-retreat',
+        'the-moss-blanket',
+        'the-ancient-ruins',
+      ],
       gadget: [
         'the-ranch',
         'ogdens-retreat',
@@ -1499,6 +1516,12 @@ const cards = [
       '/assets/games/slime-rancher-2/resources/iconCraftRoyalJelly.png',
     tags: ['resource', 'rare', 'apiary'],
     locations: {
+      'treasure-pod': [
+        'ogdens-retreat',
+        'the-moss-blanket',
+        'the-ancient-ruins',
+        'the-wilds',
+      ],
       gadget: [
         'the-ranch',
         'ogdens-retreat',
@@ -1521,6 +1544,7 @@ const cards = [
       '/assets/games/slime-rancher-2/resources/iconCraftWildHoney.png',
     tags: ['resource', 'common', 'apiary'],
     locations: {
+      'treasure-pod': ['the-moss-blanket', 'the-ancient-ruins', 'the-wilds'],
       gadget: ['the-moss-blanket'],
     },
   },
@@ -1559,6 +1583,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/resources/iconCraftSpiralSteam.png',
     tags: ['resource', 'uncommon', 'pump'],
     locations: {
+      'treasure-pod': ['the-dry-reef', 'the-ancient-ruins'],
       gadget: [
         'the-ranch',
         'ogdens-retreat',
@@ -1580,6 +1605,7 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/resources/iconCraftLavaDust.png',
     tags: ['resource', 'rare', 'pump'],
     locations: {
+      'treasure-pod': ['ogdens-retreat', 'the-dry-reef', 'the-ancient-ruins'],
       gadget: [
         'the-ranch',
         'ogdens-retreat',
@@ -1602,6 +1628,7 @@ const cards = [
       '/assets/games/slime-rancher-2/resources/iconCraftDeepBrine.png',
     tags: ['resource', 'common', 'pump'],
     locations: {
+      'treasure-pod': ['the-ranch', 'the-dry-reef', 'the-ancient-ruins'],
       gadget: ['the-dry-reef'],
     },
   },
