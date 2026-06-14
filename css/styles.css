@@ -552,7 +552,7 @@ header {
   padding: 0.2rem;
   border-radius: 1rem;
   font-size: 0.75rem;
-  margin: 0.1rem;
+  margin: 0 auto;
 }
 
 .tag-docile {
@@ -587,6 +587,26 @@ header {
   grid-area: card-location-tags;
   display: flex;
   flex-wrap: wrap;
+  align-self: stretch;
+  width: 100%;
+}
+
+.location-source {
+  width: 100%;
+}
+
+.location-source summary {
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0.3rem 0;
+  user-select: none;
+}
+
+.location-source .location-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px 0 4px 8px;
 }
 
 /* Media Queries */
