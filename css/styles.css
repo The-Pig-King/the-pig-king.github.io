@@ -60,6 +60,13 @@
   --decoration-color: #68462b;
   --curio-color: #f2a234;
 
+  --spawn-color: #f78142;
+  --worldgen-color: #9cd9e5;
+  --crate-color: #ff426b;
+  --treasure-pod-color: #55d523;
+  --spawn-largo-color: #7574b9;
+  --twinkle-slime-color: #ffaac9;
+
   --the-ranch-color: #825235;
   --ogdens-retreat-color: #d6c086;
   --mochis-manor-color: #e89a11;
@@ -596,6 +603,9 @@ header {
 }
 
 .location-source summary {
+  color: var(--source-color, white);
+  font-weight: bold;
+
   cursor: pointer;
   font-size: 0.75rem;
   padding: 0.3rem 0;

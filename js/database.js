@@ -369,6 +369,8 @@ const filterCards = () => {
       let cardValues;
       if (group === 'location') {
         cardValues = card.locations ? Object.values(card.locations).flat() : [];
+      } else if (group === 'source') {
+        cardValues = card.locations ? Object.keys(card.locations) : [];
       } else if (group === 'style') {
         cardValues = card.styles;
       } else {
@@ -492,7 +494,7 @@ const renderCards = (cards) => {
                     .map(
                       ([source, locs]) => `
                 <details class="location-source">
-                  <summary>
+                  <summary style="--source-color: var(--${source}-color)">
                       <span class="summary-content">
                         ${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}
                         <img class="source-icon" src="/assets/games/slime-rancher/sources/${source}.png" alt="${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}">
