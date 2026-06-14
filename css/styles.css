@@ -590,7 +590,7 @@ header {
   grid-area: card-location-tags;
   display: flex;
   flex-wrap: wrap;
-  align-self: stretch;
+  align-self: self-start;
   width: 100%;
 }
 
