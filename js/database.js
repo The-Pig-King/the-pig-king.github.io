@@ -335,6 +335,110 @@ const cards = [
     locations: ['the-slimeulation'],
   },
   {
+    name: 'Pink Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortPink.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortPink.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Rock Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortRock.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortRock.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Tabby Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortTabby.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortTabby.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Phosphor Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortPhosphor.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortPhosphor.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Rad Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortRad.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Boom Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortBoom.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortBoom.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Honey Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortHoney.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortHoney.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Puddle Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortPuddle.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortPuddle.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Crystal Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortCrystal.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortCrystal.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Hunter Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortHunter.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortHunter.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Quantum Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortQuantum.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Fire Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortFire.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortFire.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Dervish Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortDervish.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortDervish.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Tangle Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortTangle.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortTangle.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Mosaic Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortMosaic.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Saber Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortSaber.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortSaber.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Quicksilver Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortQuicksilver.png',
+    tags: ['plort', 'common'],
+  },
+  {
+    name: 'Gold Plort',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortGold.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortGold.png',
+    tags: ['plort', 'rare'],
+  },
+  {
     name: 'Pink Gordo',
     icon: '/assets/games/slime-rancher/gordos/iconGordoPink.png',
     'sr2-icon': '/assets/games/slime-rancher-2/gordos/iconGordoPink.png',
@@ -1297,6 +1401,311 @@ const cards = [
     icon: '/assets/games/slime-rancher/ornaments/iconOrnamentWildflower.png',
     tags: ['ornament', 'event', 'common'],
   },
+  {
+    name: 'Classic',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_00_default.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Milkshake',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_23.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Cobalt',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_01.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Firecracker',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_10.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Grapeshot',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_04.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Roboranger',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_05.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Maidatron',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_23.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Gingersnap',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_20.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Peapod',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_21.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Vanguard',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_18.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Willow',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_17.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Daybreak',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_22.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Eventide',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_02.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Salamander',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_08.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Royalton',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_07.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Neopolitan',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_11.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Mint Chip',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_12.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Ghost Wine',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_09.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Volcanic',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_13.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Knight Light',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_03.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Pretty Loud',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_19.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Silverfox',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_24.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Frozen Violet',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_16.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Astro Pearl',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_14.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Goldleaf',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_15.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Tomatillo',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_ogden.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Kanpeki',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_mochi.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Concentration',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_viktor.png',
+    tags: ['chroma', 'common'],
+  },
+  {
+    name: 'Sapphire',
+    icon: '/assets/games/slime-rancher/chromas/Sapphire_Chroma_Pack.png',
+    tags: ['chroma', 'dlc', 'common'],
+  },
+  {
+    name: 'Emerald',
+    icon: '/assets/games/slime-rancher/chromas/Emerald_Chroma_Pack.png',
+    tags: ['chroma', 'dlc', 'common'],
+  },
+  {
+    name: 'Ruby',
+    icon: '/assets/games/slime-rancher/chromas/Ruby_Chroma_Pack.png',
+    tags: ['chroma', 'dlc', 'common'],
+  },
+  {
+    name: 'Amethyst',
+    icon: '/assets/games/slime-rancher/chromas/iconChromaPack_25.png',
+    tags: ['chroma', 'unobtainable'],
+  },
+  {
+    name: 'Onyx',
+    icon: '/assets/games/slime-rancher/chromas/Onyx_Chroma_Pack.png',
+    tags: ['chroma', 'unobtainable'],
+  },
+  {
+    name: 'Water Tank',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopWater01.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopWater01.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Jetpack',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopJetpack.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 1.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Air Drive',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopAirdrive.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 1.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Dash Boots',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopBoots.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopDashBoots.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Ultra Dash Boots',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopBoots02.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopDashBoots.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Pulse Wave',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopPulsewave.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopPulsewave.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Heart Module',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopHeart01.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Heart Module Mk II',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopHeart02.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Heart Module Mk III',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopHeart03.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Heart Module Ultra',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopHeart04.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Power Module',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopPower01.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Power Module Mk II',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopPower02.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Power Module Mk III',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopPower03.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Tank Module',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopTank01.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Tank Module Mk II',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopTank02.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Tank Module Mk III',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopTank03.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Tank Module Ultra',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopTank04.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Treasure Cracker',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopTreasure01.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Treasure Cracker Mk II',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopTreasure02.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Treasure Cracker Mk III',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopTreasure03.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Golden Sureshot',
+    icon: '/assets/games/slime-rancher/upgrades/iconShopGoldenSureShot.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/upgrades/iconShopGoldenSureshot 1.png',
+    tags: ['upgrade', 'common'],
+  },
+  {
+    name: 'Extra Slime Key',
+    icon: '/assets/games/slime-rancher/upgrades/iconKeyPedia.png',
+    tags: ['upgrade', 'common'],
+  },
 ];
 
 // Give cards styles values based on icon presence
@@ -1320,12 +1729,15 @@ cards.forEach((card) => {
 
 const tagGroups = {
   slime: 'type',
+  plort: 'type',
   gordo: 'type',
   food: 'type',
   resource: 'type',
   toy: 'type',
   chime: 'type',
   ornament: 'type',
+  chroma: 'type',
+  upgrade: 'type',
 
   special: 'subtype',
   event: 'subtype',
