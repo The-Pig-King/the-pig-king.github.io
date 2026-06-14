@@ -1796,6 +1796,730 @@ const cards = [
     icon: '/assets/games/slime-rancher/zones/temp_missing_player_marker.png',
     tags: ['zone', 'common'],
   },
+  {
+    name: 'Novice Drill',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorDrillNovice.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Advanced Drill',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorDrillAdvanced.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Master Drill',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorDrillMaster.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Titan Drill',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorDrillOmega.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Novice Pump',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorPumpNovice.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Advanced Pump',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorPumpAdvanced.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Master Pump',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorPumpMaster.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Abyssal Pump',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorPumpOmega.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Novice Apiary',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorApiaryNovice.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Advanced Apiary',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorApiaryAdvanced.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Master Apiary',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorApiaryMaster.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Royal Apiary',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetExtractorApiaryOmega.png',
+    tags: ['gadget', 'common', 'extractor'],
+  },
+  {
+    name: 'Drone',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetDrone.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Advanced Drone',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetAdvancedDrone.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Med Station',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetMedStation.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetMedStation.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Hydro Turret',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetHydroTurret.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetHydroTurret.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Super Hydro Turret',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetHydroTurretSuper.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetHydroTurretSuper.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Taming Bell',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTamingBell.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTamingBell.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Spring Pad',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetSpringPad.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gadgets/iconGadgetSpringPad.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Potted Tactus',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetPottedTactus.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Novice Gordo Snare',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetGordoSnareNovice.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetGordoSnareNovice 1.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Advanced Gordo Snare',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetGordoSnareAdvanced.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetGordoSnareAdvanced 1.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Master Gordo Snare',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetGordoSnareMaster.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetGordoSnareMaster 1.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Chicken Cloner',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetChickenCloner.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Portable Water Tap',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWaterTap.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gadgets/iconGadgetWaterTap.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Portable Scareslime',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetPortableScareslime.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetPortableScareslime.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Dash Pad',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetDashPad.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gadgets/iconGadgetDashPad.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Fruit Slime Bait',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetBaitPogo.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/gadgets/iconGadgetBaitPogo.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Veggie Slime Bait',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetBaitCarrot.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetBaitCarrot.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Meat Slime Bait',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetBaitChicken.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetBaitChicken.png',
+    tags: ['gadget', 'common', 'utility'],
+  },
+  {
+    name: 'Pink Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportPink.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportPink.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Blue Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportBlue.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportBlue.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Grey Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportGrey.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportGrey.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Violet Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportViolet.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportViolet.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Green Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportGreen.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportGreen.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Red Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportRed.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportRed.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Amber Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportAmber.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportAmber.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Berry Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportBerry.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportBerry.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Cocoa Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportCocoa.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Butterscotch Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportButterscotch.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Gold Teleporter',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetTeleportGold.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportGold.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Pink Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotPink.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotPink.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Blue Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotBlue.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotBlue.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Grey Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotGrey.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotGrey.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Violet Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotViolet.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotViolet.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Green Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotGreen.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotGreen.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Red Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotRed.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotRed.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Amber Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotAmber.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotAmber.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Berry Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotBerry.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotBerry.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Cocoa Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotCocoa.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Butterscotch Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotButterscotch.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Gold Warp Depot',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotGold.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotGold.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Refinery Link',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetRefineryLink.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetRefineryLink.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Market Link',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetMarketLink.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetMarketLink.png',
+    tags: ['gadget', 'common', 'warp-tech'],
+  },
+  {
+    name: 'Pink Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampPink.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Blue Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampBlue.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampBlue.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Grey Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampGrey.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Violet Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampViolet.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Green Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampGreen.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampGreen.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Red Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampRed.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampRed.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Amber Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampAmber.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Berry Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampBerry.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Cocoa Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampCocoa.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Butterscotch Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampButterscotch.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Gold Slime Lamp',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampGold.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampGold.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Sponge Tree',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSpongeTree1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Sponge Shrub',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSpongeShrub1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Pink Coral Columns',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorPinkCoralColumns1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Coral Grass Patch',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorCoralGrassPatch1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Mossy Tree',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorMossyTree1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Mossy Tree Stump',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorMossyTreeStump1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Glow Cones',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorGlowCones1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Wildflower Patch',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorWildFlowerPatch1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Jumbo Shroom',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorJumboShroom1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Minty Grass Patch',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorMintyGrassPatch.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Blue Coral Columns',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorBlueCoralColumns1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Hexium Formation',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorHexiumFormation.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Crystal Cluster',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorCrystalCluster1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Fireflower Patch',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorFireFlowerPatch1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Sunburst Tree',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSunburstTree1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Verdant Grass Patch',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorVerdantGrass1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Star Flower Patch',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorStarFlowerPatch1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Ruined Pillar',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorRuinedPillar1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Glow Sticks',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorGlowSticks1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Crystal Sconce',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorCrystalSconce1.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Fiery Glass Sculpture',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorGlassFiery.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Thundering Glass Sculpture',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorGlassThundering.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Towering Glass Sculpture',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorGlassTowering.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Palm Tree',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorPalmTree.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Palm Sprout',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorPalmSprout.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Coil Grass',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorCoilGrass.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Ruined Desert Column',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorRuinedDesertColumn.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Ruined Desert Blocks',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorRuinedDesertBlocks.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Cave Rocks',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorWildsCaveRocks.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Glow Rocks',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorWildsGlowRocks.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Carved Rocks',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorWildsMossyRocks.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Peach Cloud Tree',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorWildsTree.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Wild Coral Columns',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorWildsCoralColumn.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Wild Grass Patch',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorWildsGrassPatch.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Cotton Flower Patch',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorWildsFlowerPatch.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Nimble Grass Patch',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorNimbleGrassPatch.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Nimble Needle Tree',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorNimbleNeedleTree.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Small Magneticore Array',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSmallMagneticoreArray.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Tall Magneticore Array',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorTallMagneticoreArray.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Sturdy Magneticore Array',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSturdyMagneticoreArray.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Ornate Magneticore Array',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorOrnateMagneticoreArray.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Battery Tower',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorBatteryTower.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Digi Panel',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorDigiPanel.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Digi Shrub',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorDigiTree.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Digi Tree',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorDigiBigTree.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Field Kit',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorFieldKit.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Supply Drop',
+    icon: '/assets/games/slime-rancher/gadgets/iconDecorSupplyDrop.png',
+    tags: ['gadget', 'common', 'decoration'],
+  },
+  {
+    name: 'Slimeball Hoop',
+    icon: '/assets/games/slime-rancher/gadgets/iconCurioSlimeballHoop.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Slime Stage',
+    icon: '/assets/games/slime-rancher/gadgets/iconCurioSlimeStage.png',
+    'sr2-icon':
+      '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeStage.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Echo Net',
+    icon: '/assets/games/slime-rancher/gadgets/iconGadgetEchoNet.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Handlebar Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionHandlebar.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Shady Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionShades.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Clip-On Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionClipOn.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Googly Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionGooglyEyes.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Smart Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionSmarty.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Serious Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionSerious.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Dandy Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionDandy.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Cute Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionCute.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Royal Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionRoyal.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Fashion Pod Remover',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionRemover.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Scuba Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionScuba.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Party Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionParty.png',
+    tags: ['gadget', 'common', 'curio'],
+  },
+  {
+    name: 'Piratey Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionShades.png',
+    tags: ['gadget', 'dlc', 'common', 'curio'],
+  },
+  {
+    name: 'Heroic Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionRoyal.png',
+    tags: ['gadget', 'dlc', 'common', 'curio'],
+  },
+  {
+    name: 'Galactic Fashion Pod',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionSmarty.png',
+    tags: ['gadget', 'dlc', 'common', 'curio'],
+  },
 ];
 
 // Give cards styles values based on icon presence
@@ -1829,6 +2553,7 @@ const tagGroups = {
   chroma: 'type',
   upgrade: 'type',
   zone: 'type',
+  gadget: 'type',
 
   special: 'subtype',
   event: 'subtype',
@@ -1854,6 +2579,12 @@ const tagGroups = {
   pump: 'resource-type',
   'range-exchange': 'resource-type',
   'echo-net': 'resource-type',
+
+  extractor: 'gadget-type',
+  utility: 'gadget-type',
+  'warp-tech': 'gadget-type',
+  decoration: 'gadget-type',
+  curio: 'gadget-type',
 
   'the-ranch': 'location',
   'ogdens-retreat': 'location',

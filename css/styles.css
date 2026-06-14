@@ -17,7 +17,7 @@
 
   --slime-color: #e24164;
   --plort-color: #b50000;
-  --gordo-color: #63625c;
+  --gordo-color: #643b3b;
   --food-color: #f85d18;
   --resource-color: #515ac2;
   --toy-color: #ffdb48;
@@ -26,6 +26,7 @@
   --chroma-color: #9d9780;
   --upgrade-color: black;
   --zone-color: #29b0fb;
+  --gadget-color: #6b6e68;
 
   --special-color: yellow;
   --event-color: #ffacca;
@@ -47,6 +48,18 @@
   --electricity-color: #ff9306;
   --other-color: #1f7fb5;
 
+  --drill-color: #fd566a;
+  --apiary-color: #94ff7a;
+  --pump-color: #54b1fa;
+  --range-exchange-color: #000d56;
+  --echo-net-color: #ece1b5;
+
+  --extractor-color: #6e7092;
+  --utility-color: #b8bbb5;
+  --warp-tech-color: #7cff0e;
+  --decoration-color: #68462b;
+  --curio-color: #f2a234;
+
   --the-ranch-color: #825235;
   --ogdens-retreat-color: #d6c086;
   --mochis-manor-color: #e89a11;
@@ -61,12 +74,6 @@
   --the-slimeulation-color: #8aadc8;
   --the-slime-sea-color: #4cde78;
   --the-vaults-color: #d67d18;
-
-  --drill-color: #fd566a;
-  --apiary-color: #94ff7a;
-  --pump-color: #54b1fa;
-  --range-exchange-color: #000d56;
-  --echo-net-color: #ece1b5;
 
   --style-sparkly-color: #f65c83;
   --style-heavy-metal-color: #766e87;
@@ -570,6 +577,9 @@ header {
   color: black;
 }
 .tag-chime {
+  color: black;
+}
+.tag-warp-tech {
   color: black;
 }
 
