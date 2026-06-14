@@ -29,7 +29,6 @@
   --gadget-color: #6b6e68;
   --misc-color: white;
 
-  --special-color: yellow;
   --event-color: #ffacca;
   --dlc-color: #ee8822;
 
@@ -551,14 +550,12 @@ header {
   color: var(--tag-text, white);
   border: var(--border-thin) color-mix(in srgb, var(--tag-color) 70%, white);
   padding: 0.2rem;
+  margin: 0.1rem;
   border-radius: 1rem;
   font-size: 0.75rem;
 }
 
 .tag-docile {
-  color: black;
-}
-.tag-special {
   color: black;
 }
 .tag-the-ancient-ruins {

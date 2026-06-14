@@ -382,7 +382,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeQuicksilver.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeQuicksilverExotic.png',
-    tags: ['slime', 'special', 'common', 'docile', 'harmful'],
+    tags: ['slime', 'common', 'docile', 'harmful'],
     locations: {
       spawn: ['nimble-valley'],
     },
@@ -393,7 +393,7 @@ const cards = [
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeGlitch.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeGlitchExotic.png',
-    tags: ['slime', 'special', 'common', 'docile'],
+    tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: ['the-slimeulation'],
     },
@@ -406,7 +406,7 @@ const cards = [
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeGoldExotic.png',
     'sr2-icon':
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeGold.png',
-    tags: ['slime', 'special', 'rare', 'docile'],
+    tags: ['slime', 'rare', 'docile'],
     locations: {
       spawn: [
         'the-dry-reef',
@@ -437,7 +437,7 @@ const cards = [
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeLuckyExotic.png',
     'sr2-icon':
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeLucky.png',
-    tags: ['slime', 'special', 'rare', 'docile'],
+    tags: ['slime', 'rare', 'docile'],
     locations: {
       spawn: [
         'the-dry-reef',
@@ -463,7 +463,7 @@ const cards = [
   {
     name: 'Twinkle Slime',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeTwinkle.png',
-    tags: ['slime', 'special', 'event', 'rare'],
+    tags: ['slime', 'event', 'rare'],
     locations: {
       spawn: [
         'the-dry-reef',

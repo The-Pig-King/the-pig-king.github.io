@@ -32,7 +32,6 @@ const tagGroups = {
   gadget: 'type',
   misc: 'type',
 
-  special: 'subtype',
   event: 'subtype',
   dlc: 'subtype',
 
