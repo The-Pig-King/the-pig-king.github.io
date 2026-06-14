@@ -1706,6 +1706,96 @@ const cards = [
     icon: '/assets/games/slime-rancher/upgrades/iconKeyPedia.png',
     tags: ['upgrade', 'common'],
   },
+  {
+    name: 'The Ranch',
+    icon: '/assets/games/slime-rancher/zones/iconZoneRanch.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Grotto',
+    icon: '/assets/games/slime-rancher/zones/iconExpanGrotto.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Overgrowth',
+    icon: '/assets/games/slime-rancher/zones/iconExpanOvergrowth.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Docks',
+    icon: '/assets/games/slime-rancher/zones/iconExpanDocks.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Lab',
+    icon: '/assets/games/slime-rancher/zones/iconZoneLab.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: "Ogden's Retreat",
+    icon: '/assets/games/slime-rancher/zones/iconZoneOgdensRetreat.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: "Mochi's Manor",
+    icon: '/assets/games/slime-rancher/zones/iconZoneMochiEstate.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: "Viktor's Workshop",
+    icon: '/assets/games/slime-rancher/zones/iconZoneViktorLab.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Dry Reef',
+    icon: '/assets/games/slime-rancher/zones/iconZoneReef.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Moss Blanket',
+    icon: '/assets/games/slime-rancher/zones/iconZoneMoss.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Indigo Quarry',
+    icon: '/assets/games/slime-rancher/zones/iconZoneQuarry.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Ancient Ruins',
+    icon: '/assets/games/slime-rancher/zones/iconZoneRuins.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Glass Desert',
+    icon: '/assets/games/slime-rancher/zones/iconZoneDesert.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Wilds',
+    icon: '/assets/games/slime-rancher/zones/iconZoneWilds.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'Nimble Valley',
+    icon: '/assets/games/slime-rancher/zones/iconZoneNimbleValley.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Slimeulation',
+    icon: '/assets/games/slime-rancher/zones/iconZoneSlimeulation.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'The Slime Sea',
+    icon: '/assets/games/slime-rancher/zones/iconZoneSea.png',
+    tags: ['zone', 'common'],
+  },
+  {
+    name: 'UNKNOWN',
+    icon: '/assets/games/slime-rancher/zones/temp_missing_player_marker.png',
+    tags: ['zone', 'common'],
+  },
 ];
 
 // Give cards styles values based on icon presence
@@ -1738,6 +1828,7 @@ const tagGroups = {
   ornament: 'type',
   chroma: 'type',
   upgrade: 'type',
+  zone: 'type',
 
   special: 'subtype',
   event: 'subtype',
@@ -2234,7 +2325,7 @@ for (const [group, value] of params.entries()) {
   });
 }
 
-// Set default buttons
+// Set default mode for unfiltered groups
 Object.keys(state).forEach((group) => {
   const hasParam = params.has(group);
   if (!hasParam) {
