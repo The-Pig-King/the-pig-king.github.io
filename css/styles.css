@@ -613,6 +613,16 @@ header {
   margin: 0 auto;
 }
 
+.summary-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.source-icon {
+  width: 1.5rem;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {

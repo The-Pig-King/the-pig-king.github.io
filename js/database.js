@@ -492,7 +492,12 @@ const renderCards = (cards) => {
                     .map(
                       ([source, locs]) => `
                 <details class="location-source">
-                  <summary>${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}</summary>
+                  <summary>
+                      <span class="summary-content">
+                        ${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}
+                        <img class="source-icon" src="/assets/games/slime-rancher/sources/${source}.png" alt="${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}">
+                      </span>
+                  </summary>
                   <div class="location-tags">
                     ${locs.map((loc) => `<span class="tag location-tag tag-${loc}" style="--tag-color: var(--${loc}-color)">${titleCaseSlug(loc)}</span>`).join('')}
                   </div>
