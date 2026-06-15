@@ -11,6 +11,7 @@
   --database-color: rgb(124, 119, 119);
 
   --toggled-on-color: darkgreen;
+  --toggled-off-color: darkred;
   --reset-color: darkred;
 
   --secret-style-color: #4a2988;
@@ -468,11 +469,20 @@ header {
   border: var(--border-thin) green;
 }
 
+.btn.toggledOff {
+  background-color: var(--toggled-off-color);
+  border: var(--border-thin) red;
+}
+
 .btn:hover {
   background-color: color-mix(in srgb, var(--frame-color) 80%, white);
 }
 .btn.toggledOn:hover {
   background-color: color-mix(in srgb, var(--toggled-on-color) 90%, white);
+}
+
+.btn.toggledOff:hover {
+  background-color: color-mix(in srgb, var(--toggled-off-color) 90%, white);
 }
 
 .sort-direction-btn svg {

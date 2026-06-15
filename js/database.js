@@ -112,6 +112,7 @@ const state = {};
 filterBars.forEach(({ dataset: { group } }) => {
   state[group] = {
     filters: new Set(),
+    excludes: new Set(),
     mode: group === 'style' ? 'no-filter' : 'any',
   };
 });
@@ -192,16 +193,28 @@ filterBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     const group = btn.closest('.filter-bar').dataset.group;
     const value = btn.dataset.category;
-    const { filters } = state[group];
+    const { filters, excludes } = state[group];
 
     const values =
       group === 'style' && value === 'style' ? ['secret', 'radiant'] : [value];
 
     values.forEach((v) => {
-      filters.has(v) ? filters.delete(v) : filters.add(v);
+      if (excludes.has(v)) {
+        // toggledOff -> no class
+        excludes.delete(v);
+        btn.classList.remove('toggledOff');
+      } else if (filters.has(v)) {
+        // toggledOn -> toggledOff
+        filters.delete(v);
+        excludes.add(v);
+        btn.classList.remove('toggledOn');
+        btn.classList.add('toggledOff');
+      } else {
+        // no class -> toggledOn
+        filters.add(v);
+        btn.classList.add('toggledOn');
+      }
     });
-
-    btn.classList.toggle('toggledOn');
 
     updateUI();
   });
@@ -239,12 +252,14 @@ resetFiltersBtns.forEach((btn) => {
       filterBtns.forEach((filterBtn) => {
         if (filterBtn.closest('.filter-bar').dataset.group === group) {
           filterBtn.classList.remove('toggledOn');
+          filterBtn.classList.remove('toggledOff');
         }
       });
     } else {
       filterBtns.forEach((filterBtn) => {
         if (!filterBtn.classList.contains('style-btn') || !isNoFilterOn) {
           filterBtn.classList.remove('toggledOn');
+          filterBtn.classList.remove('toggledOff');
         }
       });
     }
@@ -287,12 +302,14 @@ resetFiltersBtns.forEach((btn) => {
         ? (state[group].mode = 'no-filter')
         : (state[group].mode = 'any');
       state[group].filters = new Set();
+      state[group].excludes = new Set();
     } else {
       Object.keys(state).forEach((group) => {
         if (group === 'style' && isNoFilterOn) {
           state[group].mode = 'no-filter';
         } else {
           state[group].filters = new Set();
+          state[group].excludes = new Set();
           state[group].mode = 'any';
         }
       });
@@ -306,9 +323,11 @@ const updateURL = () => {
   const parts = [];
 
   // Build segments of the url
-  Object.entries(state).forEach(([group, { mode, filters }]) => {
-    if (filters.size > 0) {
-      parts.push(`${group}=${mode}:${[...filters].join(',')}`);
+  Object.entries(state).forEach(([group, { mode, filters, excludes }]) => {
+    const allFilters = [...[...filters], ...[...excludes].map((v) => `-${v}`)];
+
+    if (allFilters.length > 0) {
+      parts.push(`${group}=${mode}:${allFilters.join(',')}`);
     }
   });
 
@@ -338,7 +357,12 @@ const renderResultsCount = (resultsCount) => {
   document.getElementById('resultsCount').textContent = resultsCount;
 };
 
-const matchGroup = (cardValues, filters, mode) => {
+const matchGroup = (cardValues, filters, excludes, mode) => {
+  if (excludes && excludes.size > 0) {
+    const hasExcluded = [...excludes].some((v) => cardValues?.includes(v));
+    if (hasExcluded) return false;
+  }
+
   if (filters.size === 0) return true;
 
   const filtersArray = [...filters];
@@ -365,7 +389,7 @@ const matchGroup = (cardValues, filters, mode) => {
 
 const filterCards = () => {
   return cards.filter((card) =>
-    Object.entries(state).every(([group, { filters, mode }]) => {
+    Object.entries(state).every(([group, { filters, excludes, mode }]) => {
       let cardValues;
       if (group === 'location') {
         cardValues = card.locations ? Object.values(card.locations).flat() : [];
@@ -376,7 +400,7 @@ const filterCards = () => {
       } else {
         cardValues = card.tags;
       }
-      return matchGroup(cardValues, filters, mode);
+      return matchGroup(cardValues, filters, excludes, mode);
     })
   );
 };
@@ -526,7 +550,15 @@ for (const [group, value] of params.entries()) {
 
   // Set state
   state[group].mode = mode;
-  state[group].filters = new Set(filterString.split(','));
+
+  filterString.split(',').forEach((v) => {
+    if (v.startsWith('-')) {
+      const tag = v.slice(1);
+      state[group].excludes.add(tag);
+    } else {
+      state[group].filters.add(v);
+    }
+  });
 
   // Set mode btn toggles
   modeBtns.forEach((btn) => {
@@ -542,13 +574,8 @@ for (const [group, value] of params.entries()) {
     if (btn.closest('.filter-bar').dataset.group === group) {
       if (state[group].filters.has(btn.dataset.category)) {
         btn.classList.add('toggledOn');
-      } else if (btn.dataset.category === 'style') {
-        if (
-          state[group].filters.has('secret') ||
-          state[group].filters.has('radiant')
-        ) {
-          btn.classList.add('toggledOn');
-        }
+      } else if (state[group].excludes.has(btn.dataset.category)) {
+        btn.classList.add('toggledOff');
       }
     }
   });
