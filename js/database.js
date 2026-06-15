@@ -319,12 +319,22 @@ resetFiltersBtns.forEach((btn) => {
   });
 });
 
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', () => {
+  updateUI();
+});
+
 const updateURL = () => {
   const parts = [];
 
+  const searchTerm = searchInput.value.trim();
+  if (searchTerm) {
+    parts.push(`search=${searchTerm.trim().replace(/\s+/g, '+')}`);
+  }
+
   // Build segments of the url
   Object.entries(state).forEach(([group, { mode, filters, excludes }]) => {
-    const allFilters = [...[...filters], ...[...excludes].map((v) => `-${v}`)];
+    const allFilters = [...filters, ...[...excludes].map((v) => `-${v}`)];
 
     if (allFilters.length > 0) {
       parts.push(`${group}=${mode}:${allFilters.join(',')}`);
@@ -388,23 +398,33 @@ const matchGroup = (cardValues, filters, excludes, mode) => {
 };
 
 const filterCards = () => {
-  return cards.filter((card) =>
-    Object.entries(state).every(([group, { filters, excludes, mode }]) => {
-      let cardValues;
-      if (group === 'location') {
-        cardValues = card.locations ? Object.values(card.locations).flat() : [];
-      } else if (group === 'source') {
-        cardValues = card.locations ? Object.keys(card.locations) : [];
-      } else if (group === 'style') {
-        cardValues = card.styles;
-      } else {
-        cardValues = card.tags;
-      }
-      return matchGroup(cardValues, filters, excludes, mode);
-    })
-  );
-};
+  const searchTerm = searchInput.value.toLowerCase().trim();
 
+  return cards.filter((card) => {
+    const matchesSearch =
+      searchTerm === '' || card.name.toLowerCase().includes(searchTerm);
+
+    const matchesFilters = Object.entries(state).every(
+      ([group, { filters, excludes, mode }]) => {
+        let cardValues;
+        if (group === 'location') {
+          cardValues = card.locations
+            ? Object.values(card.locations).flat()
+            : [];
+        } else if (group === 'source') {
+          cardValues = card.locations ? Object.keys(card.locations) : [];
+        } else if (group === 'style') {
+          cardValues = card.styles;
+        } else {
+          cardValues = card.tags;
+        }
+        return matchGroup(cardValues, filters, excludes, mode);
+      }
+    );
+
+    return matchesSearch && matchesFilters;
+  });
+};
 const cardContainer = document.getElementById('card-container');
 
 const secretStyleBtn = document.querySelector('.btn-secret-style');
@@ -545,7 +565,13 @@ const params = new URLSearchParams(location.search);
 modeBtns.forEach((btn) => btn.classList.remove('toggledOn'));
 filterBtns.forEach((btn) => btn.classList.remove('toggledOn'));
 
+const searchParam = params.get('search');
+if (searchParam) {
+  searchInput.value = searchInput.value = searchParam.replace(/\+/g, ' ');
+}
+
 for (const [group, value] of params.entries()) {
+  if (group === 'search') continue;
   const [mode, filterString] = value.split(':');
 
   // Set state
