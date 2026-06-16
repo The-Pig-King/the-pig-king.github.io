@@ -564,6 +564,7 @@ header {
   grid-area: card-tags;
   display: flex;
   flex-wrap: wrap;
+  gap: 0.2rem;
 }
 
 .tag {
@@ -571,7 +572,6 @@ header {
   color: var(--tag-text, white);
   border: var(--border-thin) color-mix(in srgb, var(--tag-color) 70%, white);
   padding: 0.2rem;
-  margin: 0.1rem;
   border-radius: 1rem;
   font-size: 0.75rem;
 }
@@ -629,8 +629,7 @@ header {
 .location-source .location-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  padding: 4px 0 4px 8px;
+  gap: 0.2rem;
 }
 
 .location-tag {
@@ -650,8 +649,15 @@ header {
 .card-details {
   grid-area: card-details;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 0.1rem;
+  gap: 1rem 2rem;
+}
+
+.details-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .details-name {
@@ -660,6 +666,7 @@ header {
   color: white;
   font-weight: bold;
   font-size: 1rem;
+  text-align: center;
 }
 
 .details-name:not(:first-of-type) {
@@ -690,6 +697,10 @@ header {
 
 .card-modal::backdrop {
   background: rgba(0, 0, 0, 0.4);
+}
+
+.card-modal .card-style-name {
+  margin-top: -2rem;
 }
 
 .close-modal-btn {
@@ -735,6 +746,23 @@ header {
   .nav-name {
     font-size: 2rem;
   }
+
+  .card-modal {
+    max-width: 70%;
+  }
+
+  .card-modal .card-name {
+    font-size: 2.5rem;
+  }
+
+  .card-modal .card-style-name {
+    font-size: 1.75rem;
+    margin-top: -2rem;
+  }
+
+  .card-modal .tag {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -745,5 +773,18 @@ header {
 
   .last-updated {
     font-size: 1.2rem;
+  }
+
+  .card-modal {
+    max-width: 50rem;
+  }
+
+  .card-modal .card-name {
+    font-size: 3rem;
+  }
+
+  .card-modal .card-style-name {
+    font-size: 2rem;
+    margin-top: -5rem;
   }
 }

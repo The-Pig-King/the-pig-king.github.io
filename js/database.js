@@ -571,26 +571,28 @@ const renderCard = (card) => {
                 ? Object.entries(card.details)
                     .map(
                       ([category, details]) => `
-                    <div class="details-name">
-                      ${titleCaseSlug(category)}
-                    </div>
-                    <div class="details">
-                      ${details
-                        .map(
-                          (detail) => `
-                            <img 
-                              class="details-icon"
-                              src="${
-                                cards.find((card) => {
-                                  return card.name === titleCaseSlug(detail);
-                                })?.icon ||
-                                `/assets/games/slime-rancher/extra/${detail}.png`
-                              }"
-                              alt="${titleCaseSlug(detail)}"
-                              title="${titleCaseSlug(detail)}">
-                          `
-                        )
-                        .join('')}
+                    <div class="details-group">
+                      <div class="details-name">
+                        ${titleCaseSlug(category)}
+                      </div>
+                      <div class="details">
+                        ${details
+                          .map(
+                            (detail) => `
+                              <img 
+                                class="details-icon"
+                                src="${
+                                  cards.find((card) => {
+                                    return card.name === titleCaseSlug(detail);
+                                  })?.icon ||
+                                  `/assets/games/slime-rancher/extra/${detail}.png`
+                                }"
+                                alt="${titleCaseSlug(detail)}"
+                                title="${titleCaseSlug(detail)}">
+                            `
+                          )
+                          .join('')}
+                      </div>
                     </div>
                     `
                     )
