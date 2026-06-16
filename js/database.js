@@ -620,6 +620,7 @@ const cardModal = document.getElementById('card-modal');
 const cardModalContent = document.getElementById('card-modal-content');
 const closeModal = document.getElementById('close-modal-btn');
 
+// Open modal of clicked card
 cardContainer.addEventListener('click', (e) => {
   if (e.target.closest('.card-location-tags')) return;
   if (e.target.closest('.card-details')) return;
@@ -633,6 +634,21 @@ cardContainer.addEventListener('click', (e) => {
   });
 
   cardModalContent.innerHTML = renderCard(clickedCard);
+  cardModal.showModal();
+});
+
+// Open modal of clicked detail
+document.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('details-icon')) return;
+
+  const detailName = e.target.alt;
+  const foundCard = cards.find((card) => {
+    return card.name === detailName;
+  });
+
+  if (!foundCard) return;
+
+  cardModalContent.innerHTML = renderCard(foundCard);
   cardModal.showModal();
 });
 
