@@ -12,6 +12,9 @@
   --toggled-off-color: darkred;
   --reset-color: darkred;
 
+  --yes-color: lightgreen;
+  --no-color: lightcoral;
+
   /* Slime Rancher Colors */
   --sr-color: #f285bd;
   --sr2-color: #f088ff;
@@ -685,7 +688,17 @@ header {
 }
 
 .details-icon {
-  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-yes {
+  color: var(--yes-color);
+}
+.details-no {
+  color: var(--no-color);
 }
 
 .card-modal {

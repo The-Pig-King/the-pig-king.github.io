@@ -580,7 +580,7 @@ const renderCard = (card) => {
                           .map(
                             (detail) => `
                               <img 
-                                class="details-icon"
+                                class="details-icon details-${detail}"
                                 src="${
                                   cards.find((card) => {
                                     return card.name === titleCaseSlug(detail);

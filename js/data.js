@@ -53,7 +53,10 @@ const cards = [
     },
     details: {
       diet: ['veggie', 'fruit', 'meat', 'spicy-tofu'],
-      'favorite-food': ['none'],
+      'fav-toy': ['beach-ball'],
+      plort: ['pink-plort'],
+      largoable: ['yes'],
+      gordo: ['pink-gordo'],
     },
   },
   {
@@ -94,6 +97,14 @@ const cards = [
         'the-vaults',
       ],
     },
+    details: {
+      diet: ['veggie', 'spicy-tofu'],
+      'fav-food': ['heart-beet'],
+      'fav-toy': ['big-rock'],
+      plort: ['rock-plort'],
+      largoable: ['yes'],
+      gordo: ['rock-gordo'],
+    },
   },
   {
     name: 'Tabby Slime',
@@ -126,6 +137,14 @@ const cards = [
       'range-exchange': ['the-ranch'],
       gordo: ['the-dry-reef'],
       'spawn-largo': ['the-dry-reef', 'the-wilds', 'the-slimeulation'],
+    },
+    details: {
+      diet: ['meat', 'spicy-tofu'],
+      'fav-food': ['stony-hen'],
+      'fav-toy': ['yarn-ball'],
+      plort: ['tabby-plort'],
+      largoable: ['yes'],
+      gordo: ['tabby-gordo'],
     },
   },
   {
@@ -167,6 +186,14 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['fruit', 'spicy-tofu'],
+      'fav-food': ['cuberry'],
+      'fav-toy': ['night-light'],
+      plort: ['phosphor-plort'],
+      largoable: ['yes'],
+      gordo: ['phosphor-gordo'],
+    },
   },
   {
     name: 'Rad Slime',
@@ -180,6 +207,14 @@ const cards = [
       'range-exchange': ['the-ranch'],
       gordo: ['the-indigo-quarry'],
       'spawn-largo': ['the-indigo-quarry', 'the-wilds', 'the-slimeulation'],
+    },
+    details: {
+      diet: ['veggie', 'spicy-tofu'],
+      'fav-food': ['oca-oca'],
+      'fav-toy': ['power-cell'],
+      plort: ['rad-plort'],
+      largoable: ['yes'],
+      gordo: ['rad-gordo'],
     },
   },
   {
@@ -210,6 +245,14 @@ const cards = [
         'the-slimeulation',
       ],
     },
+    details: {
+      diet: ['meat', 'spicy-tofu'],
+      'fav-food': ['briar-hen'],
+      'fav-toy': ['bomb-ball'],
+      plort: ['boom-plort'],
+      largoable: ['yes'],
+      gordo: ['boom-gordo'],
+    },
   },
   {
     name: 'Honey Slime',
@@ -227,6 +270,14 @@ const cards = [
       'range-exchange': ['the-ranch'],
       gordo: ['the-moss-blanket'],
       'spawn-largo': ['the-moss-blanket', 'the-slimeulation'],
+    },
+    details: {
+      diet: ['fruit', 'spicy-tofu'],
+      'fav-food': ['mint-mango'],
+      'fav-toy': ['buzzy-bee'],
+      plort: ['honey-plort'],
+      largoable: ['yes'],
+      gordo: ['honey-gordo'],
     },
   },
   {
@@ -251,6 +302,12 @@ const cards = [
       ],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      diet: ['water'],
+      'fav-toy': ['rubber-ducky'],
+      plort: ['puddle-plort'],
+      largoable: ['no'],
+    },
   },
   {
     name: 'Crystal Slime',
@@ -268,6 +325,14 @@ const cards = [
       crate: ['the-indigo-quarry'],
       'range-exchange': ['the-ranch'],
       gordo: ['the-indigo-quarry'],
+    },
+    details: {
+      diet: ['veggie', 'spicy-tofu'],
+      'fav-food': ['odd-onion'],
+      'fav-toy': ['crystal-ball'],
+      plort: ['crystal-plort'],
+      largoable: ['yes'],
+      gordo: ['crystal-gordo'],
     },
   },
   {
@@ -288,6 +353,14 @@ const cards = [
       gordo: ['the-moss-blanket'],
       'spawn-largo': ['the-moss-blanket', 'the-wilds', 'the-slimeulation'],
     },
+    details: {
+      diet: ['meat', 'spicy-tofu'],
+      'fav-food': ['roostro'],
+      'fav-toy': ['stuffed-chicken'],
+      plort: ['hunter-plort'],
+      largoable: ['yes'],
+      gordo: ['hunter-gordo'],
+    },
   },
   {
     name: 'Quantum Slime',
@@ -300,6 +373,14 @@ const cards = [
       spawn: ['the-ancient-ruins', 'the-glass-desert'],
       'range-exchange': ['the-ranch'],
       gordo: ['the-ancient-ruins'],
+    },
+    details: {
+      diet: ['fruit', 'spicy-tofu'],
+      'fav-food': ['phase-lemon'],
+      'fav-toy': ['puzzle-cube'],
+      plort: ['quantum-plort'],
+      largoable: ['yes'],
+      gordo: ['quantum-gordo'],
     },
   },
   {
@@ -316,6 +397,12 @@ const cards = [
     locations: {
       spawn: ['the-glass-desert'],
       'range-exchange': ['the-ranch'],
+    },
+    details: {
+      diet: ['ash'],
+      'fav-toy': ['charcoal-brick'],
+      plort: ['fire-plort'],
+      largoable: ['no'],
     },
   },
   {
@@ -334,6 +421,14 @@ const cards = [
       'range-exchange': ['the-ranch'],
       gordo: ['the-glass-desert'],
     },
+    details: {
+      diet: ['fruit', 'spicy-tofu'],
+      'fav-food': ['prickle-pear'],
+      'fav-toy': ['gyro-top'],
+      plort: ['dervish-plort'],
+      largoable: ['yes'],
+      gordo: ['dervish-gordo'],
+    },
   },
   {
     name: 'Tangle Slime',
@@ -351,6 +446,14 @@ const cards = [
       'range-exchange': ['the-ranch'],
       gordo: ['the-glass-desert'],
     },
+    details: {
+      diet: ['meat', 'spicy-tofu'],
+      'fav-food': ['painted-hen'],
+      'fav-toy': ['sol-mate'],
+      plort: ['tangle-plort'],
+      largoable: ['yes'],
+      gordo: ['tangle-gordo'],
+    },
   },
   {
     name: 'Mosaic Slime',
@@ -363,6 +466,14 @@ const cards = [
       spawn: ['the-glass-desert'],
       'range-exchange': ['the-ranch'],
       gordo: ['the-glass-desert'],
+    },
+    details: {
+      diet: ['veggie', 'spicy-tofu'],
+      'fav-food': ['silver-parsnip'],
+      'fav-toy': ['disco-ball'],
+      plort: ['mosaic-plort'],
+      largoable: ['yes'],
+      gordo: ['mosaic-gordo'],
     },
   },
   {
@@ -379,6 +490,12 @@ const cards = [
     locations: {
       'spawn-largo': ['the-wilds'],
     },
+    details: {
+      diet: ['meat', 'spicy-tofu'],
+      'fav-toy': ['stego-buddy'],
+      plort: ['saber-plort'],
+      largoable: ['yes'],
+    },
   },
   {
     name: 'Quicksilver Slime',
@@ -390,6 +507,11 @@ const cards = [
     locations: {
       spawn: ['nimble-valley'],
     },
+    details: {
+      diet: ['electricity'],
+      plort: ['quicksilver-plort'],
+      largoable: ['no'],
+    },
   },
   {
     name: 'Glitch Slime',
@@ -400,6 +522,9 @@ const cards = [
     tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: ['the-slimeulation'],
+    },
+    details: {
+      largoable: ['no'],
     },
   },
   {
@@ -432,6 +557,13 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['gilded-ginger'],
+      'fav-food': ['gilded-ginger'],
+      plort: ['gold-plort'],
+      largoable: ['no'],
+      gordo: ['gold-gordo'],
+    },
   },
   {
     name: 'Lucky Slime',
@@ -453,6 +585,10 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['meat'],
+      largoable: ['no'],
+    },
   },
   {
     name: 'Largo Slime',
@@ -462,6 +598,12 @@ const cards = [
     tags: ['slime', 'common', 'docile', 'harmful'],
     locations: {
       spawn: ['the-slimeulation'],
+    },
+    details: {
+      diet: ['depends-on-source-slimes'],
+      'fav-food': ['depends-on-source-slimes'],
+      'fav-toy': ['depends-on-source-slimes'],
+      plort: ['depends-on-source-slimes'],
     },
   },
   {
@@ -476,6 +618,9 @@ const cards = [
         'the-ancient-ruins',
         'the-glass-desert',
       ],
+    },
+    details: {
+      largoable: ['no'],
     },
   },
   {
@@ -496,6 +641,12 @@ const cards = [
         'the-vaults',
       ],
     },
+    details: {
+      diet: ['depends-on-source-slimes'],
+      'fav-food': ['depends-on-source-slimes'],
+      'fav-toy': ['depends-on-source-slimes'],
+      plort: ['depends-on-source-slimes'],
+    },
   },
   {
     name: 'The Tarr',
@@ -506,6 +657,10 @@ const cards = [
     locations: {
       spawn: ['the-slimeulation'],
     },
+    details: {
+      diet: ['meat', 'slime', 'rancher'],
+      'fav-food': ['rancher'],
+    },
   },
   {
     name: 'Pink Plort',
@@ -513,6 +668,13 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortPink.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['10'],
+      'min-price': ['4'],
+      'max-price': ['23'],
+      despawn: ['24 hours'],
+      slime: ['pink-slime'],
+    },
   },
   {
     name: 'Rock Plort',
@@ -520,6 +682,13 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortRock.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['22'],
+      'min-price': ['8'],
+      'max-price': ['50'],
+      despawn: ['24 hours'],
+      slime: ['rock-slime'],
+    },
   },
   {
     name: 'Tabby Plort',
@@ -527,6 +696,13 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortTabby.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['22'],
+      'min-price': ['8'],
+      'max-price': ['50'],
+      despawn: ['24 hours'],
+      slime: ['tabby-slime'],
+    },
   },
   {
     name: 'Phosphor Plort',
@@ -534,12 +710,26 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortPhosphor.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['22'],
+      'min-price': ['8'],
+      'max-price': ['49'],
+      despawn: ['24 hours'],
+      slime: ['phosphor-slime'],
+    },
   },
   {
     name: 'Rad Plort',
     icon: '/assets/games/slime-rancher/plorts/iconPlortRad.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['45'],
+      'min-price': ['15'],
+      'max-price': ['99'],
+      despawn: ['24 hours'],
+      slime: ['rad-slime'],
+    },
   },
   {
     name: 'Boom Plort',
@@ -547,6 +737,13 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortBoom.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['45'],
+      'min-price': ['15'],
+      'max-price': ['98'],
+      despawn: ['24 hours'],
+      slime: ['boom-slime'],
+    },
   },
   {
     name: 'Honey Plort',
@@ -554,12 +751,26 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortHoney.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['45'],
+      'min-price': ['15'],
+      'max-price': ['98'],
+      despawn: ['24 hours'],
+      slime: ['honey-slime'],
+    },
   },
   {
     name: 'Puddle Plort',
     icon: '/assets/games/slime-rancher/plorts/iconPlortPuddle.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortPuddle.png',
     tags: ['plort', 'common'],
+    details: {
+      'default-price': ['45'],
+      'min-price': ['15'],
+      'max-price': ['99'],
+      despawn: ['24 hours (30 mins outside pond)'],
+      slime: ['puddle-slime'],
+    },
   },
   {
     name: 'Crystal Plort',
@@ -567,6 +778,13 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortCrystal.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['60'],
+      'min-price': ['21'],
+      'max-price': ['132'],
+      despawn: ['24 hours'],
+      slime: ['crystal-slime'],
+    },
   },
   {
     name: 'Hunter Plort',
@@ -574,12 +792,26 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortHunter.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['60'],
+      'min-price': ['20'],
+      'max-price': ['132'],
+      despawn: ['24 hours'],
+      slime: ['hunter-slime'],
+    },
   },
   {
     name: 'Quantum Plort',
     icon: '/assets/games/slime-rancher/plorts/iconPlortQuantum.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['60'],
+      'min-price': ['21'],
+      'max-price': ['130'],
+      despawn: ['24 hours'],
+      slime: ['quantum-slime'],
+    },
   },
   {
     name: 'Fire Plort',
@@ -587,6 +819,13 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortFire.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['45'],
+      'min-price': ['15'],
+      'max-price': ['99'],
+      despawn: ['24 hours (30 mins outside incinerator)'],
+      slime: ['fire-slime'],
+    },
   },
   {
     name: 'Dervish Plort',
@@ -594,6 +833,13 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortDervish.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['75'],
+      'min-price': ['26'],
+      'max-price': ['164'],
+      despawn: ['24 hours'],
+      slime: ['dervish-slime'],
+    },
   },
   {
     name: 'Tangle Plort',
@@ -601,23 +847,49 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortTangle.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['75'],
+      'min-price': ['25'],
+      'max-price': ['167'],
+      despawn: ['24 hours'],
+      slime: ['tangle-slime'],
+    },
   },
   {
     name: 'Mosaic Plort',
     icon: '/assets/games/slime-rancher/plorts/iconPlortMosaic.png',
     tags: ['plort', 'common'],
     'range-exchange': ['the-ranch'],
+    details: {
+      'default-price': ['75'],
+      'min-price': ['26'],
+      'max-price': ['165'],
+      despawn: ['24 hours'],
+      slime: ['mosaic-slime'],
+    },
   },
   {
     name: 'Saber Plort',
     icon: '/assets/games/slime-rancher/plorts/iconPlortSaber.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortSaber.png',
     tags: ['plort', 'common'],
+    details: {
+      'default-price': ['60'],
+      'min-price': ['20'],
+      'max-price': ['134'],
+      despawn: ['24 hours'],
+      slime: ['saber-slime'],
+    },
   },
   {
     name: 'Quicksilver Plort',
     icon: '/assets/games/slime-rancher/plorts/iconPlortQuicksilver.png',
     tags: ['plort', 'common'],
+    details: {
+      'trade-price': ['20'],
+      despawn: ['24 hours'],
+      slime: ['quicksilver-slime'],
+    },
   },
   {
     name: 'Gold Plort',
@@ -626,6 +898,13 @@ const cards = [
     tags: ['plort', 'rare'],
     locations: {
       'treasure-pod': ['the-glass-desert', 'the-vaults'],
+    },
+    details: {
+      'default-price': ['300'],
+      'min-price': ['102'],
+      'max-price': ['658'],
+      despawn: ['6 hours'],
+      slime: ['gold-slime'],
     },
   },
   {
@@ -648,6 +927,14 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['veggie', 'fruit', 'meat', 'spicy-tofu'],
+      'food-limit': ['30'],
+      'rush-mode': ['20'],
+      count: ['2'],
+      'rush-count': ['2'],
+      slime: ['pink-slime'],
+    },
   },
   {
     name: 'Phosphor Gordo',
@@ -668,6 +955,15 @@ const cards = [
         'the-glass-desert',
         'the-slime-sea',
       ],
+    },
+    details: {
+      diet: ['fruit', 'spicy-tofu'],
+      'fav-food': ['cuberry'],
+      'food-limit': ['50'],
+      'rush-mode': ['30'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['phosphor-slime'],
     },
   },
   {
@@ -690,6 +986,15 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['meat', 'spicy-tofu'],
+      'fav-food': ['stony-hen'],
+      'food-limit': ['50'],
+      'rush-mode': ['1'],
+      count: ['2'],
+      'rush-count': ['2'],
+      slime: ['tabby-slime'],
+    },
   },
   {
     name: 'Honey Gordo',
@@ -710,6 +1015,15 @@ const cards = [
         'the-glass-desert',
         'the-slime-sea',
       ],
+    },
+    details: {
+      diet: ['fruit', 'spicy-tofu'],
+      'fav-food': ['mint-mango'],
+      'food-limit': ['50'],
+      'rush-mode': ['30'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['honey-slime'],
     },
   },
   {
@@ -732,6 +1046,15 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['meat', 'spicy-tofu'],
+      'fav-food': ['roostro'],
+      'food-limit': ['50'],
+      'rush-mode': ['30'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['hunter-slime'],
+    },
   },
   {
     name: 'Rock Gordo',
@@ -753,6 +1076,15 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['veggie', 'spicy-tofu'],
+      'fav-food': ['heart-beet'],
+      'food-limit': ['50'],
+      'rush-mode': ['1'],
+      count: ['2'],
+      'rush-count': ['2'],
+      slime: ['rock-slime'],
+    },
   },
   {
     name: 'Rad Gordo',
@@ -772,6 +1104,15 @@ const cards = [
         'the-glass-desert',
         'the-slime-sea',
       ],
+    },
+    details: {
+      diet: ['veggie', 'spicy-tofu'],
+      'fav-food': ['oca-oca'],
+      'food-limit': ['50'],
+      'rush-mode': ['30'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['rad-slime'],
     },
   },
   {
@@ -794,6 +1135,15 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['veggie', 'spicy-tofu'],
+      'fav-food': ['odd-onion'],
+      'food-limit': ['50'],
+      'rush-mode': ['30'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['crystal-slime'],
+    },
   },
   {
     name: 'Boom Gordo',
@@ -815,6 +1165,15 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['meat', 'spicy-tofu'],
+      'fav-food': ['briar-hen'],
+      'food-limit': ['50'],
+      'rush-mode': ['30'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['boom-slime'],
+    },
   },
   {
     name: 'Quantum Gordo',
@@ -834,6 +1193,15 @@ const cards = [
         'the-glass-desert',
         'the-slime-sea',
       ],
+    },
+    details: {
+      diet: ['fruit', 'spicy-tofu'],
+      'fav-food': ['phase-lemon'],
+      'food-limit': ['50'],
+      'rush-mode': ['30'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['quantum-slime'],
     },
   },
   {
@@ -856,6 +1224,15 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['fruit', 'spicy-tofu'],
+      'fav-food': ['prickle-pear'],
+      'food-limit': ['50'],
+      'rush-mode': ['30'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['dervish-slime'],
+    },
   },
   {
     name: 'Tangle Gordo',
@@ -877,6 +1254,15 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['meat', 'spicy-tofu'],
+      'fav-food': ['painted-hen'],
+      'food-limit': ['50'],
+      'rush-mode': ['1'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['tangle-slime'],
+    },
   },
   {
     name: 'Mosaic Gordo',
@@ -897,6 +1283,15 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['veggie', 'spicy-tofu'],
+      'fav-food': ['silver-parsnip'],
+      'food-limit': ['50'],
+      'rush-mode': ['30'],
+      count: ['1'],
+      'rush-count': ['1'],
+      slime: ['mosaic-slime'],
+    },
   },
   {
     name: 'Gold Gordo',
@@ -916,6 +1311,15 @@ const cards = [
         'the-slime-sea',
       ],
     },
+    details: {
+      diet: ['gilded-ginger'],
+      'fav-food': ['gilded-giner'],
+      'food-limit': ['6'],
+      'rush-mode': ['6'],
+      count: ['0'],
+      'rush-count': ['11'],
+      slime: ['gold-slime'],
+    },
   },
   {
     name: 'Party Gordo',
@@ -931,6 +1335,12 @@ const cards = [
         'the-wilds',
         'the-slime-sea',
       ],
+    },
+    details: {
+      diet: ['veggie', 'fruit', 'meat', 'spicy-tofu'],
+      'food-limit': ['10'],
+      count: ['1'],
+      'rush-count': ['0'],
     },
   },
   {
@@ -4068,6 +4478,11 @@ const cards = [
   {
     name: 'Bug Report',
     icon: '/assets/games/slime-rancher/misc/iconDebugReport.png',
+    tags: ['misc', 'common'],
+  },
+  {
+    name: 'Crate',
+    icon: '/assets/games/slime-rancher/misc/crate.png',
     tags: ['misc', 'common'],
   },
 ];
