@@ -51,6 +51,10 @@ const cards = [
         'the-vaults',
       ],
     },
+    details: {
+      diet: ['veggie', 'fruit', 'meat', 'spicy-tofu'],
+      'favorite-food': ['none'],
+    },
   },
   {
     name: 'Rock Slime',

@@ -510,7 +510,7 @@ header {
     'card-img-main card-style-name'
     'card-img-main card-tags'
     'card-location-tags card-location-tags'
-    'details details';
+    'card-details card-details';
 
   gap: 0.5rem;
   align-items: center;
@@ -645,6 +645,40 @@ header {
 
 .source-icon {
   width: 1.5rem;
+}
+
+.card-details {
+  grid-area: card-details;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+}
+
+.details-name {
+  width: 100%;
+
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.details-name:not(:first-of-type) {
+  padding-top: 0.5rem;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+
+  width: 100%;
+
+  color: white;
+}
+
+.details-icon {
+  width: 2.5rem;
 }
 
 .card-modal {

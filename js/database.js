@@ -519,7 +519,13 @@ const renderCard = (card) => {
             ${(card.tags ?? [])
               .map(
                 (tag) =>
-                  `<span class="tag tag-${tag.toLowerCase()}" style="--tag-color: var(--${tag}-color)">${tag === 'dlc' ? tag.toUpperCase() : titleCaseSlug(tag)}</span>`
+                  `
+                <span 
+                  class="tag tag-${tag.toLowerCase()}" 
+                  style="--tag-color: var(--${tag}-color)">
+                    ${tag === 'dlc' ? tag.toUpperCase() : titleCaseSlug(tag)}
+                </span>
+              `
               )
               .join('')}
           </div>
@@ -534,13 +540,59 @@ const renderCard = (card) => {
                   <summary style="--source-color: var(--${source}-color)">
                       <span class="summary-content">
                         ${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}
-                        <img class="source-icon" src="/assets/games/slime-rancher/sources/${source}.png" alt="${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}">
+                        <img 
+                          class="source-icon"
+                          src="/assets/games/slime-rancher/sources/${source}.png"
+                          alt="${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}">
                       </span>
                   </summary>
                   <div class="location-tags">
-                    ${locs.map((loc) => `<span class="tag location-tag tag-${loc}" style="--tag-color: var(--${loc}-color)">${titleCaseSlug(loc)}</span>`).join('')}
+                    ${locs
+                      .map(
+                        (loc) => `
+                        <span
+                          class="tag location-tag tag-${loc}"
+                          style="--tag-color: var(--${loc}-color)">
+                            ${titleCaseSlug(loc)}
+                        </span>
+                      `
+                      )
+                      .join('')}
                   </div>
                 </details>`
+                    )
+                    .join('')
+                : ''
+            }
+          </div>
+          <div class="card-details">
+            ${
+              card.details
+                ? Object.entries(card.details)
+                    .map(
+                      ([category, details]) => `
+                    <div class="details-name">
+                      ${titleCaseSlug(category)}
+                    </div>
+                    <div class="details">
+                      ${details
+                        .map(
+                          (detail) => `
+                            <img 
+                              class="details-icon"
+                              src="${
+                                cards.find((card) => {
+                                  return card.name === titleCaseSlug(detail);
+                                })?.icon ||
+                                `/assets/games/slime-rancher/extra/${detail}.png`
+                              }"
+                              alt="${titleCaseSlug(detail)}"
+                              title="${titleCaseSlug(detail)}">
+                          `
+                        )
+                        .join('')}
+                    </div>
+                    `
                     )
                     .join('')
                 : ''
@@ -563,6 +615,37 @@ const renderCards = (cards) => {
     })
     .join('');
 };
+
+const cardModal = document.getElementById('card-modal');
+const cardModalContent = document.getElementById('card-modal-content');
+const closeModal = document.getElementById('close-modal-btn');
+
+cardContainer.addEventListener('click', (e) => {
+  if (e.target.closest('.card-location-tags')) return;
+  if (e.target.closest('.card-details')) return;
+
+  const cardElement = e.target.closest('.card');
+  if (!cardElement) return;
+
+  const cardName = cardElement.querySelector('.card-name').textContent;
+  const clickedCard = cards.find((card) => {
+    return card.name === cardName;
+  });
+
+  cardModalContent.innerHTML = renderCard(clickedCard);
+  cardModal.showModal();
+});
+
+closeModal.addEventListener('click', () => {
+  cardModal.close();
+});
+
+// Close modal when clicking outside
+cardModal.addEventListener('click', (e) => {
+  if (e.target === cardModal) {
+    cardModal.close();
+  }
+});
 
 const params = new URLSearchParams(location.search);
 
@@ -640,33 +723,3 @@ filterBtns.forEach((btn) => {
 });
 
 updateUI();
-
-const cardModal = document.getElementById('card-modal');
-const cardModalContent = document.getElementById('card-modal-content');
-const closeModal = document.getElementById('close-modal-btn');
-
-cardContainer.addEventListener('click', (e) => {
-  if (e.target.closest('.card-location-tags')) return;
-
-  const cardElement = e.target.closest('.card');
-  if (!cardElement) return;
-
-  const cardName = cardElement.querySelector('.card-name').textContent;
-  const clickedCard = cards.find((card) => {
-    return card.name === cardName;
-  });
-
-  cardModalContent.innerHTML = renderCard(clickedCard);
-  cardModal.showModal();
-});
-
-closeModal.addEventListener('click', () => {
-  cardModal.close();
-});
-
-// Close modal when clicking outside
-cardModal.addEventListener('click', (e) => {
-  if (e.target === cardModal) {
-    cardModal.close();
-  }
-});
