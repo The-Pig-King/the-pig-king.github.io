@@ -1,18 +1,20 @@
 :root {
+  /* Main Colors */
   --frame-color: #2e2f36;
   --main-color: #7d7d7d;
   --background-color: #545454;
 
   --thepigking-color: #feb6b7;
 
-  --sr-color: #f285bd;
-  --sr2-color: #f088ff;
-
   --database-color: rgb(124, 119, 119);
 
   --toggled-on-color: darkgreen;
   --toggled-off-color: darkred;
   --reset-color: darkred;
+
+  /* Slime Rancher Colors */
+  --sr-color: #f285bd;
+  --sr2-color: #f088ff;
 
   --secret-style-color: #4a2988;
 
@@ -515,6 +517,7 @@ header {
   justify-items: center;
   text-align: center;
 
+  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
   border-radius: 1rem;
   background-color: var(--frame-color);
   padding: 0.5rem;
@@ -531,6 +534,7 @@ header {
 .card-name {
   grid-area: card-name;
   font-size: 1rem;
+  color: white;
 }
 
 .card-style-name {
@@ -641,6 +645,23 @@ header {
 
 .source-icon {
   width: 1.5rem;
+}
+
+.card-modal {
+  margin: auto;
+  max-width: 50rem;
+  border: 0;
+  background-color: transparent;
+}
+
+.card-modal::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 /* Media Queries */

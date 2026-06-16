@@ -430,64 +430,57 @@ const cardContainer = document.getElementById('card-container');
 const secretStyleBtn = document.querySelector('.btn-secret-style');
 const sr2StyleBtn = document.querySelector('.btn-sr2-style');
 
-const renderCards = (cards) => {
-  // No card matches
-  if (!cards || cards.length === 0) {
-    cardContainer.innerHTML = '';
-    return;
+const renderCard = (card) => {
+  if (!card) return '';
+
+  const isSecretStyleToggledOn = secretStyleBtn.classList.contains('toggledOn');
+  const isSr2StyleToggledOn = sr2StyleBtn.classList.contains('toggledOn');
+
+  const hasRadiantAndToggledOn =
+    isSecretStyleToggledOn && isSr2StyleToggledOn && card['radiant-icon'];
+  const hasSR2AndToggledOn = isSr2StyleToggledOn && card['sr2-icon'];
+  const hasSecretStyleAndToggledOn =
+    isSecretStyleToggledOn && card['secret-style-icon'];
+
+  // Select style icon
+  let iconSrc;
+  if (hasRadiantAndToggledOn) {
+    iconSrc = card['radiant-icon'];
+  } else if (hasSR2AndToggledOn) {
+    iconSrc = card['sr2-icon'];
+  } else if (hasSecretStyleAndToggledOn) {
+    iconSrc = card['secret-style-icon'];
+  } else {
+    iconSrc = card['icon'];
   }
 
-  cardContainer.innerHTML = cards
-    .map((card) => {
-      const isSecretStyleToggledOn =
-        secretStyleBtn.classList.contains('toggledOn');
-      const isSr2StyleToggledOn = sr2StyleBtn.classList.contains('toggledOn');
+  // Select style name
+  let styleName;
+  if (hasRadiantAndToggledOn) {
+    styleName = 'Radiant';
+  } else if (hasSR2AndToggledOn) {
+    styleName = 'Slime Rancher 2';
+  } else if (isSecretStyleToggledOn && card['secret-style-name']) {
+    styleName = card['secret-style-name'];
+  } else {
+    styleName = '';
+  }
 
-      const hasRadiantAndToggledOn =
-        isSecretStyleToggledOn && isSr2StyleToggledOn && card['radiant-icon'];
-      const hasSR2AndToggledOn = isSr2StyleToggledOn && card['sr2-icon'];
-      const hasSecretStyleAndToggledOn =
-        isSecretStyleToggledOn && card['secret-style-icon'];
+  let radiantVars = '';
 
-      // Select style icon
-      let iconSrc;
-      if (hasRadiantAndToggledOn) {
-        iconSrc = card['radiant-icon'];
-      } else if (hasSR2AndToggledOn) {
-        iconSrc = card['sr2-icon'];
-      } else if (hasSecretStyleAndToggledOn) {
-        iconSrc = card['secret-style-icon'];
-      } else {
-        iconSrc = card['icon'];
-      }
+  // Random radiant gradient values
+  if (hasRadiantAndToggledOn) {
+    const baseColors = ['#f8f08a', '#f6c6e8', '#d8c9ff', '#8eefff'];
 
-      // Select style name
-      let styleName;
-      if (hasRadiantAndToggledOn) {
-        styleName = 'Radiant';
-      } else if (hasSR2AndToggledOn) {
-        styleName = 'Slime Rancher 2';
-      } else if (isSecretStyleToggledOn && card['secret-style-name']) {
-        styleName = card['secret-style-name'];
-      } else {
-        styleName = '';
-      }
+    // Random Order
+    const colors = [...baseColors].sort(() => Math.random() - 0.5);
 
-      let radiantVars = '';
+    // Random stop positions
+    const p1 = 15 + Math.random() * 15; // 15–30
+    const p2 = p1 + 15 + Math.random() * 15; // 30–60
+    const p3 = p2 + 15 + Math.random() * 15; // 60–90
 
-      // Random radiant gradient values
-      if (hasRadiantAndToggledOn) {
-        const baseColors = ['#f8f08a', '#f6c6e8', '#d8c9ff', '#8eefff'];
-
-        // Random Order
-        const colors = [...baseColors].sort(() => Math.random() - 0.5);
-
-        // Random stop positions
-        const p1 = 15 + Math.random() * 15; // 15–30
-        const p2 = p1 + 15 + Math.random() * 15; // 30–60
-        const p3 = p2 + 15 + Math.random() * 15; // 60–90
-
-        radiantVars = `
+    radiantVars = `
           --angle:${Math.floor(Math.random() * 360)}deg;
           --c1:${colors[0]};
           --c2:${colors[1]};
@@ -497,27 +490,27 @@ const renderCards = (cards) => {
           --p2:${p2}%;
           --p3:${p3}%;
         `;
-      }
+  }
 
-      styleAttr = '';
-      radiantAttr = '';
-      classAttr = '';
+  let styleAttr = '';
+  let radiantAttr = '';
+  let classAttr = '';
 
-      if (hasRadiantAndToggledOn) {
-        // Distinguish Slime Rancher 2 "Radiant" styling from Rad Slime "Radiant" styling
-        radiantAttr = radiantVars;
-        classAttr = 'style-radiant';
-      } else if (hasSR2AndToggledOn) {
-        styleAttr = '--style-color: var(--sr2-color);';
-      } else if (hasSecretStyleAndToggledOn) {
-        styleAttr =
-          '--style-color: var(--style-' +
-          card['secret-style-name'].toLowerCase().replace(/\s+/g, '-') +
-          '-color);';
-      }
+  if (hasRadiantAndToggledOn) {
+    // Distinguish Slime Rancher 2 "Radiant" styling from Rad Slime "Radiant" styling
+    radiantAttr = radiantVars;
+    classAttr = 'style-radiant';
+  } else if (hasSR2AndToggledOn) {
+    styleAttr = '--style-color: var(--sr2-color);';
+  } else if (hasSecretStyleAndToggledOn) {
+    styleAttr =
+      '--style-color: var(--style-' +
+      card['secret-style-name'].toLowerCase().replace(/\s+/g, '-') +
+      '-color);';
+  }
 
-      // Render cards
-      return `
+  // Render cards
+  return `
       <div class="card">
         <img src="${iconSrc}" alt="${card.name}" class="card-img-main" />
           <h2 class="card-name ${card.name.toLowerCase().replace(/\s+/g, '-')}">${card.name}</h2>
@@ -555,6 +548,18 @@ const renderCards = (cards) => {
           </div>
         </div>
       `;
+};
+
+const renderCards = (cards) => {
+  // No card matches
+  if (!cards || cards.length === 0) {
+    cardContainer.innerHTML = '';
+    return;
+  }
+
+  cardContainer.innerHTML = cards
+    .map((card) => {
+      return renderCard(card);
     })
     .join('');
 };
@@ -635,3 +640,33 @@ filterBtns.forEach((btn) => {
 });
 
 updateUI();
+
+const cardModal = document.getElementById('card-modal');
+const cardModalContent = document.getElementById('card-modal-content');
+const closeModal = document.getElementById('close-modal-btn');
+
+cardContainer.addEventListener('click', (e) => {
+  if (e.target.closest('.card-location-tags')) return;
+
+  const cardElement = e.target.closest('.card');
+  if (!cardElement) return;
+
+  const cardName = cardElement.querySelector('.card-name').textContent;
+  const clickedCard = cards.find((card) => {
+    return card.name === cardName;
+  });
+
+  cardModalContent.innerHTML = renderCard(clickedCard);
+  cardModal.showModal();
+});
+
+closeModal.addEventListener('click', () => {
+  cardModal.close();
+});
+
+// Close modal when clicking outside
+cardModal.addEventListener('click', (e) => {
+  if (e.target === cardModal) {
+    cardModal.close();
+  }
+});
