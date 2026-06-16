@@ -639,11 +639,24 @@ cardContainer.addEventListener('click', (e) => {
 
 // Open modal of clicked detail
 document.addEventListener('click', (e) => {
-  if (!e.target.classList.contains('details-icon')) return;
+  if (
+    !e.target.classList.contains('details-icon') &&
+    !e.target.classList.contains('tag')
+  ) {
+    return;
+  }
 
-  const detailName = e.target.alt;
+  let name = '';
+  if (e.target.classList.contains('details-icon')) {
+    name = e.target.alt;
+  } else if (e.target.classList.contains('tag')) {
+    name = e.target.textContent.trim();
+  }
+
+  console.log(name);
+
   const foundCard = cards.find((card) => {
-    return card.name === detailName;
+    return card.name === name;
   });
 
   if (!foundCard) return;
