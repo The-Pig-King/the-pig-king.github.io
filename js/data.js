@@ -1372,6 +1372,10 @@ const cards = [
       ],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      'max-harvest': ['20 (30 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
+    },
   },
   {
     name: 'Oca Oca',
@@ -1381,6 +1385,11 @@ const cards = [
       spawn: ['the-indigo-quarry', 'the-slimeulation'],
       crate: ['the-indigo-quarry'],
       'range-exchange': ['the-ranch'],
+    },
+    details: {
+      'fav-of': ['rad-slime'],
+      'max-harvest': ['15 (23 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
     },
   },
   {
@@ -1408,6 +1417,11 @@ const cards = [
       ],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      'fav-of': ['rock-slime'],
+      'max-harvest': ['15 (23 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
+    },
   },
   {
     name: 'Silver Parsnip',
@@ -1417,6 +1431,11 @@ const cards = [
       spawn: ['the-glass-desert'],
       crate: ['the-glass-desert'],
       'range-exchange': ['the-ranch'],
+    },
+    details: {
+      'fav-of': ['mosaic-slime'],
+      'max-harvest': ['15 (23 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
     },
   },
   {
@@ -1429,6 +1448,11 @@ const cards = [
       crate: ['the-indigo-quarry'],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      'fav-of': ['crystal-slime'],
+      'max-harvest': ['20 (30 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
+    },
   },
   {
     name: 'Gilded Ginger',
@@ -1436,6 +1460,10 @@ const cards = [
     tags: ['food', 'veggie', 'rare'],
     locations: {
       spawn: ['the-glass-desert'],
+    },
+    details: {
+      'fav-of': ['gold-slime'],
+      'decay-time': ['20 hours (42 Miracle)'],
     },
   },
   {
@@ -1468,6 +1496,10 @@ const cards = [
       ],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      'max-harvest': ['20 (30 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
+    },
   },
   {
     name: 'Mint Mango',
@@ -1478,6 +1510,11 @@ const cards = [
       spawn: ['the-moss-blanket', 'the-slimeulation'],
       crate: ['the-moss-blanket'],
       'range-exchange': ['the-ranch'],
+    },
+    details: {
+      'fav-of': ['honey-slime'],
+      'max-harvest': ['15 (23 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
     },
   },
   {
@@ -1506,6 +1543,11 @@ const cards = [
       ],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      'fav-of': ['phosphor-slime'],
+      'max-harvest': ['15 (23 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
+    },
   },
   {
     name: 'Phase Lemon',
@@ -1515,6 +1557,11 @@ const cards = [
       spawn: ['viktors-workshop', 'the-ancient-ruins'],
       crate: ['the-ancient-ruins'],
       'range-exchange': ['the-ranch'],
+    },
+    details: {
+      'fav-of': ['quantum-slime'],
+      'max-harvest': ['15 (23 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
     },
   },
   {
@@ -1527,6 +1574,11 @@ const cards = [
       crate: ['the-glass-desert'],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      'fav-of': ['dervish-slime'],
+      'max-harvest': ['15 (23 Deluxe)'],
+      'decay-time': ['36 hours (48 Miracle)'],
+    },
   },
   {
     name: 'Kookadoba',
@@ -1535,6 +1587,10 @@ const cards = [
     locations: {
       spawn: ['the-wilds'],
       crate: ['the-wilds'],
+    },
+    details: {
+      'fav-of': ['ogden-ortiz'],
+      'decay-time': ['13 hours (30 Miracle)'],
     },
   },
   {
@@ -1553,6 +1609,9 @@ const cards = [
         'the-slimeulation',
       ],
       worldgen: ['the-ranch'],
+    },
+    details: {
+      'grow-time': ['36 hours (3 Spring Grass)'],
     },
   },
   {
@@ -1610,6 +1669,9 @@ const cards = [
       ],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      'fav-of': ['hunter-slime'],
+    },
   },
   {
     name: 'Stony Chickadoo',
@@ -1626,6 +1688,9 @@ const cards = [
         'the-wilds',
         'the-slimeulation',
       ],
+    },
+    details: {
+      'grow-time': ['6 hours (3 Spring Grass)'],
     },
   },
   {
@@ -1654,6 +1719,9 @@ const cards = [
       ],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      'fav-of': ['tabby-slime'],
+    },
   },
   {
     name: 'Briar Chickadoo',
@@ -1662,6 +1730,9 @@ const cards = [
     tags: ['food', 'future-meat', 'common'],
     locations: {
       spawn: ['the-moss-blanket', 'the-slimeulation'],
+    },
+    details: {
+      'grow-time': ['6 hours (3 Spring Grass)'],
     },
   },
   {
@@ -1673,6 +1744,9 @@ const cards = [
       spawn: ['the-moss-blanket', 'the-slimeulation'],
       'range-exchange': ['the-ranch'],
     },
+    details: {
+      'fav-of': ['boom-slime'],
+    },
   },
   {
     name: 'Painted Chickadoo',
@@ -1681,6 +1755,9 @@ const cards = [
     tags: ['food', 'future-meat', 'common'],
     locations: {
       spawn: ['the-glass-desert'],
+    },
+    details: {
+      'grow-time': ['6 hours (3 Spring Grass)'],
     },
   },
   {
@@ -1691,6 +1768,9 @@ const cards = [
     locations: {
       spawn: ['the-glass-desert'],
       'range-exchange': ['the-ranch'],
+    },
+    details: {
+      'fav-of': ['tangle-slime'],
     },
   },
   {
@@ -1734,6 +1814,9 @@ const cards = [
     locations: {
       'range-exchange': ['ogdens-retreat'],
     },
+    details: {
+      'decay-time': ['36 hours (48 Miracle)'],
+    },
   },
   {
     name: 'Water',
@@ -1769,6 +1852,9 @@ const cards = [
     locations: {
       spawn: ['nimble-valley'],
     },
+    details: {
+      'max-harvest': ['30'],
+    },
   },
   {
     name: 'Thunderclap',
@@ -1777,6 +1863,9 @@ const cards = [
     locations: {
       spawn: ['nimble-valley'],
     },
+    details: {
+      'max-harvest': ['3'],
+    },
   },
   {
     name: 'Static Clinger',
@@ -1784,6 +1873,9 @@ const cards = [
     tags: ['food', 'electricity', 'common'],
     locations: {
       spawn: ['nimble-valley'],
+    },
+    details: {
+      'max-harvest': ['3'],
     },
   },
   {
@@ -2108,6 +2200,10 @@ const cards = [
     locations: {
       worldgen: ['the-dry-reef'],
     },
+    details: {
+      price: ['300'],
+      'fav-of': ['pink-slime'],
+    },
   },
   {
     name: 'Big Rock',
@@ -2116,6 +2212,10 @@ const cards = [
     tags: ['toy', 'common'],
     locations: {
       worldgen: ['the-indigo-quarry'],
+    },
+    details: {
+      price: ['400'],
+      'fav-of': ['rock-slime'],
     },
   },
   {
@@ -2126,6 +2226,10 @@ const cards = [
     locations: {
       worldgen: ['the-moss-blanket'],
     },
+    details: {
+      price: ['400'],
+      'fav-of': ['tabby-slime'],
+    },
   },
   {
     name: 'Night Light',
@@ -2135,23 +2239,39 @@ const cards = [
     locations: {
       worldgen: ['the-slime-sea'],
     },
+    details: {
+      price: ['500'],
+      'fav-of': ['phosphor-slime'],
+    },
   },
   {
     name: 'Power Cell',
     icon: '/assets/games/slime-rancher/toys/iconToyPowerCell.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['500'],
+      'fav-of': ['rad-slime'],
+    },
   },
   {
     name: 'Bomb Ball',
     icon: '/assets/games/slime-rancher/toys/iconToyBomb.png',
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyBomb.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['500'],
+      'fav-of': ['boom-slime'],
+    },
   },
   {
     name: 'Buzzy Bee',
     icon: '/assets/games/slime-rancher/toys/iconToyBuzzBee.png',
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyBuzzyBee.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['500'],
+      'fav-of': ['honey-slime'],
+    },
   },
   {
     name: 'Rubber Ducky',
@@ -2161,72 +2281,124 @@ const cards = [
     locations: {
       worldgen: ['the-ranch'],
     },
+    details: {
+      price: ['500'],
+      'fav-of': ['puddle-slime'],
+    },
   },
   {
     name: 'Octo Buddy',
     icon: '/assets/games/slime-rancher/toys/iconToyBOctoBuddy.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['500'],
+      'fav-of': ['scuba-fashion-pod'],
+    },
   },
   {
     name: 'Crystal Ball',
     icon: '/assets/games/slime-rancher/toys/iconToyCrystalBall.png',
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyCrystalBall.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['600'],
+      'fav-of': ['crystal-slime'],
+    },
   },
   {
     name: 'Stuffed Chicken',
     icon: '/assets/games/slime-rancher/toys/iconToyStuffedChicken.png',
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyStuffedChicken.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['600'],
+      'fav-of': ['hunter-slime'],
+    },
   },
   {
     name: 'Puzzle Cube',
     icon: '/assets/games/slime-rancher/toys/iconToyPuzzleBox.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['600'],
+      'fav-of': ['quantum-slime'],
+    },
   },
   {
     name: 'Disco Ball',
     icon: '/assets/games/slime-rancher/toys/iconToyDiscoBall.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['700'],
+      'fav-of': ['mosaic-slime'],
+    },
   },
   {
     name: 'Gyro Top',
     icon: '/assets/games/slime-rancher/toys/iconToyGyroTop.png',
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyGyroTop.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['700'],
+      'fav-of': ['dervish-slime'],
+    },
   },
   {
     name: 'Sol Mate',
     icon: '/assets/games/slime-rancher/toys/iconToySolBuddy.png',
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToySolMate.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['700'],
+      'fav-of': ['tangle-slime'],
+    },
   },
   {
     name: 'Charcoal Brick',
     icon: '/assets/games/slime-rancher/toys/iconToyBrickette.png',
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyCharcoalBrick.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['700'],
+      'fav-of': ['fire-slime'],
+    },
   },
   {
     name: 'Stego Buddy',
     icon: '/assets/games/slime-rancher/toys/iconToyStegoBuddy.png',
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyStegoBuddy.png',
     tags: ['toy', 'common'],
+    details: {
+      price: ['700'],
+      'fav-of': ['saber-slime'],
+    },
   },
   {
     name: 'Treasure Chest',
     icon: '/assets/games/slime-rancher/toys/iconToyTreasureChest.png',
     tags: ['toy', 'dlc', 'common'],
+    details: {
+      price: ['200'],
+      'fav-of': ['piratey-fashion-pod'],
+    },
   },
   {
     name: 'Bop Goblin',
     icon: '/assets/games/slime-rancher/toys/iconToyBopGoblin.png',
     tags: ['toy', 'dlc', 'common'],
+    details: {
+      price: ['200'],
+      'fav-of': ['heroic-fashion-pod'],
+    },
   },
   {
     name: 'Beeper Bot',
     icon: '/assets/games/slime-rancher/toys/iconToyscifi.png',
     tags: ['toy', 'dlc', 'common'],
+    details: {
+      price: ['200'],
+      'fav-of': ['galactic-fashion-pod'],
+    },
   },
   {
     name: 'Mudball',
@@ -3471,24 +3643,36 @@ const cards = [
     icon: '/assets/games/slime-rancher/upgrades/iconShopWater01.png',
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopWater01.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['350'],
+    },
   },
   {
     name: 'Jetpack',
     icon: '/assets/games/slime-rancher/upgrades/iconShopJetpack.png',
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 1.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['350'],
+    },
   },
   {
     name: 'Air Drive',
     icon: '/assets/games/slime-rancher/upgrades/iconShopAirdrive.png',
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 1.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['500'],
+    },
   },
   {
     name: 'Dash Boots',
     icon: '/assets/games/slime-rancher/upgrades/iconShopBoots.png',
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopDashBoots.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['350'],
+    },
   },
   {
     name: 'Ultra Dash Boots',
@@ -3501,6 +3685,9 @@ const cards = [
     icon: '/assets/games/slime-rancher/upgrades/iconShopPulsewave.png',
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopPulsewave.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['350'],
+    },
   },
   {
     name: 'Heart Module',
@@ -3508,6 +3695,9 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['350'],
+    },
   },
   {
     name: 'Heart Module Mk II',
@@ -3515,6 +3705,9 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['500'],
+    },
   },
   {
     name: 'Heart Module Mk III',
@@ -3522,6 +3715,9 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['750'],
+    },
   },
   {
     name: 'Heart Module Ultra',
@@ -3536,6 +3732,9 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['350'],
+    },
   },
   {
     name: 'Power Module Mk II',
@@ -3543,6 +3742,9 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['650'],
+    },
   },
   {
     name: 'Power Module Mk III',
@@ -3550,6 +3752,9 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['950'],
+    },
   },
   {
     name: 'Tank Module',
@@ -3557,6 +3762,9 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['350'],
+    },
   },
   {
     name: 'Tank Module Mk II',
@@ -3564,6 +3772,9 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['500'],
+    },
   },
   {
     name: 'Tank Module Mk III',
@@ -3571,6 +3782,9 @@ const cards = [
     'sr2-icon':
       '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['750'],
+    },
   },
   {
     name: 'Tank Module Ultra',
@@ -3583,16 +3797,25 @@ const cards = [
     name: 'Treasure Cracker',
     icon: '/assets/games/slime-rancher/upgrades/iconShopTreasure01.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['4500'],
+    },
   },
   {
     name: 'Treasure Cracker Mk II',
     icon: '/assets/games/slime-rancher/upgrades/iconShopTreasure02.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['9000'],
+    },
   },
   {
     name: 'Treasure Cracker Mk III',
     icon: '/assets/games/slime-rancher/upgrades/iconShopTreasure03.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['25000'],
+    },
   },
   {
     name: 'Golden Sureshot',
@@ -3605,96 +3828,379 @@ const cards = [
     name: 'Extra Slime Key',
     icon: '/assets/games/slime-rancher/upgrades/iconKeyPedia.png',
     tags: ['upgrade', 'common'],
+    details: {
+      price: ['25000'],
+    },
   },
   {
     name: 'The Ranch',
     icon: '/assets/games/slime-rancher/zones/iconZoneRanch.png',
     tags: ['zone', 'common'],
+    details: {
+      plots: ['8'],
+      'gadget-sites': ['27'],
+    },
   },
   {
     name: 'The Grotto',
     icon: '/assets/games/slime-rancher/zones/iconExpanGrotto.png',
     tags: ['zone', 'common'],
+    details: {
+      price: ['1795'],
+      plots: ['5'],
+      'gadget-sites': ['11'],
+    },
   },
   {
     name: 'The Overgrowth',
     icon: '/assets/games/slime-rancher/zones/iconExpanOvergrowth.png',
     tags: ['zone', 'common'],
+    details: {
+      price: ['1795'],
+      plots: ['4'],
+      'gadget-sites': ['12'],
+      food: ['carrot', 'pogo-fruit', 'hen-hen'],
+    },
   },
   {
     name: 'The Docks',
     icon: '/assets/games/slime-rancher/zones/iconExpanDocks.png',
     tags: ['zone', 'common'],
+    details: {
+      price: ['5000'],
+      plots: ['4'],
+      'gadget-sites': ['11'],
+      food: ['water'],
+    },
   },
   {
     name: 'The Lab',
     icon: '/assets/games/slime-rancher/zones/iconZoneLab.png',
     tags: ['zone', 'common'],
+    details: {
+      price: ['10000'],
+      plots: ['5'],
+      'gadget-sites': ['15'],
+    },
   },
   {
     name: "Ogden's Retreat",
     icon: '/assets/games/slime-rancher/zones/iconZoneOgdensRetreat.png',
     tags: ['zone', 'common'],
+    details: {
+      plots: ['6'],
+      'gadget-sites': ['14'],
+      'unique-resources': ['spicy-tofu'],
+      food: ['carrot', 'pogo-fruit'],
+    },
   },
   {
     name: "Mochi's Manor",
     icon: '/assets/games/slime-rancher/zones/iconZoneMochiEstate.png',
     tags: ['zone', 'common'],
+    details: {
+      plots: ['5'],
+      'gadget-sites': ['14'],
+      food: ['water'],
+    },
   },
   {
     name: "Viktor's Workshop",
     icon: '/assets/games/slime-rancher/zones/iconZoneViktorLab.png',
     tags: ['zone', 'common'],
+    details: {
+      plots: ['4'],
+      'gadget-sites': ['12'],
+      'unique-resources': ['manifold-cube'],
+      food: ['phase-lemon', 'water'],
+    },
   },
   {
     name: 'The Dry Reef',
     icon: '/assets/games/slime-rancher/zones/iconZoneReef.png',
     tags: ['zone', 'common'],
+    details: {
+      'gadget-sites': ['76'],
+      'unique-resources': ['deep-brine'],
+      food: [
+        'carrot',
+        'heart-beet',
+        'pogo-fruit',
+        'cuberry',
+        'chickadoo',
+        'hen-hen',
+        'roostro',
+        'stony-chickadoo',
+        'stony-hen',
+        'water',
+      ],
+      slimes: [
+        'pink-slime',
+        'rock-slime',
+        'tabby-slime',
+        'phosphor-slime',
+        'puddle-slime',
+        'gold-slime',
+        'lucky-slime',
+      ],
+      gordos: ['pink-gordo', 'phosphor-gordo', 'tabby-gordo'],
+    },
   },
   {
     name: 'The Moss Blanket',
     icon: '/assets/games/slime-rancher/zones/iconZoneMoss.png',
     tags: ['zone', 'common'],
+    details: {
+      'gadget-sites': ['64'],
+      'unique-resources': ['wild-honey'],
+      food: [
+        'carrot',
+        'pogo-fruit',
+        'mint-mango',
+        'cuberry',
+        'chickadoo',
+        'hen-hen',
+        'roostro',
+        'stony-chickadoo',
+        'stony-hen',
+        'briar-chickadoo',
+        'briar-hen',
+        'water',
+      ],
+      slimes: [
+        'pink-slime',
+        'tabby-slime',
+        'phosphor-slime',
+        'boom-slime',
+        'honey-slime',
+        'puddle-slime',
+        'hunter-slime',
+        'gold-slime',
+        'lucky-slime',
+      ],
+      gordos: ['honey-gordo', 'hunter-gordo'],
+    },
   },
   {
     name: 'The Indigo Quarry',
     icon: '/assets/games/slime-rancher/zones/iconZoneQuarry.png',
     tags: ['zone', 'common'],
+    details: {
+      'gadget-sites': ['71'],
+      'unique-resources': ['indigonium'],
+      food: [
+        'carrot',
+        'oca-oca',
+        'heart-beet',
+        'odd-onion',
+        'pogo-fruit',
+        'cuberry',
+        'chickadoo',
+        'hen-hen',
+        'roostro',
+        'stony-chickadoo',
+        'stony-hen',
+        'water',
+      ],
+      slimes: [
+        'pink-slime',
+        'phosphor-slime',
+        'rad-slime',
+        'boom-slime',
+        'puddle-slime',
+        'crystal-slime',
+        'gold-slime',
+        'lucky-slime',
+      ],
+      gordos: ['rock-gordo', 'rad-gordo', 'crystal-gordo'],
+    },
   },
   {
     name: 'The Ancient Ruins',
     icon: '/assets/games/slime-rancher/zones/iconZoneRuins.png',
     tags: ['zone', 'common'],
+    details: {
+      'gadget-sites': ['67'],
+      'unique-resources': ['red-echo', 'blue-echo', 'green-echo', 'gold-echo'],
+      food: [
+        'carrot',
+        'heart-beet',
+        'pogo-fruit',
+        'cuberry',
+        'phase-lemon',
+        'chickadoo',
+        'hen-hen',
+        'roostro',
+        'stony-chickadoo',
+        'stony-hen',
+        'water',
+      ],
+      slimes: [
+        'pink-slime',
+        'rock-slime',
+        'tabby-slime',
+        'phosphor-slime',
+        'boom-slime',
+        'puddle-slime',
+        'quantum-slime',
+        'gold-slime',
+        'lucky-slime',
+      ],
+      gordos: ['boom-gordo', 'quantum-gordo'],
+    },
   },
   {
     name: 'The Glass Desert',
     icon: '/assets/games/slime-rancher/zones/iconZoneDesert.png',
     tags: ['zone', 'common'],
+    details: {
+      'gadget-sites': ['84'],
+      'unique-resources': ['glass-shard', 'pepper-jam', 'silky-sand'],
+      other: ['ancient-water'],
+      food: [
+        'carrot',
+        'heart-beet',
+        'silver-parsnip',
+        'gilded-ginger',
+        'pogo-fruit',
+        'cuberry',
+        'prickle-pear',
+        'chickadoo',
+        'hen-hen',
+        'roostro',
+        'stony-chickadoo',
+        'stony-hen',
+        'painted-chickadoo',
+        'painted-hen',
+        'water',
+      ],
+      slimes: [
+        'pink-slime',
+        'rock-slime',
+        'tabby-slime',
+        'phosphor-slime',
+        'boom-slime',
+        'puddle-slime',
+        'quantum-slime',
+        'gold-slime',
+        'lucky-slime',
+      ],
+      gordos: ['dervish-gordo', 'tangle-gordo', 'mosaic-gordo'],
+    },
   },
   {
     name: 'The Wilds',
     icon: '/assets/games/slime-rancher/zones/iconZoneWilds.png',
     tags: ['zone', 'common'],
+    details: {
+      food: [
+        'carrot',
+        'heart-beet',
+        'pogo-fruit',
+        'cuberry',
+        'kookadoba',
+        'chickadoo',
+        'hen-hen',
+        'roostro',
+        'water',
+      ],
+      slimes: [
+        'pink-slime',
+        'rock-slime',
+        'tabby-slime',
+        'phosphor-slime',
+        'rad-slime',
+        'boom-slime',
+        'hunter-slime',
+        'saber-slime',
+        'gold-slime',
+        'lucky-slime',
+      ],
+    },
   },
   {
     name: 'Nimble Valley',
     icon: '/assets/games/slime-rancher/zones/iconZoneNimbleValley.png',
     tags: ['zone', 'common'],
+    details: {
+      other: ['slooow-field'],
+      food: ['spark-shot', 'thunderclap', 'static-clinger'],
+      slimes: ['quicksilver-slime'],
+    },
   },
   {
     name: 'The Slimeulation',
     icon: '/assets/games/slime-rancher/zones/iconZoneSlimeulation.png',
     tags: ['zone', 'common'],
+    details: {
+      other: ['debug-spray'],
+      food: [
+        'carrot',
+        'oca-oca',
+        'heart-beet',
+        'odd-onion',
+        'pogo-fruit',
+        'mint-mango',
+        'cuberry',
+        'chickadoo',
+        'hen-hen',
+        'roostro',
+        'stony-chickadoo',
+        'stony-hen',
+        'briar-chickadoo',
+        'briar-hen',
+        'water',
+      ],
+      slimes: [
+        'pink-slime',
+        'rock-slime',
+        'tabby-slime',
+        'phosphor-slime',
+        'rad-slime',
+        'boom-slime',
+        'honey-slime',
+        'puddle-slime',
+        'hunter-slime',
+        'glitch-slime',
+        'gold-slime',
+        'lucky-slime',
+        'the-tarr',
+      ],
+    },
   },
   {
     name: 'The Slime Sea',
     icon: '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['zone', 'common'],
+    details: {
+      'gadget-sites': ['11'],
+      food: [
+        'carrot',
+        'heart-beet',
+        'pogo-fruit',
+        'cuberry',
+        'hen-hen',
+        'roostro',
+        'stony-hen',
+      ],
+      slimes: [
+        'pink-slime',
+        'rock-slime',
+        'tabby-slime',
+        'phosphor-slime',
+        'gold-slime',
+        'lucky-slime',
+      ],
+    },
   },
   {
-    name: 'UNKNOWN',
-    icon: '/assets/games/slime-rancher/zones/temp_missing_player_marker.png',
+    name: 'The Vaults',
+    icon: '/assets/games/slime-rancher/zones/iconHobson.png',
     tags: ['zone', 'common'],
+    details: {
+      food: ['pogo-fruit', 'water'],
+      slimes: ['pink-slime', 'rock-slime', 'gold-slime'],
+    },
   },
   {
     name: 'Novice Drill',
@@ -4407,17 +4913,17 @@ const cards = [
   },
   {
     name: 'Piratey Fashion Pod',
-    icon: '/assets/games/slime-rancher/gadgets/iconFashionShades.png',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionPiratey.png',
     tags: ['gadget', 'dlc', 'common', 'curio'],
   },
   {
     name: 'Heroic Fashion Pod',
-    icon: '/assets/games/slime-rancher/gadgets/iconFashionRoyal.png',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionHeroic.png',
     tags: ['gadget', 'dlc', 'common', 'curio'],
   },
   {
     name: 'Galactic Fashion Pod',
-    icon: '/assets/games/slime-rancher/gadgets/iconFashionSmarty.png',
+    icon: '/assets/games/slime-rancher/gadgets/iconFashionGalactic.png',
     tags: ['gadget', 'dlc', 'common', 'curio'],
   },
   {
@@ -4452,7 +4958,7 @@ const cards = [
     },
   },
   {
-    name: 'Magic Water',
+    name: 'Ancient Water',
     icon: '/assets/games/slime-rancher/misc/iconMagicWater.png',
     tags: ['misc', 'common'],
     locations: {
@@ -4466,6 +4972,9 @@ const cards = [
     locations: {
       spawn: ['nimble-valley'],
     },
+    details: {
+      'max-harvest': ['3'],
+    },
   },
   {
     name: 'Debug Spray',
@@ -4473,6 +4982,9 @@ const cards = [
     tags: ['misc', 'common'],
     locations: {
       spawn: ['the-slimeulation'],
+    },
+    details: {
+      'max-harvest': ['15'],
     },
   },
   {
