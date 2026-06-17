@@ -1207,7 +1207,7 @@ const cards = [
   {
     name: 'Dervish Gordo',
     icon: '/assets/games/slime-rancher/gordos/iconGordoDervish.png',
-    'sr2-icon': 'missing-icon',
+    'sr2-icon': '/assets/games/slime-rancher/extra/none.png',
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['the-glass-desert'],
@@ -1237,7 +1237,7 @@ const cards = [
   {
     name: 'Tangle Gordo',
     icon: '/assets/games/slime-rancher/gordos/iconGordoTangle.png',
-    'sr2-icon': 'missing-icon',
+    'sr2-icon': '/assets/games/slime-rancher/extra/none.png',
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['the-glass-desert'],
@@ -3884,7 +3884,7 @@ const cards = [
     },
   },
   {
-    name: "Ogden's Retreat",
+    name: 'Ogdens Retreat',
     icon: '/assets/games/slime-rancher/zones/iconZoneOgdensRetreat.png',
     tags: ['zone', 'common'],
     details: {
@@ -3895,7 +3895,7 @@ const cards = [
     },
   },
   {
-    name: "Mochi's Manor",
+    name: 'Mochis Manor',
     icon: '/assets/games/slime-rancher/zones/iconZoneMochiEstate.png',
     tags: ['zone', 'common'],
     details: {
@@ -3905,7 +3905,7 @@ const cards = [
     },
   },
   {
-    name: "Viktor's Workshop",
+    name: 'Viktors Workshop',
     icon: '/assets/games/slime-rancher/zones/iconZoneViktorLab.png',
     tags: ['zone', 'common'],
     details: {

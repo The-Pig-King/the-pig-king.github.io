@@ -431,11 +431,19 @@ const cardContainer = document.getElementById('card-container');
 const secretStyleBtn = document.querySelector('.btn-secret-style');
 const sr2StyleBtn = document.querySelector('.btn-sr2-style');
 
-const renderCard = (card) => {
+const renderCard = (card, style = null) => {
   if (!card) return '';
 
-  const isSecretStyleToggledOn = secretStyleBtn.classList.contains('toggledOn');
-  const isSr2StyleToggledOn = sr2StyleBtn.classList.contains('toggledOn');
+  let isSecretStyleToggledOn;
+  let isSr2StyleToggledOn;
+
+  if (!style) {
+    isSecretStyleToggledOn = secretStyleBtn.classList.contains('toggledOn');
+    isSr2StyleToggledOn = sr2StyleBtn.classList.contains('toggledOn');
+  } else {
+    isSecretStyleToggledOn = style.secret;
+    isSr2StyleToggledOn = style.sr2;
+  }
 
   const hasRadiantAndToggledOn =
     isSecretStyleToggledOn && isSr2StyleToggledOn && card['radiant-icon'];
@@ -677,8 +685,43 @@ closeModal.addEventListener('click', () => {
 // Close modal when clicking outside
 cardModal.addEventListener('click', (e) => {
   if (e.target === cardModal) {
+    document
+      .getElementById('modal-secret-style-btn')
+      .classList.remove('toggledOn');
+    document
+      .getElementById('modal-sr2-style-btn')
+      .classList.remove('toggledOn');
     cardModal.close();
   }
+});
+
+const modalStyleBtns = document.querySelectorAll('.modal-style-btn');
+modalStyleBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const modalSecretStyleBtn = document.getElementById(
+      'modal-secret-style-btn'
+    );
+    const modalSr2StyleBtn = document.getElementById('modal-sr2-style-btn');
+
+    btn.dataset.category === 'style'
+      ? modalSecretStyleBtn.classList.toggle('toggledOn')
+      : modalSr2StyleBtn.classList.toggle('toggledOn');
+
+    const cardModalContent = document.getElementById('card-modal-content');
+    const cardName = cardModalContent.querySelector('.card-name').textContent;
+    const foundCard = cards.find((card) => {
+      return card.name === cardName;
+    });
+
+    if (!foundCard) return;
+
+    const modalStyle = {
+      secret: modalSecretStyleBtn.classList.contains('toggledOn'),
+      sr2: modalSr2StyleBtn.classList.contains('toggledOn'),
+    };
+
+    cardModalContent.innerHTML = renderCard(foundCard, modalStyle);
+  });
 });
 
 const toggleLocationsBtn = document.getElementById('toggle-locations-btn');
