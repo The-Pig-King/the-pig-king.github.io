@@ -728,11 +728,21 @@ header {
 
 .close-modal-btn {
   position: absolute;
+  top: -1.65rem;
   right: 1rem;
 }
 
+.modal-style-btn {
+  position: absolute;
+  bottom: -1.65rem;
+}
+
 .modal-secret-style-btn {
-  margin-left: 1rem;
+  left: 1rem;
+}
+
+.modal-sr2-style-btn {
+  left: 13rem;
 }
 
 /* Media Queries */
@@ -788,6 +798,17 @@ header {
 
   .card-modal .tag {
     font-size: 1rem;
+  }
+
+  .close-modal-btn {
+    top: -1.7rem;
+    bottom: auto;
+    right: 1rem;
+  }
+
+  .modal-style-btn {
+    top: -1.7rem;
+    bottom: auto;
   }
 }
 
