@@ -655,7 +655,7 @@ header {
 
 .card-details {
   grid-area: card-details;
-  display: flex;
+  display: none;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem 2rem;
@@ -718,6 +718,10 @@ header {
 
 .card-modal .card-style-name {
   margin-top: -2rem;
+}
+
+.card-modal .card-details {
+  display: flex;
 }
 
 .close-modal-btn {

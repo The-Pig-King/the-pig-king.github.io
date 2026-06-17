@@ -678,6 +678,30 @@ cardModal.addEventListener('click', (e) => {
   }
 });
 
+const toggleLocationsBtn = document.getElementById('toggle-locations-btn');
+toggleLocationsBtn.addEventListener('click', () => {
+  const cardLocations = document.querySelectorAll('.card-location-tags');
+
+  toggleLocationsBtn.classList.toggle('toggledOn');
+  if (toggleLocationsBtn.classList.contains('toggledOn')) {
+    cardLocations.forEach((loc) => (loc.style.display = 'flex'));
+  } else {
+    cardLocations.forEach((loc) => (loc.style.display = 'none'));
+  }
+});
+
+const toggleDetailsBtn = document.getElementById('toggle-details-btn');
+toggleDetailsBtn.addEventListener('click', () => {
+  const cardDetails = document.querySelectorAll('.card-details');
+
+  toggleDetailsBtn.classList.toggle('toggledOn');
+  if (toggleDetailsBtn.classList.contains('toggledOn')) {
+    cardDetails.forEach((detail) => (detail.style.display = 'flex'));
+  } else {
+    cardDetails.forEach((detail) => (detail.style.display = 'none'));
+  }
+});
+
 const params = new URLSearchParams(location.search);
 
 // Reset button toggles
