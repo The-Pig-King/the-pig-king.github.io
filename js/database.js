@@ -646,8 +646,24 @@ cardContainer.addEventListener('click', (e) => {
     return card.name === cardName;
   });
 
+  // Render and open modal
   cardModalContent.innerHTML = renderCard(clickedCard);
   cardModal.showModal();
+
+  // Set modal style toggles
+  const secretStyleBtn = document.getElementById('secret-style-btn');
+  const sr2StyleBtn = document.getElementById('sr2-style-btn');
+
+  const modalSecretStyleBtn = document.getElementById('modal-secret-style-btn');
+  const modalSr2StyleBtn = document.getElementById('modal-sr2-style-btn');
+
+  secretStyleBtn.classList.contains('toggledOn')
+    ? modalSecretStyleBtn.classList.add('toggledOn')
+    : modalSecretStyleBtn.classList.remove('toggledOn');
+
+  sr2StyleBtn.classList.contains('toggledOn')
+    ? modalSr2StyleBtn.classList.add('toggledOn')
+    : modalSr2StyleBtn.classList.remove('toggledOn');
 });
 
 // Open modal of clicked detail
@@ -674,6 +690,7 @@ document.addEventListener('click', (e) => {
 
   if (!foundCard) return;
 
+  // Render and open modal
   cardModalContent.innerHTML = renderCard(foundCard);
   cardModal.showModal();
 });
