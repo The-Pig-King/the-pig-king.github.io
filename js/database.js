@@ -368,6 +368,8 @@ const renderResultsCount = (resultsCount) => {
 };
 
 const matchGroup = (cardValues, filters, excludes, mode) => {
+  if (mode === 'no-filter') return true;
+
   if (excludes && excludes.size > 0) {
     const hasExcluded = [...excludes].some((v) => cardValues?.includes(v));
     if (hasExcluded) return false;
@@ -377,7 +379,6 @@ const matchGroup = (cardValues, filters, excludes, mode) => {
 
   const filtersArray = [...filters];
 
-  if (mode === 'no-filter') return true;
   if (mode === 'any') return filtersArray.some((v) => cardValues?.includes(v));
   if (mode === 'all') return filtersArray.every((v) => cardValues?.includes(v));
 
