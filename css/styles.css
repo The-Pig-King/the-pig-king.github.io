@@ -711,6 +711,7 @@ header {
   max-width: 50rem;
   border: 0;
   background-color: transparent;
+  overflow: visible;
 }
 
 .card-modal::backdrop {
@@ -727,8 +728,11 @@ header {
 
 .close-modal-btn {
   position: absolute;
-  top: 1rem;
   right: 1rem;
+}
+
+.modal-secret-style-btn {
+  margin-left: 1rem;
 }
 
 /* Media Queries */

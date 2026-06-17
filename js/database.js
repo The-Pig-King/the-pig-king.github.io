@@ -840,4 +840,16 @@ filterBtns.forEach((btn) => {
   }
 });
 
+// Apply modal button colors
+modalStyleBtns.forEach((btn) => {
+  if (btn.dataset.category === 'style') {
+    btn.style.setProperty('--btn-color', `var(--secret-style-color)`);
+  } else {
+    btn.style.setProperty(
+      '--btn-color',
+      `var(--${btn.dataset.category}-color)`
+    );
+  }
+});
+
 updateUI();
