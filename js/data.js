@@ -4998,3 +4998,13 @@ const cards = [
     tags: ['misc', 'common'],
   },
 ];
+
+const extraIcons = {
+  meat: '/assets/games/slime-rancher/extra/meat.png',
+  none: '/assets/games/slime-rancher/extra/none.png',
+  'odgen-ortiz': '/assets/games/slime-rancher/extra/odgen-ortiz.png',
+  rancher: '/assets/games/slime-rancher/extra/rancher.png',
+  slime: '/assets/games/slime-rancher/extra/slime.png',
+  unknown: '/assets/games/slime-rancher/extra/unknown.png',
+  veggie: '/assets/games/slime-rancher/extra/veggie.png',
+};

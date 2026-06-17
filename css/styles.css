@@ -691,7 +691,8 @@ header {
   color: white;
 }
 
-.details-icon {
+.details-icon,
+.details-fallback {
   height: 2.5rem;
   display: flex;
   align-items: center;

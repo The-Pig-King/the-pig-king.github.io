@@ -578,20 +578,22 @@ const renderCard = (card) => {
                       </div>
                       <div class="details">
                         ${details
-                          .map(
-                            (detail) => `
-                              <img 
+                          .map((detail) => {
+                            const detailIconSrc =
+                              cards.find(
+                                (card) => card.name === titleCaseSlug(detail)
+                              )?.icon ||
+                              extraIcons[detail] ||
+                              null;
+
+                            return detailIconSrc
+                              ? `<img 
                                 class="details-icon details-${detail}"
-                                src="${
-                                  cards.find((card) => {
-                                    return card.name === titleCaseSlug(detail);
-                                  })?.icon ||
-                                  `/assets/games/slime-rancher/extra/${detail}.png`
-                                }"
+                                src="${detailIconSrc}"
                                 alt="${titleCaseSlug(detail)}"
-                                title="${titleCaseSlug(detail)}">
-                            `
-                          )
+                                title="${titleCaseSlug(detail)}">`
+                              : `<span class="details-fallback details-${detail}">${titleCaseSlug(detail)}</span>`;
+                          })
                           .join('')}
                       </div>
                     </div>
