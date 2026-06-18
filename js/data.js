@@ -5005,6 +5005,10 @@ const cards = [
 ];
 
 const extraIcons = {
+  'depends-on-source-slimes':
+    '/assets/games/slime-rancher/extra/depends-on-source-slimes.png',
+  electricity: '/assets/games/slime-rancher/extra/electricity.png',
+  fruit: '/assets/games/slime-rancher/extra/fruit.png',
   meat: '/assets/games/slime-rancher/extra/meat.png',
   none: '/assets/games/slime-rancher/extra/none.png',
   'odgen-ortiz': '/assets/games/slime-rancher/extra/odgen-ortiz.png',
