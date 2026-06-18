@@ -585,24 +585,53 @@ const renderCard = (card, style = null) => {
                         ${titleCaseSlug(category)}
                       </div>
                       <div class="details">
-                        ${details
-                          .map((detail) => {
-                            const detailIconSrc =
-                              cards.find(
-                                (card) => card.name === titleCaseSlug(detail)
-                              )?.icon ||
-                              extraIcons[detail] ||
-                              null;
+                        ${
+                          Array.isArray(details)
+                            ? details
+                                .map((detail) => {
+                                  const detailIconSrc =
+                                    cards.find(
+                                      (card) =>
+                                        card.name === titleCaseSlug(detail)
+                                    )?.icon ||
+                                    extraIcons[detail] ||
+                                    null;
 
-                            return detailIconSrc
-                              ? `<img 
-                                class="details-icon details-${detail}"
-                                src="${detailIconSrc}"
-                                alt="${titleCaseSlug(detail)}"
-                                title="${titleCaseSlug(detail)}">`
-                              : `<span class="details-fallback details-${detail}">${titleCaseSlug(detail)}</span>`;
-                          })
-                          .join('')}
+                                  return detailIconSrc
+                                    ? `<img 
+                                  class="details-icon details-${detail}"
+                                  src="${detailIconSrc}"
+                                  alt="${titleCaseSlug(detail)}"
+                                  title="${titleCaseSlug(detail)}">`
+                                    : `<span class="details-fallback details-${detail}">${titleCaseSlug(detail)}</span>`;
+                                })
+                                .join('')
+                            : Object.entries(details)
+                                .map(([key, value]) => {
+                                  const detailIconSrc =
+                                    cards.find(
+                                      (card) => card.name === titleCaseSlug(key)
+                                    )?.icon ||
+                                    extraIcons[key] ||
+                                    null;
+
+                                  return detailIconSrc
+                                    ? `<div class="detail-object">
+                                        <img
+                                          class="details-icon details-${key}"
+                                          src="${detailIconSrc}"
+                                          alt="${titleCaseSlug(key)}"
+                                          title="${titleCaseSlug(key)}">
+                                        <span>${value}</span>
+                                      </div>`
+                                    : `<div class="details-object">
+                                        <span class="details-fallback details-${key}">
+                                          ${titleCaseSlug(key)} (${value})
+                                        </span>
+                                      </div>`;
+                                })
+                                .join('')
+                        }
                       </div>
                     </div>
                     `

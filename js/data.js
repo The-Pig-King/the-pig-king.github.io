@@ -934,6 +934,11 @@ const cards = [
       count: ['2'],
       'rush-count': ['2'],
       slime: ['pink-slime'],
+      drops: {
+        'pink-slime': '10',
+        'slime-key': '1',
+        crate: '2',
+      },
     },
   },
   {
