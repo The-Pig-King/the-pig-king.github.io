@@ -490,7 +490,7 @@ header {
   background-color: color-mix(in srgb, var(--toggled-off-color) 90%, white);
 }
 
-.sort-direction-btn svg {
+.small-icon {
   width: 1rem;
   fill: white;
 }
