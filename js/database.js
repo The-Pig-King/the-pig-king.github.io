@@ -608,6 +608,11 @@ const renderCard = (card, style = null) => {
                                 .join('')
                             : Object.entries(details)
                                 .map(([key, value]) => {
+                                  // Handle duplicate keys
+                                  if (key.endsWith('!')) {
+                                    key = key.replace('!', '');
+                                  }
+
                                   const detailIconSrc =
                                     cards.find(
                                       (card) => card.name === titleCaseSlug(key)
