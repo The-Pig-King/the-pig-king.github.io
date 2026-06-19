@@ -297,7 +297,6 @@ resetFiltersBtns.forEach((btn) => {
 
     // Reset state
     if (isGroupButton) {
-      console.log(isNoFilterOn);
       group === 'style'
         ? (state[group].mode = 'no-filter')
         : (state[group].mode = 'any');
@@ -748,8 +747,6 @@ document.addEventListener('click', (e) => {
   } else if (e.target.classList.contains('tag')) {
     name = e.target.textContent.trim();
   }
-
-  console.log(name);
 
   const foundCard = cards.find((card) => {
     return card.name === name;
