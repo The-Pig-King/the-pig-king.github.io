@@ -649,6 +649,20 @@ const renderCard = (card, style = null) => {
       `;
 };
 
+const toggleLocationsBtn = document.getElementById('toggle-locations-btn');
+toggleLocationsBtn.addEventListener('click', () => {
+  toggleLocationsBtn.classList.toggle('toggledOn');
+
+  updateUI();
+});
+
+const toggleDetailsBtn = document.getElementById('toggle-details-btn');
+toggleDetailsBtn.addEventListener('click', () => {
+  toggleDetailsBtn.classList.toggle('toggledOn');
+
+  updateUI();
+});
+
 const renderCards = (cards) => {
   // No card matches
   if (!cards || cards.length === 0) {
@@ -661,6 +675,22 @@ const renderCards = (cards) => {
       return renderCard(card);
     })
     .join('');
+
+  // Render locations
+  const cardLocations = document.querySelectorAll('.card-location-tags');
+  if (toggleLocationsBtn.classList.contains('toggledOn')) {
+    cardLocations.forEach((loc) => (loc.style.display = 'flex'));
+  } else {
+    cardLocations.forEach((loc) => (loc.style.display = 'none'));
+  }
+
+  // Render details
+  const cardDetails = document.querySelectorAll('.card-details');
+  if (toggleDetailsBtn.classList.contains('toggledOn')) {
+    cardDetails.forEach((detail) => (detail.style.display = 'flex'));
+  } else {
+    cardDetails.forEach((detail) => (detail.style.display = 'none'));
+  }
 };
 
 const cardModal = document.getElementById('card-modal');
@@ -774,30 +804,6 @@ modalStyleBtns.forEach((btn) => {
 
     cardModalContent.innerHTML = renderCard(foundCard, modalStyle);
   });
-});
-
-const toggleLocationsBtn = document.getElementById('toggle-locations-btn');
-toggleLocationsBtn.addEventListener('click', () => {
-  const cardLocations = document.querySelectorAll('.card-location-tags');
-
-  toggleLocationsBtn.classList.toggle('toggledOn');
-  if (toggleLocationsBtn.classList.contains('toggledOn')) {
-    cardLocations.forEach((loc) => (loc.style.display = 'flex'));
-  } else {
-    cardLocations.forEach((loc) => (loc.style.display = 'none'));
-  }
-});
-
-const toggleDetailsBtn = document.getElementById('toggle-details-btn');
-toggleDetailsBtn.addEventListener('click', () => {
-  const cardDetails = document.querySelectorAll('.card-details');
-
-  toggleDetailsBtn.classList.toggle('toggledOn');
-  if (toggleDetailsBtn.classList.contains('toggledOn')) {
-    cardDetails.forEach((detail) => (detail.style.display = 'flex'));
-  } else {
-    cardDetails.forEach((detail) => (detail.style.display = 'none'));
-  }
 });
 
 const randomCardBtn = document.getElementById('random-card-btn');
