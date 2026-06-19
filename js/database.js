@@ -44,6 +44,10 @@ const tagGroups = {
   curio: 'gadget-type',
 
   'the-ranch': 'location',
+  'the-grotto': 'location',
+  'the-overgrowth': 'location',
+  'the-docks': 'location',
+  'the-lab': 'location',
   'ogdens-retreat': 'location',
   'mochis-manor': 'location',
   'viktors-workshop': 'location',

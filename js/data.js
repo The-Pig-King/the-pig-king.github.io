@@ -1431,7 +1431,7 @@ const cards = [
     tags: ['food', 'veggie', 'common'],
     locations: {
       spawn: [
-        'the-ranch',
+        'the-overgrowth',
         'ogdens-retreat',
         'the-dry-reef',
         'the-moss-blanket',
@@ -1554,7 +1554,7 @@ const cards = [
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: [
-        'the-ranch',
+        'the-overgrowth',
         'ogdens-retreat',
         'the-dry-reef',
         'the-moss-blanket',
@@ -1702,7 +1702,7 @@ const cards = [
     tags: ['food', 'meat', 'common'],
     locations: {
       spawn: [
-        'the-ranch',
+        'the-overgrowth',
         'the-dry-reef',
         'the-moss-blanket',
         'the-indigo-quarry',
@@ -1906,7 +1906,7 @@ const cards = [
     tags: ['food', 'other', 'common'],
     locations: {
       spawn: [
-        'the-ranch',
+        'the-docks',
         'mochis-manor',
         'viktors-workshop',
         'the-dry-reef',
@@ -2030,7 +2030,7 @@ const cards = [
     tags: ['resource', 'rare', 'drill'],
     locations: {
       'treasure-pod': [
-        'the-ranch',
+        'the-lab',
         'ogdens-retreat',
         'the-indigo-quarry',
         'the-ancient-ruins',
@@ -2112,7 +2112,7 @@ const cards = [
     tags: ['resource', 'uncommon', 'apiary'],
     locations: {
       'treasure-pod': [
-        'the-ranch',
+        'the-lab',
         'ogdens-retreat',
         'the-moss-blanket',
         'the-ancient-ruins',
@@ -2296,7 +2296,7 @@ const cards = [
       '/assets/games/slime-rancher-2/resources/iconCraftDeepBrine.png',
     tags: ['resource', 'common', 'pump'],
     locations: {
-      'treasure-pod': ['the-ranch', 'the-dry-reef', 'the-ancient-ruins'],
+      'treasure-pod': ['the-lab', 'the-dry-reef', 'the-ancient-ruins'],
       gadget: ['the-dry-reef'],
     },
   },
@@ -2441,7 +2441,7 @@ const cards = [
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyRubberDucky.png',
     tags: ['toy', 'common'],
     locations: {
-      worldgen: ['the-ranch'],
+      worldgen: ['the-docks'],
     },
     details: {
       price: ['500'],
@@ -4025,7 +4025,6 @@ const cards = [
       price: ['1795'],
       plots: ['4'],
       'gadget-sites': ['12'],
-      food: ['carrot', 'pogo-fruit', 'hen-hen'],
     },
   },
   {
@@ -4036,7 +4035,6 @@ const cards = [
       price: ['5000'],
       plots: ['4'],
       'gadget-sites': ['11'],
-      food: ['water'],
     },
   },
   {
@@ -4061,7 +4059,6 @@ const cards = [
       plots: ['6'],
       'gadget-sites': ['14'],
       'unique-resources': ['spicy-tofu'],
-      food: ['carrot', 'pogo-fruit'],
       'treasure-pods': {
         'green-treasure-pod': '1',
         'total-treasure-pods': '1',
@@ -4075,7 +4072,6 @@ const cards = [
     details: {
       plots: ['5'],
       'gadget-sites': ['14'],
-      food: ['water'],
     },
   },
   {
@@ -4086,7 +4082,6 @@ const cards = [
       plots: ['4'],
       'gadget-sites': ['12'],
       'unique-resources': ['manifold-cube'],
-      food: ['phase-lemon', 'water'],
     },
   },
   {
@@ -4095,29 +4090,6 @@ const cards = [
     tags: ['zone', 'common'],
     details: {
       'gadget-sites': ['76'],
-      'unique-resources': ['deep-brine'],
-      food: [
-        'carrot',
-        'heart-beet',
-        'pogo-fruit',
-        'cuberry',
-        'chickadoo',
-        'hen-hen',
-        'roostro',
-        'stony-chickadoo',
-        'stony-hen',
-        'water',
-      ],
-      slimes: [
-        'pink-slime',
-        'rock-slime',
-        'tabby-slime',
-        'phosphor-slime',
-        'puddle-slime',
-        'gold-slime',
-        'lucky-slime',
-      ],
-      gordos: ['pink-gordo', 'phosphor-gordo', 'tabby-gordo'],
       'treasure-pods': {
         'green-treasure-pod': '7',
         'blue-treasure-pod': '5',
@@ -4125,6 +4097,7 @@ const cards = [
         'secret-style-treasure-pod': '4',
         'total-treasure-pods': '18',
       },
+      'unique-resources': ['deep-brine'],
     },
   },
   {
@@ -4134,32 +4107,6 @@ const cards = [
     details: {
       'gadget-sites': ['64'],
       'unique-resources': ['wild-honey'],
-      food: [
-        'carrot',
-        'pogo-fruit',
-        'mint-mango',
-        'cuberry',
-        'chickadoo',
-        'hen-hen',
-        'roostro',
-        'stony-chickadoo',
-        'stony-hen',
-        'briar-chickadoo',
-        'briar-hen',
-        'water',
-      ],
-      slimes: [
-        'pink-slime',
-        'tabby-slime',
-        'phosphor-slime',
-        'boom-slime',
-        'honey-slime',
-        'puddle-slime',
-        'hunter-slime',
-        'gold-slime',
-        'lucky-slime',
-      ],
-      gordos: ['honey-gordo', 'hunter-gordo'],
       'treasure-pods': {
         'green-treasure-pod': '6',
         'blue-treasure-pod': '4',
@@ -4176,31 +4123,6 @@ const cards = [
     details: {
       'gadget-sites': ['71'],
       'unique-resources': ['indigonium'],
-      food: [
-        'carrot',
-        'oca-oca',
-        'heart-beet',
-        'odd-onion',
-        'pogo-fruit',
-        'cuberry',
-        'chickadoo',
-        'hen-hen',
-        'roostro',
-        'stony-chickadoo',
-        'stony-hen',
-        'water',
-      ],
-      slimes: [
-        'pink-slime',
-        'phosphor-slime',
-        'rad-slime',
-        'boom-slime',
-        'puddle-slime',
-        'crystal-slime',
-        'gold-slime',
-        'lucky-slime',
-      ],
-      gordos: ['rock-gordo', 'rad-gordo', 'crystal-gordo'],
       'treasure-pods': {
         'green-treasure-pod': '4',
         'blue-treasure-pod': '6',
@@ -4217,31 +4139,6 @@ const cards = [
     details: {
       'gadget-sites': ['67'],
       'unique-resources': ['red-echo', 'blue-echo', 'green-echo', 'gold-echo'],
-      food: [
-        'carrot',
-        'heart-beet',
-        'pogo-fruit',
-        'cuberry',
-        'phase-lemon',
-        'chickadoo',
-        'hen-hen',
-        'roostro',
-        'stony-chickadoo',
-        'stony-hen',
-        'water',
-      ],
-      slimes: [
-        'pink-slime',
-        'rock-slime',
-        'tabby-slime',
-        'phosphor-slime',
-        'boom-slime',
-        'puddle-slime',
-        'quantum-slime',
-        'gold-slime',
-        'lucky-slime',
-      ],
-      gordos: ['boom-gordo', 'quantum-gordo'],
       'treasure-pods': {
         'green-treasure-pod': '2',
         'blue-treasure-pod': '7',
@@ -4258,36 +4155,6 @@ const cards = [
     details: {
       'gadget-sites': ['84'],
       'unique-resources': ['glass-shard', 'pepper-jam', 'silky-sand'],
-      other: ['ancient-water'],
-      food: [
-        'carrot',
-        'heart-beet',
-        'silver-parsnip',
-        'gilded-ginger',
-        'pogo-fruit',
-        'cuberry',
-        'prickle-pear',
-        'chickadoo',
-        'hen-hen',
-        'roostro',
-        'stony-chickadoo',
-        'stony-hen',
-        'painted-chickadoo',
-        'painted-hen',
-        'water',
-      ],
-      slimes: [
-        'pink-slime',
-        'rock-slime',
-        'tabby-slime',
-        'phosphor-slime',
-        'boom-slime',
-        'puddle-slime',
-        'quantum-slime',
-        'gold-slime',
-        'lucky-slime',
-      ],
-      gordos: ['dervish-gordo', 'tangle-gordo', 'mosaic-gordo'],
       'treasure-pods': {
         'blue-treasure-pod': '7',
         'purple-treasure-pod': '15',
@@ -4301,29 +4168,6 @@ const cards = [
     icon: '/assets/games/slime-rancher/zones/iconZoneWilds.png',
     tags: ['zone', 'common'],
     details: {
-      food: [
-        'carrot',
-        'heart-beet',
-        'pogo-fruit',
-        'cuberry',
-        'kookadoba',
-        'chickadoo',
-        'hen-hen',
-        'roostro',
-        'water',
-      ],
-      slimes: [
-        'pink-slime',
-        'rock-slime',
-        'tabby-slime',
-        'phosphor-slime',
-        'rad-slime',
-        'boom-slime',
-        'hunter-slime',
-        'saber-slime',
-        'gold-slime',
-        'lucky-slime',
-      ],
       'treasure-pods': {
         'green-treasure-pod': '4',
         'blue-treasure-pod': '2',
@@ -4338,9 +4182,6 @@ const cards = [
     icon: '/assets/games/slime-rancher/zones/iconZoneNimbleValley.png',
     tags: ['zone', 'common'],
     details: {
-      other: ['slooow-field'],
-      food: ['spark-shot', 'thunderclap', 'static-clinger'],
-      slimes: ['quicksilver-slime'],
       'treasure-pods': {
         'green-treasure-pod': '2',
         'blue-treasure-pod': '2',
@@ -4355,39 +4196,6 @@ const cards = [
     icon: '/assets/games/slime-rancher/zones/iconZoneSlimeulation.png',
     tags: ['zone', 'common'],
     details: {
-      other: ['debug-spray'],
-      food: [
-        'carrot',
-        'oca-oca',
-        'heart-beet',
-        'odd-onion',
-        'pogo-fruit',
-        'mint-mango',
-        'cuberry',
-        'chickadoo',
-        'hen-hen',
-        'roostro',
-        'stony-chickadoo',
-        'stony-hen',
-        'briar-chickadoo',
-        'briar-hen',
-        'water',
-      ],
-      slimes: [
-        'pink-slime',
-        'rock-slime',
-        'tabby-slime',
-        'phosphor-slime',
-        'rad-slime',
-        'boom-slime',
-        'honey-slime',
-        'puddle-slime',
-        'hunter-slime',
-        'glitch-slime',
-        'gold-slime',
-        'lucky-slime',
-        'the-tarr',
-      ],
       'treasure-pods': {
         'blue-treasure-pod': '7',
         'purple-treasure-pod': '5',
@@ -4402,23 +4210,6 @@ const cards = [
     tags: ['zone', 'common'],
     details: {
       'gadget-sites': ['11'],
-      food: [
-        'carrot',
-        'heart-beet',
-        'pogo-fruit',
-        'cuberry',
-        'hen-hen',
-        'roostro',
-        'stony-hen',
-      ],
-      slimes: [
-        'pink-slime',
-        'rock-slime',
-        'tabby-slime',
-        'phosphor-slime',
-        'gold-slime',
-        'lucky-slime',
-      ],
       'treasure-pods': {
         'blue-treasure-pod': '1',
         'purple-treasure-pod': '1',
@@ -4432,8 +4223,6 @@ const cards = [
     icon: '/assets/games/slime-rancher/zones/iconHobson.png',
     tags: ['zone', 'common'],
     details: {
-      food: ['pogo-fruit', 'water'],
-      slimes: ['pink-slime', 'rock-slime', 'gold-slime'],
       'treasure-pods': {
         'purple-treasure-pod': '46',
         'total-treasure-pods': '46',
@@ -6562,7 +6351,7 @@ cards.forEach((card) => {
   }
 });
 
-// Give cards used-in values based on recipes
+// Give cards used-in details based on recipes
 cards.forEach((card) => {
   if (Object.hasOwn(card.details, 'recipe')) {
     Object.entries(card.details.recipe).forEach(([item, amount]) => {
@@ -6577,6 +6366,38 @@ cards.forEach((card) => {
         ] = amount;
         console.log(card.name.toLowerCase().replace(/\s+/g, '-'));
       }
+    });
+  }
+});
+
+// Give zones details based on location tags
+cards.forEach((card) => {
+  switch (card.tags[0]) {
+    case 'chime':
+      return;
+    case 'ornament':
+      return;
+  }
+
+  if (Object.hasOwn(card, 'locations')) {
+    Object.entries(card.locations).forEach(([source, locs]) => {
+      if (card.tags[0] === 'gordo' && source === 'gadget') return;
+
+      locs.forEach((loc) => {
+        const cardMatch = cards.find((c) => {
+          return c.name === titleCaseSlug(loc);
+        });
+
+        if (cardMatch) {
+          const key = card.name.toLowerCase().replace(/\s+/g, '-');
+
+          cardMatch.details[card.tags[0]] ??= [];
+
+          if (!cardMatch.details[card.tags[0]].includes(key)) {
+            cardMatch.details[card.tags[0]].push(key);
+          }
+        }
+      });
     });
   }
 });
