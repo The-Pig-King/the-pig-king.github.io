@@ -325,6 +325,12 @@ const updateURL = () => {
     }
   });
 
+  // Add modal to url if open
+  if (cardModal.hasAttribute('open')) {
+    const cardName = cardModal.querySelector('.card-name').textContent;
+    parts.push(`card=${cardName.trim().replace(/\s+/g, '+')}`);
+  }
+
   // Join the segments together to complete the url
   const queryString = parts.length > 0 ? `?${parts.join('&')}` : '';
   history.replaceState(null, '', `${location.pathname}${queryString}`);
@@ -684,6 +690,7 @@ const closeModal = document.getElementById('close-modal-btn');
 const openModal = (card) => {
   cardModalContent.innerHTML = renderCard(card);
   cardModal.showModal();
+  updateURL();
 };
 
 // Open modal of clicked card
@@ -700,6 +707,7 @@ cardContainer.addEventListener('click', (e) => {
   });
 
   openModal(clickedCard);
+  updateURL();
 
   // Set modal style toggles
   const secretStyleBtn = document.getElementById('secret-style-btn');
@@ -740,10 +748,12 @@ document.addEventListener('click', (e) => {
   if (!foundCard) return;
 
   openModal(foundCard);
+  updateURL();
 });
 
 closeModal.addEventListener('click', () => {
   cardModal.close();
+  updateURL();
 });
 
 // Close modal when clicking outside
@@ -756,6 +766,7 @@ cardModal.addEventListener('click', (e) => {
       .getElementById('modal-sr2-style-btn')
       .classList.remove('toggledOn');
     cardModal.close();
+    updateURL();
   }
 });
 
@@ -807,8 +818,15 @@ if (searchParam) {
   searchInput.value = searchInput.value = searchParam.replace(/\+/g, ' ');
 }
 
+let cardParam;
+
 for (const [group, value] of params.entries()) {
   if (group === 'search') continue;
+  if (group === 'card') {
+    cardParam = value;
+    continue;
+  }
+
   const [mode, filterString] = value.split(':');
 
   // Set state
@@ -884,3 +902,11 @@ modalStyleBtns.forEach((btn) => {
 });
 
 updateUI();
+
+if (cardParam) {
+  openModal(
+    cards.find((c) => {
+      return c.name === cardParam;
+    })
+  );
+}

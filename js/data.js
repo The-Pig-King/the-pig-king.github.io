@@ -6364,7 +6364,6 @@ cards.forEach((card) => {
         cardMatch.details['used-in'][
           card.name.toLowerCase().replace(/\s+/g, '-')
         ] = amount;
-        console.log(card.name.toLowerCase().replace(/\s+/g, '-'));
       }
     });
   }
