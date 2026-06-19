@@ -4011,6 +4011,10 @@ const cards = [
       price: ['1795'],
       plots: ['5'],
       'gadget-sites': ['11'],
+      'treasure-pods': {
+        'blue-treasure-pod': '1',
+        'total-treasure-pods': '1',
+      },
     },
   },
   {
@@ -4043,6 +4047,10 @@ const cards = [
       price: ['10000'],
       plots: ['5'],
       'gadget-sites': ['15'],
+      'treasure-pods': {
+        'green-treasure-pod': '1',
+        'total-treasure-pods': '1',
+      },
     },
   },
   {
@@ -4054,6 +4062,10 @@ const cards = [
       'gadget-sites': ['14'],
       'unique-resources': ['spicy-tofu'],
       food: ['carrot', 'pogo-fruit'],
+      'treasure-pods': {
+        'green-treasure-pod': '1',
+        'total-treasure-pods': '1',
+      },
     },
   },
   {
@@ -4106,6 +4118,13 @@ const cards = [
         'lucky-slime',
       ],
       gordos: ['pink-gordo', 'phosphor-gordo', 'tabby-gordo'],
+      'treasure-pods': {
+        'green-treasure-pod': '7',
+        'blue-treasure-pod': '5',
+        'purple-treasure-pod': '2',
+        'secret-style-treasure-pod': '4',
+        'total-treasure-pods': '18',
+      },
     },
   },
   {
@@ -4141,6 +4160,13 @@ const cards = [
         'lucky-slime',
       ],
       gordos: ['honey-gordo', 'hunter-gordo'],
+      'treasure-pods': {
+        'green-treasure-pod': '6',
+        'blue-treasure-pod': '4',
+        'purple-treasure-pod': '7',
+        'secret-style-treasure-pod': '3',
+        'total-treasure-pods': '20',
+      },
     },
   },
   {
@@ -4175,6 +4201,13 @@ const cards = [
         'lucky-slime',
       ],
       gordos: ['rock-gordo', 'rad-gordo', 'crystal-gordo'],
+      'treasure-pods': {
+        'green-treasure-pod': '4',
+        'blue-treasure-pod': '6',
+        'purple-treasure-pod': '6',
+        'secret-style-treasure-pod': '2',
+        'total-treasure-pods': '18',
+      },
     },
   },
   {
@@ -4209,6 +4242,13 @@ const cards = [
         'lucky-slime',
       ],
       gordos: ['boom-gordo', 'quantum-gordo'],
+      'treasure-pods': {
+        'green-treasure-pod': '2',
+        'blue-treasure-pod': '7',
+        'purple-treasure-pod': '6',
+        'secret-style-treasure-pod': '3',
+        'total-treasure-pods': '18',
+      },
     },
   },
   {
@@ -4248,6 +4288,12 @@ const cards = [
         'lucky-slime',
       ],
       gordos: ['dervish-gordo', 'tangle-gordo', 'mosaic-gordo'],
+      'treasure-pods': {
+        'blue-treasure-pod': '7',
+        'purple-treasure-pod': '15',
+        'secret-style-treasure-pod': '4',
+        'total-treasure-pods': '26',
+      },
     },
   },
   {
@@ -4278,6 +4324,13 @@ const cards = [
         'gold-slime',
         'lucky-slime',
       ],
+      'treasure-pods': {
+        'green-treasure-pod': '4',
+        'blue-treasure-pod': '2',
+        'purple-treasure-pod': '2',
+        'secret-style-treasure-pod': '1',
+        'total-treasure-pods': '9',
+      },
     },
   },
   {
@@ -4288,6 +4341,13 @@ const cards = [
       other: ['slooow-field'],
       food: ['spark-shot', 'thunderclap', 'static-clinger'],
       slimes: ['quicksilver-slime'],
+      'treasure-pods': {
+        'green-treasure-pod': '2',
+        'blue-treasure-pod': '2',
+        'purple-treasure-pod': '2',
+        'secret-style-treasure-pod': '1',
+        'total-treasure-pods': '7',
+      },
     },
   },
   {
@@ -4328,6 +4388,12 @@ const cards = [
         'lucky-slime',
         'the-tarr',
       ],
+      'treasure-pods': {
+        'blue-treasure-pod': '7',
+        'purple-treasure-pod': '5',
+        'secret-style-treasure-pod': '1',
+        'total-treasure-pods': '13',
+      },
     },
   },
   {
@@ -4353,6 +4419,12 @@ const cards = [
         'gold-slime',
         'lucky-slime',
       ],
+      'treasure-pods': {
+        'blue-treasure-pod': '1',
+        'purple-treasure-pod': '1',
+        'secret-style-treasure-pod': '1',
+        'total-treasure-pods': '3',
+      },
     },
   },
   {
@@ -4362,6 +4434,10 @@ const cards = [
     details: {
       food: ['pogo-fruit', 'water'],
       slimes: ['pink-slime', 'rock-slime', 'gold-slime'],
+      'treasure-pods': {
+        'purple-treasure-pod': '46',
+        'total-treasure-pods': '46',
+      },
     },
   },
   {
@@ -5390,17 +5466,27 @@ const cards = [
 ];
 
 const extraIcons = {
+  'blue-treasure-pod':
+    '/assets/games/slime-rancher/extra/blue-treasure-pod.png',
   'depends-on-source-slimes':
     '/assets/games/slime-rancher/extra/depends-on-source-slimes.png',
   electricity: '/assets/games/slime-rancher/extra/electricity.png',
   fruit: '/assets/games/slime-rancher/extra/fruit.png',
+  'green-treasure-pod':
+    '/assets/games/slime-rancher/extra/green-treasure-pod.png',
   meat: '/assets/games/slime-rancher/extra/meat.png',
   none: '/assets/games/slime-rancher/extra/none.png',
   'odgen-ortiz': '/assets/games/slime-rancher/extra/odgen-ortiz.png',
   ornament: '/assets/games/slime-rancher/extra/ornament.png',
+  'purple-treasure-pod':
+    '/assets/games/slime-rancher/extra/purple-treasure-pod.png',
   rancher: '/assets/games/slime-rancher/extra/rancher.png',
   'rare-ornament': '/assets/games/slime-rancher/extra/rare-ornament.png',
+  'secret-style-treasure-pod':
+    '/assets/games/slime-rancher/extra/secret-style-treasure-pod.png',
   slime: '/assets/games/slime-rancher/extra/slime.png',
+  'total-treasure-pods':
+    '/assets/games/slime-rancher/extra/total-treasure-pods.png',
   unknown: '/assets/games/slime-rancher/extra/unknown.png',
   veggie: '/assets/games/slime-rancher/extra/veggie.png',
 };
