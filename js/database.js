@@ -428,18 +428,20 @@ const renderCard = (card, style = null) => {
   let isSr2StyleToggledOn;
 
   if (!style) {
-    isSecretStyleToggledOn = secretStyleBtn.classList.contains('toggledOn');
-    isSr2StyleToggledOn = sr2StyleBtn.classList.contains('toggledOn');
+    isSecretStyleToggledOn = state.style.filters.has('secret');
+    isSr2StyleToggledOn = state.style.filters.has('sr2');
   } else {
     isSecretStyleToggledOn = style.secret;
     isSr2StyleToggledOn = style.sr2;
   }
 
-  const hasRadiantAndToggledOn =
-    isSecretStyleToggledOn && isSr2StyleToggledOn && card['radiant-icon'];
-  const hasSR2AndToggledOn = isSr2StyleToggledOn && card['sr2-icon'];
-  const hasSecretStyleAndToggledOn =
-    isSecretStyleToggledOn && card['secret-style-icon'];
+  const hasRadiantAndToggledOn = Boolean(
+    isSecretStyleToggledOn && isSr2StyleToggledOn && card['radiant-icon']
+  );
+  const hasSR2AndToggledOn = Boolean(isSr2StyleToggledOn && card['sr2-icon']);
+  const hasSecretStyleAndToggledOn = Boolean(
+    isSecretStyleToggledOn && card['secret-style-icon']
+  );
 
   // Select style icon
   let iconSrc;
@@ -853,11 +855,16 @@ for (const [group, value] of params.entries()) {
   // Set filter btn toggles
   filterBtns.forEach((btn) => {
     if (btn.closest('.filter-bar').dataset.group === group) {
-      if (state[group].filters.has(btn.dataset.category)) {
-        btn.classList.add('toggledOn');
-      } else if (state[group].excludes.has(btn.dataset.category)) {
-        btn.classList.add('toggledOff');
-      }
+      const isStyleBtn = group === 'style' && btn.dataset.category === 'style';
+      const isActive = isStyleBtn
+        ? state[group].filters.has('secret')
+        : state[group].filters.has(btn.dataset.category);
+      const isExcluded = isStyleBtn
+        ? state[group].excludes.has('secret')
+        : state[group].excludes.has(btn.dataset.category);
+
+      if (isActive) btn.classList.add('toggledOn');
+      else if (isExcluded) btn.classList.add('toggledOff');
     }
   });
 }
@@ -904,9 +911,14 @@ modalStyleBtns.forEach((btn) => {
 updateUI();
 
 if (cardParam) {
-  openModal(
-    cards.find((c) => {
-      return c.name === cardParam;
-    })
-  );
+  openModal(cards.find((c) => c.name === cardParam));
+
+  if (state.style.filters.has('secret')) {
+    document
+      .getElementById('modal-secret-style-btn')
+      .classList.add('toggledOn');
+  }
+  if (state.style.filters.has('sr2')) {
+    document.getElementById('modal-sr2-style-btn').classList.add('toggledOn');
+  }
 }
