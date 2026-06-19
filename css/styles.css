@@ -664,6 +664,8 @@ header {
   align-self: flex-start;
   flex-wrap: wrap;
   gap: 1rem 2rem;
+
+  color: rgb(173, 173, 173);
 }
 
 .details-group {
@@ -675,7 +677,6 @@ header {
 .details-name {
   width: 100%;
 
-  color: white;
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
@@ -692,8 +693,6 @@ header {
   gap: 0.1rem;
 
   width: 100%;
-
-  color: white;
 }
 
 .details-icon,
@@ -721,6 +720,11 @@ header {
 
 .card-modal::backdrop {
   background: rgba(0, 0, 0, 0.4);
+}
+
+.card-modal-content {
+  max-height: 80dvh;
+  overflow-y: auto;
 }
 
 .card-modal .card-style-name {

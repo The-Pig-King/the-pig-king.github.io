@@ -6233,7 +6233,7 @@ const cards = [
         'the-wilds',
         'the-slime-sea',
       ],
-      'range-exchange': ['the-ranch', 'nimble-valley'],
+      'range-exchange': ['the-ranch', 'mochis-manor'],
     },
   },
   {
