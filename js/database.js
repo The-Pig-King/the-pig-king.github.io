@@ -1,22 +1,3 @@
-// Give cards styles values based on icon presence
-cards.forEach((card) => {
-  if (!Object.hasOwn(card, 'styles')) {
-    card['styles'] = [];
-  }
-
-  if (card['secret-style-icon']) {
-    card.styles.push('secret');
-  }
-
-  if (card['sr2-icon']) {
-    card.styles.push('sr2');
-  }
-
-  if (card['radiant-icon']) {
-    card.styles.push('radiant');
-  }
-});
-
 const tagGroups = {
   slime: 'type',
   plort: 'type',
