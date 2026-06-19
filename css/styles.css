@@ -507,7 +507,7 @@ header {
   display: grid;
 
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-rows: auto auto auto auto 1fr;
   grid-template-areas:
     'card-img-main card-name'
     'card-img-main card-style-name'
@@ -657,6 +657,7 @@ header {
   grid-area: card-details;
   display: none;
   justify-content: center;
+  align-self: flex-start;
   flex-wrap: wrap;
   gap: 1rem 2rem;
 }

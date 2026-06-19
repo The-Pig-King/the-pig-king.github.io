@@ -6037,7 +6037,7 @@ const cards = [
     },
   },
   {
-    name: 'Clip-On Fashion Pod',
+    name: 'Clip On Fashion Pod',
     icon: '/assets/games/slime-rancher/gadgets/iconFashionClipOn.png',
     tags: ['gadget', 'common', 'curio'],
     details: {
@@ -6538,8 +6538,8 @@ const extraIcons = {
   veggie: '/assets/games/slime-rancher/extra/veggie.png',
 };
 
-// Give cards styles values based on icon presence
 cards.forEach((card) => {
+  // Give cards styles values based on icon presence
   if (!Object.hasOwn(card, 'styles')) {
     card['styles'] = [];
   }
@@ -6554,5 +6554,29 @@ cards.forEach((card) => {
 
   if (card['radiant-icon']) {
     card.styles.push('radiant');
+  }
+
+  // Give cards empty details if it doesn't exist
+  if (!Object.hasOwn(card, 'details')) {
+    card['details'] = {};
+  }
+});
+
+// Give cards used-in values based on recipes
+cards.forEach((card) => {
+  if (Object.hasOwn(card.details, 'recipe')) {
+    Object.entries(card.details.recipe).forEach(([item, amount]) => {
+      const cardMatch = cards.find((c) => {
+        return c.name === titleCaseSlug(item);
+      });
+
+      if (cardMatch) {
+        cardMatch.details['used-in'] ??= {};
+        cardMatch.details['used-in'][
+          card.name.toLowerCase().replace(/\s+/g, '-')
+        ] = amount;
+        console.log(card.name.toLowerCase().replace(/\s+/g, '-'));
+      }
+    });
   }
 });
