@@ -77,50 +77,50 @@ export const tagGroups = {
   'twinkle-slime': 'source',
 
   secret: 'style',
-  sr2: 'style',
+  sr: 'style',
   radiant: 'style',
 };
 
 export const resolveStyle = (card, style, state) => {
   let isSecretStyleToggledOn;
-  let isSr2StyleToggledOn;
+  let isSrStyleToggledOn;
 
   if (!style) {
     isSecretStyleToggledOn = state.style.filters.has('secret');
-    isSr2StyleToggledOn = state.style.filters.has('sr2');
+    isSrStyleToggledOn = state.style.filters.has('sr');
   } else {
     isSecretStyleToggledOn = style.secret;
-    isSr2StyleToggledOn = style.sr2;
+    isSrStyleToggledOn = style.sr;
   }
 
-  const hasRadiantAndToggledOn = Boolean(
-    isSecretStyleToggledOn && isSr2StyleToggledOn && card['radiant-icon']
+  const hasSecretAndToggledOn = Boolean(
+    isSecretStyleToggledOn && isSrStyleToggledOn && card['secret-style-icon']
   );
-  const hasSR2AndToggledOn = Boolean(isSr2StyleToggledOn && card['sr2-icon']);
-  const hasSecretStyleAndToggledOn = Boolean(
-    isSecretStyleToggledOn && card['secret-style-icon']
+  const hasSRAndToggledOn = Boolean(isSrStyleToggledOn && card['sr-icon']);
+  const hasRadiantAndToggledOn = Boolean(
+    isSecretStyleToggledOn && card['radiant-icon']
   );
 
   // Select style icon
   let iconSrc;
-  if (hasRadiantAndToggledOn) {
-    iconSrc = card['radiant-icon'];
-  } else if (hasSR2AndToggledOn) {
-    iconSrc = card['sr2-icon'];
-  } else if (hasSecretStyleAndToggledOn) {
+  if (hasSecretAndToggledOn) {
     iconSrc = card['secret-style-icon'];
+  } else if (hasSRAndToggledOn) {
+    iconSrc = card['sr-icon'];
+  } else if (hasRadiantAndToggledOn) {
+    iconSrc = card['radiant-icon'];
   } else {
     iconSrc = card['icon'];
   }
 
   // Select style name
   let styleName;
-  if (hasRadiantAndToggledOn) {
-    styleName = 'Radiant';
-  } else if (hasSR2AndToggledOn) {
-    styleName = 'Slime Rancher 2';
-  } else if (isSecretStyleToggledOn && card['secret-style-name']) {
+  if (hasSecretAndToggledOn) {
     styleName = card['secret-style-name'];
+  } else if (hasSRAndToggledOn) {
+    styleName = 'Slime Rancher';
+  } else if (hasRadiantAndToggledOn) {
+    styleName = 'Radiant';
   } else {
     styleName = '';
   }
@@ -155,17 +155,16 @@ export const resolveStyle = (card, style, state) => {
   let radiantAttr = '';
   let classAttr = '';
 
-  if (hasRadiantAndToggledOn) {
-    // Distinguish Slime Rancher 2 "Radiant" styling from Rad Slime "Radiant" styling
-    radiantAttr = radiantVars;
-    classAttr = 'style-radiant';
-  } else if (hasSR2AndToggledOn) {
-    styleAttr = '--style-color: var(--sr2-color);';
-  } else if (hasSecretStyleAndToggledOn) {
+  if (hasSecretAndToggledOn) {
     styleAttr =
       '--style-color: var(--style-' +
       card['secret-style-name'].toLowerCase().replace(/\s+/g, '-') +
       '-color);';
+  } else if (hasSRAndToggledOn) {
+    styleAttr = '--style-color: var(--sr-color);';
+  } else if (hasRadiantAndToggledOn) {
+    radiantAttr = radiantVars;
+    classAttr = 'style-radiant';
   }
 
   return { iconSrc, styleName, styleAttr, radiantAttr, classAttr };
@@ -178,5 +177,5 @@ initDatabase(
   extraIcons,
   originalDocumentTitle,
   titleCaseSlug,
-  'sr2'
+  'sr'
 );

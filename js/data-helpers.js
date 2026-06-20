@@ -23,6 +23,10 @@ const addStyles = (cards) => {
       card.styles.push('sr2');
     }
 
+    if (card['sr-icon']) {
+      card.styles.push('sr');
+    }
+
     if (card['radiant-icon']) {
       card.styles.push('radiant');
     }

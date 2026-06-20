@@ -750,7 +750,8 @@ header {
   left: 1rem;
 }
 
-.modal-sr2-style-btn {
+.modal-sr2-style-btn,
+.modal-sr-style-btn {
   left: 13rem;
 }
 
