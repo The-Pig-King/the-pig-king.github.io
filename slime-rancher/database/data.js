@@ -1,4 +1,32 @@
-const cards = [
+import { processCards } from '../../js/data-helpers.js';
+
+export const extraIcons = {
+  'blue-treasure-pod':
+    '/assets/games/slime-rancher/extra/blue-treasure-pod.png',
+  'depends-on-source-slimes':
+    '/assets/games/slime-rancher/extra/depends-on-source-slimes.png',
+  electricity: '/assets/games/slime-rancher/extra/electricity.png',
+  fruit: '/assets/games/slime-rancher/extra/fruit.png',
+  'green-treasure-pod':
+    '/assets/games/slime-rancher/extra/green-treasure-pod.png',
+  meat: '/assets/games/slime-rancher/extra/meat.png',
+  none: '/assets/games/slime-rancher/extra/none.png',
+  'odgen-ortiz': '/assets/games/slime-rancher/extra/odgen-ortiz.png',
+  ornament: '/assets/games/slime-rancher/extra/ornament.png',
+  'purple-treasure-pod':
+    '/assets/games/slime-rancher/extra/purple-treasure-pod.png',
+  rancher: '/assets/games/slime-rancher/extra/rancher.png',
+  'rare-ornament': '/assets/games/slime-rancher/extra/rare-ornament.png',
+  'secret-style-treasure-pod':
+    '/assets/games/slime-rancher/extra/secret-style-treasure-pod.png',
+  slime: '/assets/games/slime-rancher/extra/slime.png',
+  'total-treasure-pods':
+    '/assets/games/slime-rancher/extra/total-treasure-pods.png',
+  unknown: '/assets/games/slime-rancher/extra/unknown.png',
+  veggie: '/assets/games/slime-rancher/extra/veggie.png',
+};
+
+const rawCards = [
   {
     name: 'Pink Slime',
     'secret-style-name': 'Sparkly',
@@ -6301,102 +6329,4 @@ const cards = [
   },
 ];
 
-const extraIcons = {
-  'blue-treasure-pod':
-    '/assets/games/slime-rancher/extra/blue-treasure-pod.png',
-  'depends-on-source-slimes':
-    '/assets/games/slime-rancher/extra/depends-on-source-slimes.png',
-  electricity: '/assets/games/slime-rancher/extra/electricity.png',
-  fruit: '/assets/games/slime-rancher/extra/fruit.png',
-  'green-treasure-pod':
-    '/assets/games/slime-rancher/extra/green-treasure-pod.png',
-  meat: '/assets/games/slime-rancher/extra/meat.png',
-  none: '/assets/games/slime-rancher/extra/none.png',
-  'odgen-ortiz': '/assets/games/slime-rancher/extra/odgen-ortiz.png',
-  ornament: '/assets/games/slime-rancher/extra/ornament.png',
-  'purple-treasure-pod':
-    '/assets/games/slime-rancher/extra/purple-treasure-pod.png',
-  rancher: '/assets/games/slime-rancher/extra/rancher.png',
-  'rare-ornament': '/assets/games/slime-rancher/extra/rare-ornament.png',
-  'secret-style-treasure-pod':
-    '/assets/games/slime-rancher/extra/secret-style-treasure-pod.png',
-  slime: '/assets/games/slime-rancher/extra/slime.png',
-  'total-treasure-pods':
-    '/assets/games/slime-rancher/extra/total-treasure-pods.png',
-  unknown: '/assets/games/slime-rancher/extra/unknown.png',
-  veggie: '/assets/games/slime-rancher/extra/veggie.png',
-};
-
-cards.forEach((card) => {
-  // Give cards styles values based on icon presence
-  if (!Object.hasOwn(card, 'styles')) {
-    card['styles'] = [];
-  }
-
-  if (card['secret-style-icon']) {
-    card.styles.push('secret');
-  }
-
-  if (card['sr2-icon']) {
-    card.styles.push('sr2');
-  }
-
-  if (card['radiant-icon']) {
-    card.styles.push('radiant');
-  }
-
-  // Give cards empty details if it doesn't exist
-  if (!Object.hasOwn(card, 'details')) {
-    card['details'] = {};
-  }
-});
-
-// Give cards used-in details based on recipes
-cards.forEach((card) => {
-  if (Object.hasOwn(card.details, 'recipe')) {
-    Object.entries(card.details.recipe).forEach(([item, amount]) => {
-      const cardMatch = cards.find((c) => {
-        return c.name === titleCaseSlug(item);
-      });
-
-      if (cardMatch) {
-        cardMatch.details['used-in'] ??= {};
-        cardMatch.details['used-in'][
-          card.name.toLowerCase().replace(/\s+/g, '-')
-        ] = amount;
-      }
-    });
-  }
-});
-
-// Give zones details based on location tags
-cards.forEach((card) => {
-  switch (card.tags[0]) {
-    case 'chime':
-      return;
-    case 'ornament':
-      return;
-  }
-
-  if (Object.hasOwn(card, 'locations')) {
-    Object.entries(card.locations).forEach(([source, locs]) => {
-      if (card.tags[0] === 'gordo' && source === 'gadget') return;
-
-      locs.forEach((loc) => {
-        const cardMatch = cards.find((c) => {
-          return c.name === titleCaseSlug(loc);
-        });
-
-        if (cardMatch) {
-          const key = card.name.toLowerCase().replace(/\s+/g, '-');
-
-          cardMatch.details[card.tags[0]] ??= [];
-
-          if (!cardMatch.details[card.tags[0]].includes(key)) {
-            cardMatch.details[card.tags[0]].push(key);
-          }
-        }
-      });
-    });
-  }
-});
+export const cards = processCards(rawCards);

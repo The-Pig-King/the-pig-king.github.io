@@ -1,3 +1,6 @@
+import { cards, extraIcons } from './data.js';
+import { originalDocumentTitle, titleCaseSlug } from '../../js/main.js';
+
 const tagGroups = {
   slime: 'type',
   plort: 'type',
