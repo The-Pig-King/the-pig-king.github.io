@@ -136,7 +136,7 @@
   --lava-depths-color: #b74b42;
   --impossible-sky-color: #859ca6;
   --dream-land-color: #d79af9;
-  --terrarium-color: #2b7351;
+  --the-terrarium-color: #2b7351;
   --the-prismacore-color: #b2fefe;
 
   --border-thin: 0.1rem solid;
@@ -642,6 +642,12 @@ header {
 }
 
 .tag-powderfall-bluffs {
+  color: black;
+}
+.tag-the-prismacore {
+  color: black;
+}
+.tag-the-archway {
   color: black;
 }
 

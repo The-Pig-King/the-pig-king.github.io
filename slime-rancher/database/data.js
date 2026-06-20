@@ -695,7 +695,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortPink.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortPink.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['10'],
       'min-price': ['4'],
@@ -709,7 +711,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortRock.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortRock.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['22'],
       'min-price': ['8'],
@@ -723,7 +727,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortTabby.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortTabby.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['22'],
       'min-price': ['8'],
@@ -737,7 +743,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortPhosphor.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortPhosphor.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['22'],
       'min-price': ['8'],
@@ -750,7 +758,9 @@ const rawCards = [
     name: 'Rad Plort',
     icon: '/assets/games/slime-rancher/plorts/iconPlortRad.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['45'],
       'min-price': ['15'],
@@ -764,7 +774,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortBoom.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortBoom.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['45'],
       'min-price': ['15'],
@@ -778,7 +790,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortHoney.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortHoney.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['45'],
       'min-price': ['15'],
@@ -805,7 +819,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortCrystal.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortCrystal.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['60'],
       'min-price': ['21'],
@@ -819,7 +835,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortHunter.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortHunter.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['60'],
       'min-price': ['20'],
@@ -832,7 +850,9 @@ const rawCards = [
     name: 'Quantum Plort',
     icon: '/assets/games/slime-rancher/plorts/iconPlortQuantum.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['60'],
       'min-price': ['21'],
@@ -846,7 +866,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortFire.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortFire.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['45'],
       'min-price': ['15'],
@@ -860,7 +882,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortDervish.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortDervish.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['75'],
       'min-price': ['26'],
@@ -874,7 +898,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/plorts/iconPlortTangle.png',
     'sr2-icon': '/assets/games/slime-rancher-2/plorts/iconPlortTangle.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['75'],
       'min-price': ['25'],
@@ -887,7 +913,9 @@ const rawCards = [
     name: 'Mosaic Plort',
     icon: '/assets/games/slime-rancher/plorts/iconPlortMosaic.png',
     tags: ['plort', 'common'],
-    'range-exchange': ['the-ranch'],
+    locations: {
+      'range-exchange': ['the-ranch'],
+    },
     details: {
       'default-price': ['75'],
       'min-price': ['26'],
@@ -1720,7 +1748,8 @@ const rawCards = [
       worldgen: ['the-ranch'],
     },
     details: {
-      'grow-time': ['36 hours (3 Spring Grass)'],
+      hen: ['hen-hen'],
+      'grow-time': ['36 hours (3 hours with Spring Grass)'],
     },
   },
   {
@@ -1750,6 +1779,9 @@ const rawCards = [
         'the-slime-sea',
       ],
       'range-exchange': ['the-ranch'],
+    },
+    details: {
+      chickadoo: ['chickadoo'],
     },
   },
   {
@@ -1781,10 +1813,18 @@ const rawCards = [
     details: {
       'fav-of': ['hunter-slime'],
     },
+    details: {
+      chickadoo: [
+        'chickadoo',
+        'stony-chickadoo',
+        'briar-chickadoo',
+        'painted-chickadoo',
+      ],
+    },
   },
   {
     name: 'Stony Chickadoo',
-    icon: '/assets/games/slime-rancher/food//iconBirdChickStony.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdChickStony.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdChickStony.png',
     tags: ['food', 'future-meat', 'common'],
     locations: {
@@ -1799,12 +1839,13 @@ const rawCards = [
       ],
     },
     details: {
-      'grow-time': ['6 hours (3 Spring Grass)'],
+      hen: ['stony-hen'],
+      'grow-time': ['6 hours (3 hours with Spring Grass)'],
     },
   },
   {
     name: 'Stony Hen',
-    icon: '/assets/games/slime-rancher/food//iconBirdHenStony.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdHenStony.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHenStony.png',
     tags: ['food', 'meat', 'common'],
     locations: {
@@ -1829,24 +1870,26 @@ const rawCards = [
       'range-exchange': ['the-ranch'],
     },
     details: {
+      chickadoo: ['stony-chickadoo'],
       'fav-of': ['tabby-slime'],
     },
   },
   {
     name: 'Briar Chickadoo',
-    icon: '/assets/games/slime-rancher/food//iconBirdChickBriar.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdChickBriar.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdChickBriar.png',
     tags: ['food', 'future-meat', 'common'],
     locations: {
       spawn: ['the-moss-blanket', 'the-slimeulation'],
     },
     details: {
-      'grow-time': ['6 hours (3 Spring Grass)'],
+      hen: ['briar-hen'],
+      'grow-time': ['6 hours (3 hours with Spring Grass)'],
     },
   },
   {
     name: 'Briar Hen',
-    icon: '/assets/games/slime-rancher/food//iconBirdHenBriar.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdHenBriar.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHenBriar.png',
     tags: ['food', 'meat', 'common'],
     locations: {
@@ -1854,24 +1897,26 @@ const rawCards = [
       'range-exchange': ['the-ranch'],
     },
     details: {
+      chickadoo: ['briar-chickadoo'],
       'fav-of': ['boom-slime'],
     },
   },
   {
     name: 'Painted Chickadoo',
-    icon: '/assets/games/slime-rancher/food//iconBirdChickPainted.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdChickPainted.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdChickPainted.png',
     tags: ['food', 'future-meat', 'common'],
     locations: {
       spawn: ['the-glass-desert'],
     },
     details: {
-      'grow-time': ['6 hours (3 Spring Grass)'],
+      hen: ['painted-hen'],
+      'grow-time': ['6 hours (3 hours with Spring Grass)'],
     },
   },
   {
     name: 'Painted Hen',
-    icon: '/assets/games/slime-rancher/food//iconBirdHenPainted.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdHenPainted.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHenPainted.png',
     tags: ['food', 'meat', 'common'],
     locations: {
@@ -1879,12 +1924,13 @@ const rawCards = [
       'range-exchange': ['the-ranch'],
     },
     details: {
+      chickadoo: ['painted-chickadoo'],
       'fav-of': ['tangle-slime'],
     },
   },
   {
     name: 'Elder Hen',
-    icon: '/assets/games/slime-rancher/food//iconBirdHenElder.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdHenElder.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHenElder.png',
     tags: ['food', 'meat', 'common'],
     locations: {
@@ -1901,7 +1947,7 @@ const rawCards = [
   },
   {
     name: 'Elder Roostro',
-    icon: '/assets/games/slime-rancher/food//iconBirdRoosterElder.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdRoosterElder.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdRoosterElder.png',
     tags: ['food', 'meat', 'common'],
     locations: {
@@ -1918,7 +1964,7 @@ const rawCards = [
   },
   {
     name: 'Spicy Tofu',
-    icon: '/assets/games/slime-rancher/food//iconVeggieTofu.png',
+    icon: '/assets/games/slime-rancher/food/iconVeggieTofu.png',
     tags: ['food', 'other', 'common'],
     locations: {
       'range-exchange': ['ogdens-retreat'],
@@ -1929,7 +1975,7 @@ const rawCards = [
   },
   {
     name: 'Water',
-    icon: '/assets/games/slime-rancher/food//iconWater.png',
+    icon: '/assets/games/slime-rancher/food/iconWater.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconWater.png',
     tags: ['food', 'other', 'common'],
     locations: {
@@ -1950,7 +1996,7 @@ const rawCards = [
   },
   {
     name: 'Ash',
-    icon: '/assets/games/slime-rancher/food//iconPatchIncineratorAshTray.png',
+    icon: '/assets/games/slime-rancher/food/iconPatchIncineratorAshTray.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconAsh.png',
     tags: ['food', 'other', 'common'],
   },

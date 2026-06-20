@@ -32,6 +32,7 @@ export const tagGroups = {
 
   node: 'resource-type',
   weather: 'resource-type',
+  'the-sanctuary': 'resource-type',
 
   utility: 'gadget-type',
   'warp-tech': 'gadget-type',
@@ -52,7 +53,7 @@ export const tagGroups = {
   'lava-depths': 'location',
   'impossible-sky': 'location',
   'dream-land': 'location',
-  terrarium: 'location',
+  'the-terrarium': 'location',
   'the-prismacore': 'location',
   'the-slime-sea': 'location',
 
