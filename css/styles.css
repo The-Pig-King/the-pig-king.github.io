@@ -113,6 +113,32 @@
   --style-gilded-color: #f09325;
   --style-guardian-color: #ae2629;
 
+  /* Slime Rancher 2 Colors */
+  --nectar-color: #3fc59d;
+
+  --node-color: #b2c0e7;
+  --weather-color: #3f54a2;
+
+  --pot-color: #4099f4;
+
+  --the-conservatory-color: #1079d5;
+  --the-archway-color: #cbd2fa;
+  --the-den-color: #7968ff;
+  --the-digsite-color: #917eaa;
+  --the-tidepools-color: #ff6daa;
+  --the-gully-color: #fdbd3c;
+  --the-sanctuary-color: #5ce4b0;
+  --the-rainbow-fields-color: #37bdcc;
+  --starlight-strand-color: #b564f4;
+  --ember-valley-color: #ff6900;
+  --powderfall-bluffs-color: white;
+  --waterworks-color: #7fb0f0;
+  --lava-depths-color: #b74b42;
+  --impossible-sky-color: #859ca6;
+  --dream-land-color: #d79af9;
+  --terrarium-color: #2b7351;
+  --the-prismacore-color: #b2fefe;
+
   --border-thin: 0.1rem solid;
 }
 
@@ -612,6 +638,10 @@ header {
   color: black;
 }
 .tag-misc {
+  color: black;
+}
+
+.tag-powderfall-bluffs {
   color: black;
 }
 
