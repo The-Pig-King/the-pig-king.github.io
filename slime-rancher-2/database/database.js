@@ -9,10 +9,18 @@ export const tagGroups = {
   food: 'type',
   resource: 'type',
   toy: 'type',
+  'upgrade-part': 'type',
   upgrade: 'type',
+  weather: 'type',
   zone: 'type',
   gadget: 'type',
+  pot: 'type',
   misc: 'type',
+
+  steam: 'platform-exclusive',
+  xbox: 'platform-exclusive',
+  'epic-games': 'platform-exclusive',
+  ps5: 'platform-exclusive',
 
   common: 'rarity',
   uncommon: 'rarity',
@@ -31,7 +39,7 @@ export const tagGroups = {
   other: 'food-type',
 
   node: 'resource-type',
-  weather: 'resource-type',
+  'weather-resource': 'resource-type',
   'the-sanctuary': 'resource-type',
 
   utility: 'gadget-type',
@@ -167,5 +175,6 @@ initDatabase(
   extraIcons,
   originalDocumentTitle,
   titleCaseSlug,
-  'sr'
+  'sr',
+  'slime-rancher-2'
 );

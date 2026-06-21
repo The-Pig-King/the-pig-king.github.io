@@ -22,7 +22,6 @@ export const extraIcons = {
   slime: '/assets/games/slime-rancher/extra/slime.png',
   'total-treasure-pods':
     '/assets/games/slime-rancher/extra/total-treasure-pods.png',
-  unknown: '/assets/games/slime-rancher/extra/unknown.png',
   veggie: '/assets/games/slime-rancher/extra/veggie.png',
 };
 

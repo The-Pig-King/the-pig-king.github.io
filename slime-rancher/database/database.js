@@ -178,5 +178,6 @@ initDatabase(
   extraIcons,
   originalDocumentTitle,
   titleCaseSlug,
-  'sr2'
+  'sr2',
+  'slime-rancher'
 );

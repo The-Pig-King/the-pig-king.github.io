@@ -114,12 +114,20 @@
   --style-guardian-color: #ae2629;
 
   /* Slime Rancher 2 Colors */
+  --upgrade-part-color: #8461a5;
+  --weather-color: #3f54a2;
+
+  --steam-color: #05173a;
+  --xbox-color: #0e730f;
+  --epic-games-color: black;
+  --ps5-color: #0067c6;
+
   --nectar-color: #3fc59d;
 
   --node-color: #b2c0e7;
-  --weather-color: #3f54a2;
+  --weather-resource-color: var(--weather-color);
 
-  --pot-color: #4099f4;
+  --pot-color: #a4bde0;
 
   --the-conservatory-color: #1079d5;
   --the-archway-color: #cbd2fa;
@@ -752,6 +760,7 @@ header {
   border: 0;
   background-color: transparent;
   overflow: visible;
+  color: white;
 }
 
 .card-modal::backdrop {

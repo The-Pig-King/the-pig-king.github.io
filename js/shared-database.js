@@ -5,7 +5,8 @@ export const initDatabase = (
   extraIcons,
   originalDocumentTitle,
   titleCaseSlug,
-  srKey
+  srKey,
+  srTitle
 ) => {
   const srKeyCapitalized = srKey.charAt(0).toUpperCase() + srKey.slice(1);
 
@@ -396,7 +397,7 @@ export const initDatabase = (
                         ${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}
                         <img 
                           class="source-icon"
-                          src="/assets/games/slime-rancher/sources/${source}.png"
+                          src="/assets/games/${srTitle}/sources/${source}.png"
                           alt="${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}">
                       </span>
                   </summary>
@@ -551,7 +552,7 @@ export const initDatabase = (
   // Open modal of clicked card
   cardContainer.addEventListener('click', (e) => {
     if (e.target.closest('.card-location-tags')) return;
-    if (e.target.closest('.card-details')) return;
+    if (e.target.closest('.card-details-icon')) return;
 
     const cardElement = e.target.closest('.card');
     if (!cardElement) return;
