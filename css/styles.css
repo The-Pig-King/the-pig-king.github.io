@@ -191,6 +191,10 @@ body {
   min-height: 100vh;
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -201,6 +205,13 @@ main {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .flex-container {
@@ -497,6 +508,13 @@ header {
   color: var(--btn-color, white);
 }
 
+.btn:focus-visible,
+.card-container .card:focus-visible,
+summary:focus-visible,
+.detail:focus-visible {
+  outline: 0.15rem solid cyan;
+}
+
 .style-btn {
   background-color: color-mix(in srgb, var(--frame-color) 70%, white);
   border-color: var(--frame-color);
@@ -566,7 +584,7 @@ header {
   font-size: 1rem;
 }
 
-.card:hover {
+.card-container .card:hover {
   background-color: color-mix(in srgb, var(--frame-color) 95%, white);
 }
 
@@ -701,7 +719,8 @@ header {
   width: 1.5rem;
 }
 
-.card-details {
+.card-details,
+.details-object {
   grid-area: card-details;
   display: none;
   justify-content: center;
@@ -747,6 +766,10 @@ header {
   justify-content: center;
 }
 
+.detail-object {
+  color: inherit;
+}
+
 .details-yes {
   color: var(--yes-color);
 }
@@ -761,19 +784,24 @@ header {
   background-color: transparent;
   overflow: visible;
   color: white;
+
+  overflow-y: auto;
+  max-height: 100dvh;
 }
 
 .card-modal::backdrop {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.card-modal-content {
-  max-height: 80dvh;
-  overflow-y: auto;
+.card-modal .card-name {
+  font-size: 2rem;
+  padding-right: 2rem;
 }
 
 .card-modal .card-style-name {
-  margin-top: -2rem;
+  align-self: start;
+  font-size: 1rem;
+  padding-right: 2rem;
 }
 
 .card-modal .card-details {
@@ -782,13 +810,15 @@ header {
 
 .close-modal-btn {
   position: absolute;
-  top: -1.65rem;
-  right: 1rem;
+  top: 2.15rem;
+  right: 0.5rem;
+  border: transparent;
+  border-radius: 0.5rem;
+  background: transparent;
 }
 
-.modal-style-btn {
-  position: absolute;
-  bottom: -1.65rem;
+#modal-secret-style-btn {
+  margin-left: 1rem;
 }
 
 .modal-secret-style-btn {
@@ -848,7 +878,6 @@ header {
 
   .card-modal .card-style-name {
     font-size: 1.75rem;
-    margin-top: -2rem;
   }
 
   .card-modal .tag {
@@ -856,14 +885,8 @@ header {
   }
 
   .close-modal-btn {
-    top: -1.7rem;
-    bottom: auto;
-    right: 1rem;
-  }
-
-  .modal-style-btn {
-    top: -1.7rem;
-    bottom: auto;
+    top: 2.5rem;
+    right: 0.75rem;
   }
 }
 
@@ -887,6 +910,5 @@ header {
 
   .card-modal .card-style-name {
     font-size: 2rem;
-    margin-top: -5rem;
   }
 }

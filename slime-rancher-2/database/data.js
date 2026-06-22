@@ -408,7 +408,8 @@ const rawCards = [
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeSaber.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeSaberExotic.png',
-    'sr-icon': '/assets/games/slime-rancher/slimes/regular/iconSlimeSaber.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/slimes/regular/iconSlimeSaberSketch.png',
     tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: ['powderfall-bluffs'],
@@ -679,7 +680,6 @@ const rawCards = [
   {
     name: 'Batty Plort',
     icon: '/assets/games/slime-rancher-2/plorts/iconPlortBatty.png',
-    'sr-icon': '/assets/games/slime-rancher/plorts/iconPlortBatty.png',
     tags: ['plort', 'common'],
     details: {
       slime: ['batty-slime'],
@@ -688,7 +688,6 @@ const rawCards = [
   {
     name: 'Flutter Plort',
     icon: '/assets/games/slime-rancher-2/plorts/iconPlortFlutter.png',
-    'sr-icon': '/assets/games/slime-rancher/plorts/iconPlortFlutter.png',
     tags: ['plort', 'common'],
     details: {
       slime: ['flutter-slime'],
@@ -883,6 +882,7 @@ const rawCards = [
   {
     name: 'Phosphor Gordo',
     icon: '/assets/games/slime-rancher-2/gordos/iconGordoPhosphor.png',
+    'sr-icon': '/assets/games/slime-rancher/gordos/iconGordoPhosphor.png',
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['the-rainbow-fields'],
@@ -1229,7 +1229,6 @@ const rawCards = [
   {
     name: 'Water Lettuce',
     icon: '/assets/games/slime-rancher-2/food/iconVeggieLettuce.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconVeggieLettuce.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
       spawn: [
@@ -1291,7 +1290,6 @@ const rawCards = [
   {
     name: 'Turbo Tater',
     icon: '/assets/games/slime-rancher-2/food/iconVeggieTater.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconVeggieTater.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
       spawn: ['lava-depths', 'the-terrarium'],
@@ -1379,7 +1377,6 @@ const rawCards = [
   {
     name: 'Pomegranite',
     icon: '/assets/games/slime-rancher-2/food/iconFruitPommegranite.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconFruitPommegranite.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: [
@@ -1414,7 +1411,6 @@ const rawCards = [
   {
     name: 'Polaricherry',
     icon: '/assets/games/slime-rancher-2/food/iconFruitPolaricherry.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconFruitPolaricherry.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: ['impossible-sky', 'the-terrarium'],
@@ -2043,7 +2039,7 @@ const rawCards = [
   {
     name: 'Rubber Ducky',
     icon: '/assets/games/slime-rancher-2/toys/iconToyRubberDucky.png',
-    'sr-icon': '/assets/games/slime-rancher/toys/iconToyRubberDucky.png',
+    'sr-icon': '/assets/games/slime-rancher/toys/iconToyDuck.png',
     tags: ['toy', 'common'],
     details: {
       price: ['1000'],
@@ -2092,7 +2088,7 @@ const rawCards = [
   {
     name: 'Buzzy Bee',
     icon: '/assets/games/slime-rancher-2/toys/iconToyBuzzyBee.png',
-    'sr-icon': '/assets/games/slime-rancher/toys/iconToyBuzzyBee.png',
+    'sr-icon': '/assets/games/slime-rancher/toys/iconToyBuzzBee.png',
     tags: ['toy', 'common'],
     details: {
       price: ['750'],
@@ -2122,7 +2118,7 @@ const rawCards = [
   {
     name: 'Sol Mate',
     icon: '/assets/games/slime-rancher-2/toys/iconToySolMate.png',
-    'sr-icon': '/assets/games/slime-rancher/toys/iconToySolMate.png',
+    'sr-icon': '/assets/games/slime-rancher/toys/iconToySolBuddy.png',
     tags: ['toy', 'common'],
     details: {
       price: ['750'],
@@ -2132,7 +2128,7 @@ const rawCards = [
   {
     name: 'Charcoal Brick',
     icon: '/assets/games/slime-rancher-2/toys/iconToyCharcoalBrick.png',
-    'sr-icon': '/assets/games/slime-rancher/toys/iconToyCharcoalBrick.png',
+    'sr-icon': '/assets/games/slime-rancher/toys/iconToyBrickette.png',
     tags: ['toy', 'common'],
     details: {
       price: ['2000'],
@@ -3199,6 +3195,7 @@ const rawCards = [
   {
     name: 'The Slime Sea',
     icon: '/assets/games/slime-rancher-2/zones/iconZoneSea.png',
+    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['zone', 'common'],
   },
 ];

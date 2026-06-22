@@ -366,7 +366,7 @@ export const initDatabase = (
 
     // Render card
     return `
-      <div class="card">
+      <div class="card" tabindex="0">
         <img src="${iconSrc}" alt="${card.name}" class="card-img-main" />
           <h2 class="card-name ${card.name.toLowerCase().replace(/\s+/g, '-')}">${card.name}</h2>
           <p class="card-style-name ${classAttr}" style="${styleAttr} ${radiantAttr}">${styleName}</p>
@@ -385,7 +385,7 @@ export const initDatabase = (
               .join('')}
           </div>
 
-          <div class="card-location-tags">
+          <div class="card-location-tags" role="button">
             ${
               card.locations
                 ? Object.entries(card.locations)
@@ -405,11 +405,11 @@ export const initDatabase = (
                     ${locs
                       .map(
                         (loc) => `
-                        <span
+                        <button
                           class="tag location-tag tag-${loc}"
                           style="--tag-color: var(--${loc}-color)">
                             ${titleCaseSlug(loc)}
-                        </span>
+                        </button>
                       `
                       )
                       .join('')}
@@ -444,12 +444,19 @@ export const initDatabase = (
                                     null;
 
                                   return detailIconSrc
-                                    ? `<img 
-                                  class="details-icon details-${detail}"
-                                  src="${detailIconSrc}"
-                                  alt="${titleCaseSlug(detail)}"
-                                  title="${titleCaseSlug(detail)}">`
-                                    : `<span class="details-fallback details-${detail}">${titleCaseSlug(detail)}</span>`;
+                                    ? `
+                                    <button
+                                      class="detail details-${detail}"
+                                      data-name="${titleCaseSlug(detail)}">
+                                      <img 
+                                        class="details-icon"
+                                        src="${detailIconSrc}"
+                                        alt="${titleCaseSlug(detail)}"
+                                        title="${titleCaseSlug(detail)}">
+                                    </button>`
+                                    : `<span class="details-fallback details-${detail}">
+                                                ${titleCaseSlug(detail)}
+                                              </span>`;
                                 })
                                 .join('')
                             : Object.entries(details)
@@ -467,14 +474,16 @@ export const initDatabase = (
                                     null;
 
                                   return detailIconSrc
-                                    ? `<div class="detail-object">
+                                    ? `<button 
+                                        class="detail detail-object details-${key}"
+                                        data-name="${titleCaseSlug(key)}">
                                         <img
-                                          class="details-icon details-${key}"
+                                          class="details-icon"
                                           src="${detailIconSrc}"
                                           alt="${titleCaseSlug(key)}"
                                           title="${titleCaseSlug(key)}">
                                         <span>${value}</span>
-                                      </div>`
+                                        </button>`
                                     : `<div class="details-object">
                                         <span class="details-fallback details-${key}">
                                           ${titleCaseSlug(key)} (${value})
@@ -552,7 +561,6 @@ export const initDatabase = (
   // Open modal of clicked card
   cardContainer.addEventListener('click', (e) => {
     if (e.target.closest('.card-location-tags')) return;
-    if (e.target.closest('.card-details-icon')) return;
 
     const cardElement = e.target.closest('.card');
     if (!cardElement) return;
@@ -585,24 +593,19 @@ export const initDatabase = (
 
   // Open modal of clicked detail
   document.addEventListener('click', (e) => {
-    if (
-      !e.target.classList.contains('details-icon') &&
-      !e.target.classList.contains('tag')
-    ) {
+    const detailBtn = e.target.closest('[data-name]');
+    const tagBtn = e.target.closest('.tag');
+
+    let name = '';
+    if (detailBtn) {
+      name = detailBtn.dataset.name;
+    } else if (tagBtn) {
+      name = tagBtn.textContent.trim();
+    } else {
       return;
     }
 
-    let name = '';
-    if (e.target.classList.contains('details-icon')) {
-      name = e.target.alt;
-    } else if (e.target.classList.contains('tag')) {
-      name = e.target.textContent.trim();
-    }
-
-    const foundCard = cards.find((card) => {
-      return card.name === name;
-    });
-
+    const foundCard = cards.find((card) => card.name === name);
     if (!foundCard) return;
 
     openModal(foundCard);
