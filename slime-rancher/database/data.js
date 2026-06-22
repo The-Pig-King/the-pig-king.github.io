@@ -2436,7 +2436,9 @@ const rawCards = [
       worldgen: ['the-dry-reef'],
     },
     details: {
-      price: ['300'],
+      price: {
+        newbucks: '300',
+      },
       'fav-of': ['pink-slime'],
     },
   },
@@ -2449,7 +2451,9 @@ const rawCards = [
       worldgen: ['the-indigo-quarry'],
     },
     details: {
-      price: ['400'],
+      price: {
+        newbucks: '400',
+      },
       'fav-of': ['rock-slime'],
     },
   },
@@ -2462,7 +2466,9 @@ const rawCards = [
       worldgen: ['the-moss-blanket'],
     },
     details: {
-      price: ['400'],
+      price: {
+        newbucks: '400',
+      },
       'fav-of': ['tabby-slime'],
     },
   },
@@ -2475,7 +2481,9 @@ const rawCards = [
       worldgen: ['the-slime-sea'],
     },
     details: {
-      price: ['500'],
+      price: {
+        newbucks: '500',
+      },
       'fav-of': ['phosphor-slime'],
     },
   },
@@ -2484,7 +2492,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/toys/iconToyPowerCell.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['500'],
+      price: {
+        newbucks: '500',
+      },
       'fav-of': ['rad-slime'],
     },
   },
@@ -2494,7 +2504,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyBomb.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['500'],
+      price: {
+        newbucks: '500',
+      },
       'fav-of': ['boom-slime'],
     },
   },
@@ -2504,7 +2516,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyBuzzyBee.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['500'],
+      price: {
+        newbucks: '500',
+      },
       'fav-of': ['honey-slime'],
     },
   },
@@ -2517,7 +2531,9 @@ const rawCards = [
       worldgen: ['the-docks'],
     },
     details: {
-      price: ['500'],
+      price: {
+        newbucks: '500',
+      },
       'fav-of': ['puddle-slime'],
     },
   },
@@ -2526,7 +2542,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/toys/iconToyBOctoBuddy.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['500'],
+      price: {
+        newbucks: '500',
+      },
       'fav-of': ['scuba-fashion-pod'],
     },
   },
@@ -2536,7 +2554,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyCrystalBall.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['600'],
+      price: {
+        newbucks: '600',
+      },
       'fav-of': ['crystal-slime'],
     },
   },
@@ -2546,7 +2566,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyStuffedChicken.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['600'],
+      price: {
+        newbucks: '600',
+      },
       'fav-of': ['hunter-slime'],
     },
   },
@@ -2555,7 +2577,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/toys/iconToyPuzzleBox.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['600'],
+      price: {
+        newbucks: '600',
+      },
       'fav-of': ['quantum-slime'],
     },
   },
@@ -2564,7 +2588,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/toys/iconToyDiscoBall.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['700'],
+      price: {
+        newbucks: '700',
+      },
       'fav-of': ['mosaic-slime'],
     },
   },
@@ -2574,7 +2600,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyGyroTop.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['700'],
+      price: {
+        newbucks: '700',
+      },
       'fav-of': ['dervish-slime'],
     },
   },
@@ -2584,7 +2612,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToySolMate.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['700'],
+      price: {
+        newbucks: '700',
+      },
       'fav-of': ['tangle-slime'],
     },
   },
@@ -2594,7 +2624,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyCharcoalBrick.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['700'],
+      price: {
+        newbucks: '700',
+      },
       'fav-of': ['fire-slime'],
     },
   },
@@ -2604,7 +2636,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/toys/iconToyStegoBuddy.png',
     tags: ['toy', 'common'],
     details: {
-      price: ['700'],
+      price: {
+        newbucks: '700',
+      },
       'fav-of': ['saber-slime'],
     },
   },
@@ -2613,7 +2647,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/toys/iconToyTreasureChest.png',
     tags: ['toy', 'dlc', 'common'],
     details: {
-      price: ['200'],
+      price: {
+        newbucks: '200',
+      },
       'fav-of': ['piratey-fashion-pod'],
     },
   },
@@ -2622,7 +2658,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/toys/iconToyBopGoblin.png',
     tags: ['toy', 'dlc', 'common'],
     details: {
-      price: ['200'],
+      price: {
+        newbucks: '200',
+      },
       'fav-of': ['heroic-fashion-pod'],
     },
   },
@@ -2631,7 +2669,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/toys/iconToyscifi.png',
     tags: ['toy', 'dlc', 'common'],
     details: {
-      price: ['200'],
+      price: {
+        newbucks: '200',
+      },
       'fav-of': ['galactic-fashion-pod'],
     },
   },
@@ -3879,7 +3919,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopWater01.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['350'],
+      price: {
+        newbucks: '350',
+      },
     },
   },
   {
@@ -3888,7 +3930,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 1.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['350'],
+      price: {
+        newbucks: '350',
+      },
     },
   },
   {
@@ -3897,7 +3941,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 1.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['500'],
+      price: {
+        newbucks: '500',
+      },
     },
   },
   {
@@ -3906,7 +3952,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopDashBoots.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['350'],
+      price: {
+        newbucks: '350',
+      },
     },
   },
   {
@@ -3921,7 +3969,9 @@ const rawCards = [
     'sr2-icon': '/assets/games/slime-rancher-2/upgrades/iconShopPulsewave.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['350'],
+      price: {
+        newbucks: '350',
+      },
     },
   },
   {
@@ -3931,7 +3981,9 @@ const rawCards = [
       '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['350'],
+      price: {
+        newbucks: '350',
+      },
     },
   },
   {
@@ -3941,7 +3993,9 @@ const rawCards = [
       '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['500'],
+      price: {
+        newbucks: '500',
+      },
     },
   },
   {
@@ -3951,7 +4005,9 @@ const rawCards = [
       '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['750'],
+      price: {
+        newbucks: '750',
+      },
     },
   },
   {
@@ -3968,7 +4024,9 @@ const rawCards = [
       '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['350'],
+      price: {
+        newbucks: '350',
+      },
     },
   },
   {
@@ -3978,7 +4036,9 @@ const rawCards = [
       '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['650'],
+      price: {
+        newbucks: '650',
+      },
     },
   },
   {
@@ -3988,7 +4048,9 @@ const rawCards = [
       '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['950'],
+      price: {
+        newbucks: '950',
+      },
     },
   },
   {
@@ -3998,7 +4060,9 @@ const rawCards = [
       '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['350'],
+      price: {
+        newbucks: '350',
+      },
     },
   },
   {
@@ -4008,7 +4072,9 @@ const rawCards = [
       '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['500'],
+      price: {
+        newbucks: '500',
+      },
     },
   },
   {
@@ -4018,7 +4084,9 @@ const rawCards = [
       '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['750'],
+      price: {
+        newbucks: '750',
+      },
     },
   },
   {
@@ -4033,7 +4101,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/upgrades/iconShopTreasure01.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['4500'],
+      price: {
+        newbucks: '4500',
+      },
     },
   },
   {
@@ -4041,7 +4111,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/upgrades/iconShopTreasure02.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['9000'],
+      price: {
+        newbucks: '9000',
+      },
     },
   },
   {
@@ -4049,7 +4121,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/upgrades/iconShopTreasure03.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['25000'],
+      price: {
+        newbucks: '25000',
+      },
     },
   },
   {
@@ -4064,7 +4138,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/upgrades/iconKeyPedia.png',
     tags: ['upgrade', 'common'],
     details: {
-      price: ['25000'],
+      price: {
+        newbucks: '25000',
+      },
     },
   },
   {
@@ -4081,7 +4157,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/zones/iconExpanGrotto.png',
     tags: ['zone', 'common'],
     details: {
-      price: ['1795'],
+      price: {
+        newbucks: '1795',
+      },
       plots: ['5'],
       'gadget-sites': ['11'],
       'treasure-pods': {
@@ -4095,7 +4173,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/zones/iconExpanOvergrowth.png',
     tags: ['zone', 'common'],
     details: {
-      price: ['1795'],
+      price: {
+        newbucks: '1795',
+      },
       plots: ['4'],
       'gadget-sites': ['12'],
     },
@@ -4105,7 +4185,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/zones/iconExpanDocks.png',
     tags: ['zone', 'common'],
     details: {
-      price: ['5000'],
+      price: {
+        newbucks: '5000',
+      },
       plots: ['4'],
       'gadget-sites': ['11'],
     },
@@ -4115,7 +4197,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher/zones/iconZoneLab.png',
     tags: ['zone', 'common'],
     details: {
-      price: ['10000'],
+      price: {
+        newbucks: '10000',
+      },
       plots: ['5'],
       'gadget-sites': ['15'],
       'treasure-pods': {

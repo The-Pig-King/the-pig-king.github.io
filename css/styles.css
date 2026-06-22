@@ -116,6 +116,8 @@
   /* Slime Rancher 2 Colors */
   --upgrade-part-color: #8461a5;
   --weather-color: #3f54a2;
+  --sanctuary-upgrade-color: #34974b;
+  --pot-color: #a4bde0;
 
   --steam-color: #05173a;
   --xbox-color: #0e730f;
@@ -127,7 +129,11 @@
   --node-color: #b2c0e7;
   --weather-resource-color: var(--weather-color);
 
-  --pot-color: #a4bde0;
+  --room-color: #af80c0;
+  --room-theme-color: #2ce2a1;
+  --alcove-theme-color: #ef6a23;
+
+  --variant-color: #800080;
 
   --the-conservatory-color: #1079d5;
   --the-archway-color: #cbd2fa;
@@ -674,6 +680,9 @@ summary:focus-visible,
   color: black;
 }
 .tag-the-archway {
+  color: black;
+}
+.tag-room-theme {
   color: black;
 }
 

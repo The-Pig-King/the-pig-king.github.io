@@ -13,6 +13,7 @@ export const tagGroups = {
   upgrade: 'type',
   weather: 'type',
   zone: 'type',
+  'sanctuary-upgrade': 'type',
   gadget: 'type',
   pot: 'type',
   misc: 'type',
@@ -42,9 +43,14 @@ export const tagGroups = {
   'weather-resource': 'resource-type',
   'the-sanctuary': 'resource-type',
 
+  room: 'sanctuary-upgrade-type',
+  'room-theme': 'sanctuary-upgrade-type',
+  'alcove-theme': 'sanctuary-upgrade-type',
+
   utility: 'gadget-type',
   'warp-tech': 'gadget-type',
   decoration: 'gadget-type',
+  variant: 'gadget-type',
 
   'the-conservatory': 'location',
   'the-archway': 'location',
