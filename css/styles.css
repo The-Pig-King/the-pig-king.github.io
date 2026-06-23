@@ -135,6 +135,12 @@
 
   --variant-color: #800080;
 
+  --the-grey-labyrinth-color: #ffb6ff;
+  --beach-color: #ffd952;
+  --fun-color: #fc5181;
+  --platform-color: #6cd488;
+  --golden-statue-color: #d68105;
+
   --the-conservatory-color: #1079d5;
   --the-archway-color: #cbd2fa;
   --the-den-color: #7968ff;
@@ -645,44 +651,21 @@ summary:focus-visible,
   font-size: 0.75rem;
 }
 
-.tag-docile {
-  color: black;
-}
-.tag-the-ancient-ruins {
-  color: black;
-}
-.tag-the-wilds {
-  color: black;
-}
-.tag-common {
-  color: black;
-}
-.tag-echo-net {
-  color: black;
-}
-.tag-toy {
-  color: black;
-}
-.tag-chime {
-  color: black;
-}
-.tag-warp-tech {
-  color: black;
-}
-.tag-misc {
-  color: black;
-}
-
-.tag-powderfall-bluffs {
-  color: black;
-}
-.tag-the-prismacore {
-  color: black;
-}
-.tag-the-archway {
-  color: black;
-}
-.tag-room-theme {
+.tag-docile,
+.tag-the-ancient-ruins,
+.tag-the-wilds,
+.tag-common,
+.tag-echo-net,
+.tag-toy,
+.tag-chime,
+.tag-warp-tech,
+.tag-misc,
+.tag-powderfall-bluffs,
+.tag-the-prismacore,
+.tag-the-archway,
+.tag-room-theme,
+.tag-the-grey-labyrinth,
+.tag-beach {
   color: black;
 }
 

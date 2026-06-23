@@ -52,6 +52,17 @@ export const tagGroups = {
   decoration: 'gadget-type',
   variant: 'gadget-type',
 
+  'the-rainbow-fields': 'decoration-theme',
+  'ember-valley': 'decoration-theme',
+  'starlight-strand': 'decoration-theme',
+  'powderfall-bluffs': 'decoration-theme',
+  'the-grey-labyrinth': 'decoration-theme',
+  'the-conservatory': 'decoration-theme',
+  beach: 'decoration-theme',
+  fun: 'decoration-theme',
+  platform: 'decoration-theme',
+  'golden-statue': 'decoration-theme',
+
   'the-conservatory': 'location',
   'the-archway': 'location',
   'the-den': 'location',
