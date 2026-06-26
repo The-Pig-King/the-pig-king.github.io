@@ -86,6 +86,7 @@ export const tagGroups = {
   weather: 'source',
   worldgen: 'source',
   pot: 'source',
+  'exchange-station': 'source',
   'treasure-pod': 'source',
   gadget: 'source',
   gordo: 'source',

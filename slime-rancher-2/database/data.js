@@ -848,7 +848,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['the-rainbow-fields'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['veggie', 'fruit', 'meat'],
@@ -866,7 +883,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['the-rainbow-fields'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['veggie'],
@@ -886,7 +920,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['the-rainbow-fields'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['fruit'],
@@ -906,7 +957,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['starlight-strand'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['meat'],
@@ -926,7 +994,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['starlight-strand'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['fruit'],
@@ -945,7 +1030,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['starlight-strand'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['veggie', 'fruit', 'meat'],
@@ -963,7 +1065,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['starlight-strand'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['meat'],
@@ -982,7 +1101,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['starlight-strand'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['nectar'],
@@ -1001,7 +1137,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['ember-valley'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['fruit'],
@@ -1021,7 +1174,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'harmful'],
     locations: {
       worldgen: ['ember-valley'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['meat'],
@@ -1041,7 +1211,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'harmful'],
     locations: {
       worldgen: ['ember-valley'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['veggie'],
@@ -1061,7 +1248,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'harmful'],
     locations: {
       worldgen: ['ember-valley'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['veggie'],
@@ -1081,7 +1285,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['ember-valley'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['meat'],
@@ -1100,7 +1321,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['powderfall-bluffs'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['meat'],
@@ -1119,7 +1357,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['impossible-sky'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['fruit'],
@@ -1138,7 +1393,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['dream-land'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['meat'],
@@ -1157,7 +1429,24 @@ const rawCards = [
     tags: ['gordo', 'common', 'docile'],
     locations: {
       worldgen: ['the-terrarium'],
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['veggie'],
@@ -1176,7 +1465,24 @@ const rawCards = [
     'sr-icon': '/assets/games/slime-rancher/gordos/iconGordoTangle.png',
     tags: ['gordo', 'common', 'docile'],
     locations: {
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['meat'],
@@ -1191,7 +1497,24 @@ const rawCards = [
     'sr-icon': '/assets/games/slime-rancher/gordos/iconGordoDervish.png',
     tags: ['gordo', 'common', 'docile'],
     locations: {
-      gadget: [],
+      gadget: [
+        'the-conservatory',
+        'the-archway',
+        'the-den',
+        'the-digsite',
+        'the-gully',
+        'the-tidepools',
+        'the-sanctuary',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       diet: ['fruit'],
@@ -2289,11 +2612,21 @@ const rawCards = [
     name: 'Heart Cell',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentHeartCell.png',
     tags: ['upgrade-part', 'common'],
+    details: {
+      price: {
+        'shadow-plort': '25',
+      },
+    },
   },
   {
     name: 'Power Chip',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentEnergyChip.png',
     tags: ['upgrade-part', 'common'],
+    details: {
+      price: {
+        'shadow-plort': '25',
+      },
+    },
   },
   {
     name: 'Dash Boot Module',
@@ -2309,6 +2642,17 @@ const rawCards = [
     name: 'Storage Cell',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentStorageCell.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'exchange-station': ['the-prismacore'],
+    },
+    details: {
+      price: {
+        'prisma-plort': '20',
+        'shadow-plort': '60',
+        'shadow-plort!': '60',
+        'shadow-plort!!': '60',
+      },
+    },
   },
   {
     name: 'Vac Tank',
@@ -2346,7 +2690,8 @@ const rawCards = [
     tags: ['upgrade-part', 'common'],
     details: {
       price: {
-        'rainbow-coin': 15,
+        'rainbow-coin': '15',
+        'shadow-plort': '60',
       },
     },
   },
@@ -2356,7 +2701,8 @@ const rawCards = [
     tags: ['upgrade-part', 'common'],
     details: {
       price: {
-        'rainbow-coin': 15,
+        'rainbow-coin': '15',
+        'shadow-plort': '60',
       },
     },
   },
@@ -2364,7 +2710,14 @@ const rawCards = [
     name: 'Drone Station Module',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentQuantum.png',
     tags: ['upgrade-part', 'common'],
-    details: {},
+    locations: {
+      'exchange-station': ['the-prismacore'],
+    },
+    details: {
+      price: {
+        'prisma-plort': '50',
+      },
+    },
   },
   {
     name: 'Resource Harvester',
@@ -3761,6 +4114,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTripleHydroTurret.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
+      price: {
+        'shadow-plort': '25',
+      },
       recipe: {
         newbucks: '2000',
         'hyper-plort': '30',
@@ -4156,6 +4512,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStabilizerFlag.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
+      price: {
+        'shadow-plort': '15',
+      },
       recipe: {
         newbucks: '50',
         'pink-plort': '5',
@@ -4461,6 +4820,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetDreamLanternT2.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
+      price: {
+        'shadow-plort': '25',
+      },
       recipe: {
         newbucks: '15000',
         'honey-plort': '50',
@@ -4489,6 +4851,9 @@ const rawCards = [
     name: 'Nullifier',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetHarmonizer.png',
     tags: ['gadget', 'common', 'utility'],
+    locations: {
+      'exchange-station': ['the-prismacore'],
+    },
     details: {
       price: {
         'prisma-plort': '20',
@@ -4631,6 +4996,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportGreyLabyrinth.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
+      price: {
+        'shadow-plort': '25',
+      },
       recipe: {
         newbucks: '5000',
         'sloomber-plort': '20',
@@ -4787,6 +5155,9 @@ const rawCards = [
     'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetTeleportGold.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
+      price: {
+        'shadow-plort': '25',
+      },
       recipe: {
         newbucks: '5000',
         'twin-plort': '30',
@@ -7689,6 +8060,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPottedLavaPlants.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
+      price: {
+        'shadow-plort': '15',
+      },
       recipe: {
         newbucks: '150',
         'tangle-plort': '10',
@@ -7718,6 +8092,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAncientWallLighting.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
+      price: {
+        'shadow-plort': '15',
+      },
       recipe: {
         newbucks: '250',
         'sloomber-plort': '10',
@@ -7731,6 +8108,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorOakTree.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
+      price: {
+        'shadow-plort': '15',
+      },
       recipe: {
         newbucks: '200',
         'twin-plort': '10',
@@ -7744,6 +8124,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPurpleOakTree.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
+      price: {
+        'shadow-plort': '15',
+      },
       recipe: {
         newbucks: '200',
         'sloomber-plort': '10',
@@ -7821,6 +8204,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAquarium.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
+      price: {
+        'shadow-plort': '25',
+      },
       recipe: {
         newbucks: '6000',
         'twin-plort': '25',
@@ -7835,6 +8221,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLavaFountain.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
+      price: {
+        'shadow-plort': '25',
+      },
       recipe: {
         newbucks: '7000',
         'twin-plort': '25',
@@ -7849,6 +8238,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAnglerFountain.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
+      price: {
+        'shadow-plort': '60',
+      },
       recipe: {
         newbucks: '9000',
         'sloomber-plort': '25',
@@ -7863,6 +8255,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldTwistedTree.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
+      price: {
+        'shadow-plort': '25',
+      },
       recipe: {
         newbucks: '1000',
         'sloomber-plort': '20',
@@ -8349,7 +8744,7 @@ const rawCards = [
     tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
     details: {
       price: {
-        'shadow-plort': '25',
+        'shadow-plort': '15',
       },
       original: ['blue-flower-lamp'],
       variants: [
@@ -8621,6 +9016,9 @@ const rawCards = [
     icon: '/assets/games/slime-rancher-2/gadgets/iconDecorMiniaturesDome.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
+      price: {
+        'shadow-plort': '25',
+      },
       recipe: {
         newbucks: '10000',
         'twin-plort': '25',
@@ -9046,6 +9444,25 @@ const rawCards = [
         'gold-plort': '3',
         'wild-honey': '10',
         'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Newbucks',
+    icon: '/assets/games/slime-rancher-2/misc/iconNewbuck.png',
+    tags: ['misc', 'common'],
+    details: {},
+  },
+  {
+    name: 'Rainbow Coin',
+    icon: '/assets/games/slime-rancher-2/misc/rainbowcoinicon.png',
+    tags: ['misc', 'common'],
+    locations: {
+      'exchange-station': ['the-prismacore'],
+    },
+    details: {
+      price: {
+        'prisma-plort': '10',
       },
     },
   },

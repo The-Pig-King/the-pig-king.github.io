@@ -3,6 +3,7 @@ import { titleCaseSlug } from './main.js';
 export function processCards(cards) {
   addStyles(cards);
   addRecipeUsage(cards);
+  addPriceUsage(cards);
   addZoneData(cards);
 
   return cards;
@@ -50,6 +51,26 @@ const addRecipeUsage = (cards) => {
         if (cardMatch) {
           cardMatch.details['used-in'] ??= {};
           cardMatch.details['used-in'][
+            card.name.toLowerCase().replace(/\s+/g, '-')
+          ] = amount;
+        }
+      });
+    }
+  });
+};
+
+const addPriceUsage = (cards) => {
+  // Give cards used-to-buy details based on prices
+  cards.forEach((card) => {
+    if (Object.hasOwn(card.details, 'price')) {
+      Object.entries(card.details.price).forEach(([item, amount]) => {
+        const cardMatch = cards.find((c) => {
+          return c.name === titleCaseSlug(item);
+        });
+
+        if (cardMatch) {
+          cardMatch.details['used-to-buy'] ??= {};
+          cardMatch.details['used-to-buy'][
             card.name.toLowerCase().replace(/\s+/g, '-')
           ] = amount;
         }

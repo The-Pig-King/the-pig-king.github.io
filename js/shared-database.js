@@ -463,7 +463,7 @@ export const initDatabase = (
                                 .map(([key, value]) => {
                                   // Handle duplicate keys
                                   if (key.endsWith('!')) {
-                                    key = key.replace('!', '');
+                                    key = key.replaceAll('!', '');
                                   }
 
                                   const detailIconSrc =

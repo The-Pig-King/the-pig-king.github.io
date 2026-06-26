@@ -118,6 +118,7 @@
   --weather-color: #3f54a2;
   --sanctuary-upgrade-color: #34974b;
   --pot-color: #a4bde0;
+  --exchange-station-color: var(--range-exchange-color);
 
   --steam-color: #05173a;
   --xbox-color: #0e730f;
