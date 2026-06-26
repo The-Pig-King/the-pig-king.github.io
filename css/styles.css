@@ -31,6 +31,7 @@
   --ornament-color: #5ca876;
   --chroma-color: #9d9780;
   --upgrade-color: black;
+  --plot-building-color: #f79524;
   --zone-color: #29b0fb;
   --gadget-color: #6b6e68;
   --misc-color: white;
@@ -59,6 +60,9 @@
   --pump-color: #54b1fa;
   --range-exchange-color: #000d56;
   --echo-net-color: #ece1b5;
+
+  --building-color: #89ef3f;
+  --building-upgrade-color: #2275a8;
 
   --extractor-color: #6e7092;
   --utility-color: #b8bbb5;
@@ -659,6 +663,7 @@ summary:focus-visible,
 .tag-echo-net,
 .tag-toy,
 .tag-chime,
+.tag-building,
 .tag-warp-tech,
 .tag-misc,
 .tag-powderfall-bluffs,

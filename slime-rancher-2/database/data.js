@@ -3352,6 +3352,484 @@ const rawCards = [
     },
   },
   {
+    name: 'Demolish Plot',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchDemolish.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchDemolish.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '200',
+      },
+    },
+  },
+  {
+    name: 'Corral',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralBase.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCorralBase.png',
+    tags: ['plot-building', 'common', 'building'],
+    details: {
+      price: {
+        newbucks: '250',
+      },
+      upgrades: [
+        'corral-high-walls',
+        'music-box',
+        'air-net',
+        'solar-shield',
+        'corral-plort-collector',
+        'auto-feeder',
+      ],
+    },
+  },
+  {
+    name: 'Corral High Walls',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralWalls.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCorralWalls.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '260',
+      },
+      'upgrade-for': ['corral'],
+      'other-upgrades': [
+        'music-box',
+        'air-net',
+        'solar-shield',
+        'corral-plort-collector',
+        'auto-feeder',
+      ],
+    },
+  },
+  {
+    name: 'Music Box',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralMusic.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCorralMusic.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '350',
+      },
+      'upgrade-for': ['corral'],
+      'other-upgrades': [
+        'corral-high-walls',
+        'air-net',
+        'solar-shield',
+        'corral-plort-collector',
+        'auto-feeder',
+      ],
+    },
+  },
+  {
+    name: 'Air Net',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralNet.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCorralNet.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '425',
+      },
+      'upgrade-for': ['corral'],
+      'other-upgrades': [
+        'corral-high-walls',
+        'music-box',
+        'solar-shield',
+        'corral-plort-collector',
+        'auto-feeder',
+      ],
+    },
+  },
+  {
+    name: 'Solar Shield',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralSolar.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCorralSolar.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '425',
+      },
+      'upgrade-for': ['corral'],
+      'other-upgrades': [
+        'corral-high-walls',
+        'music-box',
+        'air-net',
+        'corral-plort-collector',
+        'auto-feeder',
+      ],
+    },
+  },
+  {
+    name: 'Corral Plort Collector',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralCollector.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCorralCollector.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '750',
+      },
+      'upgrade-for': ['corral'],
+      'other-upgrades': [
+        'corral-high-walls',
+        'music-box',
+        'air-net',
+        'solar-shield',
+        'auto-feeder',
+      ],
+    },
+  },
+  {
+    name: 'Auto Feeder',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralFeeder.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCorralFeeder.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '750',
+      },
+      'upgrade-for': ['corral'],
+      'other-upgrades': [
+        'corral-high-walls',
+        'music-box',
+        'air-net',
+        'solar-shield',
+        'plort-collector',
+      ],
+    },
+  },
+  {
+    name: 'Garden',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenBase.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchGardenBase.png',
+    tags: ['plot-building', 'common', 'building'],
+    details: {
+      price: {
+        newbucks: '250',
+      },
+      upgrades: [
+        'nutrient-soil',
+        'sprinkler',
+        'scareslime',
+        'growth-amplifier',
+        'remove-crops',
+      ],
+    },
+  },
+  {
+    name: 'Nutrient Soil',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenSoil.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchGardenSoil.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '600',
+      },
+      'upgrade-for': ['garden'],
+      'other-upgrades': [
+        'sprinkler',
+        'scareslime',
+        'growth-amplifier',
+        'remove-crops',
+      ],
+    },
+  },
+  {
+    name: 'Sprinkler',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenSprinkler.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchGardenSprinkler.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '700',
+      },
+      'upgrade-for': ['garden'],
+      'other-upgrades': [
+        'nutrient-soil',
+        'scareslime',
+        'growth-amplifier',
+        'remove-crops',
+      ],
+    },
+  },
+  {
+    name: 'Scareslime',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenScareslime.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchGardenScareslime.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '425',
+      },
+      'upgrade-for': ['garden'],
+      'other-upgrades': [
+        'nutrient-soil',
+        'sprinkler',
+        'growth-amplifier',
+        'remove-crops',
+      ],
+    },
+  },
+  {
+    name: 'Growth Amplifier',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenDeluxe.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchGardenDeluxe.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '1400',
+      },
+      'upgrade-for': ['garden'],
+      'other-upgrades': [
+        'nutrient-soil',
+        'sprinkler',
+        'scareslime',
+        'remove-crops',
+      ],
+    },
+  },
+  {
+    name: 'Remove Crops',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenClearCrop.png',
+    'sr-icon':
+      '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenClearCrop.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '50',
+      },
+      'upgrade-for': ['garden'],
+      'other-upgrades': [
+        'nutrient-soil',
+        'sprinkler',
+        'growth-amplifier',
+        'scareslime',
+      ],
+    },
+  },
+  {
+    name: 'Coop',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCoopBase.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCoopBase.png',
+    tags: ['plot-building', 'common', 'building'],
+    details: {
+      price: {
+        newbucks: '250',
+      },
+      upgrades: [
+        'coop-high-walls',
+        'spring-grass',
+        'vitamizer',
+        'elder-collector',
+      ],
+    },
+  },
+  {
+    name: 'Coop High Walls',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCoopWalls.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCoopWalls.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '200',
+      },
+      'upgrade-for': ['coop'],
+      'other-upgrades': ['spring-grass', 'vitamizer', 'elder-collector'],
+    },
+  },
+  {
+    name: 'Spring Grass',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCoopGrass.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCoopGrass.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '600',
+      },
+      'upgrade-for': ['coop'],
+      'other-upgrades': ['coop-high-walls', 'vitamizer', 'elder-collector'],
+    },
+  },
+  {
+    name: 'Vitamizer',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCoopVitamizer.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCoopVitamizer.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '700',
+      },
+      'upgrade-for': ['coop'],
+      'other-upgrades': ['coop-high-walls', 'spring-grass', 'elder-collector'],
+    },
+  },
+  {
+    name: 'Elder Collector',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCoopDeluxe.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchCoopDeluxe.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '1300',
+      },
+      'upgrade-for': ['coop'],
+      'other-upgrades': ['coop-high-walls', 'spring-grass', 'vitamizer'],
+    },
+  },
+  {
+    name: 'Silo',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchSiloBase.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchSiloBase.png',
+    tags: ['plot-building', 'common', 'building'],
+    details: {
+      price: {
+        newbucks: '450',
+      },
+      upgrades: [
+        'additional-storage',
+        'additional-storage-ii',
+        'additional-storage-iii',
+        'improved-storage-capacity',
+      ],
+    },
+  },
+  {
+    name: 'Additional Storage',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchSiloStorage.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchSiloStorage.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      'upgrade-for': ['silo'],
+      'other-upgrades': [
+        'additional-storage-ii',
+        'additional-storage-iii',
+        'improved-storage-capacity',
+      ],
+    },
+  },
+  {
+    name: 'Additional Storage II',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchSiloStorage.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchSiloStorage.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '575',
+      },
+      'upgrade-for': ['silo'],
+      'other-upgrades': [
+        'additional-storage',
+        'additional-storage-iii',
+        'improved-storage-capacity',
+      ],
+    },
+  },
+  {
+    name: 'Additional Storage III',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchSiloStorage.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchSiloStorage.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '650',
+      },
+      'upgrade-for': ['silo'],
+      'other-upgrades': [
+        'additional-storage',
+        'additional-storage-ii',
+        'improved-storage-capacity',
+      ],
+    },
+  },
+  {
+    name: 'Improved Storage Capacity',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchSiloStorageUpgrade.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '1800',
+      },
+      'upgrade-for': ['silo'],
+      'other-upgrades': [
+        'additional-storage',
+        'additional-storage-ii',
+        'additional-storage-iii',
+      ],
+    },
+  },
+  {
+    name: 'Incinerator',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchIncineratorBase.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchIncineratorBase.png',
+    tags: ['plot-building', 'common', 'building'],
+    details: {
+      price: {
+        newbucks: '450',
+      },
+      upgrades: ['ash-trough'],
+    },
+  },
+  {
+    name: 'Ash Trough',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchIncineratorAshTray.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchIncineratorAshTray.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      'upgrade-for': ['incinerator'],
+    },
+  },
+  {
+    name: 'Pond',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchPondBase.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/plot-buildings/iconPatchPondBase.png',
+    tags: ['plot-building', 'common', 'building'],
+    details: {
+      price: {
+        newbucks: '450',
+      },
+      upgrades: ['pond-plort-collector'],
+    },
+  },
+  {
+    name: 'Pond Plort Collector',
+    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralCollector.png',
+    tags: ['plot-building', 'common', 'building-upgrade'],
+    details: {
+      price: {
+        newbucks: '1200',
+      },
+      'upgrade-for': ['pond'],
+    },
+  },
+  {
     name: 'Rain',
     icon: '/assets/games/slime-rancher-2/weather/iconWeatherRain.png',
     tags: ['weather', 'common'],

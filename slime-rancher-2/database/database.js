@@ -11,6 +11,7 @@ export const tagGroups = {
   toy: 'type',
   'upgrade-part': 'type',
   upgrade: 'type',
+  'plot-building': 'type',
   weather: 'type',
   zone: 'type',
   'sanctuary-upgrade': 'type',
@@ -42,6 +43,9 @@ export const tagGroups = {
   node: 'resource-type',
   'weather-resource': 'resource-type',
   'the-sanctuary': 'resource-type',
+
+  building: 'plot-type',
+  'building-upgrade': 'plot-type',
 
   room: 'sanctuary-upgrade-type',
   'room-theme': 'sanctuary-upgrade-type',

@@ -12,6 +12,7 @@ export const tagGroups = {
   chime: 'type',
   ornament: 'type',
   chroma: 'type',
+  'plot-building': 'type',
   upgrade: 'type',
   zone: 'type',
   gadget: 'type',
@@ -40,6 +41,9 @@ export const tagGroups = {
   pump: 'resource-type',
   'range-exchange': 'resource-type',
   'echo-net': 'resource-type',
+
+  building: 'plot-type',
+  'building-upgrade': 'plot-type',
 
   extractor: 'gadget-type',
   utility: 'gadget-type',
