@@ -3647,6 +3647,7 @@ const rawCards = [
   {
     name: 'Dash Pad',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetDashPad.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetDashPad.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3661,6 +3662,8 @@ const rawCards = [
   {
     name: 'Master Gordo Snare',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetGordoSnareMaster 1.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetGordoSnareMaster.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       price: {
@@ -3679,6 +3682,8 @@ const rawCards = [
   {
     name: 'Advanced Gordo Snare',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetGordoSnareAdvanced 1.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetGordoSnareAdvanced.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3694,6 +3699,8 @@ const rawCards = [
   {
     name: 'Novice Gordo Snare',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetGordoSnareNovice 1.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetGordoSnareNovice.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3722,6 +3729,7 @@ const rawCards = [
   {
     name: 'Hydro Turret',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetHydroTurret.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetHydroTurret.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3735,6 +3743,8 @@ const rawCards = [
   {
     name: 'Super Hydro Turret',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetHydroTurretSuper.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetHydroTurretSuper.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3763,6 +3773,7 @@ const rawCards = [
   {
     name: 'Med Station',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetMedStation.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetMedStation.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3776,6 +3787,8 @@ const rawCards = [
   {
     name: 'Portable Scareslime',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetPortableScareslime.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetPortableScareslime.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3790,6 +3803,7 @@ const rawCards = [
   {
     name: 'Fruit Slime Bait',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetBaitPogo.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetBaitPogo.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3804,6 +3818,7 @@ const rawCards = [
   {
     name: 'Meat Slime Bait',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetBaitChicken.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetBaitChicken.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3818,6 +3833,7 @@ const rawCards = [
   {
     name: 'Veggie Slime Bait',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetBaitCarrot.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetBaitCarrot.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3832,6 +3848,7 @@ const rawCards = [
   {
     name: 'Portable Water Tap',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWaterTap.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetWaterTap.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       price: {
@@ -3848,6 +3865,7 @@ const rawCards = [
   {
     name: '#1 Slime Stage',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeStage.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconCurioSlimeStage.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3974,6 +3992,7 @@ const rawCards = [
   {
     name: 'Spring Pad',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSpringPad.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetSpringPad.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -3988,6 +4007,7 @@ const rawCards = [
   {
     name: 'Taming Bell',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTamingBell.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetTamingBell.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -4679,6 +4699,7 @@ const rawCards = [
   {
     name: 'Market Link',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetMarketLink.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetMarketLink.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4693,6 +4714,7 @@ const rawCards = [
   {
     name: 'Refinery Link',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetRefineryLink.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetRefineryLink.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4706,6 +4728,8 @@ const rawCards = [
   {
     name: 'Amber Teleporter',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportAmber.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetTeleportAmber.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       price: {
@@ -4724,6 +4748,8 @@ const rawCards = [
   {
     name: 'Berry Teleporter',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportBerry.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetTeleportBerry.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       price: {
@@ -4742,6 +4768,7 @@ const rawCards = [
   {
     name: 'Blue Teleporter',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportBlue.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetTeleportBlue.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4757,6 +4784,7 @@ const rawCards = [
   {
     name: 'Gold Teleporter',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportGold.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetTeleportGold.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4772,6 +4800,8 @@ const rawCards = [
   {
     name: 'Green Teleporter',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportGreen.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetTeleportGreen.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       price: {
@@ -4790,6 +4820,7 @@ const rawCards = [
   {
     name: 'Grey Teleporter',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportGrey.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetTeleportGrey.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4805,6 +4836,7 @@ const rawCards = [
   {
     name: 'Pink Teleporter',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportPink.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetTeleportPink.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4820,6 +4852,7 @@ const rawCards = [
   {
     name: 'Red Teleporter',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportRed.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetTeleportRed.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       price: {
@@ -4853,6 +4886,8 @@ const rawCards = [
   {
     name: 'Violet Teleporter',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetTeleportViolet.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetTeleportViolet.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4868,6 +4903,8 @@ const rawCards = [
   {
     name: 'Amber Warp Depot',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotAmber.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotAmber.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       price: {
@@ -4885,6 +4922,8 @@ const rawCards = [
   {
     name: 'Berry Warp Depot',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotBerry.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotBerry.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       price: {
@@ -4902,6 +4941,8 @@ const rawCards = [
   {
     name: 'Blue Warp Depot',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotBlue.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotBlue.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4916,6 +4957,8 @@ const rawCards = [
   {
     name: 'Gold Warp Depot',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotGold.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotGold.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       price: {
@@ -4933,6 +4976,8 @@ const rawCards = [
   {
     name: 'Green Warp Depot',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotGreen.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotGreen.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       price: {
@@ -4950,6 +4995,8 @@ const rawCards = [
   {
     name: 'Grey Warp Depot',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotGrey.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotGrey.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4964,6 +5011,8 @@ const rawCards = [
   {
     name: 'Pink Warp Depot',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotPink.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotPink.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -4978,6 +5027,7 @@ const rawCards = [
   {
     name: 'Red Warp Depot',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotRed.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotRed.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       price: {
@@ -5009,6 +5059,8 @@ const rawCards = [
   {
     name: 'Violet Warp Depot',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetWarpDepotViolet.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconGadgetWarpDepotViolet.png',
     tags: ['gadget', 'common', 'warp-tech'],
     details: {
       recipe: {
@@ -6740,6 +6792,2260 @@ const rawCards = [
       recipe: {
         newbucks: '50',
         'dervish-plort': '5',
+      },
+    },
+  },
+  {
+    name: 'Small Pinwheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPinwheelSmall.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '50',
+        'dervish-plort': '5',
+        'buzz-wax': '1',
+      },
+      variants: [
+        'small-pink-lemonade-pinwheel',
+        'small-teal-pinwheel',
+        'small-prismatic-pinwheel',
+      ],
+    },
+  },
+  {
+    name: 'Small Pink Lemonade Pinwheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPinwheelSmallPinkLemonade.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '40',
+      },
+      original: ['small-pinwheel'],
+      variants: ['small-teal-pinwheel', 'small-prismatic-pinwheel'],
+    },
+  },
+  {
+    name: 'Small Teal Pinwheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPinwheelSmallTeal.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '40',
+      },
+      original: ['small-pinwheel'],
+      variants: ['small-pink-lemonade-pinwheel', 'small-prismatic-pinwheel'],
+    },
+  },
+  {
+    name: 'Small Prismatic Pinwheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPinwheelSmallPrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '1',
+      },
+      original: ['small-pinwheel'],
+      variants: ['small-pink-lemonade-pinwheel', 'small-teal-pinwheel'],
+    },
+  },
+  {
+    name: 'Large Pinwheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPinwheelLarge.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '50',
+        'tangle-plort': '5',
+        jellystone: '1',
+      },
+      variants: [
+        'large-pink-lemonade-pinwheel',
+        'large-teal-pinwheel',
+        'large-prismatic-pinwheel',
+      ],
+    },
+  },
+  {
+    name: 'Large Pink Lemonade Pinwheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPinwheelLargePinkLemonade.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '40',
+      },
+      original: ['large-pinwheel'],
+      variants: ['large-teal-pinwheel', 'large-prismatic-pinwheel'],
+    },
+  },
+  {
+    name: 'Large Teal Pinwheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPinwheelLargeTeal.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '40',
+      },
+      original: ['large-pinwheel'],
+      variants: ['large-pink-lemonade-pinwheel', 'large-prismatic-pinwheel'],
+    },
+  },
+  {
+    name: 'Large Prismatic Pinwheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPinwheelLargePrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '1',
+      },
+      original: ['large-pinwheel'],
+      variants: ['large-pink-lemonade-pinwheel', 'large-teal-pinwheel'],
+    },
+  },
+  {
+    name: 'Wide Trellis',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorEmptyTrellisWide.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '150',
+        'angler-plort': '5',
+        jellystone: '3',
+      },
+    },
+  },
+  {
+    name: 'Small Trellis',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorEmptyTrellis.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      price: {
+        newbucks: '80',
+      },
+      recipe: {
+        newbucks: '100',
+        'tabby-plort': '10',
+        'deep-brine': '3',
+      },
+    },
+  },
+  {
+    name: 'Trellis Arch',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTrellisTall.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '150',
+        'batty-plort': '5',
+        'wild-honey': '3',
+      },
+    },
+  },
+  {
+    name: 'Wide Emerald Trellis',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTrellisWide.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '200',
+        'tangle-plort': '10',
+        jellystone: '3',
+      },
+    },
+  },
+  {
+    name: 'Small Emerald Trellis',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorEmeraldVineTrellis.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '100',
+        'cotton-plort': '20',
+        'deep-brine': '3',
+        jellystone: '2',
+        'wild-honey': '2',
+      },
+    },
+  },
+  {
+    name: 'Wheelbarrow',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorWheelbarrow.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '100',
+        'rock-plort': '10',
+        'silky-sand': '5',
+      },
+    },
+  },
+  {
+    name: 'Wind Chimes',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorWindChime.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '250',
+        'honey-plort': '10',
+        'drift-crystal': '5',
+      },
+    },
+  },
+  {
+    name: 'Conservatory Bench',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorBench.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '100',
+        'pink-plort': '10',
+      },
+    },
+  },
+  {
+    name: 'Large Simple Bench',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLargeSimpleBench.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'boom-plort': '10',
+        'cotton-plort': '10',
+        'drift-crystal': '3',
+      },
+    },
+  },
+  {
+    name: 'Conservatory Chair',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSingleChair.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '100',
+        'cotton-plort': '10',
+      },
+    },
+  },
+  {
+    name: 'Conservatory Table',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTable.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '100',
+        'tabby-plort': '10',
+      },
+    },
+  },
+  {
+    name: 'Mushroom Planter',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorMushroomPlanter.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '100',
+        'tabby-plort': '5',
+        'slime-fossil': '3',
+      },
+    },
+  },
+  {
+    name: 'Potted Plants',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorMainPottedPlant.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '250',
+        'honey-plort': '10',
+        'deep-brine': '5',
+      },
+    },
+  },
+  {
+    name: 'Conservatory Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorBasicTallLamp.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '100',
+        'phosphor-plort': '10',
+        'storm-glass': '1',
+      },
+    },
+  },
+  {
+    name: 'Cheerful Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorCheerfulStatue.png',
+    tags: ['gadget', 'common', 'decoration', 'starlight-strand'],
+    details: {
+      recipe: {
+        newbucks: '700',
+        'ringtail-plort': '20',
+        'fire-plort': '10',
+        'tabby-plort': '15',
+        'radiant-ore': '10',
+        'buzz-wax': '10',
+      },
+    },
+  },
+  {
+    name: 'Overjoyed Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorOverjoyedStatue.png',
+    tags: ['gadget', 'common', 'decoration', 'the-rainbow-fields'],
+    details: {
+      recipe: {
+        newbucks: '700',
+        'crystal-plort': '15',
+        'puddle-plort': '10',
+        'hunter-plort': '15',
+        'radiant-ore': '10',
+        jellystone: '10',
+      },
+    },
+  },
+  {
+    name: 'Happy Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorHappyStatue.png',
+    tags: ['gadget', 'common', 'decoration', 'ember-valley'],
+    details: {
+      recipe: {
+        newbucks: '700',
+        'flutter-plort': '15',
+        'pink-plort': '15',
+        'batty-plort': '15',
+        'radiant-ore': '10',
+        'primordy-oil': '10',
+      },
+    },
+  },
+  {
+    name: 'Boombox',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorBoombox.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '1000',
+        'boom-plort': '25',
+        'angler-plort': '25',
+        'slime-fossil': '5',
+        'storm-glass': '3',
+      },
+      variants: ['pink-boombox', 'grey-boombox'],
+    },
+  },
+  {
+    name: 'Pink Boombox',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorBoomboxPink.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      original: ['boombox'],
+      variants: ['grey-boombox'],
+    },
+  },
+  {
+    name: 'Grey Boombox',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorBoomboxGrey.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      original: ['boombox'],
+      variants: ['pink-boombox'],
+    },
+  },
+  {
+    name: 'Dainty Teacup',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTeacupSmall.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '500',
+        'puddle-plort': '10',
+        'primordy-oil': '5',
+      },
+      variants: [
+        'dainty-mint-teacup',
+        'dainty-blue-teacup',
+        'dainty-prismatic-teacup',
+      ],
+    },
+  },
+  {
+    name: 'Dainty Mint Teacup',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSmallTeacupMint.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      original: ['dainty-teacup'],
+      variants: ['dainty-blue-teacup', 'dainty-prismatic-teacup'],
+    },
+  },
+  {
+    name: 'Dainty Blue Teacup',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSmallTeacupBlue.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      original: ['dainty-teacup'],
+      variants: ['dainty-mint-teacup', 'dainty-prismatic-teacup'],
+    },
+  },
+  {
+    name: 'Dainty Prismatic Teacup',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTeacupSmallPrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '4',
+      },
+      original: ['dainty-teacup'],
+      variants: ['dainty-mint-teacup', 'dainty-blue-teacup'],
+    },
+  },
+  {
+    name: 'Bountiful Teacup',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTeacupLarge.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '500',
+        'fire-plort': '10',
+        'storm-glass': '5',
+      },
+      variants: [
+        'bountiful-mint-teacup',
+        'bountiful-blue-teacup',
+        'bountiful-prismatic-teacup',
+      ],
+    },
+  },
+  {
+    name: 'Bountiful Mint Teacup',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLargeTeacupMint.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      original: ['bountiful-teacup'],
+      variants: ['bountiful-blue-teacup', 'bountiful-prismatic-teacup'],
+    },
+  },
+  {
+    name: 'Bountiful Blue Teacup',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLargeTeacupBlue.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      original: ['bountiful-teacup'],
+      variants: ['bountiful-mint-teacup', 'bountiful-prismatic-teacup'],
+    },
+  },
+  {
+    name: 'Bountiful Prismatic Teacup',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTeacupLargePrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '4',
+      },
+      original: ['bountiful-teacup'],
+      variants: ['bountiful-mint-teacup', 'bountiful-blue-teacup'],
+    },
+  },
+  {
+    name: 'Pink Striped Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStripedLamp.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '200',
+        'pink-plort': '20',
+        'lightning-mote': '3',
+      },
+      variants: [
+        'mint-striped-lamp',
+        'blue-striped-lamp',
+        'prismatic-striped-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Mint Striped Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStripedLampMint.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      original: ['pink-striped-lamp'],
+      variants: ['blue-striped-lamp', 'prismatic-striped-lamp'],
+    },
+  },
+  {
+    name: 'Blue Striped Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStripedLampBlue.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      original: ['pink-striped-lamp'],
+      variants: ['mint-striped-lamp', 'prismatic-striped-lamp'],
+    },
+  },
+  {
+    name: 'Prismatic Striped Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStripedLampprismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '5',
+      },
+      original: ['pink-striped-lamp'],
+      variants: ['mint-striped-lamp', 'blue-striped-lamp'],
+    },
+  },
+  {
+    name: 'Beach Lantern',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorBeachLantern.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      recipe: {
+        newbucks: '200',
+        'angler-plort': '20',
+        'lava-dust': '3',
+      },
+    },
+  },
+  {
+    name: 'Swing',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSwing.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '1500',
+        'batty-plort': '25',
+        'pink-plort': '25',
+        'wild-honey': '4',
+        'drift-crystal': '6',
+      },
+      variants: ['mint-swing', 'blue-swing', 'prismatic-swing'],
+    },
+  },
+  {
+    name: 'Mint Swing',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSwingMint.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      original: ['swing'],
+      variants: ['blue-swing', 'prismatic-swing'],
+    },
+  },
+  {
+    name: 'Blue Swing',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSwingBlue.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      original: ['swing'],
+      variants: ['mint-swing', 'prismatic-swing'],
+    },
+  },
+  {
+    name: 'Prismatic Swing',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSwingPrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '?',
+      },
+      original: ['swing'],
+      variants: ['mint-swing', 'blue-swing'],
+    },
+  },
+  {
+    name: 'Seesaw',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSeesaw.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      recipe: {
+        newbucks: '1000',
+        'hunter-plort': '25',
+        'tabby-plort': '25',
+        'deep-brine': '3',
+      },
+      variants: ['mint-seesaw', 'blue-seesaw', 'prismatic-seesaw'],
+    },
+  },
+  {
+    name: 'Mint Seesaw',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSeesawMint.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      original: ['seesaw'],
+      variants: ['blue-seesaw', 'prismatic-seesaw'],
+    },
+  },
+  {
+    name: 'Blue Seesaw',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSeesawBlue.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      original: ['seesaw'],
+      variants: ['mint-seesaw', 'prismatic-seesaw'],
+    },
+  },
+  {
+    name: 'Prismatic Seesaw',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSeesawPrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '5',
+      },
+      original: ['seesaw'],
+      variants: ['mint-seesaw', 'blue-seesaw'],
+    },
+  },
+  {
+    name: 'Display Case',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTechDisplay.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      recipe: {
+        newbucks: '1500',
+        'crystal-plort': '10',
+        'storm-glass': '5',
+      },
+    },
+  },
+  {
+    name: 'Small Sandcastle',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSmallSandcastle.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'fire-plort': '10',
+        'flutter-plort': '10',
+        'wild-honey': '3',
+      },
+    },
+  },
+  {
+    name: 'Large Sandcastle',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLargeSandcastleBig.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'puddle-plort': '10',
+        'honey-plort': '10',
+        'silky-sand': '3',
+      },
+    },
+  },
+  {
+    name: 'Reef Chair',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorReefChair.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '200',
+        'puddle-plort': '5',
+        'slime-fossil': '5',
+      },
+    },
+  },
+  {
+    name: 'Reef Table',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorReefTable.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '200',
+        'angler-plort': '10',
+        'deep-brine': '5',
+      },
+    },
+  },
+  {
+    name: 'Clam Throne',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorClamThrone.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'angler-plort': '10',
+        'honey-plort': '10',
+        'deep-brine': '3',
+      },
+    },
+  },
+  {
+    name: 'Slime Jail Standee',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStandeeJail.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'ringtail-plort': '10',
+        'tabby-plort': '5',
+        'lava-dust': '3',
+      },
+    },
+  },
+  {
+    name: 'Sunflower Standee',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStandeeSunflower.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'tangle-plort': '10',
+        'puddle-plort': '5',
+        'radiant-ore': '3',
+      },
+    },
+  },
+  {
+    name: 'Snowman Standee',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStandeeSnowman.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'saber-plort': '10',
+        'cotton-plort': '5',
+        'perfect-snowflake': '3',
+      },
+    },
+  },
+  {
+    name: 'Tarr Standee',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStandeeTarr.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'hunter-plort': '10',
+        'boom-plort': '5',
+        'storm-glass': '3',
+      },
+    },
+  },
+  {
+    name: 'Music Tile',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorMusicTile.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      price: {
+        newbucks: '100',
+      },
+      recipe: {
+        newbucks: '50',
+        'saber-plort': '3',
+        'tabby-plort': '3',
+        'radiant-ore': '1',
+      },
+    },
+  },
+  {
+    name: 'Music Pillar',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorMusicPillar.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      price: {
+        newbucks: '100',
+      },
+      recipe: {
+        newbucks: '50',
+        'hunter-plort': '3',
+        'cotton-plort': '3',
+        'radiant-ore': '1',
+      },
+    },
+  },
+  {
+    name: 'Small Net',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorNetPost.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      price: {
+        newbucks: '200',
+      },
+      recipe: {
+        newbucks: '400',
+        'cotton-plort': '10',
+        'wild-honey': '3',
+      },
+    },
+  },
+  {
+    name: 'Medium Net',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorNet.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'angler-plort': '10',
+        'silky-sand': '3',
+      },
+    },
+  },
+  {
+    name: 'Large Net',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorNetTall.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      recipe: {
+        newbucks: '1000',
+        'dervish-plort': '20',
+        'storm-glass': '5',
+      },
+    },
+  },
+  {
+    name: 'Ancient Arched Wall',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAncientArchedWall.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '80',
+      },
+      recipe: {
+        newbucks: '200',
+        'rock-plort': '10',
+        'tin-petal': '5',
+        'black-indigonium': '5',
+      },
+    },
+  },
+  {
+    name: 'Potted Lava Plants',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPottedLavaPlants.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      recipe: {
+        newbucks: '150',
+        'tangle-plort': '10',
+        'tin-petal': '5',
+        'black-indigonium': '5',
+      },
+    },
+  },
+  {
+    name: 'Excavation Lights',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorExcavationLights.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '80',
+      },
+      recipe: {
+        newbucks: '150',
+        'dervish-plort': '10',
+        'aqua-glass': '5',
+        'dream-bubble': '5',
+      },
+    },
+  },
+  {
+    name: 'Wall Lighting',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAncientWallLighting.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      recipe: {
+        newbucks: '250',
+        'sloomber-plort': '10',
+        'lightning-mote': '3',
+        'storm-glass': '3',
+      },
+    },
+  },
+  {
+    name: 'Young Cedaroak',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorOakTree.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      recipe: {
+        newbucks: '200',
+        'twin-plort': '10',
+        'tin-petal': '5',
+        'wild-honey': '5',
+      },
+    },
+  },
+  {
+    name: 'Ancient Purple Oak',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPurpleOakTree.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      recipe: {
+        newbucks: '200',
+        'sloomber-plort': '10',
+        'tin-petal': '5',
+        'buzz-wax': '5',
+      },
+    },
+  },
+  {
+    name: 'Ancient Round Pillar',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAncientRoundPillar.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '80',
+      },
+      recipe: {
+        newbucks: '100',
+        'twin-plort': '10',
+        'black-indigonium': '3',
+      },
+    },
+  },
+  {
+    name: 'Gold Slime Floor Panel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldSlimeFLoorPanel.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      recipe: {
+        newbucks: '1000',
+        'sloomber-plort': '25',
+        'flutter-plort': '25',
+        'aqua-glass': '10',
+        'dream-bubble': '10',
+      },
+    },
+  },
+  {
+    name: 'Labyrinth Wall Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLabyrinthWallLamp.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '300',
+        'fire-plort': '20',
+        'storm-glass': '5',
+        'tin-petal': '5',
+      },
+    },
+  },
+  {
+    name: 'Labyrinth Standing Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLabyrinthStandingLamp.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '300',
+        'fire-plort': '20',
+        'lightning-mote': '5',
+        'tin-petal': '5',
+      },
+    },
+  },
+  {
+    name: 'Aquarium',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAquarium.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      recipe: {
+        newbucks: '6000',
+        'twin-plort': '25',
+        'hunter-plort': '25',
+        'puddle-plort': '5',
+        'aqua-glass': '10',
+      },
+    },
+  },
+  {
+    name: 'Magma Fountain',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLavaFountain.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      recipe: {
+        newbucks: '7000',
+        'twin-plort': '25',
+        'fire-plort': '25',
+        'primordy-oil': '10',
+        'magma-comb': '10',
+      },
+    },
+  },
+  {
+    name: 'Angler Fountain',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAnglerFountain.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      recipe: {
+        newbucks: '9000',
+        'sloomber-plort': '25',
+        'prisma-plort': '20',
+        'deep-brine': '10',
+        'aqua-glass': '10',
+      },
+    },
+  },
+  {
+    name: 'Gold Twisted Tree',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldTwistedTree.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      recipe: {
+        newbucks: '1000',
+        'sloomber-plort': '20',
+        'tin-petal': '15',
+        'aqua-glass': '5',
+        'dream-bubble': '5',
+      },
+    },
+  },
+  {
+    name: 'Ship in a Bottle',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorShipInABottle.png',
+    tags: ['gadget', 'common', 'decoration', 'beach'],
+    details: {
+      price: {
+        newbucks: '3000',
+      },
+      recipe: {
+        newbucks: '9000',
+        'flutter-plort': '50',
+        'tabby-plort': '50',
+        'radiant-ore': '10',
+        'sun-sap': '1',
+      },
+    },
+  },
+  {
+    name: 'Carousel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorCarousel.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '10000',
+        'phosphor-plort': '50',
+        'crystal-plort': '50',
+        'radiant-ore': '10',
+        'lightning-mote': '5',
+        'strange-diamond': '1',
+      },
+      variants: ['mint-carousel', 'blue-carousel', 'prismatic-carousel'],
+    },
+  },
+  {
+    name: 'Mint Carousel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorCarouselMint.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '3500',
+      },
+      original: ['carousel'],
+      variants: ['blue-carousel', 'prismatic-carousel'],
+    },
+  },
+  {
+    name: 'Blue Carousel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorCarouselBlue.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '3500',
+      },
+      original: ['carousel'],
+      variants: ['mint-carousel', 'prismatic-carousel'],
+    },
+  },
+  {
+    name: 'Prismatic Carousel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorCarouselPrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '?',
+      },
+      original: ['carousel'],
+      variants: ['mint-carousel', 'blue-carousel'],
+    },
+  },
+  {
+    name: 'Ferris Wheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorFerrisWheel.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      recipe: {
+        newbucks: '10000',
+        'ringtail-plort': '50',
+        'rock-plort': '50',
+        'deep-brine': '10',
+        'drift-crystal': '3',
+        'sun-sap': '1',
+      },
+      variants: [
+        'mint-ferris-wheel',
+        'blue-ferris-wheel',
+        'prismatic-ferris-wheel',
+      ],
+    },
+  },
+  {
+    name: 'Mint Ferris Wheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorFerrisWheelMint.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '3500',
+      },
+      original: ['ferris-wheel'],
+      variants: ['blue-ferris-wheel', 'prismatic-ferris-wheel'],
+    },
+  },
+  {
+    name: 'Blue Ferris Wheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorFerrisWheelBlue.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '3500',
+      },
+      original: ['ferris-wheel'],
+      variants: ['mint-ferris-wheel', 'prismatic-ferris-wheel'],
+    },
+  },
+  {
+    name: 'Prismatic Ferris Wheel',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorFerrisWheelPrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '?',
+      },
+      original: ['ferris-wheel'],
+      variants: ['mint-ferris-wheel', 'blue-ferris-wheel'],
+    },
+  },
+  {
+    name: 'Wooden Fence',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorWoodenFence.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '100',
+      },
+      recipe: {
+        newbucks: '150',
+        'twin-plort': '10',
+        'tin-petal': '5',
+        'black-indigonium': '5',
+      },
+    },
+  },
+  {
+    name: 'Straight Stone Fence',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStraightStoneFence.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '200',
+        'sloomber-plort': '10',
+        'rock-plort': '10',
+        'black-indigonium': '5',
+        jellystone: '5',
+      },
+      variants: ['straight-prismatic-stone-fence'],
+    },
+  },
+  {
+    name: 'Straight Prismatic Stone Fence',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStraightStoneFencePrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        'rainbow-coin': '2',
+      },
+      original: ['straight-stone-fence'],
+    },
+  },
+  {
+    name: 'Curved Stone Fence',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorCurvedStoneFence.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '200',
+        'sloomber-plort': '10',
+        'rock-plort': '10',
+        'black-indigonium': '5',
+        jellystone: '5',
+      },
+      variants: ['curved-prismatic-stone-fence'],
+    },
+  },
+  {
+    name: 'Curved Prismatic Stone Fence',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorCurvedStoneFencePrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        'rainbow-coin': '2',
+      },
+      original: ['curved-stone-fence'],
+    },
+  },
+  {
+    name: 'Electric Pillar Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorElectricLampPillar.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        'rainbow-coin': '5',
+      },
+      recipe: {
+        newbucks: '1500',
+        'hyper-plort': '20',
+        'phosphor-plort': '20',
+        'tin-petal': '10',
+        'black-indigonium': '10',
+      },
+    },
+  },
+  {
+    name: 'Small Pink Flower Pillow',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetFlowerPillowSmall.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '200',
+        'honey-plort': '10',
+        'cotton-plort': '10',
+        'silky-sand': '5',
+      },
+      variants: [
+        'small-purple-flower-pillow',
+        'small-yellow-flower-pillow',
+        'small-blue-flower-pillow',
+      ],
+    },
+  },
+  {
+    name: 'Small Purple Flower Pillow',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSmallPurpleFlowerPillow.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      original: ['small-pink-flower-pillow'],
+      variants: ['small-yellow-flower-pillow', 'small-blue-flower-pillow'],
+    },
+  },
+  {
+    name: 'Small Yellow Flower Pillow',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSmallYellowFlowerPillow.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      original: ['small-pink-flower-pillow'],
+      variants: ['small-purple-flower-pillow', 'small-blue-flower-pillow'],
+    },
+  },
+  {
+    name: 'Small Blue Flower Pillow',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSmallBlueFlowerPillow.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      original: ['small-pink-flower-pillow'],
+      variants: ['small-purple-flower-pillow', 'small-yellow-flower-pillow'],
+    },
+  },
+  {
+    name: 'Large Blue Flower Pillow',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetFlowerPillowLarge.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '200',
+      },
+      recipe: {
+        newbucks: '250',
+        'flutter-plort': '10',
+        'batty-plort': '10',
+        'wild-honey': '5',
+      },
+      variants: [
+        'large-coral-flower-pillow',
+        'large-purple-flower-pillow',
+        'large-yellow-flower-pillow',
+      ],
+    },
+  },
+  {
+    name: 'Large Coral Flower Pillow',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetLargeCoralFlowerPillow.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '200',
+      },
+      original: ['large-blue-flower-pillow'],
+      variants: ['large-purple-flower-pillow', 'large-yellow-flower-pillow'],
+    },
+  },
+  {
+    name: 'Large Purple Flower Pillow',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetLargePurpleFlowerPillow.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '200',
+      },
+      original: ['large-blue-flower-pillow'],
+      variants: ['large-coral-flower-pillow', 'large-yellow-flower-pillow'],
+    },
+  },
+  {
+    name: 'Large Yellow Flower Pillow',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetLargeYellowFlowerPillow.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '200',
+      },
+      original: ['large-blue-flower-pillow'],
+      variants: ['large-coral-flower-pillow', 'large-purple-flower-pillow'],
+    },
+  },
+  {
+    name: 'Azure Water Flower',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSwampBlueFlower.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '200',
+        'hyper-plort': '10',
+        'puddle-plort': '10',
+        'aqua-glass': '5',
+      },
+    },
+  },
+  {
+    name: 'Overgrown Lilypad',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetOvergrownLilypad.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '200',
+        'twin-plort': '10',
+        'hyper-plort': '10',
+        'aqua-glass': '5',
+      },
+    },
+  },
+  {
+    name: 'Giant Stalks',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTwistyOvergrownTree.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '150',
+      },
+      recipe: {
+        newbucks: '200',
+        'tangle-plort': '10',
+        'tabby-plort': '10',
+        'buzz-wax': '5',
+      },
+      variants: ['prismatic-giant-stalks'],
+    },
+  },
+  {
+    name: 'Prismatic Giant Stalks',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorTwistyOvergrownTreePrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        'rainbow-coin': '4',
+      },
+      original: ['giant-stalks'],
+    },
+  },
+  {
+    name: 'Blue Floral Slime Tree',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetFlowerSlimeTree.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '800',
+      },
+      recipe: {
+        newbucks: '1500',
+        'tabby-plort': '20',
+        'tangle-plort': '20',
+        'radiant-ore': '10',
+        jellystone: '10',
+      },
+      variants: [
+        'coral-floral-slime-tree',
+        'purple-floral-slime-tree',
+        'yellow-floral-slime-tree',
+      ],
+    },
+  },
+  {
+    name: 'Coral Floral Slime Tree',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetCoralFloralSlimeTree.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '800',
+      },
+      original: ['blue-floral-slime-tree'],
+      variants: ['purple-floral-slime-tree', 'yellow-floral-slime-tree'],
+    },
+  },
+  {
+    name: 'Purple Floral Slime Tree',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetPurpleFloralSlimeTree.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '800',
+      },
+      original: ['blue-floral-slime-tree'],
+      variants: ['coral-floral-slime-tree', 'yellow-floral-slime-tree'],
+    },
+  },
+  {
+    name: 'Yellow Floral Slime Tree',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetYellowFloralSlimeTree.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '800',
+      },
+      original: ['blue-floral-slime-tree'],
+      variants: ['coral-floral-slime-tree', 'purple-floral-slime-tree'],
+    },
+  },
+  {
+    name: 'Blue Flower Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetPlantLamp.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '800',
+      },
+      recipe: {
+        newbucks: '1500',
+        'hyper-plort': '20',
+        'hunter-plort': '20',
+        'tin-petal': '10',
+        'black-indigonium': '10',
+      },
+      variants: [
+        'prismatic-flower-lamp',
+        'purple-flower-lamp',
+        'orange-flower-lamp',
+        'pink-flower-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Prismatic Flower Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetPlantLampPrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        'shadow-plort': '25',
+      },
+      original: ['blue-flower-lamp'],
+      variants: [
+        'purple-flower-lamp',
+        'orange-flower-lamp',
+        'pink-flower-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Purple Flower Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPurplePlantLamp.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '800',
+      },
+      original: ['blue-flower-lamp'],
+      variants: [
+        'prismatic-flower-lamp',
+        'orange-flower-lamp',
+        'pink-flower-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Orange Flower Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecoOrangePlantLamp.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '800',
+      },
+      original: ['blue-flower-lamp'],
+      variants: [
+        'prismatic-flower-lamp',
+        'purple-flower-lamp',
+        'pink-flower-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Pink Flower Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecoPinkPlantLamp.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        newbucks: '800',
+      },
+      original: ['blue-flower-lamp'],
+      variants: [
+        'prismatic-flower-lamp',
+        'purple-flower-lamp',
+        'orange-flower-lamp',
+      ],
+    },
+  },
+  {
+    name: 'High-Tech Wall',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGigisCoreBarrier.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      price: {
+        'rainbow-coin': '5',
+      },
+      recipe: {
+        newbucks: '500',
+        'hyper-plort': '10',
+        'rock-plort': '10',
+        'tin-petal': '10',
+        'black-indigonium': '5',
+      },
+    },
+  },
+  {
+    name: 'High-Tech Battery',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGigisBattery.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      price: {
+        'rainbow-coin': '5',
+      },
+      recipe: {
+        newbucks: '500',
+        'hyper-plort': '10',
+        'phosphor-plort': '10',
+        'tin-petal': '10',
+        'magma-comb': '5',
+      },
+    },
+  },
+  {
+    name: 'Scientists Chair',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorScientistChair.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      price: {
+        newbucks: '100',
+      },
+      recipe: {
+        newbucks: '150',
+        'saber-plort': '10',
+        'lava-dust': '3',
+      },
+    },
+  },
+  {
+    name: 'Scientists Desk',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorScientistTable.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      price: {
+        newbucks: '300',
+      },
+      recipe: {
+        newbucks: '500',
+        'honey-plort': '20',
+        'crystal-plort': '20',
+        'primordy-oil': '5',
+        'buzz-wax': '5',
+      },
+    },
+  },
+  {
+    name: 'Short Comfy Couch',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorCouchSingle.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      price: {
+        newbucks: '100',
+      },
+      recipe: {
+        newbucks: '200',
+        'angler-plort': '10',
+        'primordy-oil': '10',
+      },
+    },
+  },
+  {
+    name: 'Long Comfy Couch',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorCouchDouble.png',
+    tags: ['gadget', 'common', 'decoration', 'the-conservatory'],
+    details: {
+      price: {
+        newbucks: '100',
+      },
+      recipe: {
+        newbucks: '200',
+        'fire-plort': '10',
+        'buzz-wax': '10',
+      },
+    },
+  },
+  {
+    name: 'Blue Lava Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampBlue.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampBlue.png',
+    tags: ['gadget', 'common', 'decoration', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      recipe: {
+        newbucks: '1000',
+        'puddle-plort': '20',
+        jellystone: '10',
+        'lava-dust': '5',
+      },
+      variants: [
+        'gold-lava-lamp',
+        'green-lava-lamp',
+        'red-lava-lamp',
+        'prismatic-lava-lamp',
+        'shadow-lava-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Gold Lava Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampGold.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampGold.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      original: ['blue-lava-lamp'],
+      variants: [
+        'green-lava-lamp',
+        'red-lava-lamp',
+        'prismatic-lava-lamp',
+        'shadow-lava-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Green Lava Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampGreen.png',
+    'sr-icon':
+      '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampGreen.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      original: ['blue-lava-lamp'],
+      variants: [
+        'gold-lava-lamp',
+        'red-lava-lamp',
+        'prismatic-lava-lamp',
+        'shadow-lava-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Red Lava Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampRed.png',
+    'sr-icon': '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampRed.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        newbucks: '500',
+      },
+      original: ['blue-lava-lamp'],
+      variants: [
+        'gold-lava-lamp',
+        'green-lava-lamp',
+        'prismatic-lava-lamp',
+        'shadow-lava-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Prismatic Lava Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampPurple.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'rainbow-coin': '3',
+      },
+      original: ['blue-lava-lamp'],
+      variants: [
+        'gold-lava-lamp',
+        'green-lava-lamp',
+        'red-lava-lamp',
+        'shadow-lava-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Shadow Lava Lamp',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampBlack.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
+    details: {
+      price: {
+        'shadow-plort': '?',
+      },
+      original: ['blue-lava-lamp'],
+      variants: [
+        'gold-lava-lamp',
+        'green-lava-lamp',
+        'red-lava-lamp',
+        'prismatic-lava-lamp',
+      ],
+    },
+  },
+  {
+    name: 'Miniatures Dome',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorMiniaturesDome.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      recipe: {
+        newbucks: '10000',
+        'twin-plort': '25',
+        'batty-plort': '25',
+        'tin-petal': '20',
+        'dream-bubble': '20',
+      },
+    },
+  },
+  {
+    name: 'Miniature Windmill',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorMiniatureWindmill.png',
+    tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        'rainbow-coin': '10',
+      },
+      recipe: {
+        newbucks: '10000',
+        'sloomber-plort': '20',
+        'dervish-plort': '20',
+        'dream-bubble': '20',
+        'wild-honey': '10',
+      },
+      variants: ['prismatic-miniature-windmill'],
+    },
+  },
+  {
+    name: 'Prismatic Miniature Windmill',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorMiniatureWindmillPrismatic.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'the-grey-labyrinth'],
+    details: {
+      price: {
+        'rainbow-coin': '15',
+      },
+      original: ['miniature-windmill'],
+    },
+  },
+  {
+    name: 'Square Stone Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStonePlatformSquare.png',
+    tags: ['gadget', 'common', 'decoration', 'platform'],
+    details: {
+      recipe: {
+        newbucks: '200',
+        'hyper-plort': '20',
+        'magma-comb': '5',
+      },
+    },
+  },
+  {
+    name: 'Round Grass Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformRoundGrass.png',
+    tags: ['gadget', 'common', 'decoration', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      recipe: {
+        newbucks: '200',
+        'twin-plort': '20',
+        'dream-bubble': '5',
+      },
+      variants: [
+        'round-ice-platform',
+        'round-magma-platform',
+        'round-moss-platform',
+      ],
+    },
+  },
+  {
+    name: 'Round Ice Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformRoundIce.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      original: ['round-grass-platform'],
+      variants: ['round-magma-platform', 'round-moss-platform'],
+    },
+  },
+  {
+    name: 'Round Magma Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformRoundMagma.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      original: ['round-grass-platform'],
+      variants: ['round-ice-platform', 'round-moss-platform'],
+    },
+  },
+  {
+    name: 'Round Moss Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformRoundMoss.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      original: ['round-grass-platform'],
+      variants: ['round-ice-platform', 'round-magma-platform'],
+    },
+  },
+  {
+    name: 'Round Stone Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStonePlatformRound.png',
+    tags: ['gadget', 'common', 'decoration', 'platform'],
+    details: {
+      recipe: {
+        newbucks: '200',
+        'sloomber-plort': '20',
+        'black-indigonium': '5',
+      },
+    },
+  },
+  {
+    name: 'Step Grass Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformStepGrass.png',
+    tags: ['gadget', 'common', 'decoration', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      recipe: {
+        newbucks: '200',
+        'hyper-plort': '20',
+        'dream-bubble': '5',
+      },
+      variants: [
+        'step-ice-platform',
+        'step-magma-platform',
+        'step-moss-platform',
+      ],
+    },
+  },
+  {
+    name: 'Step Ice Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformStepIce.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      original: ['step-grass-platform'],
+      variants: ['step-magma-platform', 'step-moss-platform'],
+    },
+  },
+  {
+    name: 'Step Magma Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformStepMagma.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      original: ['step-grass-platform'],
+      variants: ['step-ice-platform', 'step-moss-platform'],
+    },
+  },
+  {
+    name: 'Step Moss Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformStepMoss.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      original: ['step-grass-platform'],
+      variants: ['step-ice-platform', 'step-magma-platform'],
+    },
+  },
+  {
+    name: 'Half Circle Grass Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformHalfCircleGrass.png',
+    tags: ['gadget', 'common', 'decoration', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      recipe: {
+        newbucks: '200',
+        'sloomber-plort': '20',
+        'aqua-glass': '5',
+      },
+      variants: [
+        'half-circle-ice-platform',
+        'half-circle-magma-platform',
+        'half-circle-moss-platform',
+      ],
+    },
+  },
+  {
+    name: 'Half Circle Ice Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformHalfIce.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      original: ['half-circle-grass-platform'],
+      variants: ['half-circle-magma-platform', 'half-circle-moss-platform'],
+    },
+  },
+  {
+    name: 'Half Circle Magma Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformHalfMagma.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      original: ['half-circle-grass-platform'],
+      variants: ['half-circle-ice-platform', 'half-circle-moss-platform'],
+    },
+  },
+  {
+    name: 'Half Circle Moss Platform',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorPlatformHalfCircleMoss.png',
+    tags: ['gadget', 'common', 'decoration', 'variant', 'platform'],
+    details: {
+      price: {
+        sprinkles: '10',
+      },
+      original: ['half-circle-grass-platform'],
+      variants: ['half-circle-ice-platform', 'half-circle-magma-platform'],
+    },
+  },
+  {
+    name: 'Golden Chicken Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenHenHenStatue.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      recipe: {
+        newbucks: '15000',
+        'yolky-plort': '20',
+        'gold-plort': '3',
+        'slime-fossil': '10',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Cotton Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenCottonStatue.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      recipe: {
+        newbucks: '15000',
+        'cotton-plort': '50',
+        'gold-plort': '3',
+        'deep-brine': '10',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Tabby Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenStatueTabby.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      price: {
+        newbucks: '4000',
+      },
+      recipe: {
+        newbucks: '10000',
+        'tabby-plort': '50',
+        'gold-plort': '3',
+        'buzz-wax': '10',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Angler Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldAnglerStatue.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      recipe: {
+        newbucks: '15000',
+        'angler-plort': '50',
+        'gold-plort': '3',
+        'primordy-oil': '10',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Batty Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenStatueBatty.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      price: {
+        newbucks: '4000',
+      },
+      recipe: {
+        newbucks: '10000',
+        'batty-plort': '50',
+        'gold-plort': '3',
+        jellystone: '10',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Honey Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenStatueHoney.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {},
+  },
+  {
+    name: 'Golden Flutter Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenFlutterStatue.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      recipe: {
+        newbucks: '15000',
+        'flutter-plort': '50',
+        'gold-plort': '3',
+        'buzz-wax': '10',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Dervish Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenDervishStatue.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      recipe: {
+        newbucks: '15000',
+        'dervish-plort': '50',
+        'gold-plort': '3',
+        'deep-brine': '10',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Tangle Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenTangleStatue.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      recipe: {
+        newbucks: '15000',
+        'tangle-plort': '50',
+        'gold-plort': '3',
+        jellystone: '10',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Saber Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenStatueSaber.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {},
+  },
+  {
+    name: 'Golden Twin Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenStatueTwin.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      price: {
+        'rainbow-coin': '25',
+      },
+      recipe: {
+        newbucks: '15000',
+        'twin-plort': '50',
+        'gold-plort': '3',
+        'tin-petal': '25',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Sloomber Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenStatueSloomber.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      price: {
+        'rainbow-coin': '25',
+      },
+      recipe: {
+        newbucks: '15000',
+        'sloomber-plort': '50',
+        'gold-plort': '3',
+        'tin-petal': '25',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Hyper Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenStatueHyper.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      price: {
+        'rainbow-coin': '25',
+      },
+      recipe: {
+        newbucks: '15000',
+        'hyper-plort': '50',
+        'gold-plort': '3',
+        'tin-petal': '25',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Golden Yolky Statue',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenStatueYolky.png',
+    tags: ['gadget', 'common', 'decoration', 'golden-statue'],
+    details: {
+      price: {
+        newbucks: '10000',
+      },
+      recipe: {
+        newbucks: '15000',
+        'yolky-plort': '50',
+        'gold-plort': '3',
+        'wild-honey': '10',
+        'strange-diamond': '1',
       },
     },
   },
