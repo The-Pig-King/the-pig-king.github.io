@@ -122,7 +122,6 @@
   --weather-color: #3f54a2;
   --sanctuary-upgrade-color: #34974b;
   --pot-color: #a4bde0;
-  --exchange-station-color: var(--range-exchange-color);
 
   --steam-color: #05173a;
   --xbox-color: #0e730f;
@@ -145,6 +144,10 @@
   --fun-color: #fc5181;
   --platform-color: #6cd488;
   --golden-statue-color: #d68105;
+
+  --golden-pot-color: #edbb54;
+  --shadow-pot-color: #519899;
+  --exchange-station-color: var(--range-exchange-color);
 
   --the-conservatory-color: #1079d5;
   --the-archway-color: #cbd2fa;

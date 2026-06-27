@@ -41,6 +41,17 @@ const rawCards = [
         'powderfall-bluffs',
       ],
       worldgen: ['the-conservatory'],
+      pot: [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
       gordo: ['the-rainbow-fields'],
     },
     details: {
@@ -60,6 +71,7 @@ const rawCards = [
     locations: {
       spawn: ['the-rainbow-fields', 'starlight-strand', 'powderfall-bluffs'],
       weather: ['powderfall-bluffs'],
+      pot: ['the-rainbow-fields', 'dream-land'],
       gordo: ['the-rainbow-fields'],
     },
     details: {
@@ -84,6 +96,7 @@ const rawCards = [
     locations: {
       spawn: ['the-rainbow-fields', 'ember-valley'],
       weather: ['ember-valley'],
+      pot: ['the-rainbow-fields', 'ember-valley', 'impossible-sky'],
       gordo: ['ember-valley'],
     },
     details: {
@@ -113,6 +126,13 @@ const rawCards = [
         'ember-valley',
         'powderfall-bluffs',
       ],
+      pot: [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+      ],
       gordo: ['the-rainbow-fields'],
     },
     details: {
@@ -133,6 +153,7 @@ const rawCards = [
     locations: {
       spawn: ['starlight-strand', 'ember-valley'],
       weather: ['starlight-strand'],
+      pot: ['waterworks'],
       gordo: ['starlight-strand'],
     },
     details: {
@@ -157,6 +178,7 @@ const rawCards = [
     locations: {
       spawn: ['starlight-strand', 'ember-valley', 'powderfall-bluffs'],
       weather: ['ember-valley'],
+      pot: ['starlight-strand', 'impossible-sky', 'the-terrarium'],
       gordo: ['ember-valley'],
     },
     details: {
@@ -176,6 +198,7 @@ const rawCards = [
     tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: ['ember-valley'],
+      pot: ['ember-valley', 'lava-depths'],
       gordo: ['ember-valley'],
     },
     details: {
@@ -236,6 +259,7 @@ const rawCards = [
     tags: ['slime', 'common', 'harmful'],
     locations: {
       spawn: ['ember-valley', 'powderfall-bluffs'],
+      pot: ['lava-depths'],
       gordo: ['ember-valley'],
     },
     details: {
@@ -260,6 +284,7 @@ const rawCards = [
     locations: {
       spawn: ['starlight-strand'],
       weather: ['starlight-strand'],
+      pot: ['starlight-strand'],
       gordo: ['starlight-strand'],
     },
     details: {
@@ -304,6 +329,7 @@ const rawCards = [
     tags: ['slime', 'common', 'harmful'],
     locations: {
       spawn: ['ember-valley', 'powderfall-bluffs'],
+      pot: ['lava-depths'],
       gordo: ['ember-valley'],
     },
     details: {
@@ -327,6 +353,7 @@ const rawCards = [
     tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: ['starlight-strand', 'powderfall-bluffs'],
+      pot: ['powderfall-bluffs', 'waterworks'],
       gordo: ['starlight-strand'],
     },
     details: {
@@ -372,6 +399,11 @@ const rawCards = [
         'starlight-strand',
         'ember-valley',
         'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
       ],
     },
     details: {
@@ -393,6 +425,11 @@ const rawCards = [
         'starlight-strand',
         'ember-valley',
         'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
       ],
     },
     details: {
@@ -414,6 +451,7 @@ const rawCards = [
     locations: {
       spawn: ['powderfall-bluffs'],
       weather: ['powderfall-bluffs'],
+      pot: ['powderfall-bluffs'],
       gordo: ['powderfall-bluffs'],
     },
     details: {
@@ -510,6 +548,7 @@ const rawCards = [
     tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: ['dream-land'],
+      pot: ['dream-land'],
       gordo: ['dream-land'],
     },
     details: {
@@ -529,6 +568,7 @@ const rawCards = [
     tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: ['impossible-sky'],
+      pot: ['impossible-sky', 'dream-land', 'the-terrarium'],
       gordo: ['impossible-sky'],
     },
     details: {
@@ -548,6 +588,7 @@ const rawCards = [
     tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: ['the-terrarium'],
+      pot: ['the-terrarium'],
       gordo: ['the-terrarium'],
     },
     details: {
@@ -565,6 +606,13 @@ const rawCards = [
     tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: [
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
+      'shadow-pot': [
         'waterworks',
         'lava-depths',
         'impossible-sky',
@@ -873,7 +921,7 @@ const rawCards = [
       slime: ['pink-slime'],
       drops: {
         'pink-slime': '12',
-        pot: '1',
+        'the-rainbow-fields-pot': '1',
       },
     },
   },
@@ -909,7 +957,7 @@ const rawCards = [
       slime: ['cotton-slime'],
       drops: {
         'cotton-slime': '12',
-        pot: '1',
+        'the-rainbow-fields-pot': '1',
       },
     },
   },
@@ -946,7 +994,7 @@ const rawCards = [
       slime: ['phosphor-slime'],
       drops: {
         'phosphor-slime': '12',
-        pot: '1',
+        'the-rainbow-fields-pot': '1',
       },
     },
   },
@@ -983,7 +1031,7 @@ const rawCards = [
       slime: ['hunter-slime'],
       drops: {
         'hunter-slime': '12',
-        pot: '1',
+        'starlight-strand-pot': '1',
       },
     },
   },
@@ -1020,7 +1068,7 @@ const rawCards = [
       slime: ['honey-slime'],
       drops: {
         'honey-slime': '12',
-        pot: '1',
+        'starlight-strand-pot': '1',
       },
     },
   },
@@ -1055,7 +1103,7 @@ const rawCards = [
       slime: ['ringtail-slime'],
       drops: {
         'ringtail-slime': '12',
-        pot: '1',
+        'starlight-strand-pot': '1',
       },
     },
   },
@@ -1091,7 +1139,7 @@ const rawCards = [
       slime: ['angler-slime'],
       drops: {
         'angler-slime': '12',
-        pot: '1',
+        'starlight-strand-pot': '1',
       },
     },
   },
@@ -1127,7 +1175,7 @@ const rawCards = [
       slime: ['flutter-slime'],
       drops: {
         'flutter-slime': '12',
-        pot: '1',
+        'starlight-strand-pot': '1',
       },
     },
   },
@@ -1163,7 +1211,7 @@ const rawCards = [
       slime: ['batty-slime'],
       drops: {
         'batty-slime': '12',
-        pot: '1',
+        'ember-valley-pot': '1',
       },
     },
   },
@@ -1200,7 +1248,7 @@ const rawCards = [
       slime: ['boom-slime'],
       drops: {
         'boom-slime': '12',
-        pot: '1',
+        'ember-valley-pot': '1',
       },
     },
   },
@@ -1237,7 +1285,7 @@ const rawCards = [
       slime: ['crystal-slime'],
       drops: {
         'crystal-slime': '12',
-        pot: '1',
+        'ember-valley-pot': '1',
       },
     },
   },
@@ -1274,7 +1322,7 @@ const rawCards = [
       slime: ['rock-slime'],
       drops: {
         'rock-slime': '12',
-        pot: '1',
+        'ember-valley-pot': '1',
       },
     },
   },
@@ -1311,7 +1359,7 @@ const rawCards = [
       slime: ['tabby-slime'],
       drops: {
         'tabby-slime': '12',
-        pot: '1',
+        'ember-valley-pot': '1',
       },
     },
   },
@@ -1347,7 +1395,7 @@ const rawCards = [
       slime: ['saber-slime'],
       drops: {
         'saber-slime': '12',
-        pot: '1',
+        'powderfall-bluffs-pot': '1',
       },
     },
   },
@@ -1383,7 +1431,7 @@ const rawCards = [
       slime: ['twin-slime'],
       drops: {
         'twin-slime': '12',
-        pot: '1',
+        'impossible-sky-pot': '1',
       },
     },
   },
@@ -1419,7 +1467,7 @@ const rawCards = [
       slime: ['sloomber-slime'],
       drops: {
         'sloomber-slime': '12',
-        pot: '1',
+        'dream-land-pot': '1',
       },
     },
   },
@@ -1455,7 +1503,7 @@ const rawCards = [
       slime: ['hyper-slime'],
       drops: {
         'hyper-slime': '12',
-        pot: '1',
+        'the-terrarium-pot': '1',
       },
     },
   },
@@ -1543,6 +1591,17 @@ const rawCards = [
         'the-terrarium',
       ],
       worldgen: ['the-conservatory'],
+      pot: [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       'max-harvest': ['20'],
@@ -1562,6 +1621,7 @@ const rawCards = [
         'impossible-sky',
         'the-terrarium',
       ],
+      pot: ['dream-land'],
     },
     details: {
       'fav-of': ['cotton-slime'],
@@ -1583,6 +1643,13 @@ const rawCards = [
         'lava-depths',
         'impossible-sky',
       ],
+      pot: [
+        'starlight-strand',
+        'ember-valley',
+        'lava-depths',
+        'impossible-sky',
+        'the-terrarium',
+      ],
     },
     details: {
       'fav-of': ['rock-slime'],
@@ -1603,6 +1670,7 @@ const rawCards = [
         'dream-land',
         'the-terrarium',
       ],
+      pot: ['powderfall-bluffs'],
     },
     details: {
       'fav-of': ['crystal-slime'],
@@ -1616,6 +1684,7 @@ const rawCards = [
     tags: ['food', 'veggie', 'common'],
     locations: {
       spawn: ['lava-depths', 'the-terrarium'],
+      pot: ['the-terrarium'],
     },
     details: {
       'fav-of': ['hyper-slime'],
@@ -1637,6 +1706,17 @@ const rawCards = [
     locations: {
       spawn: [
         'the-archway',
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
+      pot: [
         'the-rainbow-fields',
         'starlight-strand',
         'ember-valley',
@@ -1685,6 +1765,13 @@ const rawCards = [
         'ember-valley',
         'powderfall-bluffs',
         'waterworks',
+      ],
+      pot: [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
         'lava-depths',
         'impossible-sky',
         'dream-land',
@@ -1710,6 +1797,7 @@ const rawCards = [
         'dream-land',
         'the-terrarium',
       ],
+      pot: ['lava-depths'],
     },
     details: {
       'fav-of': ['batty-slime'],
@@ -1737,6 +1825,7 @@ const rawCards = [
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: ['impossible-sky', 'the-terrarium'],
+      pot: ['impossible-sky', 'dream-land', 'the-terrarium'],
     },
     details: {
       'fav-of': ['twin-slime'],
@@ -1791,6 +1880,17 @@ const rawCards = [
         'dream-land',
         'the-terrarium',
       ],
+      pot: [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
     details: {
       chickadoo: ['chickadoo'],
@@ -1807,6 +1907,17 @@ const rawCards = [
         'starlight-strand',
         'ember-valley',
         'powderfall-bluffs',
+      ],
+      pot: [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
       ],
     },
     details: {
@@ -1852,6 +1963,7 @@ const rawCards = [
         'impossible-sky',
         'the-terrarium',
       ],
+      pot: ['starlight-strand', 'powderfall-bluffs', 'waterworks'],
     },
     details: {
       'fav-of': ['angler-slime'],
@@ -1892,6 +2004,7 @@ const rawCards = [
         'dream-land',
         'the-terrarium',
       ],
+      pot: ['the-rainbow-fields', 'powderfall-bluffs', 'impossible-sky'],
     },
     details: {
       'fav-of': ['tabby-slime'],
@@ -1918,6 +2031,7 @@ const rawCards = [
     tags: ['food', 'meat', 'common'],
     locations: {
       spawn: ['ember-valley', 'lava-depths'],
+      pot: ['ember-valley', 'lava-depths'],
     },
     details: {
       'fav-of': ['boom-slime'],
@@ -1942,6 +2056,7 @@ const rawCards = [
     tags: ['food', 'meat', 'common'],
     locations: {
       spawn: ['powderfall-bluffs'],
+      pot: ['powderfall-bluffs'],
     },
     details: {
       'fav-of': ['saber-slime'],
@@ -1992,6 +2107,7 @@ const rawCards = [
     tags: ['food', 'meat', 'common'],
     locations: {
       spawn: ['dream-land'],
+      pot: ['dream-land'],
     },
     details: {
       'fav-of': ['sloomber-slime'],
@@ -2080,6 +2196,7 @@ const rawCards = [
         'the-tidepools',
         'the-rainbow-fields',
       ],
+      'golden-pot': ['the-rainbow-fields'],
     },
   },
   {
@@ -2089,6 +2206,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['starlight-strand', 'ember-valley'],
+      'golden-pot': ['starlight-strand'],
     },
   },
   {
@@ -2116,6 +2234,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['starlight-strand'],
+      'golden-pot': ['starlight-strand'],
     },
   },
   {
@@ -2132,6 +2251,7 @@ const rawCards = [
         'the-tidepools',
         'the-rainbow-fields',
       ],
+      'golden-pot': ['the-rainbow-fields'],
     },
   },
   {
@@ -2140,6 +2260,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['starlight-strand', 'ember-valley'],
+      'golden-pot': ['starlight-strand', 'ember-valley'],
     },
   },
   {
@@ -2156,6 +2277,13 @@ const rawCards = [
         'powderfall-bluffs',
         'waterworks',
       ],
+      'golden-pot': [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'waterworks',
+        'lava-depths',
+      ],
     },
   },
   {
@@ -2165,6 +2293,7 @@ const rawCards = [
     tags: ['resource', 'uncommon', 'node'],
     locations: {
       spawn: ['powderfall-bluffs'],
+      'golden-pot': ['powderfall-bluffs'],
     },
   },
   {
@@ -2173,6 +2302,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['powderfall-bluffs'],
+      'golden-pot': ['powderfall-bluffs'],
     },
   },
   {
@@ -2181,6 +2311,7 @@ const rawCards = [
     tags: ['resource', 'rare', 'node'],
     locations: {
       spawn: ['powderfall-bluffs', 'the-terrarium'],
+      'golden-pot': ['powderfall-bluffs', 'the-terrarium'],
     },
   },
   {
@@ -2231,6 +2362,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['lava-depths'],
+      'golden-pot': ['lava-depths'],
     },
   },
   {
@@ -2239,6 +2371,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['waterworks'],
+      'golden-pot': ['waterworks'],
     },
   },
   {
@@ -2261,6 +2394,13 @@ const rawCards = [
         'dream-land',
         'the-terrarium',
       ],
+      'golden-pot': [
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
     },
   },
   {
@@ -2269,6 +2409,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['impossible-sky', 'the-terrarium'],
+      'golden-pot': ['impossible-sky', 'the-terrarium'],
     },
   },
   {
@@ -2278,6 +2419,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['impossible-sky', 'dream-land'],
+      'golden-pot': ['impossible-sky', 'dream-land'],
     },
   },
   {
@@ -9927,72 +10069,446 @@ const rawCards = [
   },
   {
     name: 'The Rainbow Fields Pot',
-    icon: '/assets/games/slime-rancher-2/pots/pot.png',
+    icon: '/assets/games/slime-rancher-2/pots/the-rainbow-fields-pot.png',
     tags: ['pot', 'common'],
     locations: {
       spawn: ['the-rainbow-fields'],
-      gordo: [''],
+      gordo: ['the-rainbow-fields'],
     },
     details: {
       'possible-drops (1 newbucks, 3 resource)': {
-        newbucks: '100',
+        newbucks: '20',
         'newbucks!': '50',
-        'newbucks!!': '20',
-        'hen-hen': '1',
-        'tabby-slime': '1',
-        carrot: '1',
-        'pogo-fruit': '1',
-        roostro: '1',
-        cuberry: '1',
-        'stony-hen': '1',
-        'phosphor-slime': '1',
+        'newbucks!!': '100',
         'pink-slime': '1',
         'cotton-slime': '1',
+        'tabby-slime': '1',
+        'phosphor-slime': '1',
+        carrot: '1',
+        'pogo-fruit': '1',
+        cuberry: '1',
+        'hen-hen': '1',
+        roostro: '1',
+        'stony-hen': '1',
       },
-      'source-gordo': [''],
+      'source-gordo': ['pink-gordo', 'cotton-gordo', 'phosphor-gordo'],
+    },
+  },
+  {
+    name: 'Rainbow Fields Golden Pot',
+    icon: '/assets/games/slime-rancher-2/pots/the-rainbow-fields-golden-pot.png',
+    tags: ['pot', 'rare'],
+    locations: {
+      spawn: ['the-rainbow-fields'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 6 to 9 resource)': {
+        newbucks: '500',
+        'newbucks!': '1000',
+        'newbucks!!': '2000',
+        'deep-brine': '1',
+        jellystone: '1',
+        'strange-diamond': '1',
+      },
     },
   },
   {
     name: 'Starlight Strand Pot',
-    icon: '/assets/games/slime-rancher-2/pots/pot.png',
+    icon: '/assets/games/slime-rancher-2/pots/starlight-strand-pot.png',
     tags: ['pot', 'common'],
     locations: {
       spawn: ['starlight-strand'],
-      gordo: [''],
+      gordo: ['starlight-strand'],
     },
     details: {
       'possible-drops (1 newbucks, 3 resource)': {
-        newbucks: '100',
+        newbucks: '20',
         'newbucks!': '50',
-        'newbucks!!': '20',
-        'heart-beet': '1',
+        'newbucks!!': '100',
+        'pink-slime': '1',
+        'phosphor-slime': '1',
+        'rock-slime': '1',
         'honey-slime': '1',
-        roostro: '1',
+        carrot: '1',
+        'heart-beet': '1',
+        'pogo-fruit': '1',
         cuberry: '1',
         'hen-hen': '1',
-        carrot: '1',
-        'rock-slime': '1',
-        'pogo-fruit': '1',
-        'phosphor-slime': '1',
+        roostro: '1',
         'sea-hen': '1',
-        'pink-slime': '1',
       },
-      'source-gordo': [''],
+      'source-gordo': [
+        'hunter-gordo',
+        'honey-gordo',
+        'ringtail-gordo',
+        'angler-gordo',
+        'flutter-gordo',
+      ],
     },
   },
   {
-    name: 'Golden Pot',
-    icon: '/assets/games/slime-rancher-2/pots/golden-pot.png',
-    tags: ['pot', 'common'],
+    name: 'Starlight Strand Golden Pot',
+    icon: '/assets/games/slime-rancher-2/pots/starlight-strand-golden-pot.png',
+    tags: ['pot', 'rare'],
     locations: {
-      spawn: ['the-rainbow-fields'],
+      spawn: ['starlight-strand'],
     },
     details: {
-      'possible-drops (1 newbucks, 8 resource)': {
+      'possible-drops (1 newbucks, 6 to 9 resource)': {
         newbucks: '500',
-        jellystone: '1',
+        'newbucks!': '1000',
+        'newbucks!!': '2000',
+        'silky-sand': '1',
+        'wild-honey': '1',
+        'radiant-ore': '1',
         'strange-diamond': '1',
-        'deep-brine': '1',
+      },
+    },
+  },
+  {
+    name: 'Ember Valley Pot',
+    icon: '/assets/games/slime-rancher-2/pots/ember-valley-pot.png',
+    tags: ['pot', 'common'],
+    locations: {
+      spawn: ['ember-valley'],
+      gordo: ['ember-valley'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 3 resource)': {
+        newbucks: '20',
+        'newbucks!': '50',
+        'newbucks!!': '100',
+        'pink-slime': '1',
+        'tabby-slime': '1',
+        'phosphor-slime': '1',
+        'batty-slime': '1',
+        carrot: '1',
+        'heart-beet': '1',
+        'pogo-fruit': '1',
+        cuberry: '1',
+        'hen-hen': '1',
+        roostro: '1',
+        'briar-hen': '1',
+      },
+      'source-gordo': [
+        'batty-gordo',
+        'boom-gordo',
+        'crystal-gordo',
+        'rock-gordo',
+        'tabby-gordo',
+      ],
+    },
+  },
+  {
+    name: 'Ember Valley Golden Pot',
+    icon: '/assets/games/slime-rancher-2/pots/ember-valley-golden-pot.png',
+    tags: ['pot', 'rare'],
+    locations: {
+      spawn: ['ember-valley'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 6 to 9 resource)': {
+        newbucks: '500',
+        'newbucks!': '1000',
+        'newbucks!!': '2000',
+        'primordy-oil': '1',
+        'silky-sand': '1',
+        'lava-dust': '1',
+        'radiant-ore': '1',
+        'strange-diamond': '1',
+      },
+    },
+  },
+  {
+    name: 'Powderfall Bluffs Pot',
+    icon: '/assets/games/slime-rancher-2/pots/powderfall-bluffs-pot.png',
+    tags: ['pot', 'common'],
+    locations: {
+      spawn: ['powderfall-bluffs'],
+      gordo: ['powderfall-bluffs'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 3 resource)': {
+        newbucks: '20',
+        'newbucks!': '50',
+        'newbucks!!': '100',
+        'pink-slime': '1',
+        'phosphor-slime': '1',
+        'hunter-slime': '1',
+        'saber-slime': '1',
+        carrot: '1',
+        'odd-onion': '1',
+        'pogo-fruit': '1',
+        cuberry: '1',
+        'hen-hen': '1',
+        roostro: '1',
+        'thundercluck-hen': '1',
+      },
+      'source-gordo': ['saber-gordo'],
+    },
+  },
+  {
+    name: 'Powderfall Bluffs Golden Pot',
+    icon: '/assets/games/slime-rancher-2/pots/powderfall-bluffs-golden-pot.png',
+    tags: ['pot', 'rare'],
+    locations: {
+      spawn: ['powderfall-bluffs'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 6 to 9 resource)': {
+        newbucks: '500',
+        'newbucks!': '1000',
+        'newbucks!!': '2000',
+        'slime-fossil': '1',
+        'perfect-snowflake': '1',
+        'sun-sap': '1',
+      },
+    },
+  },
+  {
+    name: 'Shadow Pot',
+    icon: '/assets/games/slime-rancher-2/pots/shadow-pot.png',
+    tags: ['pot', 'common'],
+    locations: {
+      spawn: [
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
+    },
+    details: {
+      'possible-drops (1 newbucks)': {
+        newbucks: '20',
+        'newbucks!': '50',
+        'newbucks!!': '100',
+        'shadow-slime': '3-6',
+      },
+    },
+  },
+  {
+    name: 'Waterworks Pot',
+    icon: '/assets/games/slime-rancher-2/pots/waterworks-pot.png',
+    tags: ['pot', 'common'],
+    locations: {
+      spawn: ['waterworks'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 3 resource)': {
+        newbucks: '20',
+        'newbucks!': '50',
+        'newbucks!!': '100',
+        'pink-slime': '1',
+        'phosphor-slime': '1',
+        'angler-slime': '1',
+        'hunter-slime': '1',
+        carrot: '1',
+        'pogo-fruit': '1',
+        cuberry: '1',
+        'hen-hen': '1',
+        roostro: '1',
+        'sea-hen': '1',
+      },
+    },
+  },
+  {
+    name: 'Waterworks Golden Pot',
+    icon: '/assets/games/slime-rancher-2/pots/waterworks-golden-pot.png',
+    tags: ['pot', 'rare'],
+    locations: {
+      spawn: ['waterworks'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 6 to 9 resource)': {
+        newbucks: '500',
+        'newbucks!': '1000',
+        'newbucks!!': '2000',
+        'strange-diamond': '1',
+        'aqua-glass': '1',
+        'tin-petal': '1',
+      },
+    },
+  },
+  {
+    name: 'Lava Depths Pot',
+    icon: '/assets/games/slime-rancher-2/pots/lava-depths-pot.png',
+    tags: ['pot', 'common'],
+    locations: {
+      spawn: ['lava-depths'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 3 resource)': {
+        newbucks: '20',
+        'newbucks!': '50',
+        'newbucks!!': '100',
+        'pink-slime': '1',
+        'batty-slime': '1',
+        'boom-slime': '1',
+        'crystal-slime': '1',
+        carrot: '1',
+        'heart-beet': '1',
+        'pogo-fruit': '1',
+        pomegranite: '1',
+        'hen-hen': '1',
+        roostro: '1',
+        'briar-hen': '1',
+      },
+    },
+  },
+  {
+    name: 'Lava Depths Golden Pot',
+    icon: '/assets/games/slime-rancher-2/pots/lava-depths-golden-pot.png',
+    tags: ['pot', 'rare'],
+    locations: {
+      spawn: ['lava-depths'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 6 to 9 resource)': {
+        newbucks: '500',
+        'newbucks!': '1000',
+        'newbucks!!': '2000',
+        'strange-diamond': '1',
+        'magma-comb': '1',
+        'tin-petal': '1',
+      },
+    },
+  },
+  {
+    name: 'Impossible Sky Pot',
+    icon: '/assets/games/slime-rancher-2/pots/impossible-sky-pot.png',
+    tags: ['pot', 'common'],
+    locations: {
+      spawn: ['impossible-sky'],
+      gordo: ['impossible-sky'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 3 resource)': {
+        newbucks: '20',
+        'newbucks!': '50',
+        'newbucks!!': '100',
+        'pink-slime': '1',
+        'tabby-slime': '1',
+        'rock-slime': '1',
+        'twin-slime': '1',
+        carrot: '1',
+        'heart-beet': '1',
+        'pogo-fruit': '1',
+        polaricherry: '1',
+        'hen-hen': '1',
+        roostro: '1',
+        'stony-hen': '1',
+      },
+      'source-gordo': ['twin-gordo'],
+    },
+  },
+  {
+    name: 'Impossible Sky Golden Pot',
+    icon: '/assets/games/slime-rancher-2/pots/impossible-sky-golden-pot.png',
+    tags: ['pot', 'rare'],
+    locations: {
+      spawn: ['impossible-sky'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 6 to 9 resource)': {
+        newbucks: '500',
+        'newbucks!': '1000',
+        'newbucks!!': '2000',
+        'tin-petal': '1',
+        'black-indigonium': '1',
+        'royal-jelly': '1',
+      },
+    },
+  },
+  {
+    name: 'Dream Land Pot',
+    icon: '/assets/games/slime-rancher-2/pots/dream-land-pot.png',
+    tags: ['pot', 'common'],
+    locations: {
+      spawn: ['dream-land'],
+      gordo: ['dream-land'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 3 resource)': {
+        newbucks: '20',
+        'newbucks!': '50',
+        'newbucks!!': '100',
+        'pink-slime': '1',
+        'cotton-slime': '1',
+        'sloomber-slime': '1',
+        'twin-slime': '1',
+        carrot: '1',
+        'water-lettuce': '1',
+        'pogo-fruit': '1',
+        polaricherry: '1',
+        'hen-hen': '1',
+        roostro: '1',
+        'candied-hen': '1',
+      },
+      'source-gordo': ['sloomber-gordo'],
+    },
+  },
+  {
+    name: 'Dream Land Golden Pot',
+    icon: '/assets/games/slime-rancher-2/pots/dream-land-golden-pot.png',
+    tags: ['pot', 'rare'],
+    locations: {
+      spawn: ['dream-land'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 6 to 9 resource)': {
+        newbucks: '500',
+        'newbucks!': '1000',
+        'newbucks!!': '2000',
+        'dream-bubble': '1',
+        'tin-petal': '1',
+        'royal-jelly': '1',
+      },
+    },
+  },
+  {
+    name: 'The Terrarium Pot',
+    icon: '/assets/games/slime-rancher-2/pots/the-terrarium-pot.png',
+    tags: ['pot', 'common'],
+    locations: {
+      spawn: ['the-terrarium'],
+      gordo: ['the-terrarium'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 3 resource)': {
+        newbucks: '20',
+        'newbucks!': '50',
+        'newbucks!!': '100',
+        'pink-slime': '1',
+        'rock-slime': '1',
+        'twin-slime': '1',
+        'hyper-slime': '1',
+        carrot: '1',
+        'heart-beet': '1',
+        'turbo-tater': '1',
+        'pogo-fruit': '1',
+        polaricherry: '1',
+        'hen-hen': '1',
+        roostro: '1',
+      },
+      'source-gordo': ['hyper-gordo'],
+    },
+  },
+  {
+    name: 'The Terrarium Golden Pot',
+    icon: '/assets/games/slime-rancher-2/pots/the-terrarium-golden-pot.png',
+    tags: ['pot', 'rare'],
+    locations: {
+      spawn: ['the-terrarium'],
+    },
+    details: {
+      'possible-drops (1 newbucks, 6 to 9 resource)': {
+        newbucks: '500',
+        'newbucks!': '1000',
+        'newbucks!!': '2000',
+        'sun-sap': '1',
+        'tin-petal': '1',
+        'black-indigonium': '1',
       },
     },
   },
@@ -10000,6 +10516,37 @@ const rawCards = [
     name: 'Newbucks',
     icon: '/assets/games/slime-rancher-2/misc/iconNewbuck.png',
     tags: ['misc', 'common'],
+    locations: {
+      pot: [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
+      'golden-pot': [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
+        'powderfall-bluffs',
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
+      'shadow-pot': [
+        'waterworks',
+        'lava-depths',
+        'impossible-sky',
+        'dream-land',
+        'the-terrarium',
+      ],
+    },
     details: {},
   },
   {

@@ -353,10 +353,16 @@ export const initDatabase = (
       return matchesSearch && matchesFilters;
     });
   };
+
   const cardContainer = document.getElementById('card-container');
 
   const secretStyleBtn = document.querySelector('.btn-secret-style');
   const srStyleBtn = document.querySelector(`.btn-${srKey}-style`);
+
+  const sourceFilterBar = document.querySelector(
+    '.filter-bar[data-group="source"]'
+  );
+  const sourceFilterBtns = [...sourceFilterBar.querySelectorAll('.filter-btn')];
 
   const renderCard = (card, style = null) => {
     if (!card) return '';
@@ -391,7 +397,15 @@ export const initDatabase = (
                 ? Object.entries(card.locations)
                     .map(
                       ([source, locs]) => `
-                <details class="location-source">
+                <details class="location-source" ${
+                  sourceFilterBtns
+                    .find(
+                      (btn) => btn.dataset.category === source.toLowerCase()
+                    )
+                    ?.classList.contains('toggledOn')
+                    ? 'open'
+                    : ''
+                }>
                   <summary style="--source-color: var(--${source}-color)">
                       <span class="summary-content">
                         ${titleCaseSlug(source === 'spawn-largo' ? 'Spawn (Largo)' : source)}
