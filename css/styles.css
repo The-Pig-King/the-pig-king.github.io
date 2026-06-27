@@ -831,17 +831,17 @@ summary:focus-visible,
   left: 13rem;
 }
 
-.loaded-txt {
-  margin: auto;
+.loaded-text {
+  margin: 0.5rem auto;
 }
 
-.loaded-txt:last-of-type {
-  margin: 1rem auto;
+.loaded-text:last-of-type {
+  margin-bottom: 1.5rem;
 }
 
 .load-more-btn {
   display: none;
-  margin: 1rem auto;
+  margin: auto auto 1rem auto;
   padding: 0.5rem 2rem;
 }
 

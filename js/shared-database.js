@@ -572,7 +572,7 @@ export const initDatabase = (
     loadMoreBtn.style.display = remaining > 0 ? 'block' : 'none';
 
     const loaded = Math.min(currentPageSize, cards.length);
-    document.querySelectorAll('.loaded-txt').forEach((el) => {
+    document.querySelectorAll('.loaded-text').forEach((el) => {
       el.textContent = `${loaded} loaded (${Math.max(remaining, 0)} remaining)`;
     });
 
