@@ -790,6 +790,11 @@ summary:focus-visible,
   max-height: 100dvh;
 }
 
+.card-modal:focus,
+.card-modal .card:focus {
+  outline: none;
+}
+
 .card-modal::backdrop {
   background: rgba(0, 0, 0, 0.4);
 }
@@ -818,17 +823,18 @@ summary:focus-visible,
   background: transparent;
 }
 
-#modal-secret-style-btn {
-  margin-left: 1rem;
+.close-modal-btn:focus {
+  outline-color: white;
 }
 
-.modal-secret-style-btn {
-  left: 1rem;
+.modal-top-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin: auto 1rem;
 }
 
-.modal-sr2-style-btn,
-.modal-sr-style-btn {
-  left: 13rem;
+.sister-link-btn {
+  margin-left: auto;
 }
 
 .loaded-text {

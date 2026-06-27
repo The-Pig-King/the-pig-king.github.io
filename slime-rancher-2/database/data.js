@@ -2890,6 +2890,7 @@ const rawCards = [
   },
   {
     name: 'Heart Module II',
+    'sister-name': 'Heart Module Mk II',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopHeart02.png',
     tags: ['upgrade', 'common'],
@@ -2908,6 +2909,7 @@ const rawCards = [
   },
   {
     name: 'Heart Module III',
+    'sister-name': 'Heart Module Mk III',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopHeart03.png',
     tags: ['upgrade', 'common'],
@@ -2926,6 +2928,7 @@ const rawCards = [
   },
   {
     name: 'Heart Module IV',
+    'sister-name': 'Heart Module Ultra',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopHeart04.png',
     tags: ['upgrade', 'common'],
@@ -2958,6 +2961,7 @@ const rawCards = [
   },
   {
     name: 'Power Core II',
+    'sister-name': 'Power Module Mk II',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopPower02.png',
     tags: ['upgrade', 'common'],
@@ -2976,6 +2980,7 @@ const rawCards = [
   },
   {
     name: 'Power Core III',
+    'sister-name': 'Power Module Mk III',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopPower03.png',
     tags: ['upgrade', 'common'],
@@ -3042,6 +3047,7 @@ const rawCards = [
   },
   {
     name: 'Dash Boots II',
+    'sister-name': 'Ultra Dash Boots',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopDashBoots.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopBoots02.png',
     tags: ['upgrade', 'common'],
@@ -3075,6 +3081,7 @@ const rawCards = [
   },
   {
     name: 'Jetpack II',
+    'sister-name': 'Air Drive',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 1.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopAirDrive.png',
     tags: ['upgrade', 'common'],
@@ -3093,6 +3100,7 @@ const rawCards = [
   },
   {
     name: 'Tank Booster',
+    'sister-name': 'Tank Module',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopTank01.png',
     tags: ['upgrade', 'common'],
@@ -3107,6 +3115,7 @@ const rawCards = [
   },
   {
     name: 'Tank Booster II',
+    'sister-name': 'Tank Module Mk II',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopTank02.png',
     tags: ['upgrade', 'common'],
@@ -3125,6 +3134,7 @@ const rawCards = [
   },
   {
     name: 'Tank Booster III',
+    'sister-name': 'Tank Module Mk III',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopTank03.png',
     tags: ['upgrade', 'common'],
@@ -3143,6 +3153,7 @@ const rawCards = [
   },
   {
     name: 'Tank Booster IV',
+    'sister-name': 'Tank Module Ultra',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopTank04.png',
     tags: ['upgrade', 'common'],
@@ -9520,6 +9531,7 @@ const rawCards = [
   },
   {
     name: 'Blue Lava Lamp',
+    'sister-name': 'Blue Slime Lamp',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampBlue.png',
     'sr-icon': '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampBlue.png',
     tags: ['gadget', 'common', 'decoration', 'fun'],
@@ -9544,6 +9556,7 @@ const rawCards = [
   },
   {
     name: 'Gold Lava Lamp',
+    'sister-name': 'Gold Slime Lamp',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampGold.png',
     'sr-icon': '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampGold.png',
     tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
@@ -9562,6 +9575,7 @@ const rawCards = [
   },
   {
     name: 'Green Lava Lamp',
+    'sister-name': 'Green Slime Lamp',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampGreen.png',
     'sr-icon':
       '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampGreen.png',
@@ -9581,6 +9595,7 @@ const rawCards = [
   },
   {
     name: 'Red Lava Lamp',
+    'sister-name': 'Red Slime Lamp',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeLavaLampRed.png',
     'sr-icon': '/assets/games/slime-rancher/gadgets/iconDecorSlimeLampRed.png',
     tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],

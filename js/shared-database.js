@@ -599,7 +599,17 @@ export const initDatabase = (
 
   const openModal = (card) => {
     cardModalContent.innerHTML = renderCard(card);
+
+    const sisterLinkBtn = document.getElementById('sister-link-btn');
+    sisterLinkBtn.style.display = card[`${srKey}-icon`] ? 'block' : 'none';
+    sisterLinkBtn.style.color = `var(--${srKey}-color)`;
+    sisterLinkBtn.textContent = `View in ${srKey.toUpperCase()} Database`;
+
+    const sisterName = card['sister-name'] ?? card.name;
+    sisterLinkBtn.dataset.cardName = sisterName;
+
     cardModal.showModal();
+    closeModal.focus();
     updateURL();
   };
 
@@ -673,6 +683,14 @@ export const initDatabase = (
         .classList.remove('toggledOn');
       cardModal.close();
       updateURL();
+    } else {
+      const srBtn = e.target.closest('.sister-link-btn');
+      if (srBtn) {
+        const name = srBtn.dataset.cardName;
+        const sisterPage =
+          srTitle === 'slime-rancher' ? 'slime-rancher-2' : 'slime-rancher';
+        window.location.href = `/${sisterPage}/database/?card=${name.replace(/\s+/g, '+')}`;
+      }
     }
   });
 
