@@ -613,6 +613,16 @@ export const initDatabase = (
     updateURL();
   };
 
+  // Open modal with keyboard
+  cardContainer.addEventListener('keydown', (e) => {
+    if (e.key !== ' ' && e.key !== 'Enter') return;
+    if (e.target.closest('.card-location-tags')) return;
+    const cardElement = e.target.closest('.card');
+    if (!cardElement) return;
+    e.preventDefault();
+    cardElement.click();
+  });
+
   // Open modal of clicked card
   cardContainer.addEventListener('click', (e) => {
     if (e.target.closest('.card-location-tags')) return;

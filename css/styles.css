@@ -531,7 +531,8 @@ header {
 .btn:focus-visible,
 .card-container .card:focus-visible,
 summary:focus-visible,
-.detail:focus-visible {
+.detail:focus-visible,
+.tag:focus-visible {
   outline: 0.15rem solid cyan;
 }
 
@@ -790,8 +791,8 @@ summary:focus-visible,
   max-height: 100dvh;
 }
 
-.card-modal:focus,
-.card-modal .card:focus {
+.card-modal:focus-visible,
+.card-modal .card:focus-visible {
   outline: none;
 }
 
