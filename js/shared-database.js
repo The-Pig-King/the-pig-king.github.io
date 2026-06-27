@@ -272,6 +272,8 @@ export const initDatabase = (
   };
 
   const updateUI = () => {
+    currentPageSize = pageSize;
+
     const filteredCards = filterCards();
     const resultsCount = filteredCards.length;
 
@@ -355,6 +357,24 @@ export const initDatabase = (
   };
 
   const cardContainer = document.getElementById('card-container');
+
+  const loadSelect = document.getElementById('load-select');
+
+  loadSelect.addEventListener('change', () => {
+    pageSize = loadSelect.value === 'all' ? Infinity : Number(loadSelect.value);
+    updateUI();
+  });
+
+  let pageSize = 100;
+  let currentPageSize = pageSize;
+
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  loadMoreBtn.textContent = `Load ${pageSize} more`;
+
+  loadMoreBtn.addEventListener('click', () => {
+    currentPageSize += pageSize;
+    renderCards(sortCards(filterCards()));
+  });
 
   const secretStyleBtn = document.querySelector('.btn-secret-style');
   const srStyleBtn = document.querySelector(`.btn-${srKey}-style`);
@@ -539,11 +559,22 @@ export const initDatabase = (
       return;
     }
 
-    cardContainer.innerHTML = cards
+    const visible = cards.slice(0, currentPageSize);
+
+    cardContainer.innerHTML = visible
       .map((card) => {
         return renderCard(card);
       })
       .join('');
+
+    const remaining = cards.length - currentPageSize;
+    loadMoreBtn.textContent = `Load ${Math.min(remaining, pageSize)} more`;
+    loadMoreBtn.style.display = remaining > 0 ? 'block' : 'none';
+
+    const loaded = Math.min(currentPageSize, cards.length);
+    document.querySelectorAll('.loaded-txt').forEach((el) => {
+      el.textContent = `${loaded} loaded (${Math.max(remaining, 0)} remaining)`;
+    });
 
     // Render locations
     const cardLocations = document.querySelectorAll('.card-location-tags');

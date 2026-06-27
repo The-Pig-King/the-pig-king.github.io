@@ -831,6 +831,20 @@ summary:focus-visible,
   left: 13rem;
 }
 
+.loaded-txt {
+  margin: auto;
+}
+
+.loaded-txt:last-of-type {
+  margin: 1rem auto;
+}
+
+.load-more-btn {
+  display: none;
+  margin: 1rem auto;
+  padding: 0.5rem 2rem;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {

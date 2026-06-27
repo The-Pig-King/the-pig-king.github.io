@@ -63,13 +63,22 @@
               <span>results</span>
             </div>
             <div>
+              <label for="load-select">Results per page</label>
+              <select class="btn" id="load-select">
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="all">All</option>
+              </select>
+            </div>
+            <div>
               <button class="btn advanced-filters-btn">Advanced Filters</button>
               <button class="btn reset-filters-btn" id="reset-filters-btn">
                 Reset Filters
               </button>
             </div>
             <div>
-              <label for="sort">Sort by</label>
+              <label for="sort-select">Sort by</label>
               <select class="btn" id="sort-select">
                 <option value="automatic">Automatic</option>
                 <option value="name">Name</option>
@@ -535,6 +544,7 @@
           </div>
         </div>
       </div>
+      <div class="loaded-txt"></div>
       <div class="card-container" id="card-container"></div>
       <dialog class="card-modal" id="card-modal">
         <button class="btn close-modal-btn icon" id="close-modal-btn">
@@ -561,6 +571,8 @@
         </button>
         <div class="card-modal-content" id="card-modal-content"></div>
       </dialog>
+      <div class="loaded-txt"></div>
+      <button class="btn load-more-btn" id="load-more-btn"></button>
     </main>
     <footer>
       <div class="frame-container footer-bar">
