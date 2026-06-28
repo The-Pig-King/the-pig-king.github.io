@@ -600,6 +600,23 @@ export const initDatabase = (
   const openModal = (card) => {
     cardModalContent.innerHTML = renderCard(card);
 
+    // Set modal style toggles
+    const secretStyleBtn = document.getElementById('secret-style-btn');
+    const srStyleBtn = document.getElementById(`${srKey}-style-btn`);
+
+    const modalSecretStyleBtn = document.getElementById(
+      'modal-secret-style-btn'
+    );
+    const modalSrStyleBtn = document.getElementById(`modal-${srKey}-style-btn`);
+
+    secretStyleBtn.classList.contains('toggledOn')
+      ? modalSecretStyleBtn.classList.add('toggledOn')
+      : modalSecretStyleBtn.classList.remove('toggledOn');
+
+    srStyleBtn.classList.contains('toggledOn')
+      ? modalSrStyleBtn.classList.add('toggledOn')
+      : modalSrStyleBtn.classList.remove('toggledOn');
+
     const sisterLinkBtn = document.getElementById('sister-link-btn');
     sisterLinkBtn.style.display = card[`${srKey}-icon`] ? 'block' : 'none';
     sisterLinkBtn.style.color = `var(--${srKey}-color)`;
@@ -637,23 +654,6 @@ export const initDatabase = (
 
     openModal(clickedCard);
     updateURL();
-
-    // Set modal style toggles
-    const secretStyleBtn = document.getElementById('secret-style-btn');
-    const srStyleBtn = document.getElementById(`${srKey}-style-btn`);
-
-    const modalSecretStyleBtn = document.getElementById(
-      'modal-secret-style-btn'
-    );
-    const modalSrStyleBtn = document.getElementById(`modal-${srKey}-style-btn`);
-
-    secretStyleBtn.classList.contains('toggledOn')
-      ? modalSecretStyleBtn.classList.add('toggledOn')
-      : modalSecretStyleBtn.classList.remove('toggledOn');
-
-    srStyleBtn.classList.contains('toggledOn')
-      ? modalSrStyleBtn.classList.add('toggledOn')
-      : modalSrStyleBtn.classList.remove('toggledOn');
   });
 
   // Open modal of clicked detail
@@ -679,6 +679,39 @@ export const initDatabase = (
 
   closeModal.addEventListener('click', () => {
     cardModal.close();
+    updateURL();
+  });
+
+  // Navigate neighbouring modals with arrow keys
+  document.addEventListener('keydown', (e) => {
+    if (!cardModal.hasAttribute('open')) return;
+    if (
+      e.key !== 'ArrowLeft' &&
+      e.key !== 'ArrowRight' &&
+      e.key !== 'a' &&
+      e.key !== 'd' &&
+      e.key !== 'A' &&
+      e.key !== 'D'
+    )
+      return;
+
+    const visibleCards = sortCards(filterCards());
+    const currentName =
+      cardModalContent.querySelector('.card-name').textContent;
+    const currentIndex = visibleCards.findIndex((c) => c.name === currentName);
+
+    if (
+      (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') &&
+      currentIndex > 0
+    ) {
+      openModal(visibleCards[currentIndex - 1]);
+    } else if (
+      (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') &&
+      currentIndex < visibleCards.length - 1
+    ) {
+      openModal(visibleCards[currentIndex + 1]);
+    }
+
     updateURL();
   });
 
