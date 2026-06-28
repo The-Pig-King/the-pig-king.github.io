@@ -2891,7 +2891,7 @@ const rawCards = [
   {
     name: 'Heart Module II',
     'sister-name': 'Heart Module Mk II',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem2.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopHeart02.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -2910,7 +2910,7 @@ const rawCards = [
   {
     name: 'Heart Module III',
     'sister-name': 'Heart Module Mk III',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem3.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopHeart03.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -2929,7 +2929,7 @@ const rawCards = [
   {
     name: 'Heart Module IV',
     'sister-name': 'Heart Module Ultra',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopHeartSystem4.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopHeart04.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -2962,7 +2962,7 @@ const rawCards = [
   {
     name: 'Power Core II',
     'sister-name': 'Power Module Mk II',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem2.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopPower02.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -2981,7 +2981,7 @@ const rawCards = [
   {
     name: 'Power Core III',
     'sister-name': 'Power Module Mk III',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem3.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopPower03.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -2999,7 +2999,7 @@ const rawCards = [
   },
   {
     name: 'Power Core IV',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem4.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3016,7 +3016,7 @@ const rawCards = [
   },
   {
     name: 'Power Core V',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopEnergySystem5.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3048,7 +3048,7 @@ const rawCards = [
   {
     name: 'Dash Boots II',
     'sister-name': 'Ultra Dash Boots',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopDashBoots.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopDashBoots2.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopBoots02.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -3082,7 +3082,7 @@ const rawCards = [
   {
     name: 'Jetpack II',
     'sister-name': 'Air Drive',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 1.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 2.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopAirDrive.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -3116,7 +3116,7 @@ const rawCards = [
   {
     name: 'Tank Booster II',
     'sister-name': 'Tank Module Mk II',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster2.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopTank02.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -3135,7 +3135,7 @@ const rawCards = [
   {
     name: 'Tank Booster III',
     'sister-name': 'Tank Module Mk III',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster3.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopTank03.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -3154,7 +3154,7 @@ const rawCards = [
   {
     name: 'Tank Booster IV',
     'sister-name': 'Tank Module Ultra',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster4.png',
     'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopTank04.png',
     tags: ['upgrade', 'common'],
     details: {
@@ -3172,7 +3172,7 @@ const rawCards = [
   },
   {
     name: 'Tank Booster V',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster5.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3189,7 +3189,7 @@ const rawCards = [
   },
   {
     name: 'Tank Booster VI',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster6.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3206,7 +3206,7 @@ const rawCards = [
   },
   {
     name: 'Tank Booster VII',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster7.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3223,7 +3223,7 @@ const rawCards = [
   },
   {
     name: 'Tank Booster VIII',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankBooster8.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3254,7 +3254,7 @@ const rawCards = [
   },
   {
     name: 'Extra Tank II',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopStorageUnit.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopStorageUnit2.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3318,7 +3318,7 @@ const rawCards = [
   },
   {
     name: 'Tank Guard II',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankProtector.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankProtector2.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3335,7 +3335,7 @@ const rawCards = [
   },
   {
     name: 'Tank Guard III',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankProtector.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopTankProtector3.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3388,7 +3388,7 @@ const rawCards = [
   },
   {
     name: 'Golden Sureshot II',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopGoldenSureshot 1.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopGoldenSureshot 2.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3405,7 +3405,7 @@ const rawCards = [
   },
   {
     name: 'Golden Sureshot III',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopGoldenSureshot 1.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopGoldenSureshot 3.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3455,7 +3455,7 @@ const rawCards = [
   },
   {
     name: 'Regenerator II',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopRegenerator.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopRegenerator2.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3489,7 +3489,7 @@ const rawCards = [
   },
   {
     name: 'Power Injector II',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopPowerInjector.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopPowerInjector2.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
