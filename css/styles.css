@@ -204,6 +204,7 @@ body.slime-rancher-2 {
 
 body {
   color: white;
+  background-color: var(--background-color);
   font-family: 'Inter', sans-serif;
   font-weight: normal;
 
@@ -220,7 +221,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: var(--background-color);
+  margin-bottom: 1rem;
 }
 
 a {
@@ -858,8 +859,25 @@ summary:focus-visible,
 }
 
 /* WR History */
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+  display: block;
+}
+
 .wr-history-table {
   text-align: center;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  background-color: var(--frame-color);
+  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
+}
+
+.wr-history-table th,
+.wr-history-table td {
+  padding: 0.5rem 3rem;
+  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
 }
 
 .country-flag {

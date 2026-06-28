@@ -35,7 +35,7 @@ const renderRunsCount = (runsCount) => {
   document.getElementById('runs-count').textContent = runsCount;
 };
 
-const tableBody = document.getElementById('tableBody');
+const tableContent = document.getElementById('table-content');
 
 const renderRuns = (runs) => {
   runs.forEach((run) => {
@@ -67,7 +67,7 @@ const renderRuns = (runs) => {
       <td>${run.version}</td>
     `;
 
-    tableBody.appendChild(tr);
+    tableContent.appendChild(tr);
   });
 };
 
