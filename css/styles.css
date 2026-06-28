@@ -857,6 +857,15 @@ summary:focus-visible,
   padding: 0.5rem 2rem;
 }
 
+/* WR History */
+.wr-history-table {
+  text-align: center;
+}
+
+.country-flag {
+  height: 0.8rem;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
