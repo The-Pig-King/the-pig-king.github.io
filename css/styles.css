@@ -7,6 +7,7 @@
   --thepigking-color: #feb6b7;
 
   --database-color: rgb(124, 119, 119);
+  --wr-history-color: rgb(255, 196, 0);
 
   --toggled-on-color: darkgreen;
   --toggled-off-color: darkred;
@@ -457,6 +458,10 @@ header {
   fill: var(--database-color);
 }
 
+.wr-history {
+  fill: var(--wr-history-color);
+}
+
 .nav-name {
   font-size: 1rem;
   font-weight: bold;
@@ -817,7 +822,7 @@ summary:focus-visible,
 
 .close-modal-btn {
   position: absolute;
-  top: 2.15rem;
+  top: 3.35rem;
   right: 0.5rem;
   border: transparent;
   border-radius: 0.5rem;
