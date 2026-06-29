@@ -5,7 +5,7 @@ import { initDatabase } from '../../js/shared-database.js';
 export const tagGroups = {
   slime: 'type',
   plort: 'type',
-  gordo: 'type',
+  gordo: ['type', 'source'],
   food: 'type',
   resource: 'type',
   toy: 'type',
@@ -15,7 +15,7 @@ export const tagGroups = {
   'plot-building': 'type',
   upgrade: 'type',
   zone: 'type',
-  gadget: 'type',
+  gadget: ['type', 'source'],
   misc: 'type',
 
   event: 'subtype',
@@ -39,7 +39,7 @@ export const tagGroups = {
   drill: 'resource-type',
   apiary: 'resource-type',
   pump: 'resource-type',
-  'range-exchange': 'resource-type',
+  'range-exchange': ['resource-type', 'source'],
   'echo-net': 'resource-type',
 
   building: 'plot-type',
@@ -73,10 +73,7 @@ export const tagGroups = {
   spawn: 'source',
   worldgen: 'source',
   crate: 'source',
-  'range-exchange': 'source',
   'treasure-pod': 'source',
-  gadget: 'source',
-  gordo: 'source',
   'spawn-largo': 'source',
   'twinkle-slime': 'source',
 
