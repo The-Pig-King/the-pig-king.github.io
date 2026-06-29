@@ -35,9 +35,27 @@ const filterRuns = (state) => {
         run.subcategory.endsWith('glitched');
     }
 
-    let matchVersionRange = true;
+    let matchSubcategory;
+    if (
+      // Match subcategory
+      state.category.filters.has('any') ||
+      state.category.filters.has('pink-gordo') ||
+      (state.category.filters.has('all-gordos') &&
+        state['subcategory'].filters.has('rush-mode'))
+    ) {
+      matchSubcategory = state['subcategory'].filters.has(run.subcategory);
+    } else if (
+      // Match all gordos non-rush mode
+      state.category.filters.has('all-gordos') &&
+      state['subcategory'].filters.has('adventure-mode')
+    ) {
+      matchSubcategory = run.subcategory !== 'rush-mode';
+    } else {
+      // No subcategory
+      matchSubcategory = true;
+    }
 
-    return matchCategory && matchRuleSet && matchVersionRange;
+    return matchCategory && matchRuleSet && matchSubcategory;
   });
 };
 
