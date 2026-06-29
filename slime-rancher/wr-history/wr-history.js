@@ -60,4 +60,3 @@ const filterRuns = (state) => {
 };
 
 initWrHistory(data, filterRuns);
-console.log(data);

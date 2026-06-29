@@ -64,6 +64,9 @@ def clean_player(player):
     allowed_fields = [
         'id',
         'names',
+        'pronouns',
+        'weblink',
+        'name-style',
         'assets',
         'location',
         'style'
@@ -122,6 +125,7 @@ def clean_run(run):
         'category': mapped_category,
         'videos': run.get('videos'),
         'comment': run.get('comment'),
+        'status': run.get('status', {}).get('status'),
         'date': run.get('date'),
         'primary_t': run.get('times', {}).get('primary_t'),
         'platform': run.get('platform'),
@@ -135,7 +139,6 @@ def clean_run(run):
             for p in run.get('players_full', [])
         ]
     }
-
 
 def main():
     print('Loading file...')

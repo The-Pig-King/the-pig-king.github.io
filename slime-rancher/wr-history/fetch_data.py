@@ -8,7 +8,7 @@ def get_json(url):
 
 # 1. Fetch all runs
 runs = []
-url = "https://www.speedrun.com/api/v1/runs?status=verified&orderby=date&direction=asc&game=9do79k6p"
+url = "https://www.speedrun.com/api/v1/runs?status=verified&orderby=date&direction=asc&game=9do79k6p&max=200"
 
 page = 1
 

@@ -32,6 +32,41 @@ export const initWrHistory = (data, filterRuns) => {
       .padStart(6, '0')}`;
   };
 
+  const formatDifference = (seconds) => {
+    if (!isFinite(seconds)) return '';
+    const abs = Math.abs(seconds);
+    const ms = abs % 1;
+    const whole = Math.floor(abs);
+    const hours = Math.floor(whole / 3600);
+    const minutes = Math.floor((whole % 3600) / 60);
+    const secs = whole % 60;
+
+    if (hours === 0 && minutes === 0) {
+      return `-${(secs + ms).toFixed(3)}`;
+    }
+    if (hours === 0) {
+      return `-${minutes}:${(secs + ms).toFixed(3).padStart(6, '0')}`;
+    }
+    return `-${hours}:${String(minutes).padStart(2, '0')}:${(secs + ms).toFixed(3).padStart(6, '0')}`;
+  };
+
+  const calculateDifference = (run, bestTime) => {
+    // Set color
+    const diff = Math.abs(run.primary_t - bestTime);
+    if (diff < 1) {
+      run.differenceColor = 'difference-worst-color';
+    } else if (diff < 5) {
+      run.differenceColor = 'difference-average-color';
+    } else if (diff < 10) {
+      run.differenceColor = 'difference-good-color';
+    } else {
+      run.differenceColor = 'difference-best-color';
+    }
+
+    // Set difference
+    run.difference = Number((run.primary_t - bestTime).toFixed(3));
+  };
+
   const renderRunsCount = (runsCount) => {
     document.getElementById('runs-count').textContent = runsCount;
   };
@@ -142,7 +177,7 @@ export const initWrHistory = (data, filterRuns) => {
       <td>${run.date || ''}</td>
       <td>${videoLink ? `<a href="${videoLink}">${videoIcon}</a>` : ''}</td>
       <td>${formatTime(run.primary_t) || ''}</td>
-      <td></td>
+      <td class="${run.differenceColor}">${formatDifference(run.difference)}</td>
       <td>
         <img 
             class="country-flag"
@@ -163,11 +198,18 @@ export const initWrHistory = (data, filterRuns) => {
   };
 
   const filterWrs = (runs) => {
-    let bestTime = Infinity;
+    const fastest = runs.reduce((acc, run) => {
+      if (!acc[run.date] || run.primary_t < acc[run.date].primary_t) {
+        acc[run.date] = run;
+      }
+      return acc;
+    }, {});
+    runs = runs.filter((run) => fastest[run.date] === run);
 
+    let bestTime = Infinity;
     return runs.filter((run) => {
-      console.log(bestTime);
       if (run.primary_t < bestTime) {
+        calculateDifference(run, bestTime);
         bestTime = run.primary_t;
         return true;
       }
@@ -185,6 +227,7 @@ export const initWrHistory = (data, filterRuns) => {
 
     renderRunsCount(runsCount);
     renderRuns(sortedWRs);
+    console.log(sortedWRs);
   };
 
   const subcategoryFilterBars = document.querySelectorAll(

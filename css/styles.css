@@ -502,7 +502,7 @@ header {
 
 .filters-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   gap: 1rem;
@@ -910,6 +910,19 @@ summary:focus-visible,
 }
 .bilibili {
   fill: var(--bilibili-color);
+}
+
+.difference-worst-color {
+  color: lightcoral;
+}
+.difference-average-color {
+  color: yellow;
+}
+.difference-good-color {
+  color: lightgreen;
+}
+.difference-best-color {
+  color: green;
 }
 
 .country-flag {
