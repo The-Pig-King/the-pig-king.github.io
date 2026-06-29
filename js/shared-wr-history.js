@@ -162,17 +162,29 @@ export const initWrHistory = (data, filterRuns) => {
     });
   };
 
+  const filterWrs = (runs) => {
+    let bestTime = Infinity;
+
+    return runs.filter((run) => {
+      console.log(bestTime);
+      if (run.primary_t < bestTime) {
+        bestTime = run.primary_t;
+        return true;
+      }
+      return false;
+    });
+  };
+
   const updateUI = () => {
     const filteredRuns = filterRuns(state);
-    const sortedRuns = filteredRuns.sort((a, b) => {
+    const filteredWrs = filterWrs(filteredRuns);
+    const sortedWRs = filteredWrs.sort((a, b) => {
       return a.date < b.date;
     });
-    const runsCount = sortedRuns.length;
+    const runsCount = sortedWRs.length;
 
     renderRunsCount(runsCount);
-    renderRuns(sortedRuns);
-    console.log(sortedRuns);
-    console.log(state);
+    renderRuns(sortedWRs);
   };
 
   const subcategoryFilterBars = document.querySelectorAll(
