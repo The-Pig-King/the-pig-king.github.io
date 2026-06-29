@@ -376,9 +376,6 @@ export const initDatabase = (
     renderCards(sortCards(filterCards()));
   });
 
-  const secretStyleBtn = document.querySelector('.btn-secret-style');
-  const srStyleBtn = document.querySelector(`.btn-${srKey}-style`);
-
   const sourceFilterBar = document.querySelector(
     '.filter-bar[data-group="source"]'
   );
@@ -739,7 +736,7 @@ export const initDatabase = (
 
   const modalStyleBtns = document.querySelectorAll('.modal-style-btn');
   modalStyleBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
       const modalSecretStyleBtn = document.getElementById(
         'modal-secret-style-btn'
       );

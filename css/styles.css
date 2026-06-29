@@ -168,6 +168,17 @@
   --the-terrarium-color: #2b7351;
   --the-prismacore-color: #b2fefe;
 
+  /* WR History Colors */
+  --any-color: var(--wr-history-color);
+  --all-gordos-color: #1b7c40;
+  --slimepedia-color: #45b1c5;
+  --pink-gordo-color: #e9517d;
+  --vacpack-color: #b67c54;
+
+  --youtube-color: #ff0033;
+  --twitch-color: #9146ff;
+  --bilibili-color: #00b7f2;
+
   --border-thin: 0.1rem solid;
 }
 
@@ -876,8 +887,23 @@ summary:focus-visible,
 
 .wr-history-table th,
 .wr-history-table td {
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 2rem;
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
+}
+
+.video-icon {
+  width: 2rem;
+  fill: white;
+}
+
+.youtube {
+  fill: var(--youtube-color);
+}
+.twitch {
+  fill: var(--twitch-color);
+}
+.bilibili {
+  fill: var(--bilibili-color);
 }
 
 .country-flag {
