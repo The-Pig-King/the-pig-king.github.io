@@ -870,6 +870,12 @@ summary:focus-visible,
 }
 
 /* WR History */
+.any-subcategory,
+.all-gordos-subcategory,
+.pink-gordo-subcategory {
+  display: none;
+}
+
 .table-container {
   overflow-x: auto;
   width: 100%;

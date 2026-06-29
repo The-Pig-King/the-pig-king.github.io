@@ -175,6 +175,10 @@ export const initWrHistory = (data, filterRuns) => {
     console.log(state);
   };
 
+  const subcategoryFilterBars = document.querySelectorAll(
+    '.filter-bar[data-group="subcategory"]'
+  );
+
   const filterBtns = document.querySelectorAll('.filter-btn');
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -191,6 +195,17 @@ export const initWrHistory = (data, filterRuns) => {
         });
       btn.classList.add('toggledOn');
       filters.add(value);
+
+      subcategoryFilterBars.forEach((bar) => {
+        bar.style.display = 'none';
+      });
+
+      subcategoryFilterBars.forEach((bar) => {
+        const subcat = [...state.category.filters][0] + '-subcategory';
+        if (bar.classList.contains(subcat)) {
+          bar.style.display = 'block';
+        }
+      });
 
       updateUI();
     });
@@ -224,6 +239,14 @@ export const initWrHistory = (data, filterRuns) => {
 
     if (btn.classList.contains('toggledOn')) {
       state[group].filters.add(value);
+    }
+  });
+
+  // Display default category subcategory bar
+  subcategoryFilterBars.forEach((bar) => {
+    const subcat = [...state.category.filters][0] + '-subcategory';
+    if (bar.classList.contains(subcat)) {
+      bar.style.display = 'block';
     }
   });
 
