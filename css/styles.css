@@ -912,6 +912,20 @@ summary:focus-visible,
   fill: var(--bilibili-color);
 }
 
+.difference-label {
+  display: none;
+  position: relative;
+  top: 0.6em;
+  margin-bottom: -1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.3rem;
+
+  width: fit-content;
+  background-color: var(--frame-color);
+  font-size: 1em;
+}
+
 .difference-worst-color {
   color: lightcoral;
 }

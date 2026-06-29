@@ -32,7 +32,7 @@ export const initWrHistory = (data, filterRuns) => {
       .padStart(6, '0')}`;
   };
 
-  const formatDifference = (seconds) => {
+  const formatTimeDifference = (seconds) => {
     if (!isFinite(seconds)) return '';
     const abs = Math.abs(seconds);
     const ms = abs % 1;
@@ -50,21 +50,42 @@ export const initWrHistory = (data, filterRuns) => {
     return `-${hours}:${String(minutes).padStart(2, '0')}:${(secs + ms).toFixed(3).padStart(6, '0')}`;
   };
 
-  const calculateDifference = (run, bestTime) => {
+  const calculateTimeDifference = (run, bestTime) => {
     // Set color
     const diff = Math.abs(run.primary_t - bestTime);
     if (diff < 1) {
-      run.differenceColor = 'difference-worst-color';
+      run.timeDifferenceColor = 'difference-worst-color';
     } else if (diff < 5) {
-      run.differenceColor = 'difference-average-color';
+      run.timeDifferenceColor = 'difference-average-color';
     } else if (diff < 10) {
-      run.differenceColor = 'difference-good-color';
+      run.timeDifferenceColor = 'difference-good-color';
     } else {
-      run.differenceColor = 'difference-best-color';
+      run.timeDifferenceColor = 'difference-best-color';
     }
 
-    // Set difference
-    run.difference = Number((run.primary_t - bestTime).toFixed(3));
+    // Set time difference
+    run.timeDifference = Number((run.primary_t - bestTime).toFixed(3));
+  };
+
+  const calculateDaysDifference = (run, prevDate) => {
+    if (!prevDate) {
+      run.daysDifference = null;
+      return;
+    }
+    const ms =
+      new Date(run.date.slice(0, 10)) - new Date(prevDate.slice(0, 10));
+    run.daysDifference = Math.round(ms / (1000 * 60 * 60 * 24));
+
+    // Set color
+    if (run.daysDifference < 1) {
+      run.daysDifferenceColor = 'difference-worst-color';
+    } else if (run.daysDifference < 7) {
+      run.daysDifferenceColor = 'difference-average-color';
+    } else if (run.daysDifference < 365) {
+      run.daysDifferenceColor = 'difference-good-color';
+    } else {
+      run.daysDifferenceColor = 'difference-best-color';
+    }
   };
 
   const renderRunsCount = (runsCount) => {
@@ -174,10 +195,15 @@ export const initWrHistory = (data, filterRuns) => {
         }[videoHostname] ?? defaultVideoIcon;
 
       tr.innerHTML = `
-      <td>${run.date || ''}</td>
+      <td>
+        ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
+        ${run.daysDifference != null ? `<br><span class="${run.daysDifferenceColor} difference-label">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
+      </td>
       <td>${videoLink ? `<a href="${videoLink}">${videoIcon}</a>` : ''}</td>
-      <td>${formatTime(run.primary_t) || ''}</td>
-      <td class="${run.differenceColor}">${formatDifference(run.difference)}</td>
+      <td>
+        ${formatTime(run.primary_t) || ''}
+        ${run.timeDifference !== '' ? `<br><span class="${run.timeDifferenceColor} difference-label">${formatTimeDifference(run.timeDifference)}</span>` : ''}
+      </td>
       <td>
         <img 
             class="country-flag"
@@ -207,10 +233,14 @@ export const initWrHistory = (data, filterRuns) => {
     runs = runs.filter((run) => fastest[run.date] === run);
 
     let bestTime = Infinity;
+    let prevDate = null;
     return runs.filter((run) => {
       if (run.primary_t < bestTime) {
-        calculateDifference(run, bestTime);
+        calculateTimeDifference(run, bestTime);
         bestTime = run.primary_t;
+
+        calculateDaysDifference(run, prevDate);
+        prevDate = run.date;
         return true;
       }
       return false;
@@ -227,6 +257,12 @@ export const initWrHistory = (data, filterRuns) => {
 
     renderRunsCount(runsCount);
     renderRuns(sortedWRs);
+
+    document.querySelectorAll('.difference-label').forEach((label) => {
+      toggleDifferenceBtn.classList.contains('toggledOn')
+        ? (label.style.display = 'block')
+        : (label.style.display = 'none');
+    });
     console.log(sortedWRs);
   };
 
@@ -276,6 +312,13 @@ export const initWrHistory = (data, filterRuns) => {
         `var(--${btn.dataset.category}-color)`
       );
     }
+  });
+
+  const toggleDifferenceBtn = document.getElementById('toggle-difference-btn');
+  toggleDifferenceBtn.addEventListener('click', () => {
+    toggleDifferenceBtn.classList.toggle('toggledOn');
+
+    updateUI();
   });
 
   const filterBars = document.querySelectorAll('.filter-bar[data-group]');
