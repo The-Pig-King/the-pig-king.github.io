@@ -8,8 +8,6 @@ export const initDatabase = (
   srKey,
   srTitle
 ) => {
-  const srKeyCapitalized = srKey.charAt(0).toUpperCase() + srKey.slice(1);
-
   const groupTags = (tags = []) => {
     const grouped = new Map();
 

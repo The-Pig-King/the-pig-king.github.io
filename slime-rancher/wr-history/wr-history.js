@@ -38,9 +38,9 @@ const renderRunsCount = (runsCount) => {
 const tableContent = document.getElementById('table-content');
 
 const renderRuns = (runs) => {
-  runs.forEach((run) => {
-    console.log(run);
+  tableContent.innerHTML = '';
 
+  runs.forEach((run) => {
     const tr = document.createElement('tr');
 
     const player = run.players_full?.[0];
@@ -163,8 +163,32 @@ const renderRuns = (runs) => {
 
 const data = await fetch('data.json').then((r) => r.json());
 
+const filterRuns = () => {
+  return data.filter((run) => {
+    let matchCategory = false;
+    if (state.category.filters.has('any')) {
+      return (
+        run.category === 'any-glitchless' || run.category === 'any-glitched'
+      );
+    } else if (state.category.filters.has('all-gordos')) {
+      return run.category === 'all-gordos';
+    } else if (state.category.filters.has('slimepedia')) {
+      return (
+        run.category === 'slimepedia-glitchless' ||
+        run.category === 'slimepedia-glitched'
+      );
+    } else if (state.category.filters.has('pink-gordo')) {
+      return run.category === 'pink-gordo';
+    } else if (state.category.filters.has('vacpack')) {
+      return run.category === 'vacpack';
+    }
+
+    return matchCategory;
+  });
+};
+
 const updateUI = () => {
-  const filteredRuns = data;
+  const filteredRuns = filterRuns();
   const sortedRuns = filteredRuns.sort((a, b) => {
     return a.date < b.date;
   });
@@ -172,9 +196,30 @@ const updateUI = () => {
 
   renderRunsCount(runsCount);
   renderRuns(sortedRuns);
+  console.log(sortedRuns);
+  console.log(state);
 };
 
 const filterBtns = document.querySelectorAll('.filter-btn');
+filterBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const group = btn.closest('.filter-bar').dataset.group;
+    const value = btn.dataset.category;
+    const { filters } = state[group];
+
+    btn
+      .closest('.filter-bar')
+      .querySelectorAll('.filter-btn')
+      .forEach((b) => {
+        b.classList.remove('toggledOn');
+        filters.delete(b.dataset.category);
+      });
+    btn.classList.add('toggledOn');
+    filters.add(value);
+
+    updateUI();
+  });
+});
 
 // Apply filter button colors
 filterBtns.forEach((btn) => {
@@ -187,5 +232,16 @@ filterBtns.forEach((btn) => {
     );
   }
 });
+
+const filterBars = document.querySelectorAll('.filter-bar[data-group]');
+
+const state = {};
+filterBars.forEach(({ dataset: { group } }) => {
+  state[group] = {
+    filters: new Set(),
+  };
+});
+
+state['category'].filters.add('any');
 
 updateUI();
