@@ -108,7 +108,7 @@ export const initWrHistory = (data, filterRuns) => {
 
       const defaultVideoIcon = `
         <svg 
-        class='video-icon default'
+        class='table-icon default'
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 640 640">
             <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License
@@ -123,7 +123,7 @@ export const initWrHistory = (data, filterRuns) => {
 
       const youtubeIcon = `
         <svg 
-        class='video-icon youtube'
+        class='table-icon youtube'
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 640 640">
             <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
@@ -139,7 +139,7 @@ export const initWrHistory = (data, filterRuns) => {
 
       const twitchIcon = `
         <svg 
-        class='video-icon twitch'
+        class='table-icon twitch'
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 640 640">
             <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
@@ -152,33 +152,47 @@ export const initWrHistory = (data, filterRuns) => {
         </svg>`;
 
       const bilibiliIcon = `
-    <svg 
-    class='video-icon bilibili'
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 640 640">
-    <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
-    - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-    <title>Bilibili</title>
-    <path d="M552.6 168.1C569.3 186.2 577 207.8 575.9 233.8L575.9 436.2C575.5 462.6 566.7 
-    484.3 549.4 501.3C532.2 518.3 510.3 527.2 483.9 528L156 528C129.6 527.2 107.8 518.2 90.7 
-    500.8C73.6 483.4 64.7 460.5 64 432.2L64 233.8C64.8 207.8 73.7 186.2 90.7 168.1C107.8 151.8 
-    129.5 142.8 156 142L185.4 142L160 116.2C154.3 110.5 151.4 103.2 151.4 94.4C151.4 85.6 
-    154.3 78.3 160 72.6C165.7 66.9 173 64 181.9 64C190.8 64 198 66.9 203.8 72.6L277.1 
-    142L365.1 142L439.6 72.6C445.7 66.9 453.2 64 462 64C470.8 64 478.1 66.9 483.9 72.6C489.6 
-    78.3 492.5 85.6 492.5 94.4C492.5 103.2 489.6 110.5 483.9 116.2L458.6 142L487.9 142C514.3 
-    142.8 535.9 151.8 552.6 168.1zM513.8 237.8C513.4 228.2 510.1 220.4 503.1 214.3C497.9 208.2 
-    489.1 204.9 480.4 204.5L160 204.5C150.4 204.9 142.6 208.2 136.4 214.3C130.3 220.4 127 
-    228.2 126.6 237.8L126.6 432.2C126.6 441.4 129.9 449.2 136.4 455.7C142.9 462.2 150.8 465.5 
-    160 465.5L480.4 465.5C489.6 465.5 497.4 462.2 503.7 455.7C510 449.2 513.4 441.4 513.8 
-    432.2L513.8 237.8zM249.5 280.5C255.8 286.8 259.2 294.6 259.6 303.7L259.6 337C259.2 346.2 
-    255.9 353.9 249.8 360.2C243.6 366.5 235.8 369.7 226.2 369.7C216.6 369.7 208.7 366.5 202.6 
-    360.2C196.5 353.9 193.2 346.2 192.8 337L192.8 303.7C193.2 294.6 196.6 286.8 202.9 
-    280.5C209.2 274.2 216.1 270.9 226.2 270.5C235.4 270.9 243.2 274.2 249.5 280.5zM441 
-    280.5C447.3 286.8 450.7 294.6 451.1 303.7L451.1 337C450.7 346.2 447.4 353.9 441.3 
-    360.2C435.2 366.5 427.3 369.7 417.7 369.7C408.1 369.7 400.3 366.5 394.1 360.2C387.1 
-    353.9 384.7 346.2 384.4 337L384.4 303.7C384.7 294.6 388.1 286.8 394.4 280.5C400.7 274.2 
-    408.5 270.9 417.7 270.5C426.9 270.9 434.7 274.2 441 280.5z"/>
-    </svg>`;
+        <svg 
+        class='table-icon bilibili'
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 640">
+          <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
+          - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+          <title>Bilibili</title>
+          <path d="M552.6 168.1C569.3 186.2 577 207.8 575.9 233.8L575.9 436.2C575.5 462.6 566.7 
+          484.3 549.4 501.3C532.2 518.3 510.3 527.2 483.9 528L156 528C129.6 527.2 107.8 518.2 90.7 
+          500.8C73.6 483.4 64.7 460.5 64 432.2L64 233.8C64.8 207.8 73.7 186.2 90.7 168.1C107.8 151.8 
+          129.5 142.8 156 142L185.4 142L160 116.2C154.3 110.5 151.4 103.2 151.4 94.4C151.4 85.6 
+          154.3 78.3 160 72.6C165.7 66.9 173 64 181.9 64C190.8 64 198 66.9 203.8 72.6L277.1 
+          142L365.1 142L439.6 72.6C445.7 66.9 453.2 64 462 64C470.8 64 478.1 66.9 483.9 72.6C489.6 
+          78.3 492.5 85.6 492.5 94.4C492.5 103.2 489.6 110.5 483.9 116.2L458.6 142L487.9 142C514.3 
+          142.8 535.9 151.8 552.6 168.1zM513.8 237.8C513.4 228.2 510.1 220.4 503.1 214.3C497.9 208.2 
+          489.1 204.9 480.4 204.5L160 204.5C150.4 204.9 142.6 208.2 136.4 214.3C130.3 220.4 127 
+          228.2 126.6 237.8L126.6 432.2C126.6 441.4 129.9 449.2 136.4 455.7C142.9 462.2 150.8 465.5 
+          160 465.5L480.4 465.5C489.6 465.5 497.4 462.2 503.7 455.7C510 449.2 513.4 441.4 513.8 
+          432.2L513.8 237.8zM249.5 280.5C255.8 286.8 259.2 294.6 259.6 303.7L259.6 337C259.2 346.2 
+          255.9 353.9 249.8 360.2C243.6 366.5 235.8 369.7 226.2 369.7C216.6 369.7 208.7 366.5 202.6 
+          360.2C196.5 353.9 193.2 346.2 192.8 337L192.8 303.7C193.2 294.6 196.6 286.8 202.9 
+          280.5C209.2 274.2 216.1 270.9 226.2 270.5C235.4 270.9 243.2 274.2 249.5 280.5zM441 
+          280.5C447.3 286.8 450.7 294.6 451.1 303.7L451.1 337C450.7 346.2 447.4 353.9 441.3 
+          360.2C435.2 366.5 427.3 369.7 417.7 369.7C408.1 369.7 400.3 366.5 394.1 360.2C387.1 
+          353.9 384.7 346.2 384.4 337L384.4 303.7C384.7 294.6 388.1 286.8 394.4 280.5C400.7 274.2 
+          408.5 270.9 417.7 270.5C426.9 270.9 434.7 274.2 441 280.5z"/>
+        </svg>`;
+
+      const commentIcon = `
+        <svg 
+        class="table-icon"
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 640 640">
+          <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License -
+          https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+          <path d="M64 416L64 192C64 139 107 96 160 96L480 96C533 96 576 139 576 192L576 
+          416C576 469 533 512 480 512L360 512C354.8 512 349.8 513.7 345.6 516.8L230.4 
+          603.2C226.2 606.3 221.2 608 216 608C202.7 608 192 597.3 192 584L192 512L160 
+          512C107 512 64 469 64 416z"/>
+        </svg>
+    `;
 
       // Choose icon
       const videoHostname = videoLink
@@ -235,6 +249,7 @@ export const initWrHistory = (data, filterRuns) => {
           ${playerNameHtml}
         </td>
         <td>${run.version}</td>
+        <td>${run?.comment ? commentIcon : ''}</td>
       `;
 
       tableContent.appendChild(tr);
@@ -269,21 +284,79 @@ export const initWrHistory = (data, filterRuns) => {
     });
   };
 
+  const sortWrs = (runs) => {
+    const direction = sortDirection.dataset.mode;
+
+    switch (sortSelect.value) {
+      case 'date':
+        return direction === 'ascending'
+          ? runs.sort((a, b) => {
+              return a.date > b.date;
+            })
+          : runs.sort((a, b) => {
+              return a.date < b.date;
+            });
+      case 'version':
+        return direction === 'ascending'
+          ? runs.sort((a, b) => {
+              return a.version > b.version;
+            })
+          : runs.sort((a, b) => {
+              return a.version < b.version;
+            });
+      case 'runner':
+        return direction === 'ascending'
+          ? runs.sort((a, b) => {
+              const nameA = (
+                a.players_full?.[0]?.names?.international ?? ''
+              ).toLowerCase();
+              const nameB = (
+                b.players_full?.[0]?.names?.international ?? ''
+              ).toLowerCase();
+              if (nameA < nameB) return -1;
+              if (nameA > nameB) return 1;
+              return 0;
+            })
+          : runs.sort((a, b) => {
+              const nameA = (
+                a.players_full?.[0]?.names?.international ?? ''
+              ).toLowerCase();
+              const nameB = (
+                b.players_full?.[0]?.names?.international ?? ''
+              ).toLowerCase();
+              if (nameA > nameB) return -1;
+              if (nameA < nameB) return 1;
+              return 0;
+            });
+    }
+  };
+
   const updateUI = () => {
     const filteredRuns = filterRuns(state);
     const filteredWrs = filterWrs(filteredRuns);
-    const sortedWRs = filteredWrs.sort((a, b) => {
-      return a.date < b.date;
-    });
+    const sortedWRs = sortWrs(filteredWrs);
+
     const runsCount = sortedWRs.length;
 
     renderRunsCount(runsCount);
     renderRuns(sortedWRs);
 
+    // Sort state tracking for controlling difference label css
+    tableContent.classList.toggle(
+      'sorted-by-date',
+      sortSelect.value === 'date'
+    );
+    tableContent.classList.toggle(
+      'date-ascending',
+      sortSelect.value === 'date' && sortDirection.dataset.mode === 'ascending'
+    );
+
+    // Only show difference labels when the toggle is on && sorting by date
     document.querySelectorAll('.difference-label').forEach((label) => {
-      toggleDifferenceBtn.classList.contains('toggledOn')
-        ? (label.style.display = 'block')
-        : (label.style.display = 'none');
+      const shouldShow =
+        toggleDifferenceBtn.classList.contains('toggledOn') &&
+        sortSelect.value === 'date';
+      label.style.display = shouldShow ? 'block' : 'none';
     });
     console.log(sortedWRs);
   };
@@ -324,6 +397,34 @@ export const initWrHistory = (data, filterRuns) => {
     });
   });
 
+  const toggleDifferenceBtn = document.getElementById('toggle-difference-btn');
+  toggleDifferenceBtn.addEventListener('click', () => {
+    toggleDifferenceBtn.classList.toggle('toggledOn');
+
+    updateUI();
+  });
+
+  const sortSelect = document.getElementById('sort-select');
+  sortSelect.addEventListener('change', () => {
+    updateUI();
+  });
+
+  const sortDirection = document.getElementById('sort-direction-btn');
+  sortDirection.addEventListener('click', () => {
+    const mode = sortDirection.dataset.mode;
+    if (mode === 'ascending') {
+      sortDirection.innerHTML =
+        '<svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M278.6 438.6L182.6 534.6C170.1 547.1 149.8 547.1 137.3 534.6L41.3 438.6C28.8 426.1 28.8 405.8 41.3 393.3C53.8 380.8 74.1 380.8 86.6 393.3L128 434.7L128 128C128 110.3 142.3 96 160 96C177.7 96 192 110.3 192 128L192 434.7L233.4 393.3C245.9 380.8 266.2 380.8 278.7 393.3C291.2 405.8 291.2 426.1 278.7 438.6zM352 544C334.3 544 320 529.7 320 512C320 494.3 334.3 480 352 480L384 480C401.7 480 416 494.3 416 512C416 529.7 401.7 544 384 544L352 544zM352 416C334.3 416 320 401.7 320 384C320 366.3 334.3 352 352 352L448 352C465.7 352 480 366.3 480 384C480 401.7 465.7 416 448 416L352 416zM352 288C334.3 288 320 273.7 320 256C320 238.3 334.3 224 352 224L512 224C529.7 224 544 238.3 544 256C544 273.7 529.7 288 512 288L352 288zM352 160C334.3 160 320 145.7 320 128C320 110.3 334.3 96 352 96L576 96C593.7 96 608 110.3 608 128C608 145.7 593.7 160 576 160L352 160z"/></svg>';
+      sortDirection.dataset.mode = 'descending';
+    } else {
+      sortDirection.innerHTML =
+        '<svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M352 96C334.3 96 320 110.3 320 128C320 145.7 334.3 160 352 160L384 160C401.7 160 416 145.7 416 128C416 110.3 401.7 96 384 96L352 96zM352 224C334.3 224 320 238.3 320 256C320 273.7 334.3 288 352 288L448 288C465.7 288 480 273.7 480 256C480 238.3 465.7 224 448 224L352 224zM352 352C334.3 352 320 366.3 320 384C320 401.7 334.3 416 352 416L512 416C529.7 416 544 401.7 544 384C544 366.3 529.7 352 512 352L352 352zM352 480C334.3 480 320 494.3 320 512C320 529.7 334.3 544 352 544L576 544C593.7 544 608 529.7 608 512C608 494.3 593.7 480 576 480L352 480zM182.6 105.4C170.1 92.9 149.8 92.9 137.3 105.4L41.3 201.4C28.8 213.9 28.8 234.2 41.3 246.7C53.8 259.2 74.1 259.2 86.6 246.7L128 205.3L128 512C128 529.7 142.3 544 160 544C177.7 544 192 529.7 192 512L192 205.3L233.4 246.7C245.9 259.2 266.2 259.2 278.7 246.7C291.2 234.2 291.2 213.9 278.7 201.4L182.7 105.4z"/></svg>';
+      sortDirection.dataset.mode = 'ascending';
+    }
+
+    updateUI();
+  });
+
   // Apply filter button colors
   filterBtns.forEach((btn) => {
     if (btn.dataset.category === 'style') {
@@ -334,13 +435,6 @@ export const initWrHistory = (data, filterRuns) => {
         `var(--${btn.dataset.category}-color)`
       );
     }
-  });
-
-  const toggleDifferenceBtn = document.getElementById('toggle-difference-btn');
-  toggleDifferenceBtn.addEventListener('click', () => {
-    toggleDifferenceBtn.classList.toggle('toggledOn');
-
-    updateUI();
   });
 
   const filterBars = document.querySelectorAll('.filter-bar[data-group]');

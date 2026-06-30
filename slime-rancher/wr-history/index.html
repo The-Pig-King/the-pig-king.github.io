@@ -60,6 +60,8 @@
               <label for="sort-select">Sort by</label>
               <select class="btn" id="sort-select">
                 <option value="date">Date</option>
+                <option value="version">Version</option>
+                <option value="runner">Runner</option>
               </select>
               <button
                 class="btn sort-direction-btn"
@@ -193,13 +195,13 @@
         <table class="wr-history-table">
           <thead>
             <tr>
-              <th>#</th>
+              <th>WR #</th>
               <th>Date</th>
               <th>Video</th>
               <th>Time</th>
               <th>Runner</th>
               <th>Version</th>
-              <th>Notes</th>
+              <th>Comment</th>
             </tr>
           </thead>
           <tbody id="table-content"></tbody>

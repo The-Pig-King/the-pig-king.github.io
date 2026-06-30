@@ -901,7 +901,7 @@ summary:focus-visible,
   white-space: nowrap;
 }
 
-.video-icon {
+.table-icon {
   width: 2rem;
   fill: white;
 }
@@ -928,6 +928,18 @@ summary:focus-visible,
   width: fit-content;
   background-color: var(--frame-color);
   font-size: 1em;
+}
+
+.date-ascending .difference-label {
+  top: -1.6em;
+  margin-bottom: 0;
+  margin-top: -1em;
+}
+
+.date-ascending tr:first-child .difference-label {
+  top: -1.6em;
+  margin-bottom: 0;
+  margin-top: auto;
 }
 
 .difference-worst-color {
