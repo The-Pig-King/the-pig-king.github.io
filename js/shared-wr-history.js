@@ -182,7 +182,7 @@ export const initWrHistory = (data, filterRuns) => {
 
       const commentIcon = `
         <svg 
-        class="table-icon"
+        class="table-icon comment-icon"
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 640 640">
           <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License -
@@ -249,7 +249,10 @@ export const initWrHistory = (data, filterRuns) => {
           ${playerNameHtml}
         </td>
         <td>${run.version}</td>
-        <td>${run?.comment ? commentIcon : ''}</td>
+        <td class="comment-td">
+          ${run?.comment ? commentIcon : ''}
+          <div class="comment-container">${run?.comment ?? ''}</div>
+        </td>
       `;
 
       tableContent.appendChild(tr);
@@ -423,6 +426,35 @@ export const initWrHistory = (data, filterRuns) => {
     }
 
     updateUI();
+  });
+
+  document.querySelector('tbody').addEventListener('click', (e) => {
+    const icon = e.target.closest('.comment-icon');
+    if (!icon) return;
+
+    const containers = document.querySelectorAll('.comment-container');
+    const container = icon
+      .closest('.comment-td')
+      .querySelector('.comment-container');
+    const isVisible = container.style.display === 'block';
+
+    containers.forEach((c) => {
+      c.style.display = 'none';
+    });
+
+    container.style.display = isVisible ? 'none' : 'block';
+  });
+
+  // Close comment on outside click
+  document.addEventListener('click', (e) => {
+    const isProtected =
+      e.target.closest('.comment-icon') ||
+      e.target.closest('.comment-container');
+    if (isProtected) return;
+
+    document.querySelectorAll('.comment-container').forEach((c) => {
+      c.style.display = 'none';
+    });
   });
 
   // Apply filter button colors
