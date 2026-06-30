@@ -194,36 +194,55 @@ export const initWrHistory = (data, filterRuns) => {
           'b23.tv': bilibiliIcon,
         }[videoHostname] ?? defaultVideoIcon;
 
+      // Set player name color
+      const style = player?.['name-style'];
+      let playerNameHtml = playerName;
+
+      if (style?.style === 'gradient') {
+        playerNameHtml = `
+        <span
+          class="player-gradient"
+          style="background-image: linear-gradient(90deg, ${style['color-from'].light}, ${style['color-to'].light});"
+        >
+          ${playerName}
+        </span>
+      `;
+      } else if (style?.style === 'solid') {
+        playerNameHtml = `
+        <span style="color:${style.color.light}">
+          ${playerName}
+        </span>
+      `;
+      }
+
       tr.innerHTML = `
-      <td>
-        ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
-        ${run.daysDifference != null ? `<br><span class="${run.daysDifferenceColor} difference-label">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
-      </td>
-      <td>${videoLink ? `<a href="${videoLink}">${videoIcon}</a>` : ''}</td>
-      <td>
-        ${formatTime(run.primary_t) || ''}
-        ${run.timeDifference !== '' ? `<br><span class="${run.timeDifferenceColor} difference-label">${formatTimeDifference(run.timeDifference)}</span>` : ''}
-      </td>
-      <td>
-        <img 
+        <td>${run.wrNumber}</td>
+        <td class='date-column'>
+          ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
+          ${run.daysDifference != null ? `<br><span class="${run.daysDifferenceColor} difference-label">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
+        </td>
+        <td>${videoLink ? `<a href="${videoLink}">${videoIcon}</a>` : ''}</td>
+        <td>
+          ${formatTime(run.primary_t) || ''}
+          ${run.timeDifference !== '' ? `<br><span class="${run.timeDifferenceColor} difference-label">${formatTimeDifference(run.timeDifference)}</span>` : ''}
+        </td>
+        <td>
+          <img
             class="country-flag"
-            src="${
-              countryCode
-                ? `https://www.speedrun.com/images/flags/${countryCode}.png`
-                : ''
-            }" 
-                title="${countryName}" 
-                alt="${countryName}">
-        ${playerName}
-      </td>
-      <td>${run.version}</td>
-    `;
+            src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
+            title="${countryName}"
+            alt="${countryName}">
+          ${playerNameHtml}
+        </td>
+        <td>${run.version}</td>
+      `;
 
       tableContent.appendChild(tr);
     });
   };
 
   const filterWrs = (runs) => {
+    // Keep fastest of a single day (speedrun.com only tracks day, not time)
     const fastest = runs.reduce((acc, run) => {
       if (!acc[run.date] || run.primary_t < acc[run.date].primary_t) {
         acc[run.date] = run;
@@ -234,6 +253,7 @@ export const initWrHistory = (data, filterRuns) => {
 
     let bestTime = Infinity;
     let prevDate = null;
+    let wrCount = 1;
     return runs.filter((run) => {
       if (run.primary_t < bestTime) {
         calculateTimeDifference(run, bestTime);
@@ -241,6 +261,8 @@ export const initWrHistory = (data, filterRuns) => {
 
         calculateDaysDifference(run, prevDate);
         prevDate = run.date;
+
+        run.wrNumber = wrCount++;
         return true;
       }
       return false;

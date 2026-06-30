@@ -897,6 +897,10 @@ summary:focus-visible,
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
 }
 
+.date-column {
+  white-space: nowrap;
+}
+
 .video-icon {
   width: 2rem;
   fill: white;
@@ -941,6 +945,13 @@ summary:focus-visible,
 
 .country-flag {
   height: 0.8rem;
+}
+
+.player-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Media Queries */
