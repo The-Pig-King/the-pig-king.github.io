@@ -2,13 +2,79 @@ import { initWrHistory } from '../../js/shared-wr-history.js';
 
 const data = await fetch('data.json').then((r) => r.json());
 
-// Correct some records
+// Correct data
 data.find((e) => {
   return e.id === 'm7q51lwz';
 }).date = '2019-07-19';
 
+data.find((e) => {
+  return e.id === 'z15p4jjy';
+}).date = '2020-06-10';
+
+// Add data
+data.find((e) => {
+  return e.id === 'ywrnn3pm';
+}).details = { sub: 'First sub 12' };
+
+data.find((e) => {
+  return e.id === 'zgvx91dz';
+}).details = { sub: 'First sub 13' };
+
+data.find((e) => {
+  return e.id === 'mexg293z';
+}).details = { sub: 'First sub 14' };
+
+data.find((e) => {
+  return e.id === 'y2q2165y';
+}).details = { sub: 'First sub 15' };
+
+data.find((e) => {
+  return e.id === 'yjkv1dgm';
+}).details = { sub: 'First sub 16' };
+
+data.find((e) => {
+  return e.id === 'znj8787m';
+}).details = { route: 'Desert Hover introduced' };
+
+data.find((e) => {
+  return e.id === 'y91o11nm';
+}).details = { route: 'Honey Gordo Hover introduced' };
+
+data.find((e) => {
+  return e.id === 'y97q76em';
+}).details = { route: 'Modern Route introduced' };
+
+data.find((e) => {
+  return e.id === 'z16r25wm';
+}).details = { sub: 'First sub 25' };
+
+data.find((e) => {
+  return e.id === 'zglx060m';
+}).details = { sub: 'First sub 26' };
+
+data.find((e) => {
+  return e.id === 'mrveewgz';
+}).details = { sub: 'First sub 27' };
+
+data.find((e) => {
+  return e.id === 'y258ql7y';
+}).details = { sub: 'First sub 55' };
+
+data.find((e) => {
+  return e.id === 'mr00p64m';
+}).details = { sub: 'First sub 32' };
+
+data.find((e) => {
+  return e.id === 'zn707w9m';
+}).details = { sub: 'First sub 33' };
+
+data.find((e) => {
+  return e.id === 'y91qvxnm';
+}).details = { sub: 'First sub 34' };
+
 const additionalData = [
   {
+    details: { route: 'Bridge Hover introduced' },
     id: null,
     weblink: null,
     category: 'any-glitchless',
@@ -64,6 +130,7 @@ const additionalData = [
     ],
   },
   {
+    details: { hour: 'World Record for 1.5 hours' },
     id: null,
     weblink: null,
     category: 'any-glitchless',
@@ -119,6 +186,7 @@ const additionalData = [
     ],
   },
   {
+    details: { hour: 'World Record for 2 hours' },
     id: null,
     weblink: null,
     category: 'any-glitchless',
@@ -174,6 +242,7 @@ const additionalData = [
     ],
   },
   {
+    details: { hour: 'World Record for 2.5 hours' },
     id: 'y92dowrz',
     weblink: 'https://www.speedrun.com/slime_rancher/runs/y92dowrz',
     category: 'any-glitchless',
@@ -229,6 +298,7 @@ const additionalData = [
     ],
   },
   {
+    details: { hour: 'World Record for 1.5 hours' },
     id: 'mk9p9xxz',
     weblink: 'https://www.speedrun.com/slime_rancher/runs/mk9p9xxz',
     category: 'any-glitchless',
@@ -284,6 +354,7 @@ const additionalData = [
     ],
   },
   {
+    details: { hour: 'World Record for 15 mins' },
     id: 'zg7l7qvz',
     weblink: 'https://www.speedrun.com/slime_rancher/runs/zg7l7qvz',
     category: 'any-glitchless',
@@ -340,6 +411,7 @@ const additionalData = [
     ],
   },
   {
+    details: { hour: 'World Record for 15 mins' },
     id: null,
     weblink: null,
     category: 'any-glitchless',
@@ -560,6 +632,7 @@ const additionalData = [
     ],
   },
   {
+    details: { hour: 'World Record for 5 hours' },
     id: 'y2373q7m',
     weblink: 'https://www.speedrun.com/slime_rancher/runs/y2373q7m',
     category: 'any-glitchless',
@@ -726,6 +799,7 @@ const additionalData = [
     ],
   },
   {
+    details: { hour: 'World Record for 30 mins' },
     id: 'y6v64jqm',
     weblink: 'https://www.speedrun.com/slime_rancher/runs/y6v64jqm',
     category: 'all-gordos',

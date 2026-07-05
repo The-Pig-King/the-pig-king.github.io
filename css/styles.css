@@ -995,6 +995,26 @@ summary:focus-visible,
   font-size: 0.8rem;
 }
 
+.currentWr {
+  fill: var(--wr-history-color);
+  color: var(--wr-history-color);
+}
+
+.sub {
+  fill: cornflowerblue;
+  color: cornflowerblue;
+}
+
+.route {
+  fill: cyan;
+  color: cyan;
+}
+
+.hour {
+  fill: grey;
+  color: grey;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {

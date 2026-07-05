@@ -1,31 +1,24 @@
 export const initWrHistory = (data, additionalData, filterRuns) => {
   const formatTime = (seconds) => {
     if (seconds == null || isNaN(seconds)) return '';
-
     const ms = seconds % 1;
     const whole = Math.floor(seconds);
-
     const hours = Math.floor(whole / 3600);
     const minutes = Math.floor((whole % 3600) / 60);
     const secs = whole % 60;
 
     // < 1 second → 0.xxx
     if (whole === 0) {
-      return `0.${Math.floor(ms * 1000)
-        .toString()
-        .padStart(3, '0')}`;
+      return `0.${ms.toFixed(3).split('.')[1]}`;
     }
-
     // < 1 minute → x.xxx
     if (hours === 0 && minutes === 0) {
-      return (secs + ms).toFixed(3).replace(/0+$/, '').replace(/\.$/, '');
+      return (secs + ms).toFixed(3);
     }
-
     // < 1 hour → m:ss.xxx
     if (hours === 0) {
       return `${minutes}:${(secs + ms).toFixed(3).padStart(6, '0')}`;
     }
-
     // ≥ 1 hour → h:mm:ss.xxx
     return `${hours}:${String(minutes).padStart(2, '0')}:${(secs + ms)
       .toFixed(3)
@@ -96,6 +89,15 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
 
   const renderRuns = (runs) => {
     tableContent.innerHTML = '';
+
+    // Add data
+    const fastestRun = runs.reduce((a, b) =>
+      a.primary_t < b.primary_t ? a : b
+    );
+    fastestRun.details = {
+      currentWr: 'Current World Record',
+      ...fastestRun.details,
+    };
 
     runs.forEach((run) => {
       const tr = document.createElement('tr');
@@ -195,19 +197,71 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
         </svg>
     `;
 
+      const currentWrIcon = `
+      <svg 
+      class="table-icon comment-icon currentWr"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 640 640">
+        <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
+        https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+        <path d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 
+        478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 
+        368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 
+        512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 
+        576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 
+        438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 
+        72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 
+        117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 
+        158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 
+        254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/>
+      </svg>
+    `;
+
+      const subIcon = `
+      <svg 
+      class="table-icon comment-icon sub"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M264.5 64C251.2 64 240.5 74.7 240.5 88C240.5 101.3 251.2 112 264.5 112L296.5 112L296.5 137.3C188.5 149.2 104.5 240.8 104.5 352C104.5 471.3 201.2 568 320.5 568C439.8 568 536.5 471.3 536.5 352C536.5 312.2 525.7 274.9 506.9 242.8L535.1 214.6C547.6 202.1 547.6 181.8 535.1 169.3C522.6 156.8 502.3 156.8 489.8 169.3L466.4 192.7C433.5 162.5 391.2 142.4 344.4 137.2L344.4 111.9L376.4 111.9C389.7 111.9 400.4 101.2 400.4 87.9C400.4 74.6 389.7 63.9 376.4 63.9L264.4 63.9zM344.5 248L344.5 352C344.5 365.3 333.8 376 320.5 376C307.2 376 296.5 365.3 296.5 352L296.5 248C296.5 234.7 307.2 224 320.5 224C333.8 224 344.5 234.7 344.5 248z"/></svg>`;
+
+      const routeIcon = `<svg 
+      class="table-icon comment-icon route"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M576 160C576 210.2 516.9 285.1 491.4 315C487.6 319.4 482 321.1 476.9 320L384 320C366.3 320 352 334.3 352 352C352 369.7 366.3 384 384 384L480 384C533 384 576 427 576 480C576 533 533 576 480 576L203.6 576C212.3 566.1 222.9 553.4 233.6 539.2C239.9 530.8 246.4 521.6 252.6 512L480 512C497.7 512 512 497.7 512 480C512 462.3 497.7 448 480 448L384 448C331 448 288 405 288 352C288 299 331 256 384 256L423.8 256C402.8 224.5 384 188.3 384 160C384 107 427 64 480 64C533 64 576 107 576 160zM181.1 553.1C177.3 557.4 173.9 561.2 171 564.4L169.2 566.4L169 566.2C163 570.8 154.4 570.2 149 564.4C123.8 537 64 466.5 64 416C64 363 107 320 160 320C213 320 256 363 256 416C256 446 234.9 483 212.5 513.9C201.8 528.6 190.8 541.9 181.7 552.4L181.1 553.1zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM480 192C497.7 192 512 177.7 512 160C512 142.3 497.7 128 480 128C462.3 128 448 142.3 448 160C448 177.7 462.3 192 480 192z"/></svg>`;
+
+      const hourIcon = `
+      <svg 
+      class="table-icon comment-icon hour"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 640 640">
+        <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
+        https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+        <path d="M128 96C128 78.3 142.3 64 160 64L480 64C497.7 64 512 78.3 512 96C512 113.7 
+        497.7 128 480 128L480 139C480 181.4 463.1 222.1 433.1 252.1L365.2 320L433.1 387.9C463.1 
+        417.9 480 458.6 480 501L480 512C497.7 512 512 526.3 512 544C512 561.7 497.7 576 480 
+        576L160 576C142.3 576 128 561.7 128 544C128 526.3 142.3 512 160 512L160 501C160 458.6 
+        176.9 417.9 206.9 387.9L274.8 320L206.9 252.1C176.9 222.1 160 181.4 160 139L160 
+        128C142.3 128 128 113.7 128 96zM224 128L224 139C224 164.5 234.1 188.9 252.1 206.9L320 
+        274.8L387.9 206.9C405.9 188.9 416 164.5 416 139L416 128L224 128zM224 512L416 512L416 
+        501C416 475.5 405.9 451.1 387.9 433.1L320 365.2L252.1 433.1C234.1 451.1 224 475.5 224 
+        501L224 512z"/>
+      </svg>`;
+
+      const icons = {
+        'youtube.com': youtubeIcon,
+        'youtu.be': youtubeIcon,
+        'twitch.tv': twitchIcon,
+        'bilibili.com': bilibiliIcon,
+        'b23.tv': bilibiliIcon,
+        currentWr: currentWrIcon,
+        sub: subIcon,
+        route: routeIcon,
+        hour: hourIcon,
+      };
+
       // Choose icon
       const videoHostname = videoLink
         ? new URL(videoLink).hostname.replace('www.', '')
         : '';
-
-      const videoIcon =
-        {
-          'youtube.com': youtubeIcon,
-          'youtu.be': youtubeIcon,
-          'twitch.tv': twitchIcon,
-          'bilibili.com': bilibiliIcon,
-          'b23.tv': bilibiliIcon,
-        }[videoHostname] ?? defaultVideoIcon;
 
       // Set player name color
       const style = player?.['name-style'];
@@ -236,7 +290,7 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
           ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
           ${run.daysDifference != null ? `<br><span class="${run.daysDifferenceColor} difference-label">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
         </td>
-        <td>${videoLink ? `<a href="${videoLink}">${videoIcon}</a>` : ''}</td>
+        <td>${videoLink ? `<a href="${videoLink}">${icons[videoHostname]}</a>` : ''}</td>
         <td>
           ${formatTime(run.primary_t) || ''}
           ${run.timeDifference !== '' ? `<br><span class="${run.timeDifferenceColor} difference-label">${formatTimeDifference(run.timeDifference)}</span>` : ''}
@@ -254,7 +308,21 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
           ${run?.comment ? commentIcon : ''}
           <div class="comment-container">${run?.comment ?? ''}</div>
         </td>
-      `;
+        <td class="comment-td">
+        ${
+          run?.details
+            ? Object.entries(run.details)
+                .map(
+                  ([key, value]) => `
+                  <span data-key="${key}">${icons[key] ?? ''}</span>
+                  <div class="comment-container ${key}">${value}</div>
+                `
+                )
+                .join('')
+            : ''
+        }
+        </td>
+        `;
 
       tableContent.appendChild(tr);
     });
@@ -500,16 +568,17 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
     const icon = e.target.closest('.comment-icon');
     if (!icon) return;
 
+    const keyEl = e.target.closest('[data-key]');
+    const key = keyEl?.dataset.key;
+
+    const selector = key ? `.comment-container.${key}` : '.comment-container';
+
     const containers = document.querySelectorAll('.comment-container');
-    const container = icon
-      .closest('.comment-td')
-      .querySelector('.comment-container');
+    const container = icon.closest('.comment-td').querySelector(selector);
+    if (!container) return;
+
     const isVisible = container.style.display === 'block';
-
-    containers.forEach((c) => {
-      c.style.display = 'none';
-    });
-
+    containers.forEach((c) => (c.style.display = 'none'));
     container.style.display = isVisible ? 'none' : 'block';
   });
 
