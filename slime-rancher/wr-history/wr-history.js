@@ -2,8 +2,954 @@ import { initWrHistory } from '../../js/shared-wr-history.js';
 
 const data = await fetch('data.json').then((r) => r.json());
 
-const filterRuns = (state) => {
-  return data.filter((run) => {
+// Correct some records
+data.find((e) => {
+  return e.id === 'm7q51lwz';
+}).date = '2019-07-19';
+
+const additionalData = [
+  {
+    id: null,
+    weblink: null,
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2020-07-27',
+    primary_t: 800.0,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.4.1',
+    players_full: [
+      {
+        id: 'pj01dwmx',
+        names: {
+          international: 'ThePigKing',
+          japanese: null,
+        },
+        pronouns: 'He/Him',
+        weblink: 'https://www.speedrun.com/users/ThePigKing',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#A259C5',
+            dark: '#C279E5',
+          },
+          'color-to': {
+            light: '#249BCE',
+            dark: '#44BBEE',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'gb',
+            names: {
+              international: 'United Kingdom',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2020-06-10',
+    primary_t: 814.95,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.4.1',
+    players_full: [
+      {
+        id: 'pj01dwmx',
+        names: {
+          international: 'ThePigKing',
+          japanese: null,
+        },
+        pronouns: 'He/Him',
+        weblink: 'https://www.speedrun.com/users/ThePigKing',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#A259C5',
+            dark: '#C279E5',
+          },
+          'color-to': {
+            light: '#249BCE',
+            dark: '#44BBEE',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'gb',
+            names: {
+              international: 'United Kingdom',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2019-07-19',
+    primary_t: 855.35,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.4.0',
+    players_full: [
+      {
+        id: 'pj01dwmx',
+        names: {
+          international: 'ThePigKing',
+          japanese: null,
+        },
+        pronouns: 'He/Him',
+        weblink: 'https://www.speedrun.com/users/ThePigKing',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#A259C5',
+            dark: '#C279E5',
+          },
+          'color-to': {
+            light: '#249BCE',
+            dark: '#44BBEE',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'gb',
+            names: {
+              international: 'United Kingdom',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 'y92dowrz',
+    weblink: 'https://www.speedrun.com/slime_rancher/runs/y92dowrz',
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: 'https://www.youtube.com/watch?v=T5mV0ZPQPSE',
+        },
+      ],
+    },
+    comment: 'Happy with this run :)',
+    status: 'verified',
+    date: '2019-01-21',
+    primary_t: 887.61,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.3.2',
+    players_full: [
+      {
+        id: 'pj01dwmx',
+        names: {
+          international: 'ThePigKing',
+          japanese: null,
+        },
+        pronouns: 'He/Him',
+        weblink: 'https://www.speedrun.com/users/ThePigKing',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#A259C5',
+            dark: '#C279E5',
+          },
+          'color-to': {
+            light: '#249BCE',
+            dark: '#44BBEE',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'gb',
+            names: {
+              international: 'United Kingdom',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 'mk9p9xxz',
+    weblink: 'https://www.speedrun.com/slime_rancher/runs/mk9p9xxz',
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: 'https://www.youtube.com/watch?v=xWzpy7fZcA8',
+        },
+      ],
+    },
+    comment: 'very good :D',
+    status: 'verified',
+    date: '2019-01-08',
+    primary_t: 910.17,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.3.2',
+    players_full: [
+      {
+        id: 'pj01dwmx',
+        names: {
+          international: 'ThePigKing',
+          japanese: null,
+        },
+        pronouns: 'He/Him',
+        weblink: 'https://www.speedrun.com/users/ThePigKing',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#A259C5',
+            dark: '#C279E5',
+          },
+          'color-to': {
+            light: '#249BCE',
+            dark: '#44BBEE',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'gb',
+            names: {
+              international: 'United Kingdom',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 'zg7l7qvz',
+    weblink: 'https://www.speedrun.com/slime_rancher/runs/zg7l7qvz',
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: 'https://www.youtube.com/watch?v=x2_1sQkybt0',
+        },
+      ],
+    },
+    comment:
+      "I've already beaten this but submitting for the sake of accurate PB history\r\n(and for the sake of accurate PB history I'll mention that there was a 15:17 too between this and my previous PB)",
+    status: 'verified',
+    date: '2019-01-08',
+    primary_t: 911.32,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.3.2',
+    players_full: [
+      {
+        id: 'pj0034jw',
+        names: {
+          international: 'Amaranth',
+          japanese: null,
+        },
+        pronouns: 'He/Him',
+        weblink: 'https://www.speedrun.com/users/Amaranth',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#A259C5',
+            dark: '#C279E5',
+          },
+          'color-to': {
+            light: '#A259C5',
+            dark: '#C279E5',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'it',
+            names: {
+              international: 'Italy',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2019-01-08',
+    primary_t: 919.0,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.3.2',
+    players_full: [
+      {
+        id: 'pj0034jw',
+        names: {
+          international: 'Amaranth',
+          japanese: null,
+        },
+        pronouns: 'He/Him',
+        weblink: 'https://www.speedrun.com/users/Amaranth',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#A259C5',
+            dark: '#C279E5',
+          },
+          'color-to': {
+            light: '#A259C5',
+            dark: '#C279E5',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'it',
+            names: {
+              international: 'Italy',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2018-04-04',
+    primary_t: 963.0,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.2.1',
+    players_full: [
+      {
+        id: '98rpyqj1',
+        names: {
+          international: 'Supra',
+          japanese: null,
+        },
+        pronouns: 'They/Them',
+        weblink: 'https://www.speedrun.com/users/Supra',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#900090',
+            dark: '#A010A0',
+          },
+          'color-to': {
+            light: '#E762B5',
+            dark: '#F772C5',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'us',
+            names: {
+              international: 'United States',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2018-01-16',
+    primary_t: 1093.0,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.1.2',
+    players_full: [
+      {
+        id: '98rpyqj1',
+        names: {
+          international: 'Supra',
+          japanese: null,
+        },
+        pronouns: 'They/Them',
+        weblink: 'https://www.speedrun.com/users/Supra',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#900090',
+            dark: '#A010A0',
+          },
+          'color-to': {
+            light: '#E762B5',
+            dark: '#F772C5',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'us',
+            names: {
+              international: 'United States',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2018-01-12',
+    primary_t: 1113.0,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.1.2',
+    players_full: [
+      {
+        id: '98rpyqj1',
+        names: {
+          international: 'Supra',
+          japanese: null,
+        },
+        pronouns: 'They/Them',
+        weblink: 'https://www.speedrun.com/users/Supra',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#900090',
+            dark: '#A010A0',
+          },
+          'color-to': {
+            light: '#E762B5',
+            dark: '#F772C5',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'us',
+            names: {
+              international: 'United States',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 'y2373q7m',
+    weblink: 'https://www.speedrun.com/slime_rancher/runs/y2373q7m',
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: 'https://www.youtube.com/watch?v=DYMPnScV0w0',
+        },
+      ],
+    },
+    comment:
+      "I knew this route was better! Hope people will start running it as it's less rng and more fun",
+    status: 'verified',
+    date: '2017-09-03',
+    primary_t: 1196.45,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.0.1',
+    players_full: [
+      {
+        id: 'o86p713j',
+        names: {
+          international: 'tak4n',
+          japanese: null,
+        },
+        pronouns: '',
+        weblink: 'https://www.speedrun.com/users/tak4n',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#4646CE',
+            dark: '#6666EE',
+          },
+          'color-to': {
+            light: '#4646CE',
+            dark: '#6666EE',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'nz',
+            names: {
+              international: 'New Zealand',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2017-08-08',
+    primary_t: 1637.0,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.0.1',
+    players_full: [
+      {
+        id: '5j5w65wj',
+        names: {
+          international: 'ttJogge',
+          japanese: null,
+        },
+        pronouns: '',
+        weblink: 'https://www.speedrun.com/users/ttJogge',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#249BCE',
+            dark: '#44BBEE',
+          },
+          'color-to': {
+            light: '#249BCE',
+            dark: '#44BBEE',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'se',
+            names: {
+              international: 'Sweden',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'any-glitchless',
+    videos: {
+      links: [
+        {
+          uri: 'https://youtu.be/wEx1UdK1mMs',
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2018-03-30',
+    primary_t: 1031.16,
+    platform: null,
+    subcategory: '1.0.1-1.4.4',
+    version: '1.2.0',
+    players_full: [
+      {
+        id: '98rpyqj1',
+        names: {
+          international: 'Supra',
+          japanese: null,
+        },
+        pronouns: 'They/Them',
+        weblink: 'https://www.speedrun.com/users/Supra',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#900090',
+            dark: '#A010A0',
+          },
+          'color-to': {
+            light: '#E762B5',
+            dark: '#F772C5',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'us',
+            names: {
+              international: 'United States',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 'y6v64jqm',
+    weblink: 'https://www.speedrun.com/slime_rancher/runs/y6v64jqm',
+    category: 'all-gordos',
+    videos: {
+      links: [
+        {
+          uri: 'https://youtu.be/AdPsfSra4SA',
+        },
+      ],
+    },
+    comment: null,
+    status: 'verified',
+    date: '2024-03-24',
+    primary_t: 1562.77,
+    platform: null,
+    subcategory: '1.0.1-1.4.4-glitchless',
+    version: '1.4.4',
+    players_full: [
+      {
+        id: 'jnzr3n1j',
+        names: {
+          international: 'Giraffe_',
+          japanese: null,
+        },
+        pronouns: 'He/Him',
+        weblink: 'https://www.speedrun.com/users/Giraffe_',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#DAA520',
+            dark: '#F0C03E',
+          },
+          'color-to': {
+            light: '#DAA520',
+            dark: '#F0C03E',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'us',
+            names: {
+              international: 'United States',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'all-gordos',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '',
+    primary_t: 2560.0,
+    platform: null,
+    subcategory: '1.0.1-1.4.4-glitchless',
+    version: '1.1.2',
+    players_full: [
+      {
+        id: '98rpyqj1',
+        names: {
+          international: 'Supra',
+          japanese: null,
+        },
+        pronouns: 'They/Them',
+        weblink: 'https://www.speedrun.com/users/Supra',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#900090',
+            dark: '#A010A0',
+          },
+          'color-to': {
+            light: '#E762B5',
+            dark: '#F772C5',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'us',
+            names: {
+              international: 'United States',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: null,
+    weblink: null,
+    category: 'all-gordos',
+    videos: {
+      links: [
+        {
+          uri: null,
+        },
+      ],
+    },
+    comment: null,
+    status: 'unverified',
+    date: '2018-01-27',
+    primary_t: 2596.0,
+    platform: null,
+    subcategory: '1.0.1-1.4.4-glitchless',
+    version: '1.1.2',
+    players_full: [
+      {
+        id: '98rpyqj1',
+        names: {
+          international: 'Supra',
+          japanese: null,
+        },
+        pronouns: 'They/Them',
+        weblink: 'https://www.speedrun.com/users/Supra',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#900090',
+            dark: '#A010A0',
+          },
+          'color-to': {
+            light: '#E762B5',
+            dark: '#F772C5',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'us',
+            names: {
+              international: 'United States',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 'yl0pexky',
+    weblink: 'https://www.speedrun.com/slime_rancher/runs/yl0pexky',
+    category: 'slimepedia-glitchless',
+    videos: {
+      links: [
+        {
+          uri: 'https://youtu.be/Lrq1zPrB_xw',
+        },
+      ],
+    },
+    comment:
+      "This is obviously a really long and terrible run with many mistakes, I genuinly feel bad for whatever moderator has to verify this.\r\n\r\nmod note: a lot of the run is missing footage, however accepting in good faith since you've submitted a faster run without the issues so this run is obsolete anyway",
+    status: 'verified',
+    date: '2020-01-12',
+    primary_t: 13958.31,
+    platform: null,
+    subcategory: '1.4.0-1.4.4',
+    version: '1.4.1',
+    players_full: [
+      {
+        id: 'y8dnm3oj',
+        names: {
+          international: 'DSF',
+          japanese: null,
+        },
+        pronouns: null,
+        weblink: 'https://www.speedrun.com/users/DSF',
+        'name-style': {
+          style: 'gradient',
+          'color-from': {
+            light: '#EE2222',
+            dark: '#EE4444',
+          },
+          'color-to': {
+            light: '#EE2222',
+            dark: '#EE4444',
+          },
+        },
+        assets: {
+          icon: {},
+          supporterIcon: null,
+          image: {},
+        },
+        location: {
+          country: {
+            code: 'us',
+            names: {
+              international: 'United States',
+              japanese: null,
+            },
+          },
+        },
+      },
+    ],
+  },
+];
+
+const filterRuns = (state, runs) => {
+  return runs.filter((run) => {
     let matchCategory = false;
     if (state.category.filters.has('any')) {
       matchCategory =
@@ -12,8 +958,9 @@ const filterRuns = (state) => {
       matchCategory = run.category === 'all-gordos';
     } else if (state.category.filters.has('slimepedia')) {
       matchCategory =
-        run.category === 'slimepedia-glitchless' ||
-        run.category === 'slimepedia-glitched';
+        (run.category === 'slimepedia-glitchless' &&
+          run.subcategory === '1.4.0-1.4.4') ||
+        (run.category === 'slimepedia-glitched' && run.subcategory === '1.2.0');
     } else if (state.category.filters.has('pink-gordo')) {
       matchCategory = run.category === 'pink-gordo';
     } else if (state.category.filters.has('vacpack')) {
@@ -59,4 +1006,4 @@ const filterRuns = (state) => {
   });
 };
 
-initWrHistory(data, filterRuns);
+initWrHistory(data, additionalData, filterRuns);

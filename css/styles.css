@@ -898,6 +898,10 @@ summary:focus-visible,
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
 }
 
+.unverified {
+  color: grey;
+}
+
 .date-column {
   white-space: nowrap;
 }

@@ -1,4 +1,4 @@
-export const initWrHistory = (data, filterRuns) => {
+export const initWrHistory = (data, additionalData, filterRuns) => {
   const formatTime = (seconds) => {
     if (seconds == null || isNaN(seconds)) return '';
 
@@ -99,6 +99,7 @@ export const initWrHistory = (data, filterRuns) => {
 
     runs.forEach((run) => {
       const tr = document.createElement('tr');
+      if (run.status === 'unverified') tr.classList.add('unverified');
 
       const player = run.players_full?.[0];
       const playerName = run.players_full?.[0]?.names?.international ?? '';
@@ -270,17 +271,9 @@ export const initWrHistory = (data, filterRuns) => {
     runs = runs.filter((run) => fastest[run.date] === run);
 
     let bestTime = Infinity;
-    let prevDate = null;
-    let wrCount = 1;
     return runs.filter((run) => {
       if (run.primary_t < bestTime) {
-        calculateTimeDifference(run, bestTime);
         bestTime = run.primary_t;
-
-        calculateDaysDifference(run, prevDate);
-        prevDate = run.date;
-
-        run.wrNumber = wrCount++;
         return true;
       }
       return false;
@@ -294,10 +287,10 @@ export const initWrHistory = (data, filterRuns) => {
       case 'date':
         return direction === 'ascending'
           ? runs.sort((a, b) => {
-              return a.date > b.date;
+              return a.primary_t < b.primary_t;
             })
           : runs.sort((a, b) => {
-              return a.date < b.date;
+              return a.primary_t > b.primary_t;
             });
       case 'version':
         return direction === 'ascending'
@@ -334,15 +327,83 @@ export const initWrHistory = (data, filterRuns) => {
     }
   };
 
-  const updateUI = () => {
-    const filteredRuns = filterRuns(state);
-    const filteredWrs = filterWrs(filteredRuns);
-    const sortedWRs = sortWrs(filteredWrs);
+  const addAdditionalData = (runs) => {
+    const verifiedRecords = additionalData.filter((run) => {
+      return run.status === 'verified';
+    });
+    for (let i = 0, j = runs.length; i < verifiedRecords.length; i++, j++) {
+      runs[j] = verifiedRecords[i];
+    }
 
-    const runsCount = sortedWRs.length;
+    // Sort oldest -> newest
+    runs.sort((a, b) => {
+      return a.primary_t < b.primary_t;
+    });
+
+    return runs;
+  };
+
+  const addUnverifiedRecords = (runs) => {
+    const unverifiedRecords = additionalData.filter((run) => {
+      return run.status === 'unverified';
+    });
+    for (let i = 0, j = runs.length; i < unverifiedRecords.length; i++, j++) {
+      runs[j] = unverifiedRecords[i];
+    }
+
+    // Sort oldest -> newest
+    runs.sort((a, b) => {
+      return a.primary_t < b.primary_t;
+    });
+
+    return runs;
+  };
+
+  const addProperties = (runs) => {
+    for (let i = 0; i < runs.length; i++) {
+      runs[i].wrNumber = i + 1;
+    }
+
+    let bestTime = Infinity;
+    let prevDate = null;
+    return runs.filter((run) => {
+      if (run.primary_t < bestTime) {
+        calculateTimeDifference(run, bestTime);
+        bestTime = run.primary_t;
+
+        calculateDaysDifference(run, prevDate);
+        prevDate = run.date;
+
+        return true;
+      }
+      return false;
+    });
+  };
+
+  const updateUI = () => {
+    // Remove some non-records
+    data.splice(data.indexOf(data.find((e) => e.id === 'zgn0wqdy')), 1);
+    data.splice(data.indexOf(data.find((e) => e.id === 'yo485d5m')), 1);
+
+    let worldRecords = filterRuns(state, data);
+    worldRecords = filterWrs(worldRecords);
+    worldRecords = filterRuns(state, addAdditionalData(worldRecords));
+
+    if (
+      document
+        .getElementById('toggle-unverfied-btn')
+        .classList.contains('toggledOn')
+    ) {
+      worldRecords = filterRuns(state, addUnverifiedRecords(worldRecords));
+    }
+
+    worldRecords = addProperties(worldRecords);
+    worldRecords = sortWrs(worldRecords);
+
+    const runsCount = worldRecords.length;
 
     renderRunsCount(runsCount);
-    renderRuns(sortedWRs);
+    renderRuns(worldRecords);
 
     // Sort state tracking for controlling difference label css
     tableContent.classList.toggle(
@@ -361,7 +422,6 @@ export const initWrHistory = (data, filterRuns) => {
         sortSelect.value === 'date';
       label.style.display = shouldShow ? 'block' : 'none';
     });
-    console.log(sortedWRs);
   };
 
   const subcategoryFilterBars = document.querySelectorAll(
@@ -407,6 +467,13 @@ export const initWrHistory = (data, filterRuns) => {
     updateUI();
   });
 
+  const toggleUnverifiedBtn = document.getElementById('toggle-unverfied-btn');
+  toggleUnverifiedBtn.addEventListener('click', () => {
+    toggleUnverifiedBtn.classList.toggle('toggledOn');
+
+    updateUI();
+  });
+
   const sortSelect = document.getElementById('sort-select');
   sortSelect.addEventListener('change', () => {
     updateUI();
@@ -428,6 +495,7 @@ export const initWrHistory = (data, filterRuns) => {
     updateUI();
   });
 
+  // Open comment
   document.querySelector('tbody').addEventListener('click', (e) => {
     const icon = e.target.closest('.comment-icon');
     if (!icon) return;
