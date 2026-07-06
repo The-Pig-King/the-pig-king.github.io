@@ -90,6 +90,10 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
   const renderRuns = (runs) => {
     tableContent.innerHTML = '';
 
+    if (runs.length === 0) {
+      return;
+    }
+
     // Add data
     const fastestRun = runs.reduce((a, b) =>
       a.primary_t < b.primary_t ? a : b
@@ -185,7 +189,7 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
 
       const commentIcon = `
         <svg 
-        class="table-icon comment-icon"
+        class="table-icon detail-icon"
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 640 640">
           <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License -
@@ -199,7 +203,7 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
 
       const currentWrIcon = `
       <svg 
-      class="table-icon comment-icon currentWr"
+      class="table-icon detail-icon currentWr"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 640 640">
         <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
@@ -219,18 +223,18 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
 
       const subIcon = `
       <svg 
-      class="table-icon comment-icon sub"
+      class="table-icon detail-icon sub"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M264.5 64C251.2 64 240.5 74.7 240.5 88C240.5 101.3 251.2 112 264.5 112L296.5 112L296.5 137.3C188.5 149.2 104.5 240.8 104.5 352C104.5 471.3 201.2 568 320.5 568C439.8 568 536.5 471.3 536.5 352C536.5 312.2 525.7 274.9 506.9 242.8L535.1 214.6C547.6 202.1 547.6 181.8 535.1 169.3C522.6 156.8 502.3 156.8 489.8 169.3L466.4 192.7C433.5 162.5 391.2 142.4 344.4 137.2L344.4 111.9L376.4 111.9C389.7 111.9 400.4 101.2 400.4 87.9C400.4 74.6 389.7 63.9 376.4 63.9L264.4 63.9zM344.5 248L344.5 352C344.5 365.3 333.8 376 320.5 376C307.2 376 296.5 365.3 296.5 352L296.5 248C296.5 234.7 307.2 224 320.5 224C333.8 224 344.5 234.7 344.5 248z"/></svg>`;
 
       const routeIcon = `<svg 
-      class="table-icon comment-icon route"
+      class="table-icon detail-icon route"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M576 160C576 210.2 516.9 285.1 491.4 315C487.6 319.4 482 321.1 476.9 320L384 320C366.3 320 352 334.3 352 352C352 369.7 366.3 384 384 384L480 384C533 384 576 427 576 480C576 533 533 576 480 576L203.6 576C212.3 566.1 222.9 553.4 233.6 539.2C239.9 530.8 246.4 521.6 252.6 512L480 512C497.7 512 512 497.7 512 480C512 462.3 497.7 448 480 448L384 448C331 448 288 405 288 352C288 299 331 256 384 256L423.8 256C402.8 224.5 384 188.3 384 160C384 107 427 64 480 64C533 64 576 107 576 160zM181.1 553.1C177.3 557.4 173.9 561.2 171 564.4L169.2 566.4L169 566.2C163 570.8 154.4 570.2 149 564.4C123.8 537 64 466.5 64 416C64 363 107 320 160 320C213 320 256 363 256 416C256 446 234.9 483 212.5 513.9C201.8 528.6 190.8 541.9 181.7 552.4L181.1 553.1zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM480 192C497.7 192 512 177.7 512 160C512 142.3 497.7 128 480 128C462.3 128 448 142.3 448 160C448 177.7 462.3 192 480 192z"/></svg>`;
 
       const hourIcon = `
       <svg 
-      class="table-icon comment-icon hour"
+      class="table-icon detail-icon hour"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 640 640">
         <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
@@ -304,18 +308,18 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
           ${playerNameHtml}
         </td>
         <td>${run.version}</td>
-        <td class="comment-td">
+        <td class="detail-td">
           ${run?.comment ? commentIcon : ''}
-          <div class="comment-container">${run?.comment ?? ''}</div>
+          <div class="detail-container">${run?.comment ?? ''}</div>
         </td>
-        <td class="comment-td">
+        <td class="detail-td">
         ${
           run?.details
             ? Object.entries(run.details)
                 .map(
                   ([key, value]) => `
                   <span data-key="${key}">${icons[key] ?? ''}</span>
-                  <div class="comment-container ${key}">${value}</div>
+                  <div class="detail-container ${key}">${value}</div>
                 `
                 )
                 .join('')
@@ -448,6 +452,28 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
     });
   };
 
+  const updateURL = () => {
+    const parts = [];
+
+    // Build segments of the url
+    Object.entries(state).forEach(([group, { filters }]) => {
+      const allFilters = [...filters];
+      if (allFilters.length === 0) return;
+
+      // Set subcategory
+      if (group === 'subcategory') {
+        const activeCategory = [...state.category.filters][0] ?? '';
+        parts.push(`subcategory=${activeCategory}:${allFilters.join(',')}`);
+      } else {
+        parts.push(`${group}=${allFilters.join(',')}`);
+      }
+    });
+
+    // Join the segments together to complete the url
+    const queryString = parts.length > 0 ? `?${parts.join('&')}` : '';
+    history.replaceState(null, '', `${location.pathname}${queryString}`);
+  };
+
   const updateUI = () => {
     // Remove some non-records
     data.splice(data.indexOf(data.find((e) => e.id === 'zgn0wqdy')), 1);
@@ -490,43 +516,13 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
         sortSelect.value === 'date';
       label.style.display = shouldShow ? 'block' : 'none';
     });
+
+    updateURL();
   };
 
   const subcategoryFilterBars = document.querySelectorAll(
     '.filter-bar[data-group="subcategory"]'
   );
-
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const group = btn.closest('.filter-bar').dataset.group;
-      const value = btn.dataset.category;
-      const { filters } = state[group];
-
-      btn
-        .closest('.filter-bar')
-        .querySelectorAll('.filter-btn')
-        .forEach((b) => {
-          b.classList.remove('toggledOn');
-          filters.delete(b.dataset.category);
-        });
-      btn.classList.add('toggledOn');
-      filters.add(value);
-
-      subcategoryFilterBars.forEach((bar) => {
-        bar.style.display = 'none';
-      });
-
-      subcategoryFilterBars.forEach((bar) => {
-        const subcat = [...state.category.filters][0] + '-subcategory';
-        if (bar.classList.contains(subcat)) {
-          bar.style.display = 'block';
-        }
-      });
-
-      updateUI();
-    });
-  });
 
   const toggleDifferenceBtn = document.getElementById('toggle-difference-btn');
   toggleDifferenceBtn.addEventListener('click', () => {
@@ -563,18 +559,47 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
     updateUI();
   });
 
-  // Open comment
+  const filterBtns = document.querySelectorAll('.filter-btn');
+
+  const resetFiltersBtns = document.querySelectorAll('.reset-filters-btn');
+  resetFiltersBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      // Restore state to default
+      Object.keys(state).forEach((group) => {
+        state[group].filters = new Set(defaultState[group].filters);
+      });
+
+      // Set button toggles
+      filterBtns.forEach((filterBtn) => {
+        const group = filterBtn.closest('.filter-bar').dataset.group;
+        const value = filterBtn.dataset.category;
+        filterBtn.classList.toggle(
+          'toggledOn',
+          state[group].filters.has(value)
+        );
+      });
+
+      subcategoryFilterBars.forEach((bar) => {
+        const subcat = [...state.category.filters][0] + '-subcategory';
+        bar.style.display = bar.classList.contains(subcat) ? 'block' : 'none';
+      });
+
+      updateUI();
+    });
+  });
+
+  // Open detail
   document.querySelector('tbody').addEventListener('click', (e) => {
-    const icon = e.target.closest('.comment-icon');
+    const icon = e.target.closest('.detail-icon');
     if (!icon) return;
 
     const keyEl = e.target.closest('[data-key]');
     const key = keyEl?.dataset.key;
 
-    const selector = key ? `.comment-container.${key}` : '.comment-container';
+    const selector = key ? `.detail-container.${key}` : '.detail-container';
 
-    const containers = document.querySelectorAll('.comment-container');
-    const container = icon.closest('.comment-td').querySelector(selector);
+    const containers = document.querySelectorAll('.detail-container');
+    const container = icon.closest('.detail-td').querySelector(selector);
     if (!container) return;
 
     const isVisible = container.style.display === 'block';
@@ -582,14 +607,13 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
     container.style.display = isVisible ? 'none' : 'block';
   });
 
-  // Close comment on outside click
+  // Close detail on outside click
   document.addEventListener('click', (e) => {
     const isProtected =
-      e.target.closest('.comment-icon') ||
-      e.target.closest('.comment-container');
+      e.target.closest('.detail-icon') || e.target.closest('.detail-container');
     if (isProtected) return;
 
-    document.querySelectorAll('.comment-container').forEach((c) => {
+    document.querySelectorAll('.detail-container').forEach((c) => {
       c.style.display = 'none';
     });
   });
@@ -610,27 +634,148 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
 
   const state = {};
   filterBars.forEach(({ dataset: { group } }) => {
-    state[group] = {
-      filters: new Set(),
-    };
+    state[group] = { filters: new Set() };
   });
 
-  // Set default filters
+  const subcategoryStore = {};
+  subcategoryFilterBars.forEach((bar) => {
+    const catClass = [...bar.classList].find((c) => c.endsWith('-subcategory'));
+    if (!catClass) return;
+    const category = catClass.replace('-subcategory', '');
+
+    const defaults = new Set();
+    bar.querySelectorAll('.filter-btn.toggledOn').forEach((b) => {
+      defaults.add(b.dataset.category);
+    });
+    subcategoryStore[category] = defaults;
+  });
+
+  // Set default filters for every group EXCEPT subcategory
   filterBtns.forEach((btn) => {
     const group = btn.closest('.filter-bar').dataset.group;
-    const value = btn.dataset.category;
+    if (group === 'subcategory') return;
 
+    const value = btn.dataset.category;
     if (btn.classList.contains('toggledOn')) {
       state[group].filters.add(value);
     }
   });
 
-  // Display default category subcategory bar
+  let activeCategory = [...state.category.filters][0];
+  state.subcategory.filters = subcategoryStore[activeCategory] ?? new Set();
+
+  subcategoryFilterBars.forEach((bar) => {
+    bar.style.display = bar.classList.contains(`${activeCategory}-subcategory`)
+      ? 'block'
+      : 'none';
+  });
+
+  const defaultState = {};
+  Object.keys(state).forEach((group) => {
+    if (group === 'subcategory') {
+      defaultState[group] = {
+        filters: new Set(subcategoryStore[activeCategory] ?? []),
+      };
+    } else {
+      defaultState[group] = { filters: new Set(state[group].filters) };
+    }
+  });
+
+  const params = new URLSearchParams(location.search);
+
+  if (params.has('category')) {
+    state.category.filters.clear();
+    params
+      .get('category')
+      .split(',')
+      .forEach((v) => state.category.filters.add(v));
+    activeCategory = [...state.category.filters][0];
+    state.subcategory.filters = subcategoryStore[activeCategory] ?? new Set();
+    subcategoryStore[activeCategory] = state.subcategory.filters;
+  }
+
+  for (const [group, value] of params.entries()) {
+    if (!state[group] || group === 'category') continue;
+
+    if (group === 'subcategory') {
+      const [prefixCategory, list] = value.includes(':')
+        ? value.split(':')
+        : [activeCategory, value];
+
+      if (prefixCategory !== activeCategory) continue;
+
+      state.subcategory.filters.clear();
+      list.split(',').forEach((v) => state.subcategory.filters.add(v));
+      continue;
+    }
+
+    state[group].filters.clear();
+    value.split(',').forEach((v) => state[group].filters.add(v));
+  }
+
+  filterBtns.forEach((btn) => {
+    const group = btn.closest('.filter-bar').dataset.group;
+    const value = btn.dataset.category;
+    btn.classList.toggle('toggledOn', state[group].filters.has(value));
+  });
+
   subcategoryFilterBars.forEach((bar) => {
     const subcat = [...state.category.filters][0] + '-subcategory';
-    if (bar.classList.contains(subcat)) {
-      bar.style.display = 'block';
-    }
+    bar.style.display = bar.classList.contains(subcat) ? 'block' : 'none';
+  });
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const group = btn.closest('.filter-bar').dataset.group;
+      const value = btn.dataset.category;
+      const { filters } = state[group];
+
+      btn
+        .closest('.filter-bar')
+        .querySelectorAll('.filter-btn')
+        .forEach((b) => {
+          b.classList.remove('toggledOn');
+          filters.delete(b.dataset.category);
+        });
+      btn.classList.add('toggledOn');
+      filters.add(value);
+
+      subcategoryFilterBars.forEach((bar) => {
+        bar.style.display = 'none';
+      });
+
+      subcategoryFilterBars.forEach((bar) => {
+        const subcat = [...state.category.filters][0] + '-subcategory';
+        if (bar.classList.contains(subcat)) {
+          bar.style.display = 'block';
+        }
+      });
+
+      if (group === 'category') {
+        if (!subcategoryStore[value]) {
+          const defaults = new Set();
+          document
+            .querySelector(
+              `.filter-bar[data-group="subcategory"].${value}-subcategory`
+            )
+            ?.querySelectorAll('.filter-btn.toggledOn')
+            .forEach((b) => defaults.add(b.dataset.category));
+          subcategoryStore[value] = defaults;
+        }
+        state.subcategory.filters = subcategoryStore[value];
+
+        document
+          .querySelectorAll('.filter-bar[data-group="subcategory"] .filter-btn')
+          .forEach((subBtn) => {
+            subBtn.classList.toggle(
+              'toggledOn',
+              state.subcategory.filters.has(subBtn.dataset.category)
+            );
+          });
+      }
+
+      updateUI();
+    });
   });
 
   updateUI();

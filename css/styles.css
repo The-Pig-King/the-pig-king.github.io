@@ -971,15 +971,15 @@ summary:focus-visible,
   -webkit-text-fill-color: transparent;
 }
 
-.comment-td {
+.detail-td {
   position: relative;
 }
 
-.comment-td svg:hover {
+.detail-td svg:hover {
   cursor: pointer;
 }
 
-.comment-container {
+.detail-container {
   display: none;
   position: absolute;
   left: 50%;
