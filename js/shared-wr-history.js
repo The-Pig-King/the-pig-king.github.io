@@ -1,4 +1,160 @@
-export const initWrHistory = (data, additionalData, filterRuns) => {
+export const initWrHistory = (
+  data,
+  additionalData,
+  filterRuns,
+  titleCaseSlug
+) => {
+  const fullData = [...data, ...additionalData];
+
+  const defaultVideoIcon = `
+        <svg 
+        class='table-icon default'
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 640 640">
+            <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License
+            - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+            <title>Video</title>
+            <path d="M128 128C92.7 128 64 156.7 64 192L64 448C64 483.3 92.7 512 128 512L384 
+            512C419.3 512 448 483.3 448 448L448 192C448 156.7 419.3 128 384 128L128 128zM496 
+            400L569.5 458.8C573.7 462.2 578.9 464 584.3 464C597.4 464 608 453.4 608 440.3L608 
+            199.7C608 186.6 597.4 176 584.3 176C578.9 176 573.7 177.8 569.5 181.2L496 240L496 
+            400z"/>
+        </svg>`;
+
+  const youtubeIcon = `
+        <svg 
+        class='table-icon youtube'
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 640 640">
+            <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
+            - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+            <title>Youtube</title>
+            <path d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 
+            128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 
+            47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 
+            512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 
+            409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 
+            239.2L406.9 320.4L264.2 401.6z"/>
+        </svg>`;
+
+  const twitchIcon = `
+        <svg 
+        class='table-icon twitch'
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 640 640">
+            <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
+            - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+            <title>Twitch</title>
+            <path d="M455.4 167.5L416.8 167.5L416.8 277.2L455.4 277.2L455.4 167.5zM349.2 167L310.6 
+            167L310.6 276.8L349.2 276.8L349.2 167zM185 64L88.5 155.4L88.5 484.6L204.3 484.6L204.3 
+            576L300.8 484.6L378.1 484.6L551.9 320L551.9 64L185 64zM513.3 301.8L436.1 374.9L358.9 
+            374.9L291.3 438.9L291.3 374.9L204.4 374.9L204.4 100.6L513.3 100.6L513.3 301.8z"/>
+        </svg>`;
+
+  const bilibiliIcon = `
+        <svg 
+        class='table-icon bilibili'
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 640">
+          <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
+          - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+          <title>Bilibili</title>
+          <path d="M552.6 168.1C569.3 186.2 577 207.8 575.9 233.8L575.9 436.2C575.5 462.6 566.7 
+          484.3 549.4 501.3C532.2 518.3 510.3 527.2 483.9 528L156 528C129.6 527.2 107.8 518.2 90.7 
+          500.8C73.6 483.4 64.7 460.5 64 432.2L64 233.8C64.8 207.8 73.7 186.2 90.7 168.1C107.8 151.8 
+          129.5 142.8 156 142L185.4 142L160 116.2C154.3 110.5 151.4 103.2 151.4 94.4C151.4 85.6 
+          154.3 78.3 160 72.6C165.7 66.9 173 64 181.9 64C190.8 64 198 66.9 203.8 72.6L277.1 
+          142L365.1 142L439.6 72.6C445.7 66.9 453.2 64 462 64C470.8 64 478.1 66.9 483.9 72.6C489.6 
+          78.3 492.5 85.6 492.5 94.4C492.5 103.2 489.6 110.5 483.9 116.2L458.6 142L487.9 142C514.3 
+          142.8 535.9 151.8 552.6 168.1zM513.8 237.8C513.4 228.2 510.1 220.4 503.1 214.3C497.9 208.2 
+          489.1 204.9 480.4 204.5L160 204.5C150.4 204.9 142.6 208.2 136.4 214.3C130.3 220.4 127 
+          228.2 126.6 237.8L126.6 432.2C126.6 441.4 129.9 449.2 136.4 455.7C142.9 462.2 150.8 465.5 
+          160 465.5L480.4 465.5C489.6 465.5 497.4 462.2 503.7 455.7C510 449.2 513.4 441.4 513.8 
+          432.2L513.8 237.8zM249.5 280.5C255.8 286.8 259.2 294.6 259.6 303.7L259.6 337C259.2 346.2 
+          255.9 353.9 249.8 360.2C243.6 366.5 235.8 369.7 226.2 369.7C216.6 369.7 208.7 366.5 202.6 
+          360.2C196.5 353.9 193.2 346.2 192.8 337L192.8 303.7C193.2 294.6 196.6 286.8 202.9 
+          280.5C209.2 274.2 216.1 270.9 226.2 270.5C235.4 270.9 243.2 274.2 249.5 280.5zM441 
+          280.5C447.3 286.8 450.7 294.6 451.1 303.7L451.1 337C450.7 346.2 447.4 353.9 441.3 
+          360.2C435.2 366.5 427.3 369.7 417.7 369.7C408.1 369.7 400.3 366.5 394.1 360.2C387.1 
+          353.9 384.7 346.2 384.4 337L384.4 303.7C384.7 294.6 388.1 286.8 394.4 280.5C400.7 274.2 
+          408.5 270.9 417.7 270.5C426.9 270.9 434.7 274.2 441 280.5z"/>
+        </svg>`;
+
+  const commentIcon = `
+        <svg 
+        class="table-icon detail-icon"
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 640 640">
+          <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License -
+          https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+          <path d="M64 416L64 192C64 139 107 96 160 96L480 96C533 96 576 139 576 192L576 
+          416C576 469 533 512 480 512L360 512C354.8 512 349.8 513.7 345.6 516.8L230.4 
+          603.2C226.2 606.3 221.2 608 216 608C202.7 608 192 597.3 192 584L192 512L160 
+          512C107 512 64 469 64 416z"/>
+        </svg>
+    `;
+
+  const currentWrIcon = `
+      <svg 
+      class="table-icon detail-icon currentWr"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 640 640">
+        <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
+        https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+        <path d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 
+        478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 
+        368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 
+        512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 
+        576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 
+        438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 
+        72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 
+        117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 
+        158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 
+        254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/>
+      </svg>
+    `;
+
+  const subIcon = `
+      <svg 
+      class="table-icon detail-icon sub"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M264.5 64C251.2 64 240.5 74.7 240.5 88C240.5 101.3 251.2 112 264.5 112L296.5 112L296.5 137.3C188.5 149.2 104.5 240.8 104.5 352C104.5 471.3 201.2 568 320.5 568C439.8 568 536.5 471.3 536.5 352C536.5 312.2 525.7 274.9 506.9 242.8L535.1 214.6C547.6 202.1 547.6 181.8 535.1 169.3C522.6 156.8 502.3 156.8 489.8 169.3L466.4 192.7C433.5 162.5 391.2 142.4 344.4 137.2L344.4 111.9L376.4 111.9C389.7 111.9 400.4 101.2 400.4 87.9C400.4 74.6 389.7 63.9 376.4 63.9L264.4 63.9zM344.5 248L344.5 352C344.5 365.3 333.8 376 320.5 376C307.2 376 296.5 365.3 296.5 352L296.5 248C296.5 234.7 307.2 224 320.5 224C333.8 224 344.5 234.7 344.5 248z"/></svg>`;
+
+  const routeIcon = `<svg 
+      class="table-icon detail-icon route"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M576 160C576 210.2 516.9 285.1 491.4 315C487.6 319.4 482 321.1 476.9 320L384 320C366.3 320 352 334.3 352 352C352 369.7 366.3 384 384 384L480 384C533 384 576 427 576 480C576 533 533 576 480 576L203.6 576C212.3 566.1 222.9 553.4 233.6 539.2C239.9 530.8 246.4 521.6 252.6 512L480 512C497.7 512 512 497.7 512 480C512 462.3 497.7 448 480 448L384 448C331 448 288 405 288 352C288 299 331 256 384 256L423.8 256C402.8 224.5 384 188.3 384 160C384 107 427 64 480 64C533 64 576 107 576 160zM181.1 553.1C177.3 557.4 173.9 561.2 171 564.4L169.2 566.4L169 566.2C163 570.8 154.4 570.2 149 564.4C123.8 537 64 466.5 64 416C64 363 107 320 160 320C213 320 256 363 256 416C256 446 234.9 483 212.5 513.9C201.8 528.6 190.8 541.9 181.7 552.4L181.1 553.1zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM480 192C497.7 192 512 177.7 512 160C512 142.3 497.7 128 480 128C462.3 128 448 142.3 448 160C448 177.7 462.3 192 480 192z"/></svg>`;
+
+  const hourIcon = `
+      <svg 
+      class="table-icon detail-icon hour"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 640 640">
+        <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
+        https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+        <path d="M128 96C128 78.3 142.3 64 160 64L480 64C497.7 64 512 78.3 512 96C512 113.7 
+        497.7 128 480 128L480 139C480 181.4 463.1 222.1 433.1 252.1L365.2 320L433.1 387.9C463.1 
+        417.9 480 458.6 480 501L480 512C497.7 512 512 526.3 512 544C512 561.7 497.7 576 480 
+        576L160 576C142.3 576 128 561.7 128 544C128 526.3 142.3 512 160 512L160 501C160 458.6 
+        176.9 417.9 206.9 387.9L274.8 320L206.9 252.1C176.9 222.1 160 181.4 160 139L160 
+        128C142.3 128 128 113.7 128 96zM224 128L224 139C224 164.5 234.1 188.9 252.1 206.9L320 
+        274.8L387.9 206.9C405.9 188.9 416 164.5 416 139L416 128L224 128zM224 512L416 512L416 
+        501C416 475.5 405.9 451.1 387.9 433.1L320 365.2L252.1 433.1C234.1 451.1 224 475.5 224 
+        501L224 512z"/>
+      </svg>`;
+
+  const icons = {
+    'youtube.com': youtubeIcon,
+    'youtu.be': youtubeIcon,
+    'twitch.tv': twitchIcon,
+    'bilibili.com': bilibiliIcon,
+    'b23.tv': bilibiliIcon,
+    currentWr: currentWrIcon,
+    sub: subIcon,
+    route: routeIcon,
+    hour: hourIcon,
+  };
+
   const formatTime = (seconds) => {
     if (seconds == null || isNaN(seconds)) return '';
     const ms = seconds % 1;
@@ -87,9 +243,91 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
 
   const tableContent = document.getElementById('table-content');
 
+  const renderRun = (run) => {
+    const tr = document.createElement('tr');
+
+    tr.classList.add('run-table-row');
+    if (run.status === 'unverified') tr.classList.add('unverified');
+
+    tr.setAttribute('id', run.id);
+
+    const player = run.players_full?.[0];
+    const playerName = run.players_full?.[0]?.names?.international ?? '';
+    const countryCode = player?.location?.country?.code ?? '';
+    const countryName = player?.location?.country?.names?.international ?? '';
+    const videoLink = run?.videos?.links?.[0]?.uri ?? '';
+
+    // Choose icon
+    const videoHostname = videoLink
+      ? new URL(videoLink).hostname.replace('www.', '')
+      : '';
+
+    // Set player name color
+    const style = player?.['name-style'];
+
+    let playerNameHtml = playerName;
+
+    if (style?.style === 'gradient') {
+      playerNameHtml = `
+    <span
+      class="player-gradient runner-name"
+      style="background-image: linear-gradient(90deg, ${style['color-from'].light}, ${style['color-to'].light});"
+    >
+      ${playerName}
+    </span>
+  `;
+    } else if (style?.style === 'solid') {
+      playerNameHtml = `
+    <span style="color:${style.color.light}">
+      ${playerName}
+    </span>
+  `;
+    }
+
+    tr.innerHTML = `
+    <td>${run.wrNumber}</td>
+    <td class='date-column'>
+      ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
+      ${run.daysDifference != null ? `<br><span class="${run.daysDifferenceColor} difference-label">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
+    </td>
+    <td>${videoLink ? `<a href="${videoLink}">${icons[videoHostname]}</a>` : ''}</td>
+    <td>
+      ${formatTime(run.primary_t) || ''}
+      ${run.timeDifference !== '' ? `<br><span class="${run.timeDifferenceColor} difference-label">${formatTimeDifference(run.timeDifference)}</span>` : ''}
+    </td>
+    <td>
+      <img
+        class="country-flag"
+        src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
+        title="${countryName}"
+        alt="${countryName}">
+      ${playerNameHtml}
+    </td>
+    <td>${run.version}</td>
+    <td class="detail-td">
+      ${run?.comment ? commentIcon : ''}
+      <div class="detail-container">${run?.comment ?? ''}</div>
+    </td>
+    <td class="detail-td">
+    ${
+      run?.details
+        ? Object.entries(run.details)
+            .map(
+              ([key, value]) => `
+              <span data-key="${key}">${icons[key] ?? ''}</span>
+              <div class="detail-container ${key}">${value}</div>
+            `
+            )
+            .join('')
+        : ''
+    }
+    </td>
+    `;
+    return tr;
+  };
+
   const renderRuns = (runs) => {
     tableContent.innerHTML = '';
-
     if (runs.length === 0) {
       return;
     }
@@ -98,237 +336,14 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
     const fastestRun = runs.reduce((a, b) =>
       a.primary_t < b.primary_t ? a : b
     );
+
     fastestRun.details = {
       currentWr: 'Current World Record',
       ...fastestRun.details,
     };
 
     runs.forEach((run) => {
-      const tr = document.createElement('tr');
-      if (run.status === 'unverified') tr.classList.add('unverified');
-
-      const player = run.players_full?.[0];
-      const playerName = run.players_full?.[0]?.names?.international ?? '';
-      const countryCode = player?.location?.country?.code ?? '';
-      const countryName = player?.location?.country?.names?.international ?? '';
-      const videoLink = run?.videos?.links?.[0]?.uri ?? '';
-
-      const defaultVideoIcon = `
-        <svg 
-        class='table-icon default'
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 640 640">
-            <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License
-            - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-            <title>Video</title>
-            <path d="M128 128C92.7 128 64 156.7 64 192L64 448C64 483.3 92.7 512 128 512L384 
-            512C419.3 512 448 483.3 448 448L448 192C448 156.7 419.3 128 384 128L128 128zM496 
-            400L569.5 458.8C573.7 462.2 578.9 464 584.3 464C597.4 464 608 453.4 608 440.3L608 
-            199.7C608 186.6 597.4 176 584.3 176C578.9 176 573.7 177.8 569.5 181.2L496 240L496 
-            400z"/>
-        </svg>`;
-
-      const youtubeIcon = `
-        <svg 
-        class='table-icon youtube'
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 640 640">
-            <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
-            - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-            <title>Youtube</title>
-            <path d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 
-            128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 
-            47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 
-            512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 
-            409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 
-            239.2L406.9 320.4L264.2 401.6z"/>
-        </svg>`;
-
-      const twitchIcon = `
-        <svg 
-        class='table-icon twitch'
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 640 640">
-            <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
-            - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-            <title>Twitch</title>
-            <path d="M455.4 167.5L416.8 167.5L416.8 277.2L455.4 277.2L455.4 167.5zM349.2 167L310.6 
-            167L310.6 276.8L349.2 276.8L349.2 167zM185 64L88.5 155.4L88.5 484.6L204.3 484.6L204.3 
-            576L300.8 484.6L378.1 484.6L551.9 320L551.9 64L185 64zM513.3 301.8L436.1 374.9L358.9 
-            374.9L291.3 438.9L291.3 374.9L204.4 374.9L204.4 100.6L513.3 100.6L513.3 301.8z"/>
-        </svg>`;
-
-      const bilibiliIcon = `
-        <svg 
-        class='table-icon bilibili'
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 640">
-          <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License 
-          - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-          <title>Bilibili</title>
-          <path d="M552.6 168.1C569.3 186.2 577 207.8 575.9 233.8L575.9 436.2C575.5 462.6 566.7 
-          484.3 549.4 501.3C532.2 518.3 510.3 527.2 483.9 528L156 528C129.6 527.2 107.8 518.2 90.7 
-          500.8C73.6 483.4 64.7 460.5 64 432.2L64 233.8C64.8 207.8 73.7 186.2 90.7 168.1C107.8 151.8 
-          129.5 142.8 156 142L185.4 142L160 116.2C154.3 110.5 151.4 103.2 151.4 94.4C151.4 85.6 
-          154.3 78.3 160 72.6C165.7 66.9 173 64 181.9 64C190.8 64 198 66.9 203.8 72.6L277.1 
-          142L365.1 142L439.6 72.6C445.7 66.9 453.2 64 462 64C470.8 64 478.1 66.9 483.9 72.6C489.6 
-          78.3 492.5 85.6 492.5 94.4C492.5 103.2 489.6 110.5 483.9 116.2L458.6 142L487.9 142C514.3 
-          142.8 535.9 151.8 552.6 168.1zM513.8 237.8C513.4 228.2 510.1 220.4 503.1 214.3C497.9 208.2 
-          489.1 204.9 480.4 204.5L160 204.5C150.4 204.9 142.6 208.2 136.4 214.3C130.3 220.4 127 
-          228.2 126.6 237.8L126.6 432.2C126.6 441.4 129.9 449.2 136.4 455.7C142.9 462.2 150.8 465.5 
-          160 465.5L480.4 465.5C489.6 465.5 497.4 462.2 503.7 455.7C510 449.2 513.4 441.4 513.8 
-          432.2L513.8 237.8zM249.5 280.5C255.8 286.8 259.2 294.6 259.6 303.7L259.6 337C259.2 346.2 
-          255.9 353.9 249.8 360.2C243.6 366.5 235.8 369.7 226.2 369.7C216.6 369.7 208.7 366.5 202.6 
-          360.2C196.5 353.9 193.2 346.2 192.8 337L192.8 303.7C193.2 294.6 196.6 286.8 202.9 
-          280.5C209.2 274.2 216.1 270.9 226.2 270.5C235.4 270.9 243.2 274.2 249.5 280.5zM441 
-          280.5C447.3 286.8 450.7 294.6 451.1 303.7L451.1 337C450.7 346.2 447.4 353.9 441.3 
-          360.2C435.2 366.5 427.3 369.7 417.7 369.7C408.1 369.7 400.3 366.5 394.1 360.2C387.1 
-          353.9 384.7 346.2 384.4 337L384.4 303.7C384.7 294.6 388.1 286.8 394.4 280.5C400.7 274.2 
-          408.5 270.9 417.7 270.5C426.9 270.9 434.7 274.2 441 280.5z"/>
-        </svg>`;
-
-      const commentIcon = `
-        <svg 
-        class="table-icon detail-icon"
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 640 640">
-          <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License -
-          https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-          <path d="M64 416L64 192C64 139 107 96 160 96L480 96C533 96 576 139 576 192L576 
-          416C576 469 533 512 480 512L360 512C354.8 512 349.8 513.7 345.6 516.8L230.4 
-          603.2C226.2 606.3 221.2 608 216 608C202.7 608 192 597.3 192 584L192 512L160 
-          512C107 512 64 469 64 416z"/>
-        </svg>
-    `;
-
-      const currentWrIcon = `
-      <svg 
-      class="table-icon detail-icon currentWr"
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 640 640">
-        <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
-        https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-        <path d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 
-        478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 
-        368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 
-        512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 
-        576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 
-        438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 
-        72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 
-        117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 
-        158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 
-        254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/>
-      </svg>
-    `;
-
-      const subIcon = `
-      <svg 
-      class="table-icon detail-icon sub"
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M264.5 64C251.2 64 240.5 74.7 240.5 88C240.5 101.3 251.2 112 264.5 112L296.5 112L296.5 137.3C188.5 149.2 104.5 240.8 104.5 352C104.5 471.3 201.2 568 320.5 568C439.8 568 536.5 471.3 536.5 352C536.5 312.2 525.7 274.9 506.9 242.8L535.1 214.6C547.6 202.1 547.6 181.8 535.1 169.3C522.6 156.8 502.3 156.8 489.8 169.3L466.4 192.7C433.5 162.5 391.2 142.4 344.4 137.2L344.4 111.9L376.4 111.9C389.7 111.9 400.4 101.2 400.4 87.9C400.4 74.6 389.7 63.9 376.4 63.9L264.4 63.9zM344.5 248L344.5 352C344.5 365.3 333.8 376 320.5 376C307.2 376 296.5 365.3 296.5 352L296.5 248C296.5 234.7 307.2 224 320.5 224C333.8 224 344.5 234.7 344.5 248z"/></svg>`;
-
-      const routeIcon = `<svg 
-      class="table-icon detail-icon route"
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M576 160C576 210.2 516.9 285.1 491.4 315C487.6 319.4 482 321.1 476.9 320L384 320C366.3 320 352 334.3 352 352C352 369.7 366.3 384 384 384L480 384C533 384 576 427 576 480C576 533 533 576 480 576L203.6 576C212.3 566.1 222.9 553.4 233.6 539.2C239.9 530.8 246.4 521.6 252.6 512L480 512C497.7 512 512 497.7 512 480C512 462.3 497.7 448 480 448L384 448C331 448 288 405 288 352C288 299 331 256 384 256L423.8 256C402.8 224.5 384 188.3 384 160C384 107 427 64 480 64C533 64 576 107 576 160zM181.1 553.1C177.3 557.4 173.9 561.2 171 564.4L169.2 566.4L169 566.2C163 570.8 154.4 570.2 149 564.4C123.8 537 64 466.5 64 416C64 363 107 320 160 320C213 320 256 363 256 416C256 446 234.9 483 212.5 513.9C201.8 528.6 190.8 541.9 181.7 552.4L181.1 553.1zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM480 192C497.7 192 512 177.7 512 160C512 142.3 497.7 128 480 128C462.3 128 448 142.3 448 160C448 177.7 462.3 192 480 192z"/></svg>`;
-
-      const hourIcon = `
-      <svg 
-      class="table-icon detail-icon hour"
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 640 640">
-        <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
-        https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-        <path d="M128 96C128 78.3 142.3 64 160 64L480 64C497.7 64 512 78.3 512 96C512 113.7 
-        497.7 128 480 128L480 139C480 181.4 463.1 222.1 433.1 252.1L365.2 320L433.1 387.9C463.1 
-        417.9 480 458.6 480 501L480 512C497.7 512 512 526.3 512 544C512 561.7 497.7 576 480 
-        576L160 576C142.3 576 128 561.7 128 544C128 526.3 142.3 512 160 512L160 501C160 458.6 
-        176.9 417.9 206.9 387.9L274.8 320L206.9 252.1C176.9 222.1 160 181.4 160 139L160 
-        128C142.3 128 128 113.7 128 96zM224 128L224 139C224 164.5 234.1 188.9 252.1 206.9L320 
-        274.8L387.9 206.9C405.9 188.9 416 164.5 416 139L416 128L224 128zM224 512L416 512L416 
-        501C416 475.5 405.9 451.1 387.9 433.1L320 365.2L252.1 433.1C234.1 451.1 224 475.5 224 
-        501L224 512z"/>
-      </svg>`;
-
-      const icons = {
-        'youtube.com': youtubeIcon,
-        'youtu.be': youtubeIcon,
-        'twitch.tv': twitchIcon,
-        'bilibili.com': bilibiliIcon,
-        'b23.tv': bilibiliIcon,
-        currentWr: currentWrIcon,
-        sub: subIcon,
-        route: routeIcon,
-        hour: hourIcon,
-      };
-
-      // Choose icon
-      const videoHostname = videoLink
-        ? new URL(videoLink).hostname.replace('www.', '')
-        : '';
-
-      // Set player name color
-      const style = player?.['name-style'];
-      let playerNameHtml = playerName;
-
-      if (style?.style === 'gradient') {
-        playerNameHtml = `
-        <span
-          class="player-gradient"
-          style="background-image: linear-gradient(90deg, ${style['color-from'].light}, ${style['color-to'].light});"
-        >
-          ${playerName}
-        </span>
-      `;
-      } else if (style?.style === 'solid') {
-        playerNameHtml = `
-        <span style="color:${style.color.light}">
-          ${playerName}
-        </span>
-      `;
-      }
-
-      tr.innerHTML = `
-        <td>${run.wrNumber}</td>
-        <td class='date-column'>
-          ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
-          ${run.daysDifference != null ? `<br><span class="${run.daysDifferenceColor} difference-label">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
-        </td>
-        <td>${videoLink ? `<a href="${videoLink}">${icons[videoHostname]}</a>` : ''}</td>
-        <td>
-          ${formatTime(run.primary_t) || ''}
-          ${run.timeDifference !== '' ? `<br><span class="${run.timeDifferenceColor} difference-label">${formatTimeDifference(run.timeDifference)}</span>` : ''}
-        </td>
-        <td>
-          <img
-            class="country-flag"
-            src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
-            title="${countryName}"
-            alt="${countryName}">
-          ${playerNameHtml}
-        </td>
-        <td>${run.version}</td>
-        <td class="detail-td">
-          ${run?.comment ? commentIcon : ''}
-          <div class="detail-container">${run?.comment ?? ''}</div>
-        </td>
-        <td class="detail-td">
-        ${
-          run?.details
-            ? Object.entries(run.details)
-                .map(
-                  ([key, value]) => `
-                  <span data-key="${key}">${icons[key] ?? ''}</span>
-                  <div class="detail-container ${key}">${value}</div>
-                `
-                )
-                .join('')
-            : ''
-        }
-        </td>
-        `;
-
-      tableContent.appendChild(tr);
+      tableContent.appendChild(renderRun(run));
     });
   };
 
@@ -469,17 +484,25 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
       }
     });
 
+    // Add modal to url if open
+    if (cardModal.hasAttribute('open')) {
+      const currentId = cardModalContent.id;
+      parts.push(`run=${currentId.trim().replace(/\s+/g, '+')}`);
+    }
+
     // Join the segments together to complete the url
     const queryString = parts.length > 0 ? `?${parts.join('&')}` : '';
     history.replaceState(null, '', `${location.pathname}${queryString}`);
   };
+
+  let worldRecords;
 
   const updateUI = () => {
     // Remove some non-records
     data.splice(data.indexOf(data.find((e) => e.id === 'zgn0wqdy')), 1);
     data.splice(data.indexOf(data.find((e) => e.id === 'yo485d5m')), 1);
 
-    let worldRecords = filterRuns(state, data);
+    worldRecords = filterRuns(state, data);
     worldRecords = filterWrs(worldRecords);
     worldRecords = filterRuns(state, addAdditionalData(worldRecords));
 
@@ -519,6 +542,185 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
 
     updateURL();
   };
+
+  const renderModal = (run) => {
+    const modal = document.createElement('div');
+    modal.classList.add('run');
+    if (run.status === 'unverified') modal.classList.add('unverified');
+    modal.setAttribute('id', run.id);
+
+    const player = run.players_full?.[0];
+    const playerName = player?.names?.international ?? '';
+    const countryCode = player?.location?.country?.code ?? '';
+    const countryName = player?.location?.country?.names?.international ?? '';
+    const videoLink = run?.videos?.links?.[0]?.uri ?? '';
+    const videoHostname = videoLink
+      ? new URL(videoLink).hostname.replace('www.', '')
+      : '';
+
+    const style = player?.['name-style'];
+    let playerNameHtml = playerName;
+    if (style?.style === 'gradient') {
+      playerNameHtml = `
+      <span class="player-gradient runner-name"
+        style="background-image: linear-gradient(90deg, ${style['color-from'].light}, ${style['color-to'].light});">
+        ${playerName}
+      </span>`;
+    } else if (style?.style === 'solid') {
+      playerNameHtml = `<span style="color:${style.color.light}">${playerName}</span>`;
+    }
+
+    const currentId = cardModalContent.id;
+    const currentIndex = worldRecords.findIndex((run) => run.id === currentId);
+    const nextWR = worldRecords[currentIndex - 1] ?? null;
+    const previousWR = worldRecords[currentIndex + 1] ?? null;
+
+    console.log(run);
+    modal.innerHTML = `
+      <div class="run-main">
+        <span class="run-category">${titleCaseSlug(run.category)}</span>
+        in
+        <span class="run-time">${formatTime(run.primary_t)}</span>
+        by
+        <span class="runner">
+          <img class="country-flag"
+            src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
+            title="${countryName}" alt="${countryName}">
+          ${playerNameHtml}
+        </span>
+      </div>
+      <div class="wr-number"><span class="wr-number-icon">${currentWrIcon}</span> # ${run.wrNumber}</div>
+      <div class="run-date">${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
+      <div class="run-version">${run.version}</div>
+      ${
+        run?.details
+          ? `<div class="run-details">
+            ${Object.entries(run.details)
+              .map(
+                ([key, value]) => `
+                      <span data-key="${key}">${icons[key] ?? ''}</span>
+                      <div class="detail-container ${key}">${value}</div>
+                    `
+              )
+              .join('')}
+            </div>`
+          : ''
+      }
+      <a class="run-verification" ${run.weblink ? `href="${run.weblink}"` : ''}>${run.status === 'verified' ? `<img class="speedrun-icon" src="https://www.speedrun.com/images/favicon.png"></img>` : ''} ${titleCaseSlug(run.status)}</a>
+      ${run.timeDifference !== '' ? `<div class="run-difference ${run.timeDifferenceColor}">${formatTimeDifference(run.timeDifference)}</div>` : ''}
+      ${
+        previousWR
+          ? `
+        <div class="previous-wr">
+          <div>${formatTime(previousWR.primary_t)}</div>
+          <div class="run-date">${previousWR.date ? new Date(previousWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
+          ${previousWR.daysDifference != null ? `<span class="${previousWR.daysDifferenceColor}">${previousWR.daysDifference} day${previousWR.daysDifference === 1 ? '' : 's'}</span>` : ''}
+        </div>`
+          : ''
+      }
+      ${
+        nextWR
+          ? `
+        <div class="next-wr">
+          <div>${formatTime(nextWR.primary_t)}</div>
+          <div class="run-date">${nextWR.date ? new Date(nextWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
+          ${nextWR.daysDifference != null ? `<span class="${nextWR.daysDifferenceColor}">${nextWR.daysDifference} day${nextWR.daysDifference === 1 ? '' : 's'}</span>` : ''}
+        </div>`
+          : ''
+      }
+      ${videoLink ? `<a class="run-video" href="${videoLink}">${icons[videoHostname]}</a>` : ''}
+      ${run?.comment ? `<div class="run-comment">${run.comment}</div>` : ''}
+    `;
+
+    return modal;
+  };
+
+  const cardModal = document.getElementById('card-modal');
+  const cardModalContent = document.getElementById('card-modal-content');
+  const closeModal = document.getElementById('close-modal-btn');
+
+  const openModal = (run) => {
+    cardModalContent.setAttribute('id', run.id);
+    cardModalContent.replaceChildren(renderModal(run));
+
+    cardModal.showModal();
+    closeModal.focus();
+    updateURL();
+  };
+
+  // Open modal with keyboard
+  tableContent.addEventListener('keydown', (e) => {
+    if (e.key !== ' ' && e.key !== 'Enter') return;
+    if (e.target.closest('.table-icon')) return;
+    if (e.target.closest('.runner-name')) return;
+
+    const cardElement = e.target.closest('.run-table-row');
+    if (!cardElement) return;
+
+    e.preventDefault();
+    cardElement.click();
+  });
+
+  // Open modal of clicked run
+  tableContent.addEventListener('click', (e) => {
+    if (e.target.closest('.table-icon')) return;
+    if (e.target.closest('.runner-name')) return;
+
+    const cardElement = e.target.closest('.run-table-row');
+    if (!cardElement) return;
+
+    const clickedRun = fullData.find((run) => {
+      return cardElement.id === run.id;
+    });
+
+    openModal(clickedRun);
+    updateURL();
+  });
+
+  closeModal.addEventListener('click', () => {
+    cardModal.close();
+    updateURL();
+  });
+
+  // Navigate neighbouring modals with arrow keys
+  document.addEventListener('keydown', (e) => {
+    if (!cardModal.hasAttribute('open')) return;
+    if (
+      e.key !== 'ArrowLeft' &&
+      e.key !== 'ArrowRight' &&
+      e.key !== 'a' &&
+      e.key !== 'd' &&
+      e.key !== 'A' &&
+      e.key !== 'D'
+    )
+      return;
+
+    const visibleRuns = worldRecords;
+    const currentId = cardModalContent.id;
+    const currentIndex = visibleRuns.findIndex((run) => run.id === currentId);
+
+    if (
+      (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') &&
+      currentIndex > 0
+    ) {
+      openModal(visibleRuns[currentIndex - 1]);
+    } else if (
+      (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') &&
+      currentIndex < visibleRuns.length - 1
+    ) {
+      openModal(visibleRuns[currentIndex + 1]);
+    }
+
+    updateURL();
+  });
+
+  // Close modal when clicking outside
+  cardModal.addEventListener('click', (e) => {
+    if (e.target === cardModal) {
+      cardModal.close();
+      updateURL();
+    }
+  });
 
   const subcategoryFilterBars = document.querySelectorAll(
     '.filter-bar[data-group="subcategory"]'
@@ -683,46 +885,55 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
 
   const params = new URLSearchParams(location.search);
 
-  if (params.has('category')) {
-    state.category.filters.clear();
-    params
-      .get('category')
-      .split(',')
-      .forEach((v) => state.category.filters.add(v));
-    activeCategory = [...state.category.filters][0];
-    state.subcategory.filters = subcategoryStore[activeCategory] ?? new Set();
-    subcategoryStore[activeCategory] = state.subcategory.filters;
-  }
+  let runParam;
 
   for (const [group, value] of params.entries()) {
-    if (!state[group] || group === 'category') continue;
-
-    if (group === 'subcategory') {
-      const [prefixCategory, list] = value.includes(':')
-        ? value.split(':')
-        : [activeCategory, value];
-
-      if (prefixCategory !== activeCategory) continue;
-
-      state.subcategory.filters.clear();
-      list.split(',').forEach((v) => state.subcategory.filters.add(v));
+    if (group === 'run') {
+      runParam = value;
       continue;
     }
 
-    state[group].filters.clear();
-    value.split(',').forEach((v) => state[group].filters.add(v));
+    if (params.has('category')) {
+      state.category.filters.clear();
+      params
+        .get('category')
+        .split(',')
+        .forEach((v) => state.category.filters.add(v));
+      activeCategory = [...state.category.filters][0];
+      state.subcategory.filters = subcategoryStore[activeCategory] ?? new Set();
+      subcategoryStore[activeCategory] = state.subcategory.filters;
+    }
+
+    for (const [group, value] of params.entries()) {
+      if (!state[group] || group === 'category') continue;
+
+      if (group === 'subcategory') {
+        const [prefixCategory, list] = value.includes(':')
+          ? value.split(':')
+          : [activeCategory, value];
+
+        if (prefixCategory !== activeCategory) continue;
+
+        state.subcategory.filters.clear();
+        list.split(',').forEach((v) => state.subcategory.filters.add(v));
+        continue;
+      }
+
+      state[group].filters.clear();
+      value.split(',').forEach((v) => state[group].filters.add(v));
+    }
+
+    filterBtns.forEach((btn) => {
+      const group = btn.closest('.filter-bar').dataset.group;
+      const value = btn.dataset.category;
+      btn.classList.toggle('toggledOn', state[group].filters.has(value));
+    });
+
+    subcategoryFilterBars.forEach((bar) => {
+      const subcat = [...state.category.filters][0] + '-subcategory';
+      bar.style.display = bar.classList.contains(subcat) ? 'block' : 'none';
+    });
   }
-
-  filterBtns.forEach((btn) => {
-    const group = btn.closest('.filter-bar').dataset.group;
-    const value = btn.dataset.category;
-    btn.classList.toggle('toggledOn', state[group].filters.has(value));
-  });
-
-  subcategoryFilterBars.forEach((bar) => {
-    const subcat = [...state.category.filters][0] + '-subcategory';
-    bar.style.display = bar.classList.contains(subcat) ? 'block' : 'none';
-  });
 
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -779,4 +990,8 @@ export const initWrHistory = (data, additionalData, filterRuns) => {
   });
 
   updateUI();
+
+  if (runParam) {
+    openModal(fullData.find((run) => run.id === runParam));
+  }
 };

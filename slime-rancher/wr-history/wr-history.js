@@ -1,4 +1,5 @@
 import { initWrHistory } from '../../js/shared-wr-history.js';
+import { titleCaseSlug } from '../../js/main.js';
 
 const data = await fetch('data.json').then((r) => r.json());
 
@@ -75,7 +76,7 @@ data.find((e) => {
 const additionalData = [
   {
     details: { route: 'Bridge Hover introduced' },
-    id: null,
+    id: '1',
     weblink: null,
     category: 'any-glitchless',
     videos: {
@@ -131,7 +132,7 @@ const additionalData = [
   },
   {
     details: { hour: 'World Record for 1.5 hours' },
-    id: null,
+    id: '2',
     weblink: null,
     category: 'any-glitchless',
     videos: {
@@ -187,7 +188,7 @@ const additionalData = [
   },
   {
     details: { hour: 'World Record for 2 hours' },
-    id: null,
+    id: '3',
     weblink: null,
     category: 'any-glitchless',
     videos: {
@@ -412,7 +413,7 @@ const additionalData = [
   },
   {
     details: { hour: 'World Record for 15 mins' },
-    id: null,
+    id: '4',
     weblink: null,
     category: 'any-glitchless',
     videos: {
@@ -467,7 +468,7 @@ const additionalData = [
     ],
   },
   {
-    id: null,
+    id: '5',
     weblink: null,
     category: 'any-glitchless',
     videos: {
@@ -522,7 +523,7 @@ const additionalData = [
     ],
   },
   {
-    id: null,
+    id: '6',
     weblink: null,
     category: 'any-glitchless',
     videos: {
@@ -577,7 +578,7 @@ const additionalData = [
     ],
   },
   {
-    id: null,
+    id: '7',
     weblink: null,
     category: 'any-glitchless',
     videos: {
@@ -689,7 +690,7 @@ const additionalData = [
     ],
   },
   {
-    id: null,
+    id: '8',
     weblink: null,
     category: 'any-glitchless',
     videos: {
@@ -744,7 +745,7 @@ const additionalData = [
     ],
   },
   {
-    id: null,
+    id: '9',
     weblink: null,
     category: 'any-glitchless',
     videos: {
@@ -855,7 +856,7 @@ const additionalData = [
     ],
   },
   {
-    id: null,
+    id: '10',
     weblink: null,
     category: 'all-gordos',
     videos: {
@@ -910,7 +911,7 @@ const additionalData = [
     ],
   },
   {
-    id: null,
+    id: '11',
     weblink: null,
     category: 'all-gordos',
     videos: {
@@ -1080,4 +1081,4 @@ const filterRuns = (state, runs) => {
   });
 };
 
-initWrHistory(data, additionalData, filterRuns);
+initWrHistory(data, additionalData, filterRuns, titleCaseSlug);

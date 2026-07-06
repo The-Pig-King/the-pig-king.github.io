@@ -898,8 +898,81 @@ summary:focus-visible,
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
 }
 
+.run {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'run-main run-main run-main'
+    'wr-number run-date run-version'
+    'run-difference previous-wr next-wr'
+    'run-details none run-verification'
+    'run-video run-video run-video'
+    'run-comment run-comment run-comment';
+
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
+  border-radius: 1rem;
+  background-color: var(--frame-color);
+  padding: 0.5rem;
+
+  font-size: 1rem;
+}
+
+.run-main {
+  grid-area: run-main;
+}
+.wr-number {
+  grid-area: wr-number;
+}
+.wr-number-icon svg {
+  width: 1rem;
+}
+.run-date {
+  grid-area: run-date;
+}
+.run-version {
+  grid-area: run-version;
+}
+.run-details {
+  grid-area: run-details;
+}
+.run-verification {
+  grid-area: run-verification;
+}
+.speedrun-icon {
+  width: 1rem;
+}
+.run-difference {
+  grid-area: run-difference;
+}
+.previous-wr {
+  grid-area: previous-wr;
+}
+.next-wr {
+  grid-area: next-wr;
+}
+.run-video {
+  grid-area: run-video;
+}
+.run-comment {
+  grid-area: run-comment;
+  padding: 0.5rem;
+  margin: 1rem;
+  white-space: pre-line;
+  background-color: color-mix(in srgb, var(--frame-color) 90%, white);
+}
+
 .unverified {
   color: grey;
+}
+
+.run.unverified {
+  color: white;
 }
 
 .date-column {
