@@ -3148,7 +3148,7 @@ const rawCards = [
   },
   {
     name: 'Newbuck Ornament',
-    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentNewbuck.png',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentNewBuck.png',
     tags: ['ornament', 'event', 'common'],
     locations: {
       crate: [
@@ -3244,7 +3244,7 @@ const rawCards = [
   },
   {
     name: 'Quicksilver Ornament',
-    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentQuicksilver.png',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentQuickSilver.png',
     tags: ['ornament', 'event', 'common'],
     locations: {
       crate: [
@@ -3468,7 +3468,7 @@ const rawCards = [
   },
   {
     name: 'Snowflake Ornament',
-    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentSnowflake.png',
+    icon: '/assets/games/slime-rancher/ornaments/iconOrnamentSnowFlake.png',
     tags: ['ornament', 'event', 'common'],
     locations: {
       crate: [
