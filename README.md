@@ -1,31 +1,20 @@
-# the-pig-king.github.io
+# [the-pig-king.github.io](https://the-pig-king.github.io)
 
-A gaming and speedrunning focused website.
+Resources for **Slime Rancher** and **Slime Rancher 2**, with a focus on speedrunning.
 
 ## Features
 
-## Getting Started
+### Database
 
-### Viewing the Website
+A searchable and filterable database of items, locations, and more, with over 1000 entries across Slime Rancher and Slime Rancher 2.
 
-Visit the live website:
-https://the-pig-king.github.io
+### WR History
 
-### Running Locally
-
-1. Clone the repository:
-   git clone https://github.com/The-Pig-King/the-pig-king.github.io.git
-
-2. Navigate to the project directory:
-   cd the-pig-king.github.io
-
-3. Open index.html in your browser or use a local development server.
+A world record history of Slime Rancher speedruns spanning multiple categories.
 
 ## Authors
 
 [ThePigKing](https://github.com/The-Pig-King)
-
-## Version History
 
 ## License
 
