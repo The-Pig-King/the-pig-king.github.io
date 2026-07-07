@@ -971,6 +971,13 @@ export const initWrHistory = (
     });
   });
 
+  const randomRunBtn = document.getElementById('random-run-btn');
+  randomRunBtn.addEventListener('click', () => {
+    const randomRun =
+      worldRecords[Math.floor(Math.random() * worldRecords.length)];
+    openModal(randomRun);
+  });
+
   // Apply filter button colors
   filterBtns.forEach((btn) => {
     if (btn.dataset.category === 'style') {
