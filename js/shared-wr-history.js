@@ -253,6 +253,31 @@ export const initWrHistory = (
     }
   };
 
+  const getRunLinks = (run) => {
+    const links = [];
+
+    if (run.weblink) {
+      links.push({ uri: run.weblink, isWeblink: true });
+    }
+
+    (run.videos?.links ?? []).forEach((link) => {
+      if (link?.uri) {
+        links.push({ uri: link.uri, isWeblink: false });
+      }
+    });
+
+    return links;
+  };
+
+  const renderLinkIcon = (link) => {
+    if (link.isWeblink) {
+      return `<img tabindex='0' class="table-icon speedrun-icon" src="https://www.speedrun.com/images/favicon.png" alt="Speedrun.com">`;
+    }
+
+    const hostname = new URL(link.uri).hostname.replace('www.', '');
+    return icons[hostname] ?? defaultVideoIcon;
+  };
+
   const renderRunsCount = (runsCount) => {
     document.getElementById('runs-count').textContent = runsCount;
   };
@@ -272,12 +297,6 @@ export const initWrHistory = (
     const playerName = run.players_full?.[0]?.names?.international ?? '';
     const countryCode = player?.location?.country?.code ?? '';
     const countryName = player?.location?.country?.names?.international ?? '';
-    const videoLink = run?.videos?.links?.[0]?.uri ?? '';
-
-    // Choose icon
-    const videoHostname = videoLink
-      ? new URL(videoLink).hostname.replace('www.', '')
-      : '';
 
     // Set player name color
     const style = player?.['name-style'];
@@ -307,7 +326,14 @@ export const initWrHistory = (
       ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
       ${run.daysDifference != null ? `<br><span class="${run.daysDifferenceColor} difference-label">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
     </td>
-    <td>${videoLink ? `<a tabindex="-1" class="video-link" href="${videoLink}">${icons[videoHostname]}</a>` : ''}</td>
+    <td>
+      ${getRunLinks(run)
+        .map(
+          (link) =>
+            `<a tabindex="-1" href="${link.uri}">${renderLinkIcon(link)}</a>`
+        )
+        .join('')}
+    </td>
     <td>
       ${formatTime(run.primary_t) || ''}
       ${run.timeDifference !== '' ? `<br><span class="${run.timeDifferenceColor} difference-label">${formatTimeDifference(run.timeDifference)}</span>` : ''}
