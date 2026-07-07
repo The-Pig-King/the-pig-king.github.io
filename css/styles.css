@@ -193,15 +193,13 @@ body.slime-rancher-2 {
 .slime-rancher-text {
   color: var(--sr-color);
 }
-
-.slime-rancher-background {
-  background-color: var(--sr-color);
-}
-
 .slime-rancher-2-text {
   color: var(--sr2-color);
 }
 
+.slime-rancher-background {
+  background-color: var(--sr-color);
+}
 .slime-rancher-2-background {
   background-color: var(--sr2-color);
 }
@@ -302,9 +300,20 @@ button {
   justify-self: center;
 }
 
+.frame-center span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .frame-right {
   grid-column: 3;
   justify-self: end;
+}
+
+.frame-navs {
+  border-radius: 1rem;
+  margin: 0.3rem;
 }
 
 /* Header */
