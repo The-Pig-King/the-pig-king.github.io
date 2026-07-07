@@ -898,6 +898,10 @@ summary:focus-visible,
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
 }
 
+.run-table-row:hover {
+  background-color: color-mix(in srgb, var(--frame-color) 95%, white);
+}
+
 .run {
   display: grid;
 
@@ -905,8 +909,8 @@ summary:focus-visible,
   grid-template-areas:
     'run-main run-main run-main'
     'wr-number run-date run-version'
-    'run-difference previous-wr next-wr'
-    'run-details none run-verification'
+    'next-wr previous-wr run-verification'
+    'run-details run-details run-details'
     'run-video run-video run-video'
     'run-comment run-comment run-comment';
 
@@ -918,9 +922,35 @@ summary:focus-visible,
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
   border-radius: 1rem;
   background-color: var(--frame-color);
-  padding: 0.5rem;
+  padding: 1.5rem;
 
   font-size: 1rem;
+}
+
+.run > * {
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.run-modal {
+  margin: auto;
+  width: min(94vw, 50rem);
+  border: 0;
+  background-color: transparent;
+  overflow: visible;
+  color: white;
+
+  overflow-y: auto;
+  max-height: 100dvh;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgb(173, 173, 173);
+  margin-bottom: 0.2rem;
 }
 
 .run-main {
@@ -947,9 +977,6 @@ summary:focus-visible,
 .speedrun-icon {
   width: 1rem;
 }
-.run-difference {
-  grid-area: run-difference;
-}
 .previous-wr {
   grid-area: previous-wr;
 }
@@ -961,9 +988,21 @@ summary:focus-visible,
 }
 .run-comment {
   grid-area: run-comment;
-  padding: 0.5rem;
-  margin: 1rem;
   white-space: pre-line;
+}
+.run-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.previous-wr,
+.next-wr {
+  cursor: pointer;
+}
+
+.previous-wr:hover,
+.next-wr:hover {
   background-color: color-mix(in srgb, var(--frame-color) 90%, white);
 }
 
@@ -1048,8 +1087,9 @@ summary:focus-visible,
   position: relative;
 }
 
-.detail-td svg:hover {
+.detail-icon:hover {
   cursor: pointer;
+  filter: brightness(0.7);
 }
 
 .detail-container {
@@ -1061,11 +1101,17 @@ summary:focus-visible,
 
   background-color: var(--frame-color);
   border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
-  width: 8rem;
+  width: 90%;
   padding: 0.5rem;
   white-space: pre-line;
 
   font-size: 0.8rem;
+}
+
+.run-details .detail-container {
+  position: absolute;
+  max-width: 30%;
+  margin: auto;
 }
 
 .currentWr {

@@ -4,7 +4,9 @@ export const initWrHistory = (
   filterRuns,
   titleCaseSlug
 ) => {
-  const fullData = [...data, ...additionalData];
+  const dataById = new Map(data.map((run) => [run.id, run]));
+  additionalData.forEach((run) => dataById.set(run.id, run));
+  const fullData = [...dataById.values()];
 
   const defaultVideoIcon = `
         <svg 
@@ -543,6 +545,85 @@ export const initWrHistory = (
     updateURL();
   };
 
+  const getRunCategoryKey = (run) => {
+    if (run.category === 'any-glitchless' || run.category === 'any-glitched') {
+      return 'any';
+    }
+    if (run.category === 'all-gordos') {
+      return 'all-gordos';
+    }
+    if (
+      (run.category === 'slimepedia-glitchless' &&
+        run.subcategory === '1.4.0-1.4.4') ||
+      (run.category === 'slimepedia-glitched' && run.subcategory === '1.2.0')
+    ) {
+      return 'slimepedia';
+    }
+    if (run.category === 'pink-gordo') return 'pink-gordo';
+    if (run.category === 'vacpack') return 'vacpack';
+    return null;
+  };
+
+  const getRunRuleSetKey = (run) => {
+    if (
+      run.category === 'any-glitchless' ||
+      run.category === 'slimepedia-glitchless' ||
+      run.category === 'pink-gordo' ||
+      run.subcategory?.endsWith('glitchless') ||
+      run.subcategory === 'rush-mode'
+    ) {
+      return 'glitchless';
+    }
+    if (
+      run.category === 'any-glitched' ||
+      run.category === 'slimepedia-glitched' ||
+      run.subcategory?.endsWith('glitched')
+    ) {
+      return 'glitched';
+    }
+    return null;
+  };
+
+  const getRunSubcategoryKey = (run, categoryKey) => {
+    if (categoryKey === 'any' || categoryKey === 'pink-gordo') {
+      return run.subcategory ?? null;
+    }
+    if (categoryKey === 'all-gordos') {
+      return run.subcategory === 'rush-mode' ? 'rush-mode' : 'adventure-mode';
+    }
+    return null;
+  };
+
+  const getBtnLabel = (group, key, groupClass) => {
+    if (!key) return null;
+    const selector = groupClass
+      ? `.filter-bar[data-group="${group}"].${groupClass} .filter-btn[data-category="${key}"]`
+      : `.filter-bar[data-group="${group}"] .filter-btn[data-category="${key}"]`;
+    return document.querySelector(selector)?.textContent.trim() ?? null;
+  };
+
+  const getRunFullCategoryLabel = (run) => {
+    const categoryKey = getRunCategoryKey(run);
+    const ruleSetKey = getRunRuleSetKey(run);
+    const subcategoryKey = getRunSubcategoryKey(run, categoryKey);
+
+    const categoryLabel = getBtnLabel('category', categoryKey);
+    const ruleSetLabel = getBtnLabel('rule-set', ruleSetKey);
+    const subcategoryLabel = getBtnLabel(
+      'subcategory',
+      subcategoryKey,
+      `${categoryKey}-subcategory`
+    );
+
+    return [
+      categoryLabel,
+      ruleSetLabel,
+      subcategoryLabel ? `(${subcategoryLabel})` : null,
+    ]
+      .filter(Boolean)
+      .join(' ');
+  };
+
   const renderModal = (run) => {
     const modal = document.createElement('div');
     modal.classList.add('run');
@@ -553,10 +634,28 @@ export const initWrHistory = (
     const playerName = player?.names?.international ?? '';
     const countryCode = player?.location?.country?.code ?? '';
     const countryName = player?.location?.country?.names?.international ?? '';
+
     const videoLink = run?.videos?.links?.[0]?.uri ?? '';
-    const videoHostname = videoLink
-      ? new URL(videoLink).hostname.replace('www.', '')
-      : '';
+    const videoUrl = videoLink ? new URL(videoLink) : null;
+    const videoHostname = videoUrl?.hostname.replace('www.', '') ?? '';
+
+    let embedLink = null;
+
+    switch (videoHostname) {
+      case 'youtube.com':
+        embedLink = `https://www.youtube.com/embed/${videoUrl.searchParams.get('v')}`;
+        break;
+
+      case 'youtu.be':
+        embedLink = `https://www.youtube.com/embed/${videoUrl.pathname.slice(1)}`;
+        break;
+
+      case 'twitch.tv': {
+        const videoId = videoUrl.pathname.split('/').pop();
+        embedLink = `https://player.twitch.tv/?video=v${videoId}&parent=${window.location.hostname}`;
+        break;
+      }
+    }
 
     const style = player?.['name-style'];
     let playerNameHtml = playerName;
@@ -575,10 +674,9 @@ export const initWrHistory = (
     const nextWR = worldRecords[currentIndex - 1] ?? null;
     const previousWR = worldRecords[currentIndex + 1] ?? null;
 
-    console.log(run);
     modal.innerHTML = `
       <div class="run-main">
-        <span class="run-category">${titleCaseSlug(run.category)}</span>
+        <span class="run-category">${getRunFullCategoryLabel(run)}</span>
         in
         <span class="run-time">${formatTime(run.primary_t)}</span>
         by
@@ -590,11 +688,17 @@ export const initWrHistory = (
         </span>
       </div>
       <div class="wr-number"><span class="wr-number-icon">${currentWrIcon}</span> # ${run.wrNumber}</div>
-      <div class="run-date">${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
-      <div class="run-version">${run.version}</div>
-      ${
-        run?.details
-          ? `<div class="run-details">
+      <div class="run-date">
+        <div class="section-label">Date</div>
+        ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
+      </div>
+      <div class="run-version">
+        <div class="section-label">Version</div>
+        ${run.version}
+      </div>
+            ${
+              run?.details
+                ? `<div class="run-details">
             ${Object.entries(run.details)
               .map(
                 ([key, value]) => `
@@ -604,33 +708,70 @@ export const initWrHistory = (
               )
               .join('')}
             </div>`
-          : ''
-      }
-      <a class="run-verification" ${run.weblink ? `href="${run.weblink}"` : ''}>${run.status === 'verified' ? `<img class="speedrun-icon" src="https://www.speedrun.com/images/favicon.png"></img>` : ''} ${titleCaseSlug(run.status)}</a>
-      ${run.timeDifference !== '' ? `<div class="run-difference ${run.timeDifferenceColor}">${formatTimeDifference(run.timeDifference)}</div>` : ''}
-      ${
-        previousWR
-          ? `
-        <div class="previous-wr">
-          <div>${formatTime(previousWR.primary_t)}</div>
-          <div class="run-date">${previousWR.date ? new Date(previousWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
-          ${previousWR.daysDifference != null ? `<span class="${previousWR.daysDifferenceColor}">${previousWR.daysDifference} day${previousWR.daysDifference === 1 ? '' : 's'}</span>` : ''}
-        </div>`
-          : ''
-      }
+                : ''
+            }
       ${
         nextWR
           ? `
         <div class="next-wr">
+          <div class="section-label">Next Record</div>
           <div>${formatTime(nextWR.primary_t)}</div>
+          ${nextWR.timeDifference !== '' ? `<div class="${nextWR.timeDifferenceColor}">${formatTimeDifference(nextWR.timeDifference)}</div>` : ''}
           <div class="run-date">${nextWR.date ? new Date(nextWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
           ${nextWR.daysDifference != null ? `<span class="${nextWR.daysDifferenceColor}">${nextWR.daysDifference} day${nextWR.daysDifference === 1 ? '' : 's'}</span>` : ''}
         </div>`
           : ''
       }
-      ${videoLink ? `<a class="run-video" href="${videoLink}">${icons[videoHostname]}</a>` : ''}
-      ${run?.comment ? `<div class="run-comment">${run.comment}</div>` : ''}
+      ${
+        previousWR
+          ? `
+        <div class="previous-wr">
+          <div class="section-label">Previous Record</div>
+          <div>${formatTime(previousWR.primary_t)}</div>
+          ${run.timeDifference !== '' ? `<div class="${run.timeDifferenceColor}">${formatTimeDifference(run.timeDifference)}</div>` : ''}
+          <div class="run-date">${previousWR.date ? new Date(previousWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
+          ${run.daysDifference != null ? `<span class="${run.daysDifferenceColor}">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
+        </div>`
+          : ''
+      }
+      <a class="run-verification" ${run.weblink ? `href="${run.weblink}"` : ''}>${run.status === 'verified' ? `<img class="speedrun-icon" src="https://www.speedrun.com/images/favicon.png"></img>` : ''} ${titleCaseSlug(run.status)}</a>
+      ${
+        embedLink
+          ? `${videoLink ? `<iframe allowfullscreen class="run-video" src="${embedLink}"></iframe>` : ''}`
+          : `${videoLink ? `<a class="run-video" href="${videoLink}">${icons[videoHostname]}</a>` : ''}`
+      }
+      ${
+        run?.comment
+          ? `<div class="run-comment">
+          <div class="section-label">Comment</div>
+          ${run?.comment ? `<div>${run.comment}</div>` : ''}`
+          : ''
+      }
     `;
+
+    if (previousWR) {
+      const previousWREl = modal.querySelector('.previous-wr');
+      previousWREl.tabIndex = 0;
+      previousWREl.addEventListener('click', () => openModal(previousWR));
+      previousWREl.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') {
+          e.preventDefault();
+          openModal(previousWR);
+        }
+      });
+    }
+
+    if (nextWR) {
+      const nextWREl = modal.querySelector('.next-wr');
+      nextWREl.tabIndex = 0;
+      nextWREl.addEventListener('click', () => openModal(nextWR));
+      nextWREl.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') {
+          e.preventDefault();
+          openModal(nextWR);
+        }
+      });
+    }
 
     return modal;
   };
@@ -791,7 +932,7 @@ export const initWrHistory = (
   });
 
   // Open detail
-  document.querySelector('tbody').addEventListener('click', (e) => {
+  document.querySelector('body').addEventListener('click', (e) => {
     const icon = e.target.closest('.detail-icon');
     if (!icon) return;
 
@@ -801,7 +942,9 @@ export const initWrHistory = (
     const selector = key ? `.detail-container.${key}` : '.detail-container';
 
     const containers = document.querySelectorAll('.detail-container');
-    const container = icon.closest('.detail-td').querySelector(selector);
+    const container =
+      icon?.closest('.detail-td')?.querySelector(selector) ??
+      icon.closest('.run-details').querySelector(selector);
     if (!container) return;
 
     const isVisible = container.style.display === 'block';
