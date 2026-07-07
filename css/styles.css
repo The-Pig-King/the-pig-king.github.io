@@ -194,8 +194,16 @@ body.slime-rancher-2 {
   color: var(--sr-color);
 }
 
+.slime-rancher-background {
+  background-color: var(--sr-color);
+}
+
 .slime-rancher-2-text {
   color: var(--sr2-color);
+}
+
+.slime-rancher-2-background {
+  background-color: var(--sr2-color);
 }
 
 @font-face {
@@ -352,6 +360,19 @@ header {
 .title-bar:has(.title:only-child) > .title {
   grid-column: 2;
   justify-self: center;
+}
+
+.game-switcher-select {
+  font-weight: bold;
+}
+
+body.slime-rancher .game-switcher-select {
+  background-color: var(--sr-color);
+  border: none;
+}
+body.slime-rancher-2 .game-switcher-select {
+  background-color: var(--sr2-color);
+  border: none;
 }
 
 /* Footer */
