@@ -31,6 +31,24 @@ const currentYear = new Date().getFullYear();
 year.textContent =
   currentYear > startYear ? `${startYear}-${currentYear}` : startYear;
 
+fetch(
+  'https://api.github.com/repos/The-Pig-King/the-pig-king.github.io/commits?per_page=1'
+)
+  .then((response) => response.json())
+  .then((data) => {
+    const date = new Date(data[0].commit.committer.date);
+
+    document.getElementById('last-updated').textContent =
+      date.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      });
+  })
+  .catch(() => {
+    document.getElementById('last-updated').textContent = 'Unavailable';
+  });
+
 // Sister page dropdown
 const GAMES = {
   'slime-rancher': 'Slime Rancher',
