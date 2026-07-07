@@ -670,9 +670,17 @@ export const initWrHistory = (
     }
 
     const currentId = cardModalContent.id;
-    const currentIndex = worldRecords.findIndex((run) => run.id === currentId);
-    const nextWR = worldRecords[currentIndex - 1] ?? null;
-    const previousWR = worldRecords[currentIndex + 1] ?? null;
+
+    const recordsInOrder = [...worldRecords].sort(
+      (a, b) => a.primary_t - b.primary_t
+    );
+
+    const currentIndex = recordsInOrder.findIndex(
+      (run) => run.id === currentId
+    );
+
+    const nextWR = recordsInOrder[currentIndex - 1] ?? null;
+    const previousWR = recordsInOrder[currentIndex + 1] ?? null;
 
     modal.innerHTML = `
       <div class="run-main">
