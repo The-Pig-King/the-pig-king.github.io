@@ -10,6 +10,7 @@ export const initWrHistory = (
 
   const defaultVideoIcon = `
         <svg 
+        tabindex='0'
         class='table-icon default'
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 640 640">
@@ -25,6 +26,7 @@ export const initWrHistory = (
 
   const youtubeIcon = `
         <svg 
+        tabindex='0'
         class='table-icon youtube'
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 640 640">
@@ -41,6 +43,7 @@ export const initWrHistory = (
 
   const twitchIcon = `
         <svg 
+        tabindex='0'
         class='table-icon twitch'
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 640 640">
@@ -55,6 +58,7 @@ export const initWrHistory = (
 
   const bilibiliIcon = `
         <svg 
+        tabindex='0'
         class='table-icon bilibili'
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 640 640">
@@ -84,6 +88,7 @@ export const initWrHistory = (
 
   const commentIcon = `
         <svg 
+        tabindex='0'
         class="table-icon detail-icon"
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 640 640">
@@ -98,6 +103,7 @@ export const initWrHistory = (
 
   const currentWrIcon = `
       <svg 
+      tabindex='0'
       class="table-icon detail-icon currentWr"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 640 640">
@@ -118,17 +124,21 @@ export const initWrHistory = (
 
   const subIcon = `
       <svg 
+      tabindex='0'
       class="table-icon detail-icon sub"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M264.5 64C251.2 64 240.5 74.7 240.5 88C240.5 101.3 251.2 112 264.5 112L296.5 112L296.5 137.3C188.5 149.2 104.5 240.8 104.5 352C104.5 471.3 201.2 568 320.5 568C439.8 568 536.5 471.3 536.5 352C536.5 312.2 525.7 274.9 506.9 242.8L535.1 214.6C547.6 202.1 547.6 181.8 535.1 169.3C522.6 156.8 502.3 156.8 489.8 169.3L466.4 192.7C433.5 162.5 391.2 142.4 344.4 137.2L344.4 111.9L376.4 111.9C389.7 111.9 400.4 101.2 400.4 87.9C400.4 74.6 389.7 63.9 376.4 63.9L264.4 63.9zM344.5 248L344.5 352C344.5 365.3 333.8 376 320.5 376C307.2 376 296.5 365.3 296.5 352L296.5 248C296.5 234.7 307.2 224 320.5 224C333.8 224 344.5 234.7 344.5 248z"/></svg>`;
 
-  const routeIcon = `<svg 
+  const routeIcon = `
+      <svg 
+      tabindex='0'
       class="table-icon detail-icon route"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M576 160C576 210.2 516.9 285.1 491.4 315C487.6 319.4 482 321.1 476.9 320L384 320C366.3 320 352 334.3 352 352C352 369.7 366.3 384 384 384L480 384C533 384 576 427 576 480C576 533 533 576 480 576L203.6 576C212.3 566.1 222.9 553.4 233.6 539.2C239.9 530.8 246.4 521.6 252.6 512L480 512C497.7 512 512 497.7 512 480C512 462.3 497.7 448 480 448L384 448C331 448 288 405 288 352C288 299 331 256 384 256L423.8 256C402.8 224.5 384 188.3 384 160C384 107 427 64 480 64C533 64 576 107 576 160zM181.1 553.1C177.3 557.4 173.9 561.2 171 564.4L169.2 566.4L169 566.2C163 570.8 154.4 570.2 149 564.4C123.8 537 64 466.5 64 416C64 363 107 320 160 320C213 320 256 363 256 416C256 446 234.9 483 212.5 513.9C201.8 528.6 190.8 541.9 181.7 552.4L181.1 553.1zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM480 192C497.7 192 512 177.7 512 160C512 142.3 497.7 128 480 128C462.3 128 448 142.3 448 160C448 177.7 462.3 192 480 192z"/></svg>`;
 
   const hourIcon = `
       <svg 
+      tabindex='0'
       class="table-icon detail-icon hour"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 640 640">
@@ -252,6 +262,7 @@ export const initWrHistory = (
     if (run.status === 'unverified') tr.classList.add('unverified');
 
     tr.setAttribute('id', run.id);
+    tr.setAttribute('tabindex', '0');
 
     const player = run.players_full?.[0];
     const playerName = run.players_full?.[0]?.names?.international ?? '';
@@ -292,7 +303,7 @@ export const initWrHistory = (
       ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
       ${run.daysDifference != null ? `<br><span class="${run.daysDifferenceColor} difference-label">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
     </td>
-    <td>${videoLink ? `<a href="${videoLink}">${icons[videoHostname]}</a>` : ''}</td>
+    <td>${videoLink ? `<a tabindex="-1" class="video-link" href="${videoLink}">${icons[videoHostname]}</a>` : ''}</td>
     <td>
       ${formatTime(run.primary_t) || ''}
       ${run.timeDifference !== '' ? `<br><span class="${run.timeDifferenceColor} difference-label">${formatTimeDifference(run.timeDifference)}</span>` : ''}
@@ -695,7 +706,27 @@ export const initWrHistory = (
           ${playerNameHtml}
         </span>
       </div>
-      <div class="wr-number"><span class="wr-number-icon">${currentWrIcon}</span> # ${run.wrNumber}</div>
+      <div class="wr-number">
+          ${`
+            <svg 
+            class="currentWr wr-number-icon"
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 640 640">
+              <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
+              https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 
+              478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 
+              368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 
+              512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 
+              576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 
+              438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 
+              72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 
+              117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 
+              158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 
+              254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/>
+            </svg>`}
+        # ${run.wrNumber}
+      </div>
       <div class="run-date">
         <div class="section-label">Date</div>
         ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
@@ -704,20 +735,6 @@ export const initWrHistory = (
         <div class="section-label">Version</div>
         ${run.version}
       </div>
-            ${
-              run?.details
-                ? `<div class="run-details">
-            ${Object.entries(run.details)
-              .map(
-                ([key, value]) => `
-                      <span data-key="${key}">${icons[key] ?? ''}</span>
-                      <div class="detail-container ${key}">${value}</div>
-                    `
-              )
-              .join('')}
-            </div>`
-                : ''
-            }
       ${
         nextWR
           ? `
@@ -743,6 +760,20 @@ export const initWrHistory = (
           : ''
       }
       <a class="run-verification" ${run.weblink ? `href="${run.weblink}"` : ''}>${run.status === 'verified' ? `<img class="speedrun-icon" src="https://www.speedrun.com/images/favicon.png"></img>` : ''} ${titleCaseSlug(run.status)}</a>
+      ${
+        run?.details
+          ? `<div class="run-details">
+            ${Object.entries(run.details)
+              .map(
+                ([key, value]) => `
+                      <span data-key="${key}">${icons[key] ?? ''}</span>
+                      <div class="detail-container ${key}">${value}</div>
+                    `
+              )
+              .join('')}
+            </div>`
+          : ''
+      }
       ${
         embedLink
           ? `${videoLink ? `<iframe allowfullscreen class="run-video" src="${embedLink}"></iframe>` : ''}`
@@ -802,6 +833,7 @@ export const initWrHistory = (
     if (e.key !== ' ' && e.key !== 'Enter') return;
     if (e.target.closest('.table-icon')) return;
     if (e.target.closest('.runner-name')) return;
+    if (e.target.closest('.detail-container')) return;
 
     const cardElement = e.target.closest('.run-table-row');
     if (!cardElement) return;
@@ -814,6 +846,7 @@ export const initWrHistory = (
   tableContent.addEventListener('click', (e) => {
     if (e.target.closest('.table-icon')) return;
     if (e.target.closest('.runner-name')) return;
+    if (e.target.closest('.detail-container')) return;
 
     const cardElement = e.target.closest('.run-table-row');
     if (!cardElement) return;
@@ -940,24 +973,32 @@ export const initWrHistory = (
   });
 
   // Open detail
-  document.querySelector('body').addEventListener('click', (e) => {
-    const icon = e.target.closest('.detail-icon');
-    if (!icon) return;
-
-    const keyEl = e.target.closest('[data-key]');
+  const toggleDetail = (icon) => {
+    const keyEl = icon.closest('[data-key]');
     const key = keyEl?.dataset.key;
-
     const selector = key ? `.detail-container.${key}` : '.detail-container';
-
     const containers = document.querySelectorAll('.detail-container');
     const container =
-      icon?.closest('.detail-td')?.querySelector(selector) ??
-      icon.closest('.run-details').querySelector(selector);
+      icon.closest('.detail-td')?.querySelector(selector) ??
+      icon.closest('.run-details')?.querySelector(selector);
     if (!container) return;
-
     const isVisible = container.style.display === 'block';
     containers.forEach((c) => (c.style.display = 'none'));
     container.style.display = isVisible ? 'none' : 'block';
+  };
+
+  document.querySelector('body').addEventListener('click', (e) => {
+    const icon = e.target.closest('.detail-icon');
+    if (!icon) return;
+    toggleDetail(icon);
+  });
+
+  document.querySelector('body').addEventListener('keydown', (e) => {
+    if (e.key !== ' ' && e.key !== 'Enter') return;
+    const icon = e.target.closest('.detail-icon');
+    if (!icon) return;
+    e.preventDefault();
+    toggleDetail(icon);
   });
 
   // Close detail on outside click

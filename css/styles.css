@@ -959,7 +959,7 @@ summary:focus-visible,
 .wr-number {
   grid-area: wr-number;
 }
-.wr-number-icon svg {
+.wr-number-icon {
   width: 1rem;
 }
 .run-date {
