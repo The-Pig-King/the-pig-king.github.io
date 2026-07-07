@@ -2239,8 +2239,8 @@ const rawCards = [
   },
   {
     name: 'Jellystone',
-    icon: '/assets/games/slime-rancher-2/resources/iconCraftJellystone.png',
-    'sr-icon': '/assets/games/slime-rancher/resources/iconCraftJellystone.png',
+    icon: '/assets/games/slime-rancher-2/resources/iconCraftJellyStone.png',
+    'sr-icon': '/assets/games/slime-rancher/resources/iconCraftJellyStone.png',
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: [
@@ -3083,7 +3083,7 @@ const rawCards = [
     name: 'Jetpack II',
     'sister-name': 'Air Drive',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopJetpack 2.png',
-    'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopAirDrive.png',
+    'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopAirdrive.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -3371,7 +3371,7 @@ const rawCards = [
     name: 'Golden Sureshot',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopGoldenSureshot 1.png',
     'sr-icon':
-      '/assets/games/slime-rancher/upgrades/iconShopGoldenSureshot.png',
+      '/assets/games/slime-rancher/upgrades/iconShopGoldenSureShot.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -4178,7 +4178,7 @@ const rawCards = [
   },
   {
     name: 'The Digsite',
-    icon: '/assets/games/slime-rancher-2/zones/iconExpansionDigsite.png',
+    icon: '/assets/games/slime-rancher-2/zones/iconExpansionDigSite.png',
     tags: ['zone', 'common'],
     details: {
       price: {
@@ -4408,7 +4408,7 @@ const rawCards = [
   },
   {
     name: 'Magma Room',
-    icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconThememagma.png',
+    icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconThemeMagma.png',
     'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room-theme'],
     details: {
@@ -7415,7 +7415,7 @@ const rawCards = [
   },
   {
     name: 'SnowZ Bench',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSnowZBench.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSnowZbench.png',
     tags: ['gadget', 'common', 'decoration', 'powderfall-bluffs'],
     details: {
       recipe: {
@@ -8313,7 +8313,7 @@ const rawCards = [
   },
   {
     name: 'Prismatic Striped Lamp',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStripedLampprismatic.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorStripedLampPrismatic.png',
     tags: ['gadget', 'common', 'decoration', 'variant', 'fun'],
     details: {
       price: {
