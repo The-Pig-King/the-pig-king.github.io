@@ -1,8 +1,12 @@
 export const initWrHistory = (
   data,
   additionalData,
+  nonRecordsToRemove,
   filterRuns,
-  titleCaseSlug
+  titleCaseSlug,
+  getRunCategoryKey,
+  getRunRuleSetKey,
+  getRunSubcategoryKey
 ) => {
   const dataById = new Map(data.map((run) => [run.id, run]));
   additionalData.forEach((run) => dataById.set(run.id, run));
@@ -512,8 +516,9 @@ export const initWrHistory = (
 
   const updateUI = () => {
     // Remove some non-records
-    data.splice(data.indexOf(data.find((e) => e.id === 'zgn0wqdy')), 1);
-    data.splice(data.indexOf(data.find((e) => e.id === 'yo485d5m')), 1);
+    nonRecordsToRemove.forEach((run) => {
+      data.splice(data.indexOf(data.find((e) => e.id === run)), 1);
+    });
 
     worldRecords = filterRuns(state, data);
     worldRecords = filterWrs(worldRecords);
@@ -554,55 +559,6 @@ export const initWrHistory = (
     });
 
     updateURL();
-  };
-
-  const getRunCategoryKey = (run) => {
-    if (run.category === 'any-glitchless' || run.category === 'any-glitched') {
-      return 'any';
-    }
-    if (run.category === 'all-gordos') {
-      return 'all-gordos';
-    }
-    if (
-      (run.category === 'slimepedia-glitchless' &&
-        run.subcategory === '1.4.0-1.4.4') ||
-      (run.category === 'slimepedia-glitched' && run.subcategory === '1.2.0')
-    ) {
-      return 'slimepedia';
-    }
-    if (run.category === 'pink-gordo') return 'pink-gordo';
-    if (run.category === 'vacpack') return 'vacpack';
-    return null;
-  };
-
-  const getRunRuleSetKey = (run) => {
-    if (
-      run.category === 'any-glitchless' ||
-      run.category === 'slimepedia-glitchless' ||
-      run.category === 'pink-gordo' ||
-      run.subcategory?.endsWith('glitchless') ||
-      run.subcategory === 'rush-mode'
-    ) {
-      return 'glitchless';
-    }
-    if (
-      run.category === 'any-glitched' ||
-      run.category === 'slimepedia-glitched' ||
-      run.subcategory?.endsWith('glitched')
-    ) {
-      return 'glitched';
-    }
-    return null;
-  };
-
-  const getRunSubcategoryKey = (run, categoryKey) => {
-    if (categoryKey === 'any' || categoryKey === 'pink-gordo') {
-      return run.subcategory ?? null;
-    }
-    if (categoryKey === 'all-gordos') {
-      return run.subcategory === 'rush-mode' ? 'rush-mode' : 'adventure-mode';
-    }
-    return null;
   };
 
   const getBtnLabel = (group, key, groupClass) => {

@@ -1023,6 +1023,8 @@ const additionalData = [
   },
 ];
 
+const nonRecordsToRemove = ['zgn0wqdy', 'yo485d5m'];
+
 const filterRuns = (state, runs) => {
   return runs.filter((run) => {
     let matchCategory = false;
@@ -1081,4 +1083,62 @@ const filterRuns = (state, runs) => {
   });
 };
 
-initWrHistory(data, additionalData, filterRuns, titleCaseSlug);
+const getRunCategoryKey = (run) => {
+  if (run.category === 'any-glitchless' || run.category === 'any-glitched') {
+    return 'any';
+  }
+  if (run.category === 'all-gordos') {
+    return 'all-gordos';
+  }
+  if (
+    (run.category === 'slimepedia-glitchless' &&
+      run.subcategory === '1.4.0-1.4.4') ||
+    (run.category === 'slimepedia-glitched' && run.subcategory === '1.2.0')
+  ) {
+    return 'slimepedia';
+  }
+  if (run.category === 'pink-gordo') return 'pink-gordo';
+  if (run.category === 'vacpack') return 'vacpack';
+  return null;
+};
+
+const getRunRuleSetKey = (run) => {
+  if (
+    run.category === 'any-glitchless' ||
+    run.category === 'slimepedia-glitchless' ||
+    run.category === 'pink-gordo' ||
+    run.subcategory?.endsWith('glitchless') ||
+    run.subcategory === 'rush-mode'
+  ) {
+    return 'glitchless';
+  }
+  if (
+    run.category === 'any-glitched' ||
+    run.category === 'slimepedia-glitched' ||
+    run.subcategory?.endsWith('glitched')
+  ) {
+    return 'glitched';
+  }
+  return null;
+};
+
+const getRunSubcategoryKey = (run, categoryKey) => {
+  if (categoryKey === 'any' || categoryKey === 'pink-gordo') {
+    return run.subcategory ?? null;
+  }
+  if (categoryKey === 'all-gordos') {
+    return run.subcategory === 'rush-mode' ? 'rush-mode' : 'adventure-mode';
+  }
+  return null;
+};
+
+initWrHistory(
+  data,
+  additionalData,
+  nonRecordsToRemove,
+  filterRuns,
+  titleCaseSlug,
+  getRunCategoryKey,
+  getRunRuleSetKey,
+  getRunSubcategoryKey
+);

@@ -985,6 +985,8 @@ summary:focus-visible,
 }
 .run-video {
   grid-area: run-video;
+  background-color: color-mix(in srgb, var(--frame-color) 90%, white);
+  padding: 0rem;
 }
 .run-comment {
   grid-area: run-comment;
