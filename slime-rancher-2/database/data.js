@@ -444,7 +444,7 @@ const rawCards = [
     'radiant-icon':
       '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeSaber.png',
     'secret-style-icon':
-      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeSaberExotic.png',
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeSaberexotic.png',
     'sr-icon':
       '/assets/games/slime-rancher/slimes/regular/iconSlimeSaberSketch.png',
     tags: ['slime', 'common', 'docile'],
@@ -1574,7 +1574,7 @@ const rawCards = [
   {
     name: 'Carrot',
     icon: '/assets/games/slime-rancher-2/food/iconVeggieCarrot.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconVeggieCarrot.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconVeggieCarrot.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
       spawn: [
@@ -1632,7 +1632,7 @@ const rawCards = [
   {
     name: 'Heart Beet',
     icon: '/assets/games/slime-rancher-2/food/iconVeggieBeet.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconVeggieBeet.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconVeggieBeet.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
       spawn: [
@@ -1660,7 +1660,7 @@ const rawCards = [
   {
     name: 'Odd Onion',
     icon: '/assets/games/slime-rancher-2/food/iconVeggieOnion.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconVeggieOnion.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconVeggieOnion.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
       spawn: [
@@ -1701,7 +1701,7 @@ const rawCards = [
   {
     name: 'Pogo Fruit',
     icon: '/assets/games/slime-rancher-2/food/iconFruitPogo.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconFruitPogo.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconFruitPogo.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: [
@@ -1736,7 +1736,7 @@ const rawCards = [
   {
     name: 'Mint Mango',
     icon: '/assets/games/slime-rancher-2/food/iconFruitMango.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconFruitMango.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconFruitMango.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: [
@@ -1756,7 +1756,7 @@ const rawCards = [
   {
     name: 'Cuberry',
     icon: '/assets/games/slime-rancher-2/food/iconFruitCuberry.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconFruitCuberry.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconFruitCuberry.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: [
@@ -1808,7 +1808,7 @@ const rawCards = [
   {
     name: 'Prickle Pear',
     icon: '/assets/games/slime-rancher-2/food/iconFruitPear.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconFruitPear.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconFruitPear.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: ['ember-valley'],
@@ -1842,7 +1842,7 @@ const rawCards = [
   {
     name: 'Chickadoo',
     icon: '/assets/games/slime-rancher-2/food/iconBirdChick.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdChick.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdChick.png',
     tags: ['food', 'future-meat', 'common'],
     locations: {
       spawn: [
@@ -1865,7 +1865,7 @@ const rawCards = [
   {
     name: 'Hen Hen',
     icon: '/assets/games/slime-rancher-2/food/iconBirdHen.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdHen.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdHen.png',
     tags: ['food', 'meat', 'common'],
     locations: {
       spawn: [
@@ -1899,7 +1899,7 @@ const rawCards = [
   {
     name: 'Roostro',
     icon: '/assets/games/slime-rancher-2/food/iconBirdRooster.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdRooster.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdRooster.png',
     tags: ['food', 'meat', 'common'],
     locations: {
       spawn: [
@@ -1973,7 +1973,7 @@ const rawCards = [
   {
     name: 'Stony Chickadoo',
     icon: '/assets/games/slime-rancher-2/food/iconBirdChickStony.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdChickStony.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdChickStony.png',
     tags: ['food', 'future-meat', 'common'],
     locations: {
       spawn: [
@@ -1993,7 +1993,7 @@ const rawCards = [
   {
     name: 'Stony Hen',
     icon: '/assets/games/slime-rancher-2/food/iconBirdHenStony.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdHenStony.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdHenStony.png',
     tags: ['food', 'meat', 'common'],
     locations: {
       spawn: [
@@ -2014,7 +2014,7 @@ const rawCards = [
   {
     name: 'Briar Chickadoo',
     icon: '/assets/games/slime-rancher-2/food/iconBirdChickBriar.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdChickBriar.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdChickBriar.png',
     tags: ['food', 'future-meat', 'common'],
     locations: {
       spawn: ['ember-valley', 'lava-depths'],
@@ -2027,7 +2027,7 @@ const rawCards = [
   {
     name: 'Briar Hen',
     icon: '/assets/games/slime-rancher-2/food/iconBirdHenBriar.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdHenBriar.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdHenBriar.png',
     tags: ['food', 'meat', 'common'],
     locations: {
       spawn: ['ember-valley', 'lava-depths'],
@@ -2066,7 +2066,7 @@ const rawCards = [
   {
     name: 'Painted Chickadoo',
     icon: '/assets/games/slime-rancher-2/food/iconBirdChickPainted.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdChickPainted.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdChickPainted.png',
     tags: ['food', 'future-meat', 'common'],
     locations: {
       spawn: ['starlight-strand'],
@@ -2079,7 +2079,7 @@ const rawCards = [
   {
     name: 'Painted Hen',
     icon: '/assets/games/slime-rancher-2/food/iconBirdHenPainted.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdHenPainted.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdHenPainted.png',
     tags: ['food', 'meat', 'common'],
     locations: {
       spawn: ['starlight-strand'],
@@ -2117,13 +2117,13 @@ const rawCards = [
   {
     name: 'Elder Hen',
     icon: '/assets/games/slime-rancher-2/food/iconBirdHenElder.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdHenElder.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdHenElder.png',
     tags: ['food', 'meat', 'common'],
   },
   {
     name: 'Elder Roostro',
     icon: '/assets/games/slime-rancher-2/food/iconBirdRoosterElder.png',
-    'sr-icon': '/assets/games/slime-rancher/food//iconBirdRoosterElder.png',
+    'sr-icon': '/assets/games/slime-rancher/food/iconBirdRoosterElder.png',
     tags: ['food', 'meat', 'common'],
   },
   {
@@ -3285,8 +3285,8 @@ const rawCards = [
   },
   {
     name: 'Pulse Wave',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconShopPulseWave.png',
-    'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopPulseWave.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconShopPulsewave.png',
+    'sr-icon': '/assets/games/slime-rancher/upgrades/iconShopPulsewave.png',
     tags: ['upgrade', 'common'],
     details: {
       price: {
@@ -5056,7 +5056,7 @@ const rawCards = [
   },
   {
     name: 'Meat Flag',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetMarkerHenHen.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetMarkerHenhen.png',
     tags: ['gadget', 'common', 'utility'],
     details: {
       recipe: {
@@ -6604,7 +6604,7 @@ const rawCards = [
   },
   {
     name: 'Sea Grass',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSeaGrass.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSeagrass.png',
     tags: ['gadget', 'common', 'decoration', 'beach'],
     details: {
       price: {
@@ -7156,7 +7156,7 @@ const rawCards = [
   },
   {
     name: 'Azure Glow Shrooms',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAzureGlowSHrooms.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorAzureGlowShrooms.png',
     tags: ['gadget', 'common', 'decoration', 'starlight-strand'],
     details: {
       recipe: {
@@ -7493,7 +7493,7 @@ const rawCards = [
   },
   {
     name: 'Fire Flower',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorFireFlower.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorFireflower.png',
     tags: ['gadget', 'common', 'decoration', 'powderfall-bluffs'],
     details: {
       recipe: {
@@ -7569,7 +7569,7 @@ const rawCards = [
   },
   {
     name: 'Snow Globe',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSnowGlobe.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorSnowglobe.png',
     tags: ['gadget', 'common', 'decoration', 'powderfall-bluffs'],
     details: {
       recipe: {
@@ -7788,7 +7788,7 @@ const rawCards = [
   },
   {
     name: 'Windsocks',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorWindsocks.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorWindSocks.png',
     tags: ['gadget', 'common', 'decoration', 'fun'],
     details: {
       recipe: {
@@ -7985,7 +7985,7 @@ const rawCards = [
   },
   {
     name: 'Wind Chimes',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorWindChime.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorWindchime.png',
     tags: ['gadget', 'common', 'decoration', 'fun'],
     details: {
       recipe: {
@@ -8469,7 +8469,7 @@ const rawCards = [
   },
   {
     name: 'Large Sandcastle',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLargeSandcastleBig.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorLargeSandCastleBig.png',
     tags: ['gadget', 'common', 'decoration', 'beach'],
     details: {
       price: {
@@ -8783,7 +8783,7 @@ const rawCards = [
   },
   {
     name: 'Gold Slime Floor Panel',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldSlimeFLoorPanel.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldSlimeFloorPanel.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
       price: {
@@ -9246,7 +9246,7 @@ const rawCards = [
   },
   {
     name: 'Overgrown Lilypad',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetOvergrownLilypad.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetOvergrownLilyPad.png',
     tags: ['gadget', 'common', 'decoration', 'the-grey-labyrinth'],
     details: {
       price: {
@@ -9886,7 +9886,7 @@ const rawCards = [
   },
   {
     name: 'Golden Chicken Statue',
-    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenHenHenStatue.png',
+    icon: '/assets/games/slime-rancher-2/gadgets/iconDecorGoldenHenhenStatue.png',
     tags: ['gadget', 'common', 'decoration', 'golden-statue'],
     details: {
       recipe: {

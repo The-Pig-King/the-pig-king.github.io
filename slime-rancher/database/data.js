@@ -288,9 +288,9 @@ const rawCards = [
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeHoneyExotic.png',
     'sr2-icon':
-      '/assets/games/slime-rancher-2/slimes/regular/iconSlimehoney.png',
+      '/assets/games/slime-rancher-2/slimes/regular/iconSlimeHoney.png',
     'radiant-icon':
-      '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimehoney.png',
+      '/assets/games/slime-rancher-2/slimes/radiant/iconRadiantSlimeHoney.png',
     tags: ['slime', 'common', 'docile'],
     locations: {
       spawn: ['the-moss-blanket', 'the-slimeulation'],
@@ -508,7 +508,7 @@ const rawCards = [
     'secret-style-name': 'Pre-Jellasic',
     icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeSaberSketch.png',
     'secret-style-icon':
-      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeSaberExotic.png',
+      '/assets/games/slime-rancher/slimes/secret-style/iconSlimeSaberexotic.png',
     'sr2-icon':
       '/assets/games/slime-rancher-2/slimes/regular/iconSlimeSaber.png',
     'radiant-icon':
@@ -527,7 +527,7 @@ const rawCards = [
   {
     name: 'Quicksilver Slime',
     'secret-style-name': 'Boomerang',
-    icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeQuicksilver.png',
+    icon: '/assets/games/slime-rancher/slimes/regular/iconSlimeQuickSilver.png',
     'secret-style-icon':
       '/assets/games/slime-rancher/slimes/secret-style/iconSlimeQuicksilverExotic.png',
     tags: ['slime', 'common', 'docile', 'harmful'],
@@ -938,7 +938,7 @@ const rawCards = [
   },
   {
     name: 'Quicksilver Plort',
-    icon: '/assets/games/slime-rancher/plorts/iconPlortQuicksilver.png',
+    icon: '/assets/games/slime-rancher/plorts/iconPlortQuickSilver.png',
     tags: ['plort', 'common'],
     details: {
       'trade-price': ['20'],
@@ -1481,7 +1481,7 @@ const rawCards = [
   },
   {
     name: 'Carrot',
-    icon: '/assets/games/slime-rancher/food//iconVeggieCarrot.png',
+    icon: '/assets/games/slime-rancher/food/iconVeggieCarrot.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconVeggieCarrot.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
@@ -1515,7 +1515,7 @@ const rawCards = [
   },
   {
     name: 'Oca Oca',
-    icon: '/assets/games/slime-rancher/food//iconVeggieOcaOca.png',
+    icon: '/assets/games/slime-rancher/food/iconVeggieOcaoca.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
       spawn: ['the-indigo-quarry', 'the-slimeulation'],
@@ -1530,7 +1530,7 @@ const rawCards = [
   },
   {
     name: 'Heart Beet',
-    icon: '/assets/games/slime-rancher/food//iconVeggieBeet.png',
+    icon: '/assets/games/slime-rancher/food/iconVeggieBeet.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconVeggieBeet.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
@@ -1561,7 +1561,7 @@ const rawCards = [
   },
   {
     name: 'Silver Parsnip',
-    icon: '/assets/games/slime-rancher/food//iconVeggieParsnip.png',
+    icon: '/assets/games/slime-rancher/food/iconVeggieParsnip.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
       spawn: ['the-glass-desert'],
@@ -1576,7 +1576,7 @@ const rawCards = [
   },
   {
     name: 'Odd Onion',
-    icon: '/assets/games/slime-rancher/food//iconVeggieOnion.png',
+    icon: '/assets/games/slime-rancher/food/iconVeggieOnion.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconVeggieOnion.png',
     tags: ['food', 'veggie', 'common'],
     locations: {
@@ -1592,7 +1592,7 @@ const rawCards = [
   },
   {
     name: 'Gilded Ginger',
-    icon: '/assets/games/slime-rancher/food//iconVeggieGinger.png',
+    icon: '/assets/games/slime-rancher/food/iconVeggieGinger.png',
     tags: ['food', 'veggie', 'rare'],
     locations: {
       spawn: ['the-glass-desert'],
@@ -1604,7 +1604,7 @@ const rawCards = [
   },
   {
     name: 'Pogo Fruit',
-    icon: '/assets/games/slime-rancher/food//iconFruitPogo.png',
+    icon: '/assets/games/slime-rancher/food/iconFruitPogo.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconFruitPogo.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
@@ -1639,7 +1639,7 @@ const rawCards = [
   },
   {
     name: 'Mint Mango',
-    icon: '/assets/games/slime-rancher/food//iconFruitMango.png',
+    icon: '/assets/games/slime-rancher/food/iconFruitMango.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconFruitMango.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
@@ -1655,7 +1655,7 @@ const rawCards = [
   },
   {
     name: 'Cuberry',
-    icon: '/assets/games/slime-rancher/food//iconFruitCuberry.png',
+    icon: '/assets/games/slime-rancher/food/iconFruitCuberry.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconFruitCuberry.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
@@ -1687,7 +1687,7 @@ const rawCards = [
   },
   {
     name: 'Phase Lemon',
-    icon: '/assets/games/slime-rancher/food//iconFruitLemon.png',
+    icon: '/assets/games/slime-rancher/food/iconFruitLemon.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: ['viktors-workshop', 'the-ancient-ruins'],
@@ -1702,7 +1702,7 @@ const rawCards = [
   },
   {
     name: 'Prickle Pear',
-    icon: '/assets/games/slime-rancher/food//iconFruitPear.png',
+    icon: '/assets/games/slime-rancher/food/iconFruitPear.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconFruitPear.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
@@ -1718,7 +1718,7 @@ const rawCards = [
   },
   {
     name: 'Kookadoba',
-    icon: '/assets/games/slime-rancher/food//iconFruitKookadoba.png',
+    icon: '/assets/games/slime-rancher/food/iconFruitKookadoba.png',
     tags: ['food', 'fruit', 'common'],
     locations: {
       spawn: ['the-wilds'],
@@ -1731,7 +1731,7 @@ const rawCards = [
   },
   {
     name: 'Chickadoo',
-    icon: '/assets/games/slime-rancher/food//iconBirdChick.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdChick.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdChick.png',
     tags: ['food', 'future-meat', 'common'],
     locations: {
@@ -1753,7 +1753,7 @@ const rawCards = [
   },
   {
     name: 'Hen Hen',
-    icon: '/assets/games/slime-rancher/food//iconBirdHen.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdHen.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdHen.png',
     tags: ['food', 'meat', 'common'],
     locations: {
@@ -1785,7 +1785,7 @@ const rawCards = [
   },
   {
     name: 'Roostro',
-    icon: '/assets/games/slime-rancher/food//iconBirdRooster.png',
+    icon: '/assets/games/slime-rancher/food/iconBirdRooster.png',
     'sr2-icon': '/assets/games/slime-rancher-2/food/iconBirdRooster.png',
     tags: ['food', 'meat', 'common'],
     locations: {
