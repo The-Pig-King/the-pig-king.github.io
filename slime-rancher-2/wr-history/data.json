@@ -1,0 +1,3872 @@
+[
+  {
+    "id": "yo5j787z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yo5j787z",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=7cdeGGOLY8M"
+        }
+      ]
+    },
+    "comment": "The first completed any% GL speedrun - easily broken, just submitting for history\n\nMod Note: Start Time 47.767, End Time: 1:43:31.45, Frame Rate: 60, Time: 1:42:43.683",
+    "status": "verified",
+    "date": "2025-09-27",
+    "primary_t": 6163.683,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "m7vqdj0m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/m7vqdj0m",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=QsT8zono-Bo"
+        }
+      ]
+    },
+    "comment": "An early sorta optomised run, done the day before 1.0.1\n\nMod Note: Start Time 42.617, End Time: 1:16:41.5, Frame Rate: 60, Time: 1:15:58.883",
+    "status": "verified",
+    "date": "2025-09-30",
+    "primary_t": 4558.883,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zg979knm",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zg979knm",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/VTT-2f4XpxU"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 31.983, End Time: 1:10:15.35, Frame Rate: 60, Time: 1:09:43.367",
+    "status": "verified",
+    "date": "2025-10-01",
+    "primary_t": 4183.367,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.1",
+    "players_full": [
+      {
+        "id": "j5pn0oq8",
+        "names": {
+          "international": "JesseKola",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/JesseKola",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "fi",
+            "names": {
+              "international": "Finland",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y8nqoe5y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y8nqoe5y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=NqOeSqPOiHw"
+        }
+      ]
+    },
+    "comment": "made in 1.0.0.\n\nMod Note: Start Time 54.567, End Time: 2:28.933, Frame Rate: 30, Time: 1:34.367",
+    "status": "verified",
+    "date": "2025-10-02",
+    "primary_t": 94.367,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.1",
+    "players_full": [
+      {
+        "id": "j21eg6p8",
+        "names": {
+          "international": "ArturSV",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/ArturSV",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "br",
+            "names": {
+              "international": "Brazil",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z0ke8pem",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z0ke8pem",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=OUPwsrs3pwE"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 1:08.815, End Time: 2:35.296, Frame Rate: 27, Time: 1:26.481",
+    "status": "verified",
+    "date": "2025-10-02",
+    "primary_t": 86.481,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.1",
+    "players_full": [
+      {
+        "id": "j21eg6p8",
+        "names": {
+          "international": "ArturSV",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/ArturSV",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "br",
+            "names": {
+              "international": "Brazil",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yj74qedy",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yj74qedy",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/Gmj7xYqXF7o"
+        }
+      ]
+    },
+    "comment": null,
+    "status": "verified",
+    "date": "2025-10-04",
+    "primary_t": 1484.133,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "pj01dwmx",
+        "names": {
+          "international": "ThePigKing",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ThePigKing",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z567rngy",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z567rngy",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=0SsrbDqOJ70"
+        }
+      ]
+    },
+    "comment": "The first near sub hour time where most of the route still holds up\n\nMod Note: Start Time 36.9, End Time: 1:02:30.7, Frame Rate: 60, Time: 1:01:53.8",
+    "status": "verified",
+    "date": "2025-10-04",
+    "primary_t": 3713.8,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yl540l3z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yl540l3z",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=uCEizh0ZuJQ"
+        }
+      ]
+    },
+    "comment": "made in 1.0.0.\n\nMod Note: Start Time 45.233, End Time: 2:09.467, Frame Rate: 30, Time: 1:24.233",
+    "status": "verified",
+    "date": "2025-10-05",
+    "primary_t": 84.233,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.1",
+    "players_full": [
+      {
+        "id": "j21eg6p8",
+        "names": {
+          "international": "ArturSV",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/ArturSV",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "br",
+            "names": {
+              "international": "Brazil",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yl54gxrz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yl54gxrz",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/q1ghNuKTri8"
+        }
+      ]
+    },
+    "comment": null,
+    "status": "verified",
+    "date": "2025-10-09",
+    "primary_t": 3505.183,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "pj01dwmx",
+        "names": {
+          "international": "ThePigKing",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ThePigKing",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z0k1r24m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z0k1r24m",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/dTh65oHwctc"
+        }
+      ]
+    },
+    "comment": "The first sub hour - took a few days for my route luck to line up, wanted a solid route run instead of just sub 1\n\nMod Note: Start Time 36.883, End Time: 58:51.5, Frame Rate: 60, Time: 58:14.617",
+    "status": "verified",
+    "date": "2025-10-09",
+    "primary_t": 3494.617,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zn54nk9z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zn54nk9z",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/6BSdLHwVOeQ"
+        }
+      ]
+    },
+    "comment": "Don't think I'm gonna even try to improve this",
+    "status": "verified",
+    "date": "2025-10-10",
+    "primary_t": 3552.5,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "j5pn0oq8",
+        "names": {
+          "international": "JesseKola",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/JesseKola",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "fi",
+            "names": {
+              "international": "Finland",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yj739l3y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yj739l3y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/dkiSIg6y7Kk"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 35.483, End Time: 1:21.017, Frame Rate: 60, Time: 45.533",
+    "status": "verified",
+    "date": "2025-10-11",
+    "primary_t": 45.533,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "pj01dwmx",
+        "names": {
+          "international": "ThePigKing",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ThePigKing",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z17j13wz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z17j13wz",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/Ga-U7g76UDo"
+        }
+      ]
+    },
+    "comment": null,
+    "status": "verified",
+    "date": "2025-10-11",
+    "primary_t": 3482.583,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "pj01dwmx",
+        "names": {
+          "international": "ThePigKing",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ThePigKing",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y8n197dy",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y8n197dy",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/1UVoYTnL27c"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 42.4, End Time: 1:39:25.733, Frame Rate: 30, Time: 1:38:43.333",
+    "status": "verified",
+    "date": "2025-10-12",
+    "primary_t": 5923.333,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "j9vl7krx",
+        "names": {
+          "international": "cardamonT",
+          "japanese": null
+        },
+        "pronouns": "She/Her",
+        "weblink": "https://www.speedrun.com/users/cardamonT",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "us",
+            "names": {
+              "international": "United States",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yl50j43z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yl50j43z",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/yHrjcZ4lQY4"
+        }
+      ]
+    },
+    "comment": "Largo only - basically perfect i think\n\nMod Note: Start Time 36.217, End Time: 1:32.55, Frame Rate: 60, Time: 56.333",
+    "status": "verified",
+    "date": "2025-10-13",
+    "primary_t": 56.333,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zg9k67nm",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zg9k67nm",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/MvzseFuwJu4"
+        }
+      ]
+    },
+    "comment": "largo only - could 44 but basically ideal run\n\nMod Note: Start Time 37.733, End Time: 1:22.967, Frame Rate: 60, Time: 45.233",
+    "status": "verified",
+    "date": "2025-10-13",
+    "primary_t": 45.233,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "m7vqlxem",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/m7vqlxem",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/NmgEQeNTjWA"
+        }
+      ]
+    },
+    "comment": null,
+    "status": "verified",
+    "date": "2025-10-15",
+    "primary_t": 3334.767,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "j5pn0oq8",
+        "names": {
+          "international": "JesseKola",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/JesseKola",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "fi",
+            "names": {
+              "international": "Finland",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "mepxgo9y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/mepxgo9y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/__DmA8nA7mo"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 34.983, End Time: 1:19.267, Frame Rate: 60, Time: 44.283",
+    "status": "verified",
+    "date": "2025-10-15",
+    "primary_t": 44.283,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "pj01dwmx",
+        "names": {
+          "international": "ThePigKing",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ThePigKing",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yj73q63y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yj73q63y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/eLbciQybkL8"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 38.933, End Time: 19:04.8, Frame Rate: 60, Time: 18:25.867",
+    "status": "verified",
+    "date": "2025-10-16",
+    "primary_t": 1105.867,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yv53714m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yv53714m",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/zx2ZNHXbrVs"
+        }
+      ]
+    },
+    "comment": "solid for the route and adjustments, room for a 54 or 53 definitely\n\nMod Note: Start Time 36.967, End Time: 56:30.983, Frame Rate: 60, Time: 55:54.017",
+    "status": "verified",
+    "date": "2025-10-16",
+    "primary_t": 3354.017,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y8n14e5y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y8n14e5y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/nfZFIc6RwHA"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 34.667, End Time: 3:22.883, Frame Rate: 60, Time: 2:48.217",
+    "status": "verified",
+    "date": "2025-10-17",
+    "primary_t": 168.217,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "pj01dwmx",
+        "names": {
+          "international": "ThePigKing",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ThePigKing",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y685386z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y685386z",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/4M1FmifxEp0"
+        }
+      ]
+    },
+    "comment": null,
+    "status": "verified",
+    "date": "2025-10-18",
+    "primary_t": 3364.625,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "pj01dwmx",
+        "names": {
+          "international": "ThePigKing",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ThePigKing",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "ydo5e7wz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/ydo5e7wz",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/XBGEZyrCl3I"
+        }
+      ]
+    },
+    "comment": null,
+    "status": "verified",
+    "date": "2025-10-20",
+    "primary_t": 3270.65,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.2",
+    "players_full": [
+      {
+        "id": "j5pn0oq8",
+        "names": {
+          "international": "JesseKola",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/JesseKola",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "fi",
+            "names": {
+              "international": "Finland",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z0k6p19m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z0k6p19m",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/tCVKLUt312k"
+        }
+      ]
+    },
+    "comment": "thanks devs for reducing luck\n\nMod Note: Start Time 36.933, End Time: 53:18.8, Frame Rate: 60, Time: 52:41.867",
+    "status": "verified",
+    "date": "2025-11-03",
+    "primary_t": 3161.867,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.3",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zn5o5dlz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zn5o5dlz",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/kWo8ww_qSZw"
+        }
+      ]
+    },
+    "comment": "great second half, first half is just so luck based\n\nMod Note: Start Time 36.5, End Time: 52:15.9, Frame Rate: 60, Time: 51:39.4",
+    "status": "verified",
+    "date": "2025-11-06",
+    "primary_t": 3099.4,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.3",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zn51j43z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zn51j43z",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/zomZmUEaYY0"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 1:04.167, End Time: 1:16:00.267, Frame Rate: 30, Time: 1:14:56.1",
+    "status": "verified",
+    "date": "2025-11-07",
+    "primary_t": 4496.1,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.0.3",
+    "players_full": [
+      {
+        "id": "j9vl7krx",
+        "names": {
+          "international": "cardamonT",
+          "japanese": null
+        },
+        "pronouns": "She/Her",
+        "weblink": "https://www.speedrun.com/users/cardamonT",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "us",
+            "names": {
+              "international": "United States",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yv5qe5xm",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yv5qe5xm",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=twtLGRlZXP8"
+        }
+      ]
+    },
+    "comment": "This is my first speedrun submission.\n\nMy first attempt on The grey Labyrinth - Glitched\n\nI tried The Grey Labyrinth - Glitchless, but i was so bad and i get 1:10:01 (i dont have that video)\n\nFinally i tried to complete the game and i reached Grey Labyrinth at 20 minutes. (no video because i failed that speedrun)\n\nNote: I play on Xbox on PC so i can\u00b4t use mods.\n\nMod Note: Start Time 42.333, End Time: 14:17.35, Frame Rate: 60, Time: 13:35.017",
+    "status": "verified",
+    "date": "2025-11-26",
+    "primary_t": 815.017,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.0.3",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "m7v63k0m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/m7v63k0m",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/Lx5pEtxf8os?si=KLGlcCvoV-J1JnEL"
+        }
+      ]
+    },
+    "comment": "Start: 0:41\n\nEnd: 9:04\n\nMod Note: Start Time 41.217, End Time: 9:03.933, Frame Rate: 60, Time: 8:22.717",
+    "status": "verified",
+    "date": "2025-11-30",
+    "primary_t": 502.717,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.0.3",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y9wvp3ez",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y9wvp3ez",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/KhMzziP18xY?si=AQscPFjKajpcc2lA"
+        }
+      ]
+    },
+    "comment": "New route\n\nMod Note: Start Time 34.583, End Time: 4:00.8, Frame Rate: 60, Time: 3:26.217",
+    "status": "verified",
+    "date": "2025-12-01",
+    "primary_t": 206.217,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.0.3",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y9wvrdrz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y9wvrdrz",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=SbLw5MgCxjA"
+        }
+      ]
+    },
+    "comment": "thanks lamp\n\nMod Note: Start Time 39.583, End Time: 1:21.833, Frame Rate: 60, Time: 42.25",
+    "status": "verified",
+    "date": "2025-12-03",
+    "primary_t": 42.25,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z17penwz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z17penwz",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=Ok0mubuUe_s"
+        }
+      ]
+    },
+    "comment": "dont ask how i found this strat\n\nMod Note: Start Time 37.75, End Time: 1:27.183, Frame Rate: 60, Time: 49.433",
+    "status": "verified",
+    "date": "2025-12-03",
+    "primary_t": 49.433,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zx587xqm",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zx587xqm",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/C-W5qGIqWCc?si=XK_Z0RfLW723zLGR"
+        }
+      ]
+    },
+    "comment": "Note: Timer was added afterwards and may be a bit off\n\nAlso I definitely could have gotten sub 3 mins of if I had not messed up the glitch so many times\n\nMod Note: Start Time 37.9, End Time: 3:51.6, Frame Rate: 30, Time: 3:13.7",
+    "status": "verified",
+    "date": "2025-12-06",
+    "primary_t": 193.7,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "x31v0rq8",
+        "names": {
+          "international": "GamingCheese0",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/GamingCheese0",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#009856",
+            "dark": "#09B876"
+          },
+          "color-to": {
+            "light": "#7AB941",
+            "dark": "#8AC951"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ca",
+            "names": {
+              "international": "Canada",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yw56350y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yw56350y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/SU7vFM6tnpw?si=ZkPTSiz8uG4VYKgS"
+        }
+      ]
+    },
+    "comment": "Note: Timer was added afterwards and may be a bit off\n\nMod Note: Start Time 40.333, End Time: 3:37, Frame Rate: 60, Time: 2:56.667",
+    "status": "verified",
+    "date": "2025-12-06",
+    "primary_t": 176.667,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "x31v0rq8",
+        "names": {
+          "international": "GamingCheese0",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/GamingCheese0",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#009856",
+            "dark": "#09B876"
+          },
+          "color-to": {
+            "light": "#7AB941",
+            "dark": "#8AC951"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ca",
+            "names": {
+              "international": "Canada",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "mep1pv9y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/mep1pv9y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/KwdPLx6aX_I?si=mMMi08AsM7h0PebP"
+        }
+      ]
+    },
+    "comment": "Sorry, but idk why theres no audio.\n\nMod Note: Start Time 42.6, End Time: 3:02.533, Frame Rate: 30, Time: 2:19.933",
+    "status": "verified",
+    "date": "2025-12-08",
+    "primary_t": 139.933,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "mr5rdl8y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/mr5rdl8y",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=ENGTVOGjG8o&feature=youtu.be"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 58.9, End Time: 1:06:12.9, Frame Rate: 30, Time: 1:05:14",
+    "status": "verified",
+    "date": "2025-12-09",
+    "primary_t": 3914,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "j9vl7krx",
+        "names": {
+          "international": "cardamonT",
+          "japanese": null
+        },
+        "pronouns": "She/Her",
+        "weblink": "https://www.speedrun.com/users/cardamonT",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "us",
+            "names": {
+              "international": "United States",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y68o9w6z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y68o9w6z",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/ZUR6PvLtgJw?si=sTfrFLjsxgmslBFp"
+        }
+      ]
+    },
+    "comment": "My fist good try on Any%\n\nMod Note: Start Time 37.617, End Time: 49:24.433, Frame Rate: 60, Time: 48:46.817",
+    "status": "verified",
+    "date": "2025-12-13",
+    "primary_t": 2926.817,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yo5lxd1z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yo5lxd1z",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/DFu7BpxQtXk?si=Kuw9BtOS_JepyCgG"
+        }
+      ]
+    },
+    "comment": "Another Try\n\nMod Note: Start Time 34.233, End Time: 39:11.467, Frame Rate: 30, Time: 38:37.233",
+    "status": "verified",
+    "date": "2025-12-15",
+    "primary_t": 2317.233,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zp5wkpny",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zp5wkpny",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/LGeyFbS2NOs"
+        }
+      ]
+    },
+    "comment": "cant be bothered clipping into starlight teleporter i suck at it\n\nMod Note: Start Time 37.433, End Time: 2:51, Frame Rate: 60, Time: 2:13.567",
+    "status": "verified",
+    "date": "2025-12-22",
+    "primary_t": 133.567,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yj7w313y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yj7w313y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=-i7Qq0iLKmA"
+        }
+      ]
+    },
+    "comment": null,
+    "status": "verified",
+    "date": "2025-12-24",
+    "primary_t": 127.95,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.0.3",
+    "players_full": [
+      {
+        "id": "8v56vwej",
+        "names": {
+          "international": "Wikboy",
+          "japanese": null
+        },
+        "pronouns": "",
+        "weblink": "https://www.speedrun.com/users/Wikboy",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#009856",
+            "dark": "#09B876"
+          },
+          "color-to": {
+            "light": "#009856",
+            "dark": "#09B876"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "mkrq0pvz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/mkrq0pvz",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=vz3hVBG6RQM"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 34.217, End Time: 2:32.867, Frame Rate: 60, Time: 1:58.65",
+    "status": "verified",
+    "date": "2025-12-27",
+    "primary_t": 118.65,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "8v56vwej",
+        "names": {
+          "international": "Wikboy",
+          "japanese": null
+        },
+        "pronouns": "",
+        "weblink": "https://www.speedrun.com/users/Wikboy",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#009856",
+            "dark": "#09B876"
+          },
+          "color-to": {
+            "light": "#009856",
+            "dark": "#09B876"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "m7j6n54m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/m7j6n54m",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/khv3j1AH8o0?si=8knjPOVRus7DcXNS"
+        }
+      ]
+    },
+    "comment": "Old run i forgot to upload a while ago\n\nMod Note: Start Time 34.167, End Time: 32:57.567, Frame Rate: 30, Time: 32:23.4\n",
+    "status": "verified",
+    "date": "2025-12-29",
+    "primary_t": 1943.4,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zx5qvwkm",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zx5qvwkm",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/YRKAB6Fm_l8"
+        }
+      ]
+    },
+    "comment": "after 3-4 days of learning and rerouting most of the run, pig finally has some competition after months of dead category gg, had some decent clip luck\n\nMod Note: Start Time 38.367, End Time: 24:19.2, Frame Rate: 60, Time: 23:40.833",
+    "status": "verified",
+    "date": "2025-12-30",
+    "primary_t": 1420.833,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "ydon04xz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/ydon04xz",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/gA9S5r5pVcg"
+        }
+      ]
+    },
+    "comment": "just wanted a sub 3 at least\n\nMod Note: Start Time 37.617, End Time: 3:36.3, Frame Rate: 60, Time: 2:58.683",
+    "status": "verified",
+    "date": "2025-12-31",
+    "primary_t": 178.683,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zx5qd5km",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zx5qd5km",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/Mr8K4OB17sk"
+        }
+      ]
+    },
+    "comment": "best clip spots i could find, could get close to sub 2 but would be hard\n\nMod Note: Start Time 37.45, End Time: 2:54.017, Frame Rate: 60, Time: 2:16.567",
+    "status": "verified",
+    "date": "2025-12-31",
+    "primary_t": 136.567,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zx5q77qm",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zx5q77qm",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/TUj1SmLa3Ss"
+        }
+      ]
+    },
+    "comment": "absolute god run, may stand for a while unless any big timesaves.\n\nMod Note: Start Time 36.85, End Time: 22:46.617, Frame Rate: 60, Time: 22:09.767",
+    "status": "verified",
+    "date": "2026-01-01",
+    "primary_t": 1329.767,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y68g0d1z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y68g0d1z",
+    "category": "slimepedia",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=z0fanRAps2I"
+        }
+      ]
+    },
+    "comment": "First recorded slimepedia 100% run\n\nMod Note: Start Time 36.633, End Time: 1:28:14.433, Frame Rate: 30, Time: 1:27:37.8",
+    "status": "verified",
+    "date": "2026-01-12",
+    "primary_t": 5257.8,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y2rnj85m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y2rnj85m",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=-hnRzpk1yUo"
+        }
+      ]
+    },
+    "comment": "First Try\n\nMod Note: Start Time 40.583, End Time: 1:25.633, Frame Rate: 60, Time: 45.05",
+    "status": "verified",
+    "date": "2026-01-13",
+    "primary_t": 45.05,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "ydov41qz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/ydov41qz",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=TSqobO3CgvI"
+        }
+      ]
+    },
+    "comment": "Probably needs a retime\n\nMod Note: Start Time 31.967, End Time: 1:13.917, Frame Rate: 60, Time: 41.95",
+    "status": "verified",
+    "date": "2026-01-14",
+    "primary_t": 41.95,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "8v56vwej",
+        "names": {
+          "international": "Wikboy",
+          "japanese": null
+        },
+        "pronouns": "",
+        "weblink": "https://www.speedrun.com/users/Wikboy",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#009856",
+            "dark": "#09B876"
+          },
+          "color-to": {
+            "light": "#009856",
+            "dark": "#09B876"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z17v75wz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z17v75wz",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=GcfksRJAfV8"
+        }
+      ]
+    },
+    "comment": "hover was shoddy as heck\n\nMod Note: Start Time 32.933, End Time: 1:16.55, Frame Rate: 60, Time: 43.617",
+    "status": "verified",
+    "date": "2026-01-14",
+    "primary_t": 43.617,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "8v56vwej",
+        "names": {
+          "international": "Wikboy",
+          "japanese": null
+        },
+        "pronouns": "",
+        "weblink": "https://www.speedrun.com/users/Wikboy",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#009856",
+            "dark": "#09B876"
+          },
+          "color-to": {
+            "light": "#009856",
+            "dark": "#09B876"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zx5j5dkm",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zx5j5dkm",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=KeIooNmu_GY"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 35.867, End Time: 3:19.367, Frame Rate: 60, Time: 2:43.5",
+    "status": "verified",
+    "date": "2026-01-14",
+    "primary_t": 163.5,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "8v56vwej",
+        "names": {
+          "international": "Wikboy",
+          "japanese": null
+        },
+        "pronouns": "",
+        "weblink": "https://www.speedrun.com/users/Wikboy",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#009856",
+            "dark": "#09B876"
+          },
+          "color-to": {
+            "light": "#009856",
+            "dark": "#09B876"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "yw5w5g9y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/yw5w5g9y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/9Vy6Eyk5JgM?si=UDs4GXXpv5OJvdVA"
+        }
+      ]
+    },
+    "comment": "New run\n\nMod Note: Start Time 33.817, End Time: 1:16.567, Frame Rate: 60, Time: 42.75",
+    "status": "verified",
+    "date": "2026-01-15",
+    "primary_t": 42.75,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zxp95w5y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zxp95w5y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/fb9U31dTTpI"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 33.458, End Time: 1:16.354, Frame Rate: 48, Time: 42.896",
+    "status": "verified",
+    "date": "2026-02-21",
+    "primary_t": 42.896,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "jmyl6gej",
+        "names": {
+          "international": "Spams_first",
+          "japanese": null
+        },
+        "pronouns": "He/Him, She/Her",
+        "weblink": "https://www.speedrun.com/users/Spams_first",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#A259C5",
+            "dark": "#C279E5"
+          },
+          "color-to": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "de",
+            "names": {
+              "international": "Germany",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y8lqvq1m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y8lqvq1m",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://m.bilibili.com/video/BV157fAByE8M"
+        }
+      ]
+    },
+    "comment": "Nearly sub hour! Silky sand was not enough in Ember Valley sadly.So I have to look for them in Starlight Strand, which took an additional minute :(\n\nMod Note: Frame Rate: 30, Time: 1:00:11.233",
+    "status": "verified",
+    "date": "2026-02-22",
+    "primary_t": 3611.233,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "jn59wz1j",
+        "names": {
+          "international": "ChaoFan",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ChaoFan",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "cn",
+            "names": {
+              "international": "China",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y8l90xdm",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y8l90xdm",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://m.bilibili.com/video/BV11tPuzfEdc"
+        }
+      ]
+    },
+    "comment": "Spent an additional minute in finding enough deep brine unluckily.\n\nMod Note: Frame Rate: 30, Time: 58:45.566",
+    "status": "verified",
+    "date": "2026-03-01",
+    "primary_t": 3525.566,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "jn59wz1j",
+        "names": {
+          "international": "ChaoFan",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ChaoFan",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "cn",
+            "names": {
+              "international": "China",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "medxk7qy",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/medxk7qy",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/setSFz_CinQ"
+        }
+      ]
+    },
+    "comment": "sub 42? idk\n\nMod Note: Start Time 33.967, End Time: 1:15.883, Frame Rate: 60, Time: 41.917",
+    "status": "verified",
+    "date": "2026-03-03",
+    "primary_t": 41.917,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zqnr2l9z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zqnr2l9z",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/583diBhsCIM?si=pFCjKE1oG7FcnZ1P"
+        }
+      ]
+    },
+    "comment": "New run\n\nMod Note: Start Time 34.25, End Time: 1:15.817, Frame Rate: 60, Time: 41.567",
+    "status": "verified",
+    "date": "2026-03-06",
+    "primary_t": 41.567,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "mkx2n23z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/mkx2n23z",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/ngL3xzULjac"
+        }
+      ]
+    },
+    "comment": "After 4 months not playing it takes 1 day to get sub 50 okay bro, thanks rng\n\nMod Note: Start Time 38.183, End Time: 50:32.717, Frame Rate: 60, Time: 49:54.533",
+    "status": "verified",
+    "date": "2026-03-08",
+    "primary_t": 2994.533,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y4vwo3ny",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y4vwo3ny",
+    "category": "all-gordos",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.twitch.tv/videos/2719776407"
+        }
+      ]
+    },
+    "comment": "First run its slow but i got one on the board now :)\n\nMod Note: Start Time 1:05.417, End Time: 3:57:22.383, Frame Rate: 60, Time: 3:56:16.967",
+    "status": "verified",
+    "date": "2026-03-11",
+    "primary_t": 14176.967,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "j9v15dvx",
+        "names": {
+          "international": "Positivitybro18",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Positivitybro18",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#7AB941",
+            "dark": "#8AC951"
+          },
+          "color-to": {
+            "light": "#009856",
+            "dark": "#09B876"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ca",
+            "names": {
+              "international": "Canada",
+              "japanese": null
+            }
+          },
+          "region": {
+            "code": "ca/on/toronto",
+            "names": {
+              "international": "Toronto, ON, Canada",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z025qkjm",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z025qkjm",
+    "category": "all-gordos",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.twitch.tv/videos/2720459976"
+        }
+      ]
+    },
+    "comment": "Better layout on this run then the first less back tracking got a faster time :)\n\nMod Note: Start Time 45.283, End Time: 2:04:13.917, Frame Rate: 60, Time: 2:03:28.633",
+    "status": "verified",
+    "date": "2026-03-12",
+    "primary_t": 7408.633,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "j9v15dvx",
+        "names": {
+          "international": "Positivitybro18",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Positivitybro18",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#7AB941",
+            "dark": "#8AC951"
+          },
+          "color-to": {
+            "light": "#009856",
+            "dark": "#09B876"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ca",
+            "names": {
+              "international": "Canada",
+              "japanese": null
+            }
+          },
+          "region": {
+            "code": "ca/on/toronto",
+            "names": {
+              "international": "Toronto, ON, Canada",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zqnw2x9z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zqnw2x9z",
+    "category": "all-gordos",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/JB-4wcvbzmQ"
+        }
+      ]
+    },
+    "comment": "I wanted to get a sub 2h and did :b\n\nMod Note: Start Time 52.948, End Time: 1:54:38.672, Frame Rate: 58, Time: 1:53:45.724",
+    "status": "verified",
+    "date": "2026-03-12",
+    "primary_t": 6825.724,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "j9v15dvx",
+        "names": {
+          "international": "Positivitybro18",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Positivitybro18",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#7AB941",
+            "dark": "#8AC951"
+          },
+          "color-to": {
+            "light": "#009856",
+            "dark": "#09B876"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ca",
+            "names": {
+              "international": "Canada",
+              "japanese": null
+            }
+          },
+          "region": {
+            "code": "ca/on/toronto",
+            "names": {
+              "international": "Toronto, ON, Canada",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zxp2r28y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zxp2r28y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=L4rGz-Pm6fM"
+        }
+      ]
+    },
+    "comment": "my first full run with the fastest route :D\n\nMod Note: Start Time 35.136, End Time: 1:24.559, Frame Rate: 59, Time: 49.424",
+    "status": "verified",
+    "date": "2026-03-13",
+    "primary_t": 49.424,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "j470ydlj",
+        "names": {
+          "international": "NoahR_SR",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/NoahR_SR",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y6wr2lpz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y6wr2lpz",
+    "category": "all-gordos",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/IeB7GrWGjRI"
+        }
+      ]
+    },
+    "comment": "quite cool that it's decently close to any% time. Much easier category though\n\nMod Note: Start Time 40.383, End Time: 52:06.717, Frame Rate: 60, Time: 51:26.333",
+    "status": "verified",
+    "date": "2026-03-15",
+    "primary_t": 3086.333,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "y26dkw7m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/y26dkw7m",
+    "category": "all-gordos",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/L8OytdeM1QU?si=z28BbOwZM4AdPhpx"
+        }
+      ]
+    },
+    "comment": "Didn't expect a sub 40 after 3 days at most of Routing and playing but okay\n\nMod Note: Start Time 39.667, End Time: 39:40.683, Frame Rate: 60, Time: 39:01.017",
+    "status": "verified",
+    "date": "2026-03-17",
+    "primary_t": 2341.017,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "ywoq5k0m",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/ywoq5k0m",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://m.bilibili.com/video/BV1mrXVBjEE6"
+        }
+      ]
+    },
+    "comment": "I messed up the timer at the end because I was too nervous! Wasted 3 seconds for nothing but it's still a good run.\n\nMod Note: Frame Rate: 30, Time: 55:27.633",
+    "status": "verified",
+    "date": "2026-03-28",
+    "primary_t": 3327.633,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "jn59wz1j",
+        "names": {
+          "international": "ChaoFan",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/ChaoFan",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "cn",
+            "names": {
+              "international": "China",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zn678p8y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zn678p8y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/dP9LxGq2az0?si=4OufnjJaL0dXwz-1"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 36.583, End Time: 1:25, Frame Rate: 60, Time: 48.417",
+    "status": "verified",
+    "date": "2026-04-03",
+    "primary_t": 48.417,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "x3rpknex",
+        "names": {
+          "international": "Mbrom",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/Mbrom",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "zn67k23y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/zn67k23y",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/6jS96WdC_m0?si=RJ39kMraNmvLPvBq"
+        }
+      ]
+    },
+    "comment": "Mod Note: Start Time 36.533, End Time: 1:22.767, Frame Rate: 60, Time: 46.233",
+    "status": "verified",
+    "date": "2026-04-04",
+    "primary_t": 46.233,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "x3rpknex",
+        "names": {
+          "international": "Mbrom",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/Mbrom",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "gb",
+            "names": {
+              "international": "United Kingdom",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "mrwr5w7y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/mrwr5w7y",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=r2fi73qNa2w"
+        }
+      ]
+    },
+    "comment": "oh yeah im back\n\ni didnt think i could make a better time than the original route but here it is, and i got sub 30 faster than i thought.\n\nMy last achievement before the update...\n\nMod Note: Start Time 34.15, End Time: 30:18.483, Frame Rate: 60, Time: 29:44.333",
+    "status": "verified",
+    "date": "2026-04-14",
+    "primary_t": 1784.333,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z02l29em",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z02l29em",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=peNQahgx3kc"
+        }
+      ]
+    },
+    "comment": "3rd attempt and first run on this category.,\n\nfinally prismacore% was useful\n\nMod Note: Start Time 33.433, End Time: 5:15.733, Frame Rate: 60, Time: 4:42.3",
+    "status": "verified",
+    "date": "2026-04-17",
+    "primary_t": 282.3,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.2.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "z5ne90nz",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/z5ne90nz",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/yxPqh_vwPS4"
+        }
+      ]
+    },
+    "comment": "another one using some optimizations\n\nMod Note: Start Time 33.883, End Time: 4:49.583, Frame Rate: 60, Time: 4:15.7",
+    "status": "verified",
+    "date": "2026-04-24",
+    "primary_t": 255.7,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.2.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "mrwlkdgy",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/mrwlkdgy",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/9ZibjPk1uwk"
+        }
+      ]
+    },
+    "comment": "slow asf run idk man\n\nidk if my notepad or alt tabbing was allowed\n\nMod Note: Start Time 41.133, End Time: 3:00:05.7, Frame Rate: 60, Time: 2:59:24.567",
+    "status": "verified",
+    "date": "2026-04-25",
+    "primary_t": 10764.567,
+    "platform": null,
+    "subcategory": "glitchless",
+    "version": "1.2.0",
+    "players_full": [
+      {
+        "id": "jp992158",
+        "names": {
+          "international": "noobslime",
+          "japanese": null
+        },
+        "pronouns": null,
+        "weblink": "https://www.speedrun.com/users/noobslime",
+        "name-style": {
+          "style": "solid",
+          "color": {
+            "light": "#EE2222",
+            "dark": "#EE4444"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "sg",
+            "names": {
+              "international": "Singapore",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "m38kv94y",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/m38kv94y",
+    "category": "any",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://youtu.be/V-v8xx8mNMI?si=VCop65pZBkzqypmH"
+        }
+      ]
+    },
+    "comment": "Terrible start but good optimization,\n\nMaybe sub 25 or sub 24 before june?\n\nMod Note: Start Time 33.633, End Time: 28:13.383, Frame Rate: 60, Time: 27:39.75",
+    "status": "verified",
+    "date": "2026-05-01",
+    "primary_t": 1659.75,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.2.0",
+    "players_full": [
+      {
+        "id": "j5ry3ewx",
+        "names": {
+          "international": "EliamRA",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/EliamRA",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#249BCE",
+            "dark": "#44BBEE"
+          },
+          "color-to": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "ar",
+            "names": {
+              "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  }
+]

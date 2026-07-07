@@ -694,7 +694,6 @@ export const initDatabase = (
     const currentName =
       cardModalContent.querySelector('.card-name').textContent;
     const currentIndex = visibleCards.findIndex((c) => c.name === currentName);
-    console.log(currentIndex);
 
     if (
       (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') &&
