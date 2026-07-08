@@ -1044,6 +1044,7 @@ summary:focus-visible,
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     'runner-main runner-links runner-links'
+    'runner-modal-filters runner-modal-filters runner-modal-filters'
     'runner-records runner-records runner-records';
 
   gap: 1rem;
@@ -1121,6 +1122,11 @@ summary:focus-visible,
   gap: 0.5rem;
   max-height: 20rem;
   overflow-y: auto;
+}
+.runner-modal-filters {
+  grid-area: runner-modal-filters;
+  display: flex;
+  font-size: 0.6rem;
 }
 
 .unverified {

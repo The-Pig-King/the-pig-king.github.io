@@ -877,6 +877,14 @@ export const initWrHistory = (
       )
       .join('');
 
+    const activeCategory = [...state.category.filters][0];
+
+    const modalState = {
+      category: { filters: new Set(state.category.filters) },
+      'rule-set': { filters: new Set(state['rule-set'].filters) },
+      subcategory: { filters: new Set(subcategoryStore[activeCategory] ?? []) },
+    };
+
     modal.innerHTML = `
       <div class="runner-main">
         <img class="runner-pfp"
@@ -903,10 +911,107 @@ export const initWrHistory = (
             : ''
         }
       </div>
+      <div class="runner-modal-filters"></div>
       <div class="runner-records">
         ${runsListHtml}
       </div>
     `;
+
+    const filtersContainer = modal.querySelector('.runner-modal-filters');
+    const recordsContainer = modal.querySelector('.runner-records');
+
+    const renderRunnerRecords = () => {
+      let runnerRecords = filterRuns(modalState, runner.runs);
+      runnerRecords = sortWrs(runnerRecords);
+
+      recordsContainer.innerHTML = [...runnerRecords]
+        .map(
+          (run) => `
+        <div class="runner-record-row" tabindex="0" data-id="${run.id}">
+          <span class="runner-record-category">${getRunFullCategoryLabel(run)}</span>
+          in
+          <span class="runner-record-time">${formatTime(run.primary_t)}</span>
+          on
+          <span class="runner-record-date">
+            ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
+          </span>
+        </div>
+      `
+        )
+        .join('');
+
+      // Open run modal
+      recordsContainer.querySelectorAll('.runner-record-row').forEach((row) => {
+        const openRun = () => {
+          const run = fullData.find((r) => r.id === row.dataset.id);
+          if (run) openModal(run);
+        };
+        row.addEventListener('click', openRun);
+        row.addEventListener('keydown', (e) => {
+          if (e.key === ' ' || e.key === 'Enter') {
+            e.preventDefault();
+            openRun();
+          }
+        });
+      });
+    };
+
+    const renderRunnerFilters = () => {
+      filtersContainer.innerHTML = '';
+
+      const activeModalCategory = [...modalState.category.filters][0];
+
+      const categoryBar = document.querySelector(
+        '.filter-bar[data-group="category"]'
+      );
+      const ruleSetBar = document.querySelector(
+        '.filter-bar[data-group="rule-set"]'
+      );
+      const subcategoryBar = document.querySelector(
+        `.filter-bar[data-group="subcategory"].${activeModalCategory}-subcategory`
+      );
+
+      [categoryBar, ruleSetBar, subcategoryBar].forEach((bar) => {
+        if (!bar) return;
+        const clone = bar.cloneNode(true);
+        clone.style.display = 'block';
+        filtersContainer.appendChild(clone);
+
+        // Set default button toggles
+        clone.querySelectorAll('.filter-btn').forEach((btn) => {
+          const group = clone.dataset.group;
+          const value = btn.dataset.category;
+          btn.classList.toggle(
+            'toggledOn',
+            modalState[group]?.filters.has(value)
+          );
+
+          btn.addEventListener('click', () => {
+            const grp = clone.dataset.group;
+
+            // One button toggled per group
+            clone.querySelectorAll('.filter-btn').forEach((b) => {
+              b.classList.remove('toggledOn');
+              modalState[grp].filters.delete(b.dataset.category);
+            });
+            btn.classList.add('toggledOn');
+            modalState[grp].filters.add(value);
+
+            if (grp === 'category') {
+              modalState.subcategory = {
+                filters: new Set(subcategoryStore[value] ?? []),
+              };
+              renderRunnerFilters();
+            }
+
+            renderRunnerRecords();
+          });
+        });
+      });
+    };
+
+    renderRunnerFilters();
+    renderRunnerRecords();
 
     return modal;
   };
