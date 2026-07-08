@@ -1042,7 +1042,9 @@ summary:focus-visible,
   display: grid;
 
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 'runner-main runner-links runner-links';
+  grid-template-areas:
+    'runner-main runner-links runner-links'
+    'runner-records runner-records runner-records';
 
   gap: 1rem;
   align-items: center;
@@ -1110,6 +1112,15 @@ summary:focus-visible,
 }
 .runner-links {
   grid-area: runner-links;
+}
+.runner-records {
+  grid-area: runner-records;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 20rem;
+  overflow-y: auto;
 }
 
 .unverified {

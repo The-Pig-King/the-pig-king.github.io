@@ -11,7 +11,7 @@ export const initWrHistory = (
   const dataById = new Map(data.map((run) => [run.id, run]));
   additionalData.forEach((run) => dataById.set(run.id, run));
   const fullData = [...dataById.values()];
-  const fullRunnerData = [
+  const runnerData = [
     ...new Map(
       fullData
         .map((run) => run.players_full?.[0])
@@ -19,6 +19,23 @@ export const initWrHistory = (
         .map((player) => [player.id, player])
     ).values(),
   ];
+
+  const runsByPlayerId = new Map();
+
+  for (const run of fullData) {
+    for (const player of run.players_full ?? []) {
+      if (!runsByPlayerId.has(player.id)) {
+        runsByPlayerId.set(player.id, []);
+      }
+      runsByPlayerId.get(player.id).push(run);
+    }
+  }
+
+  const fullRunnerData = runnerData.map((runner) => ({
+    ...runner,
+    runs: runsByPlayerId.get(runner.id) ?? [],
+  }));
+
   console.log(fullRunnerData);
 
   const defaultVideoIcon = `
@@ -324,7 +341,10 @@ export const initWrHistory = (
   `;
     } else if (style?.style === 'solid') {
       playerNameHtml = `
-    <span style="color:${style.color.light}">
+    <span 
+      tabindex='0'
+      class="runner-name"
+      style="color:${style.color.light}">
       ${playerName}
     </span>
   `;
@@ -835,6 +855,28 @@ export const initWrHistory = (
       runnerNameHtml = `<span style="color:${style.color.light}">${runnerName}</span>`;
     }
 
+    let runnerRecords = filterRuns(state, runner.runs);
+    runnerRecords = runnerRecords.filter((run) => {
+      return worldRecords.includes(run);
+    });
+    runnerRecords = sortWrs(runnerRecords);
+
+    const runsListHtml = [...runnerRecords]
+      .map(
+        (run) => `
+        <div class="runner-record-row" tabindex="0" data-id="${run.id}">
+          <span class="runner-record-category">${getRunFullCategoryLabel(run)}</span>
+          in
+          <span class="runner-record-time">${formatTime(run.primary_t)}</span>
+          on
+          <span class="runner-record-date">
+            ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
+          </span>
+        </div>
+      `
+      )
+      .join('');
+
     modal.innerHTML = `
       <div class="runner-main">
         <img class="runner-pfp"
@@ -860,6 +902,9 @@ export const initWrHistory = (
             </a>`
             : ''
         }
+      </div>
+      <div class="runner-records">
+        ${runsListHtml}
       </div>
     `;
 
