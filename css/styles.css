@@ -16,168 +16,8 @@
   --yes-color: lightgreen;
   --no-color: lightcoral;
 
-  /* Slime Rancher Colors */
   --sr-color: #f285bd;
   --sr2-color: #f088ff;
-
-  --secret-style-color: #4a2988;
-
-  --slime-color: #e24164;
-  --plort-color: #b50000;
-  --gordo-color: #643b3b;
-  --food-color: #f85d18;
-  --resource-color: #515ac2;
-  --toy-color: #ffdb48;
-  --chime-color: #c3e7ff;
-  --ornament-color: #5ca876;
-  --chroma-color: #9d9780;
-  --upgrade-color: black;
-  --plot-building-color: #f79524;
-  --zone-color: #29b0fb;
-  --gadget-color: #6b6e68;
-  --misc-color: white;
-
-  --event-color: #ffacca;
-  --dlc-color: #ee8822;
-
-  --common-color: white;
-  --uncommon-color: green;
-  --rare-color: purple;
-  --unobtainable-color: black;
-
-  --docile-color: lightgreen;
-  --harmful-color: red;
-  --hostile-color: black;
-
-  --veggie-color: #5b733d;
-  --fruit-color: #83667a;
-  --meat-color: #cfb287;
-  --future-meat-color: #fbde76;
-  --electricity-color: #ff9306;
-  --other-color: #1f7fb5;
-
-  --drill-color: #fd566a;
-  --apiary-color: #94ff7a;
-  --pump-color: #54b1fa;
-  --range-exchange-color: #000d56;
-  --echo-net-color: #ece1b5;
-
-  --building-color: #89ef3f;
-  --building-upgrade-color: #2275a8;
-
-  --extractor-color: #6e7092;
-  --utility-color: #b8bbb5;
-  --warp-tech-color: #7cff0e;
-  --decoration-color: #68462b;
-  --curio-color: #f2a234;
-
-  --spawn-color: #f78142;
-  --worldgen-color: #9cd9e5;
-  --crate-color: #7d4f23;
-  --treasure-pod-color: #55d523;
-  --spawn-largo-color: #7574b9;
-  --twinkle-slime-color: #ffaac9;
-
-  --the-ranch-color: #825235;
-  --the-grotto-color: #5469a0;
-  --the-overgrowth-color: #e45a64;
-  --the-docks-color: #0d675e;
-  --the-lab-color: #95fe02;
-  --ogdens-retreat-color: #d6c086;
-  --mochis-manor-color: #e89a11;
-  --viktors-workshop-color: #34edcc;
-  --the-dry-reef-color: #ef5931;
-  --the-moss-blanket-color: #73be27;
-  --the-indigo-quarry-color: #9788bf;
-  --the-ancient-ruins-color: #faf73e;
-  --the-glass-desert-color: #dc9554;
-  --the-wilds-color: #f9bcda;
-  --nimble-valley-color: #264f6a;
-  --the-slimeulation-color: #8aadc8;
-  --the-slime-sea-color: #4cde78;
-  --the-vaults-color: #d67d18;
-
-  --style-sparkly-color: #f65c83;
-  --style-heavy-metal-color: #766e87;
-  --style-tiger-color: #f66f01;
-  --style-angelic-color: #d671cd;
-  --style-radiant-color: #a3ee4f;
-  --style-arcane-color: #ff2dae;
-  --style-royal-jelly-color: #8523a6;
-  --style-lilypad-color: #189f88;
-  --style-ruby-red-color: #e1393f;
-  --style-cheshire-color: #ee5583;
-  --style-monochrome-color: #bab8c1;
-  --style-devilish-color: #e867ff;
-  --style-nebula-color: #2c6e90;
-  --style-nightshade-color: #33a8a9;
-  --style-shattered-color: #73eafe;
-  --style-pre-jellasic-color: #b8bd65;
-  --style-boomerang-color: #770000;
-  --style-retro-color: #2668bd;
-  --style-gilded-color: #f09325;
-  --style-guardian-color: #ae2629;
-
-  /* Slime Rancher 2 Colors */
-  --upgrade-part-color: #8461a5;
-  --weather-color: #3f54a2;
-  --sanctuary-upgrade-color: #34974b;
-  --pot-color: #a4bde0;
-
-  --steam-color: #05173a;
-  --xbox-color: #0e730f;
-  --epic-games-color: black;
-  --ps5-color: #0067c6;
-
-  --nectar-color: #3fc59d;
-
-  --node-color: #b2c0e7;
-  --weather-resource-color: var(--weather-color);
-
-  --room-color: #af80c0;
-  --room-theme-color: #2ce2a1;
-  --alcove-theme-color: #ef6a23;
-
-  --variant-color: #800080;
-
-  --the-grey-labyrinth-color: #ffb6ff;
-  --beach-color: #ffd952;
-  --fun-color: #fc5181;
-  --platform-color: #6cd488;
-  --golden-statue-color: #d68105;
-
-  --golden-pot-color: #edbb54;
-  --shadow-pot-color: #519899;
-  --exchange-station-color: var(--range-exchange-color);
-
-  --the-conservatory-color: #1079d5;
-  --the-archway-color: #cbd2fa;
-  --the-den-color: #7968ff;
-  --the-digsite-color: #917eaa;
-  --the-tidepools-color: #ff6daa;
-  --the-gully-color: #fdbd3c;
-  --the-sanctuary-color: #5ce4b0;
-  --the-rainbow-fields-color: #37bdcc;
-  --starlight-strand-color: #b564f4;
-  --ember-valley-color: #ff6900;
-  --powderfall-bluffs-color: white;
-  --waterworks-color: #7fb0f0;
-  --lava-depths-color: #b74b42;
-  --impossible-sky-color: #859ca6;
-  --dream-land-color: #d79af9;
-  --the-terrarium-color: #2b7351;
-  --the-prismacore-color: #b2fefe;
-
-  /* WR History Colors */
-  --any-color: var(--wr-history-color);
-  --all-gordos-color: #1b7c40;
-  --slimepedia-color: #45b1c5;
-  --pink-gordo-color: #e9517d;
-  --vacpack-color: #b67c54;
-
-  --youtube-color: #ff0033;
-  --twitch-color: #9146ff;
-  --bilibili-color: #00b7f2;
 
   --border-thin: 0.1rem solid;
 }
@@ -253,6 +93,52 @@ button {
   cursor: pointer;
 }
 
+.btn {
+  background-color: var(--frame-color);
+  border: var(--border-thin) color-mix(in srgb, var(--frame-color) 70%, white);
+  padding: 0.2rem;
+  color: var(--btn-color, white);
+}
+
+.btn:focus-visible,
+.card-container .card:focus-visible,
+summary:focus-visible,
+.detail:focus-visible,
+.tag:focus-visible {
+  outline: 0.15rem solid cyan;
+}
+
+.style-btn {
+  background-color: color-mix(in srgb, var(--frame-color) 70%, white);
+  border-color: var(--frame-color);
+}
+
+.reset-filters-btn:active:hover {
+  background-color: var(--reset-color);
+  border: var(--border-thin) red;
+}
+
+.btn.toggledOn {
+  background-color: var(--toggled-on-color);
+  border: var(--border-thin) green;
+}
+
+.btn.toggledOff {
+  background-color: var(--toggled-off-color);
+  border: var(--border-thin) red;
+}
+
+.btn:hover {
+  background-color: color-mix(in srgb, var(--frame-color) 80%, white);
+}
+.btn.toggledOn:hover {
+  background-color: color-mix(in srgb, var(--toggled-on-color) 90%, white);
+}
+
+.btn.toggledOff:hover {
+  background-color: color-mix(in srgb, var(--toggled-off-color) 90%, white);
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
@@ -271,6 +157,11 @@ button {
 .icon {
   width: 2rem;
   height: 2rem;
+  fill: white;
+}
+
+.small-icon {
+  width: 1rem;
   fill: white;
 }
 
@@ -382,6 +273,46 @@ body.slime-rancher .game-switcher-select {
 body.slime-rancher-2 .game-switcher-select {
   background-color: var(--sr2-color);
   border: none;
+}
+
+.card-modal {
+  margin: auto;
+  max-width: 50rem;
+  border: 0;
+  background-color: transparent;
+  overflow: visible;
+  color: white;
+
+  overflow-y: auto;
+  max-height: 100dvh;
+}
+
+.card-modal:focus-visible,
+.card-modal .card:focus-visible {
+  outline: none;
+}
+
+.card-modal::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 3.35rem;
+  right: 0.5rem;
+  border: transparent;
+  border-radius: 0.5rem;
+  background: transparent;
+}
+
+.close-modal-btn:focus {
+  outline-color: white;
+}
+
+.modal-top-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin: auto 1rem;
 }
 
 /* Footer */
@@ -527,734 +458,6 @@ body.slime-rancher-2 .game-switcher-select {
 .nav-icon {
   width: 3rem;
   display: block;
-}
-
-/* Database */
-
-.filters-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 1rem;
-}
-
-.filter-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 0.5rem;
-}
-
-.advanced-filter-bar {
-  display: none;
-}
-
-.filter-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.2rem;
-  padding: 0.2em;
-  flex-wrap: wrap;
-}
-
-.top-group {
-  gap: 0.5rem 2rem;
-  background-color: var(--main-color);
-}
-
-.resultsCount {
-  font-weight: bold;
-}
-
-.btn {
-  background-color: var(--frame-color);
-  border: var(--border-thin) color-mix(in srgb, var(--frame-color) 70%, white);
-  padding: 0.2rem;
-  color: var(--btn-color, white);
-}
-
-.btn:focus-visible,
-.card-container .card:focus-visible,
-summary:focus-visible,
-.detail:focus-visible,
-.tag:focus-visible {
-  outline: 0.15rem solid cyan;
-}
-
-.style-btn {
-  background-color: color-mix(in srgb, var(--frame-color) 70%, white);
-  border-color: var(--frame-color);
-}
-
-.reset-filters-btn:active:hover {
-  background-color: var(--reset-color);
-  border: var(--border-thin) red;
-}
-
-.btn.toggledOn {
-  background-color: var(--toggled-on-color);
-  border: var(--border-thin) green;
-}
-
-.btn.toggledOff {
-  background-color: var(--toggled-off-color);
-  border: var(--border-thin) red;
-}
-
-.btn:hover {
-  background-color: color-mix(in srgb, var(--frame-color) 80%, white);
-}
-.btn.toggledOn:hover {
-  background-color: color-mix(in srgb, var(--toggled-on-color) 90%, white);
-}
-
-.btn.toggledOff:hover {
-  background-color: color-mix(in srgb, var(--toggled-off-color) 90%, white);
-}
-
-.small-icon {
-  width: 1rem;
-  fill: white;
-}
-
-.card-container {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 14rem));
-  gap: 1rem;
-  margin: 1rem;
-}
-
-.card {
-  display: grid;
-
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto auto auto 1fr;
-  grid-template-areas:
-    'card-img-main card-name'
-    'card-img-main card-style-name'
-    'card-img-main card-tags'
-    'card-location-tags card-location-tags'
-    'card-details card-details';
-
-  gap: 0.5rem;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-
-  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
-  border-radius: 1rem;
-  background-color: var(--frame-color);
-  padding: 0.5rem;
-
-  font-size: 1rem;
-}
-
-.card-container .card:hover {
-  background-color: color-mix(in srgb, var(--frame-color) 95%, white);
-}
-
-.card-img-main {
-  grid-area: card-img-main;
-  height: auto;
-  width: 100%;
-}
-
-.card-name {
-  grid-area: card-name;
-  font-size: 1rem;
-  color: white;
-}
-
-.card-style-name {
-  color: var(--style-color, white);
-
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin-top: -0.5rem;
-}
-
-.card-style-name.style-radiant {
-  background: linear-gradient(
-    var(--angle),
-    var(--c1) 0%,
-    var(--c2) var(--p1),
-    var(--c3) var(--p2),
-    var(--c4) var(--p3),
-    var(--c1) 100%
-  );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.card-tags {
-  grid-area: card-tags;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem;
-}
-
-.tag {
-  background-color: var(--tag-color, black);
-  color: var(--tag-text, white);
-  border: var(--border-thin) color-mix(in srgb, var(--tag-color) 70%, white);
-  padding: 0.2rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-}
-
-.tag-docile,
-.tag-the-ancient-ruins,
-.tag-the-wilds,
-.tag-common,
-.tag-echo-net,
-.tag-toy,
-.tag-chime,
-.tag-building,
-.tag-warp-tech,
-.tag-misc,
-.tag-powderfall-bluffs,
-.tag-the-prismacore,
-.tag-the-archway,
-.tag-room-theme,
-.tag-the-grey-labyrinth,
-.tag-beach {
-  color: black;
-}
-
-.card-location-tags {
-  grid-area: card-location-tags;
-  display: flex;
-  flex-wrap: wrap;
-  align-self: self-start;
-  width: 100%;
-}
-
-.location-source {
-  width: 100%;
-}
-
-.location-source summary {
-  color: var(--source-color, white);
-  font-weight: bold;
-
-  cursor: pointer;
-  font-size: 0.75rem;
-  padding: 0.3rem 0;
-  user-select: none;
-}
-
-.location-source .location-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem;
-}
-
-.location-tag {
-  margin: 0 auto;
-}
-
-.summary-content {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.1rem;
-}
-
-.source-icon {
-  width: 1.5rem;
-}
-
-.card-details,
-.details-object {
-  grid-area: card-details;
-  display: none;
-  justify-content: center;
-  align-self: flex-start;
-  flex-wrap: wrap;
-  gap: 1rem 2rem;
-
-  color: rgb(173, 173, 173);
-}
-
-.details-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.details-name {
-  width: 100%;
-
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.details-name:not(:first-of-type) {
-  padding-top: 0.5rem;
-}
-
-.details {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.1rem;
-
-  width: 100%;
-}
-
-.details-icon,
-.details-fallback {
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.detail-object {
-  color: inherit;
-}
-
-.details-yes {
-  color: var(--yes-color);
-}
-.details-no {
-  color: var(--no-color);
-}
-
-.card-modal {
-  margin: auto;
-  max-width: 50rem;
-  border: 0;
-  background-color: transparent;
-  overflow: visible;
-  color: white;
-
-  overflow-y: auto;
-  max-height: 100dvh;
-}
-
-.card-modal:focus-visible,
-.card-modal .card:focus-visible {
-  outline: none;
-}
-
-.card-modal::backdrop {
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.card-modal .card-name {
-  font-size: 2rem;
-  padding-right: 2rem;
-}
-
-.card-modal .card-style-name {
-  align-self: start;
-  font-size: 1rem;
-  padding-right: 2rem;
-}
-
-.card-modal .card-details {
-  display: flex;
-}
-
-.close-modal-btn {
-  position: absolute;
-  top: 3.35rem;
-  right: 0.5rem;
-  border: transparent;
-  border-radius: 0.5rem;
-  background: transparent;
-}
-
-.close-modal-btn:focus {
-  outline-color: white;
-}
-
-.modal-top-bar {
-  display: flex;
-  gap: 0.5rem;
-  margin: auto 1rem;
-}
-
-.sister-link-btn {
-  margin-left: auto;
-}
-
-.loaded-text {
-  margin: 0.5rem auto;
-}
-
-.loaded-text:last-of-type {
-  margin-bottom: 1.5rem;
-}
-
-.load-more-btn {
-  display: none;
-  margin: auto auto 1rem auto;
-  padding: 0.5rem 2rem;
-}
-
-/* WR History */
-.any-subcategory,
-.all-gordos-subcategory,
-.pink-gordo-subcategory {
-  display: none;
-}
-
-.table-container {
-  overflow-x: auto;
-  width: 100%;
-  display: block;
-}
-
-.wr-history-table {
-  text-align: center;
-  margin: 0 auto;
-  border-collapse: collapse;
-
-  background-color: var(--frame-color);
-  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
-}
-
-.wr-history-table th,
-.wr-history-table td {
-  padding: 0.5rem 2rem;
-  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
-}
-
-.run-table-row:hover {
-  background-color: color-mix(in srgb, var(--frame-color) 95%, white);
-}
-
-.run {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    'run-main run-main run-main'
-    'wr-number run-date run-version'
-    'next-wr previous-wr run-verification'
-    'run-details run-details run-details'
-    'run-video run-video run-video'
-    'run-comment run-comment run-comment';
-
-  gap: 1rem;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-
-  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
-  border-radius: 1rem;
-  background-color: var(--frame-color);
-  padding: 1.5rem;
-
-  font-size: 1rem;
-}
-
-.run > * {
-  padding: 0.5rem;
-  border-radius: 1rem;
-}
-
-.run-modal {
-  margin: auto;
-  width: min(94vw, 50rem);
-  border: 0;
-  background-color: transparent;
-  overflow: visible;
-  color: white;
-
-  overflow-y: auto;
-  max-height: 100dvh;
-}
-
-.section-label {
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: rgb(173, 173, 173);
-  margin-bottom: 0.2rem;
-}
-
-.run-main {
-  grid-area: run-main;
-}
-.wr-number {
-  grid-area: wr-number;
-}
-.wr-number-icon {
-  width: 1rem;
-}
-.run-date {
-  grid-area: run-date;
-}
-.run-version {
-  grid-area: run-version;
-}
-.run-details {
-  grid-area: run-details;
-}
-.run-verification {
-  grid-area: run-verification;
-}
-.speedrun-icon {
-  width: 1rem;
-}
-.previous-wr {
-  grid-area: previous-wr;
-}
-.next-wr {
-  grid-area: next-wr;
-}
-.run-video {
-  grid-area: run-video;
-  background-color: color-mix(in srgb, var(--frame-color) 90%, white);
-  padding: 0rem;
-}
-.run-comment {
-  grid-area: run-comment;
-  white-space: pre-line;
-}
-.run-video {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 0;
-}
-
-.previous-wr,
-.next-wr {
-  cursor: pointer;
-}
-
-.previous-wr:hover,
-.next-wr:hover {
-  background-color: color-mix(in srgb, var(--frame-color) 90%, white);
-}
-
-.runner {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    'runner-main runner-links runner-links'
-    'runner-modal-filters runner-modal-filters runner-modal-filters'
-    'runner-records runner-records runner-records';
-
-  gap: 1rem;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-
-  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
-  border-radius: 1rem;
-  background-color: var(--frame-color);
-  padding: 1.5rem;
-
-  font-size: 1rem;
-}
-
-.runner > * {
-  padding: 0.5rem;
-  border-radius: 1rem;
-}
-
-.runner-modal {
-  margin: auto;
-  width: min(94vw, 50rem);
-  border: 0;
-  background-color: transparent;
-  overflow: visible;
-  color: white;
-
-  overflow-y: auto;
-  max-height: 100dvh;
-}
-
-.runner-main {
-  grid-area: runner-main;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    'runner-pfp runner-name'
-    'runner-pfp runner-flag';
-  align-items: center;
-  column-gap: 0.75rem;
-  row-gap: 0.25rem;
-  text-align: left;
-}
-.runner-pfp {
-  grid-area: runner-pfp;
-  width: 5rem;
-  height: 5rem;
-  object-fit: cover;
-  border-radius: 50%;
-  align-self: center;
-}
-.runner-name-row {
-  grid-area: runner-name;
-  align-self: start;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.runner-location-row {
-  grid-area: runner-flag;
-  align-self: end;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.runner-links {
-  grid-area: runner-links;
-}
-.runner-records {
-  grid-area: runner-records;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-height: 20rem;
-  overflow-y: auto;
-}
-.runner-modal-filters {
-  grid-area: runner-modal-filters;
-  display: flex;
-  font-size: 0.6rem;
-}
-
-.unverified {
-  color: grey;
-}
-
-.run.unverified {
-  color: white;
-}
-
-.date-column {
-  white-space: nowrap;
-}
-
-.table-icon {
-  width: 2rem;
-  fill: white;
-}
-
-.youtube {
-  fill: var(--youtube-color);
-}
-.twitch {
-  fill: var(--twitch-color);
-}
-.bilibili {
-  fill: var(--bilibili-color);
-}
-
-.difference-label {
-  display: none;
-  position: relative;
-  top: 0.6em;
-  margin-bottom: -3em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 0.3rem;
-
-  width: fit-content;
-  background-color: var(--frame-color);
-  font-size: 1em;
-}
-
-.date-ascending .difference-label {
-  top: -1.6em;
-  margin-bottom: 0;
-  margin-top: -1em;
-}
-
-.date-ascending tr:first-child .difference-label {
-  top: -1.6em;
-  margin-bottom: 0;
-  margin-top: auto;
-}
-
-.difference-worst-color {
-  color: lightcoral;
-}
-.difference-average-color {
-  color: yellow;
-}
-.difference-good-color {
-  color: lightgreen;
-}
-.difference-best-color {
-  color: green;
-}
-
-.country-flag {
-  height: 0.8rem;
-}
-
-.player-gradient {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-.detail-td {
-  position: relative;
-}
-
-.detail-icon:hover {
-  cursor: pointer;
-  filter: brightness(0.7);
-}
-
-.detail-container {
-  display: none;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-
-  background-color: var(--frame-color);
-  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
-  width: 90%;
-  padding: 0.5rem;
-  white-space: pre-line;
-
-  font-size: 0.8rem;
-}
-
-.run-details .detail-container {
-  position: absolute;
-  max-width: 30%;
-  margin: auto;
-}
-
-.currentWr {
-  fill: var(--wr-history-color);
-  color: var(--wr-history-color);
-}
-
-.sub {
-  fill: cornflowerblue;
-  color: cornflowerblue;
-}
-
-.route {
-  fill: cyan;
-  color: cyan;
-}
-
-.hour {
-  fill: grey;
-  color: grey;
 }
 
 /* Media Queries */

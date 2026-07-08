@@ -743,7 +743,7 @@ export const initWrHistory = (
               158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 
               254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/>
             </svg>`}
-        # ${run.wrNumber}
+        #${run.wrNumber}
       </div>
       <div class="run-date">
         <div class="section-label">Date</div>
@@ -855,28 +855,6 @@ export const initWrHistory = (
       runnerNameHtml = `<span style="color:${style.color.light}">${runnerName}</span>`;
     }
 
-    let runnerRecords = filterRuns(state, runner.runs);
-    runnerRecords = runnerRecords.filter((run) => {
-      return worldRecords.includes(run);
-    });
-    runnerRecords = sortWrs(runnerRecords);
-
-    const runsListHtml = [...runnerRecords]
-      .map(
-        (run) => `
-        <div class="runner-record-row" tabindex="0" data-id="${run.id}">
-          <span class="runner-record-category">${getRunFullCategoryLabel(run)}</span>
-          in
-          <span class="runner-record-time">${formatTime(run.primary_t)}</span>
-          on
-          <span class="runner-record-date">
-            ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
-          </span>
-        </div>
-      `
-      )
-      .join('');
-
     const activeCategory = [...state.category.filters][0];
 
     const modalState = {
@@ -912,26 +890,67 @@ export const initWrHistory = (
         }
       </div>
       <div class="runner-modal-filters"></div>
-      <div class="runner-records">
-        ${runsListHtml}
-      </div>
+      <div class="runner-records"></div>
     `;
 
     const filtersContainer = modal.querySelector('.runner-modal-filters');
     const recordsContainer = modal.querySelector('.runner-records');
 
     const renderRunnerRecords = () => {
+      let modalWorldRecords = filterRuns(modalState, data);
+      modalWorldRecords = filterWrs(modalWorldRecords);
+      modalWorldRecords = filterRuns(
+        modalState,
+        addAdditionalData(modalWorldRecords)
+      );
+
+      if (
+        document
+          .getElementById('toggle-unverfied-btn')
+          .classList.contains('toggledOn')
+      ) {
+        modalWorldRecords = filterRuns(
+          modalState,
+          addUnverifiedRecords(modalWorldRecords)
+        );
+      }
+
+      modalWorldRecords = addProperties(modalWorldRecords);
+
       let runnerRecords = filterRuns(modalState, runner.runs);
+
+      const modalWRIds = new Set(modalWorldRecords.map((run) => run.id));
+      runnerRecords = runnerRecords.filter((run) => modalWRIds.has(run.id));
+
       runnerRecords = sortWrs(runnerRecords);
 
       recordsContainer.innerHTML = [...runnerRecords]
         .map(
           (run) => `
-        <div class="runner-record-row" tabindex="0" data-id="${run.id}">
+        <div class="runner-record-row ${run.status}" tabindex="0" data-id="${run.id}">
           <span class="runner-record-category">${getRunFullCategoryLabel(run)}</span>
-          in
           <span class="runner-record-time">${formatTime(run.primary_t)}</span>
-          on
+          <span class="wr-number">
+              ${`
+                <svg 
+                class="currentWr wr-number-icon"
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 640 640">
+                  <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
+                  https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 
+                  478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 
+                  368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 
+                  512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 
+                  576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 
+                  438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 
+                  72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 
+                  117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 
+                  158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 
+                  254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/>
+                </svg>`}
+            #${run.wrNumber}
+          </span>
           <span class="runner-record-date">
             ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
           </span>
@@ -1298,6 +1317,24 @@ export const initWrHistory = (
     const randomRun =
       worldRecords[Math.floor(Math.random() * worldRecords.length)];
     openModal(randomRun);
+  });
+
+  const randomRunnerBtn = document.getElementById('random-runner-btn');
+  randomRunnerBtn.addEventListener('click', () => {
+    const seenIds = new Set();
+    const visibleRunners = [];
+    worldRecords.forEach((run) => {
+      const runnerId = run.players_full?.[0]?.id;
+      if (!runnerId || seenIds.has(runnerId)) return;
+      seenIds.add(runnerId);
+
+      const runner = fullRunnerData.find((r) => r.id === runnerId);
+      if (runner) visibleRunners.push(runner);
+    });
+
+    const randomRunner =
+      visibleRunners[Math.floor(Math.random() * visibleRunners.length)];
+    openModal(randomRunner);
   });
 
   // Apply filter button colors
