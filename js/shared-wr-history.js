@@ -11,6 +11,15 @@ export const initWrHistory = (
   const dataById = new Map(data.map((run) => [run.id, run]));
   additionalData.forEach((run) => dataById.set(run.id, run));
   const fullData = [...dataById.values()];
+  const fullRunnerData = [
+    ...new Map(
+      fullData
+        .map((run) => run.players_full?.[0])
+        .filter(Boolean)
+        .map((player) => [player.id, player])
+    ).values(),
+  ];
+  console.log(fullRunnerData);
 
   const defaultVideoIcon = `
         <svg 
@@ -306,6 +315,7 @@ export const initWrHistory = (
     if (style?.style === 'gradient') {
       playerNameHtml = `
     <span
+      tabindex='0'
       class="player-gradient runner-name"
       style="background-image: linear-gradient(90deg, ${style['color-from'].light}, ${style['color-to'].light});"
     >
@@ -528,9 +538,12 @@ export const initWrHistory = (
     });
 
     // Add modal to url if open
-    if (cardModal.hasAttribute('open')) {
-      const currentId = cardModalContent.id;
+    if (runModal.hasAttribute('open')) {
+      const currentId = runModalContent.id;
       parts.push(`run=${currentId.trim().replace(/\s+/g, '+')}`);
+    } else if (runnerModal.hasAttribute('open')) {
+      const currentId = runnerModalContent.id;
+      parts.push(`runner=${currentId.trim().replace(/\s+/g, '+')}`);
     }
 
     // Join the segments together to complete the url
@@ -617,7 +630,7 @@ export const initWrHistory = (
       .join(' ');
   };
 
-  const renderModal = (run) => {
+  const renderRunModal = (run) => {
     const modal = document.createElement('div');
     modal.classList.add('run');
     if (run.status === 'unverified') modal.classList.add('unverified');
@@ -654,7 +667,9 @@ export const initWrHistory = (
     let playerNameHtml = playerName;
     if (style?.style === 'gradient') {
       playerNameHtml = `
-      <span class="player-gradient runner-name"
+      <span 
+        tabindex='0'
+        class="player-gradient runner-name"
         style="background-image: linear-gradient(90deg, ${style['color-from'].light}, ${style['color-to'].light});">
         ${playerName}
       </span>`;
@@ -662,7 +677,7 @@ export const initWrHistory = (
       playerNameHtml = `<span style="color:${style.color.light}">${playerName}</span>`;
     }
 
-    const currentId = cardModalContent.id;
+    const currentId = runModalContent.id;
 
     const recordsInOrder = [...worldRecords].sort(
       (a, b) => a.primary_t - b.primary_t
@@ -681,7 +696,8 @@ export const initWrHistory = (
         in
         <span class="run-time">${formatTime(run.primary_t)}</span>
         by
-        <span class="runner">
+        <span 
+          class="runner-name">
           <img class="country-flag"
             src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
             title="${countryName}" alt="${countryName}">
@@ -797,58 +813,154 @@ export const initWrHistory = (
     return modal;
   };
 
-  const cardModal = document.getElementById('card-modal');
-  const cardModalContent = document.getElementById('card-modal-content');
-  const closeModal = document.getElementById('close-modal-btn');
+  const renderRunnerModal = (runner) => {
+    const modal = document.createElement('div');
+    modal.classList.add('runner');
+    modal.setAttribute('id', runner.id);
 
-  const openModal = (run) => {
-    cardModalContent.setAttribute('id', run.id);
-    cardModalContent.replaceChildren(renderModal(run));
+    const runnerName = runner.names?.international ?? '';
+    const countryCode = runner.location?.country?.code ?? '';
+    const countryName = runner.location?.country?.names?.international ?? '';
 
-    cardModal.showModal();
-    closeModal.focus();
-    updateURL();
+    const style = runner['name-style'];
+    let runnerNameHtml = runnerName;
+    if (style?.style === 'gradient') {
+      runnerNameHtml = `
+      <span
+        class="player-gradient runner-name"
+        style="background-image: linear-gradient(90deg, ${style['color-from'].light}, ${style['color-to'].light});">
+        ${runnerName}
+      </span>`;
+    } else if (style?.style === 'solid') {
+      runnerNameHtml = `<span style="color:${style.color.light}">${runnerName}</span>`;
+    }
+
+    modal.innerHTML = `
+      <div class="runner-main">
+        <img class="runner-pfp"
+              src='https://www.speedrun.com/static/user/${runner.id}/image'
+              onerror="this.style.display='none'">
+        <div class="runner-name-row">
+          ${runnerNameHtml}
+        </div>
+        <div class="runner-location-row">
+          <img
+            class="country-flag"
+            src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
+            title="${countryName}" alt="${countryName}">
+          ${countryName ? `<span class="runner-country">${countryName}</span>` : ''}
+        </div>
+      </div>
+      <div class="runner-links">
+        ${
+          runner.weblink
+            ? `<a class="runner-verification" href="${runner.weblink}">
+              <img class="speedrun-icon" src="https://www.speedrun.com/images/favicon.png">
+              Speedrun.com Profile
+            </a>`
+            : ''
+        }
+      </div>
+    `;
+
+    return modal;
+  };
+
+  const runModal = document.getElementById('run-modal');
+  const runModalContent = document.getElementById('run-modal-content');
+  const closeRunModalBtn = document.getElementById('close-run-modal-btn');
+
+  const runnerModal = document.getElementById('runner-modal');
+  const runnerModalContent = document.getElementById('runner-modal-content');
+  const closeRunnerModalBtn = document.getElementById('close-runner-modal-btn');
+
+  const openModal = (data) => {
+    if (!data) return;
+
+    const isRun = 'primary_t' in data;
+
+    [runModal, runnerModal].forEach((modalEl) => {
+      if (modalEl.hasAttribute('open')) modalEl.close();
+    });
+
+    if (isRun) {
+      runModalContent.setAttribute('id', data.id);
+      runModalContent.replaceChildren(renderRunModal(data));
+      runModal.showModal();
+      closeRunModalBtn.focus();
+      updateURL();
+    } else {
+      runnerModalContent.setAttribute('id', data.id);
+      runnerModalContent.replaceChildren(renderRunnerModal(data));
+      runnerModal.showModal();
+      closeRunnerModalBtn.focus();
+      updateURL();
+    }
   };
 
   // Open modal with keyboard
-  tableContent.addEventListener('keydown', (e) => {
+  document.querySelector('body').addEventListener('keydown', (e) => {
     if (e.key !== ' ' && e.key !== 'Enter') return;
     if (e.target.closest('.table-icon')) return;
-    if (e.target.closest('.runner-name')) return;
     if (e.target.closest('.detail-container')) return;
 
-    const cardElement = e.target.closest('.run-table-row');
-    if (!cardElement) return;
+    const runnerNameEl = e.target.closest('.runner-name');
+    if (runnerNameEl) {
+      e.preventDefault();
+      runnerNameEl.click();
+      return;
+    }
+
+    const row = e.target.closest('.run-table-row');
+    if (!row) return;
 
     e.preventDefault();
-    cardElement.click();
+    row.click();
   });
 
   // Open modal of clicked run
-  tableContent.addEventListener('click', (e) => {
+  document.querySelector('body').addEventListener('click', (e) => {
     if (e.target.closest('.table-icon')) return;
-    if (e.target.closest('.runner-name')) return;
     if (e.target.closest('.detail-container')) return;
 
-    const cardElement = e.target.closest('.run-table-row');
+    const runnerNameEl = e.target.closest('.runner-name');
+    const cardElement =
+      e.target.closest('.run-table-row') ||
+      (runnerNameEl && e.target.closest('.run'));
     if (!cardElement) return;
 
-    const clickedRun = fullData.find((run) => {
-      return cardElement.id === run.id;
+    let clickedCard;
+    if (runnerNameEl) {
+      const run = fullData.find((run) => cardElement.id === run.id);
+      const runnerId = run?.players_full?.[0]?.id;
+      clickedCard = fullRunnerData.find((runner) => runner.id === runnerId);
+    } else {
+      clickedCard = fullData.find((run) => cardElement.id === run.id);
+    }
+
+    if (!clickedCard) return;
+    openModal(clickedCard);
+    updateURL();
+  });
+
+  const closeModal = (modalEl) => {
+    modalEl.close();
+    updateURL();
+  };
+
+  closeRunModalBtn.addEventListener('click', () => closeModal(runModal));
+  closeRunnerModalBtn.addEventListener('click', () => closeModal(runnerModal));
+
+  // Close modal when clicking outside
+  [runModal, runnerModal].forEach((modalEl) => {
+    modalEl.addEventListener('click', (e) => {
+      if (e.target === modalEl) closeModal(modalEl);
     });
-
-    openModal(clickedRun);
-    updateURL();
   });
 
-  closeModal.addEventListener('click', () => {
-    cardModal.close();
-    updateURL();
-  });
-
-  // Navigate neighbouring modals with arrow keys
+  // Navigate neighbouring runs with arrow keys
   document.addEventListener('keydown', (e) => {
-    if (!cardModal.hasAttribute('open')) return;
+    if (!runModal.hasAttribute('open')) return;
     if (
       e.key !== 'ArrowLeft' &&
       e.key !== 'ArrowRight' &&
@@ -860,7 +972,7 @@ export const initWrHistory = (
       return;
 
     const visibleRuns = worldRecords;
-    const currentId = cardModalContent.id;
+    const currentId = runModalContent.id;
     const currentIndex = visibleRuns.findIndex((run) => run.id === currentId);
 
     if (
@@ -878,12 +990,49 @@ export const initWrHistory = (
     updateURL();
   });
 
-  // Close modal when clicking outside
-  cardModal.addEventListener('click', (e) => {
-    if (e.target === cardModal) {
-      cardModal.close();
-      updateURL();
+  // Navigate neighbouring runners with arrow keys
+  document.addEventListener('keydown', (e) => {
+    if (!runnerModal.hasAttribute('open')) return;
+    if (
+      e.key !== 'ArrowLeft' &&
+      e.key !== 'ArrowRight' &&
+      e.key !== 'a' &&
+      e.key !== 'd' &&
+      e.key !== 'A' &&
+      e.key !== 'D'
+    )
+      return;
+
+    const seenIds = new Set();
+    const visibleRunners = [];
+    worldRecords.forEach((run) => {
+      const runnerId = run.players_full?.[0]?.id;
+      if (!runnerId || seenIds.has(runnerId)) return;
+      seenIds.add(runnerId);
+
+      const runner = fullRunnerData.find((r) => r.id === runnerId);
+      if (runner) visibleRunners.push(runner);
+    });
+
+    const currentId = runnerModalContent.id;
+    const currentIndex = visibleRunners.findIndex(
+      (runner) => runner.id === currentId
+    );
+    if (currentIndex === -1) return;
+
+    if (
+      (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') &&
+      currentIndex > 0
+    ) {
+      openModal(visibleRunners[currentIndex - 1]);
+    } else if (
+      (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') &&
+      currentIndex < visibleRunners.length - 1
+    ) {
+      openModal(visibleRunners[currentIndex + 1]);
     }
+
+    updateURL();
   });
 
   const subcategoryFilterBars = document.querySelectorAll(
@@ -1067,10 +1216,16 @@ export const initWrHistory = (
   const params = new URLSearchParams(location.search);
 
   let runParam;
+  let runnerParam;
 
   for (const [group, value] of params.entries()) {
     if (group === 'run') {
       runParam = value;
+      continue;
+    }
+
+    if (group === 'runner') {
+      runnerParam = value;
       continue;
     }
 
@@ -1174,5 +1329,7 @@ export const initWrHistory = (
 
   if (runParam) {
     openModal(fullData.find((run) => run.id === runParam));
+  } else if (runnerParam) {
+    openModal(fullRunnerData.find((runner) => runner.id === runnerParam));
   }
 };
