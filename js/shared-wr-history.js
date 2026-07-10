@@ -1238,6 +1238,33 @@ export const initWrHistory = (
     '.filter-bar[data-group="subcategory"]'
   );
 
+  const pageBtns = document.querySelectorAll('.page-btn');
+  pageBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      pageBtns.forEach((b) => {
+        b.classList.remove('toggledOn');
+      });
+      btn.classList.add('toggledOn');
+
+      document.querySelectorAll('.page-container').forEach((page) => {
+        page.style.display = 'none';
+      });
+
+      document.getElementById(
+        `${btn.textContent.trim().toLowerCase()}-container`
+      ).style.display = 'block';
+    });
+
+    // Display default page
+    pageBtns.forEach((btn) => {
+      if (btn.classList.contains('toggledOn')) {
+        document.getElementById(
+          `${btn.textContent.trim().toLowerCase()}-container`
+        ).style.display = 'block';
+      }
+    });
+  });
+
   const toggleDifferenceBtn = document.getElementById('toggle-difference-btn');
   toggleDifferenceBtn.addEventListener('click', () => {
     toggleDifferenceBtn.classList.toggle('toggledOn');

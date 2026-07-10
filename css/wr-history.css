@@ -12,6 +12,10 @@
 }
 
 /* WR History */
+.records-container {
+  display: none;
+}
+
 .runs-count {
   font-weight: bold;
 }
