@@ -710,6 +710,20 @@ export const initWrHistory = (
     const nextWR = recordsInOrder[currentIndex - 1] ?? null;
     const previousWR = recordsInOrder[currentIndex + 1] ?? null;
 
+    const standingDays = run.date
+      ? Math.floor((Date.now() - new Date(run.date)) / (1000 * 60 * 60 * 24))
+      : null;
+
+    if (standingDays < 1) {
+      run.standingDaysColor = 'difference-worst-color';
+    } else if (standingDays < 7) {
+      run.standingDaysColor = 'difference-average-color';
+    } else if (standingDays < 365) {
+      run.standingDaysColor = 'difference-good-color';
+    } else {
+      run.standingDaysColor = 'difference-best-color';
+    }
+
     modal.innerHTML = `
       <div class="run-main">
         <span class="run-category">${getRunFullCategoryLabel(run)}</span>
@@ -755,25 +769,35 @@ export const initWrHistory = (
       ${
         nextWR
           ? `
-        <div class="next-wr">
-          <div class="section-label">Next Record</div>
-          <div>${formatTime(nextWR.primary_t)}</div>
-          ${nextWR.timeDifference !== '' ? `<div class="${nextWR.timeDifferenceColor}">${formatTimeDifference(nextWR.timeDifference)}</div>` : ''}
-          <div class="run-date">${nextWR.date ? new Date(nextWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
-          ${nextWR.daysDifference != null ? `<span class="${nextWR.daysDifferenceColor}">${nextWR.daysDifference} day${nextWR.daysDifference === 1 ? '' : 's'}</span>` : ''}
-        </div>`
-          : ''
+            <div class="next-wr">
+              <div class="section-label">Next Record</div>
+              <div>${formatTime(nextWR.primary_t)}</div>
+              ${nextWR.timeDifference !== '' ? `<div class="${nextWR.timeDifferenceColor}">${formatTimeDifference(nextWR.timeDifference)}</div>` : ''}
+              <div class="run-date">${nextWR.date ? new Date(nextWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
+              ${nextWR.daysDifference != null ? `<span class="${nextWR.daysDifferenceColor}">${nextWR.daysDifference} day${nextWR.daysDifference === 1 ? '' : 's'}</span>` : ''}
+            </div>`
+          : `
+            <div class="standing-for">
+              <div class="section-label">Standing for</div>
+              ${
+                standingDays != null
+                  ? `<span class="${run.standingDaysColor}">
+                      ${standingDays} day${standingDays === 1 ? '' : 's'}
+                    </span>`
+                  : ''
+              }
+            </div>`
       }
       ${
         previousWR
           ? `
-        <div class="previous-wr">
-          <div class="section-label">Previous Record</div>
-          <div>${formatTime(previousWR.primary_t)}</div>
-          ${run.timeDifference !== '' ? `<div class="${run.timeDifferenceColor}">${formatTimeDifference(run.timeDifference)}</div>` : ''}
-          <div class="run-date">${previousWR.date ? new Date(previousWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
-          ${run.daysDifference != null ? `<span class="${run.daysDifferenceColor}">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
-        </div>`
+            <div class="previous-wr">
+              <div class="section-label">Previous Record</div>
+              <div>${formatTime(previousWR.primary_t)}</div>
+              ${run.timeDifference !== '' ? `<div class="${run.timeDifferenceColor}">${formatTimeDifference(run.timeDifference)}</div>` : ''}
+              <div class="run-date">${previousWR.date ? new Date(previousWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
+              ${run.daysDifference != null ? `<span class="${run.daysDifferenceColor}">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
+            </div>`
           : ''
       }
       <a class="run-verification" ${run.weblink ? `href="${run.weblink}"` : ''}>${run.status === 'verified' ? `<img class="speedrun-icon" src="https://www.speedrun.com/images/favicon.png"></img>` : ''} ${titleCaseSlug(run.status)}</a>
