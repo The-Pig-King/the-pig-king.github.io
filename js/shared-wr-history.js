@@ -36,8 +36,6 @@ export const initWrHistory = (
     runs: runsByPlayerId.get(runner.id) ?? [],
   }));
 
-  console.log(fullRunnerData);
-
   const defaultVideoIcon = `
         <svg 
         tabindex='0'
@@ -540,8 +538,20 @@ export const initWrHistory = (
     });
   };
 
+  const params = new URLSearchParams(location.search);
+
+  let currentPage = params.get('mode');
+
+  if (!currentPage) {
+    currentPage = 'records';
+    params.set('mode', currentPage);
+    history.replaceState(null, '', `${location.pathname}?${params.toString()}`);
+  }
+
   const updateURL = () => {
     const parts = [];
+
+    parts.push(`mode=${currentPage}`);
 
     // Build segments of the url
     Object.entries(state).forEach(([group, { filters }]) => {
@@ -1239,29 +1249,28 @@ export const initWrHistory = (
   );
 
   const pageBtns = document.querySelectorAll('.page-btn');
-  pageBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      pageBtns.forEach((b) => {
-        b.classList.remove('toggledOn');
-      });
-      btn.classList.add('toggledOn');
 
-      document.querySelectorAll('.page-container').forEach((page) => {
-        page.style.display = 'none';
-      });
-
-      document.getElementById(
-        `${btn.textContent.trim().toLowerCase()}-container`
-      ).style.display = 'block';
+  const showPage = (pageName) => {
+    pageBtns.forEach((b) => {
+      b.classList.toggle(
+        'toggledOn',
+        b.textContent.trim().toLowerCase() === pageName
+      );
     });
 
-    // Display default page
-    pageBtns.forEach((btn) => {
-      if (btn.classList.contains('toggledOn')) {
-        document.getElementById(
-          `${btn.textContent.trim().toLowerCase()}-container`
-        ).style.display = 'block';
-      }
+    document.querySelectorAll('.page-container').forEach((page) => {
+      page.style.display = 'none';
+    });
+
+    document.getElementById(`${pageName}-container`).style.display = 'block';
+  };
+
+  // Display default page
+  pageBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentPage = btn.textContent.trim().toLowerCase();
+      showPage(currentPage);
+      updateURL();
     });
   });
 
@@ -1457,8 +1466,6 @@ export const initWrHistory = (
     }
   });
 
-  const params = new URLSearchParams(location.search);
-
   let runParam;
   let runnerParam;
 
@@ -1470,6 +1477,12 @@ export const initWrHistory = (
 
     if (group === 'runner') {
       runnerParam = value;
+      continue;
+    }
+
+    if (group === 'mode') {
+      currentPage = value === 'runners' ? 'runners' : 'records';
+      showPage(currentPage);
       continue;
     }
 
