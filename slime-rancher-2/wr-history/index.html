@@ -133,11 +133,15 @@
         <div class="filter-bar">
           <div class="filter-group top-group">
             <div>
-              <button class="btn toggledOn" id="records-btn">Records</button>
-              <button class="btn" id="runners-btn">Runners</button>
+              <button class="btn page-btn toggledOn" id="records-btn">
+                Records
+              </button>
+              <button class="btn page-btn" id="runners-btn">Runners</button>
             </div>
           </div>
         </div>
+      </div>
+      <div class="records-container page-container" id="records-container">
         <div class="filter-bar">
           <div class="filter-group top-group">
             <div class="runs-container">
@@ -209,56 +213,63 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="filters-container">
-        <div class="filter-bar" data-group="category">
-          <div class="filter-group">
-            <h2>Category</h2>
+        <div class="filters-container">
+          <div class="filter-bar" data-group="category">
+            <div class="filter-group">
+              <h2>Category</h2>
+            </div>
+            <div class="filter-group">
+              <button class="btn filter-btn toggledOn" data-category="any">
+                Any%
+              </button>
+              <button class="btn filter-btn" data-category="all-gordos">
+                All Gordos
+              </button>
+              <button class="btn filter-btn" data-category="slimepedia">
+                Slimepedia 100%
+              </button>
+            </div>
           </div>
-          <div class="filter-group">
-            <button class="btn filter-btn toggledOn" data-category="any">
-              Any%
-            </button>
-            <button class="btn filter-btn" data-category="all-gordos">
-              All Gordos
-            </button>
-            <button class="btn filter-btn" data-category="slimepedia">
-              Slimepedia 100%
-            </button>
+          <div class="filter-bar" data-group="rule-set">
+            <div class="filter-group">
+              <h2>Rule Set</h2>
+            </div>
+            <div class="filter-group">
+              <button
+                class="btn filter-btn toggledOn"
+                data-category="glitchless"
+              >
+                Glitchless
+              </button>
+              <button class="btn filter-btn" data-category="glitched">
+                Glitched
+              </button>
+            </div>
           </div>
+          <div class="filter-bar" data-group="subcategory"></div>
         </div>
-        <div class="filter-bar" data-group="rule-set">
-          <div class="filter-group">
-            <h2>Rule Set</h2>
-          </div>
-          <div class="filter-group">
-            <button class="btn filter-btn toggledOn" data-category="glitchless">
-              Glitchless
-            </button>
-            <button class="btn filter-btn" data-category="glitched">
-              Glitched
-            </button>
-          </div>
+        <div class="table-container">
+          <table class="wr-history-table">
+            <thead>
+              <tr>
+                <th>WR #</th>
+                <th>Date</th>
+                <th>Links</th>
+                <th>Time</th>
+                <th>Runner</th>
+                <th>Version</th>
+                <th>Comment</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody id="table-content"></tbody>
+          </table>
         </div>
-        <div class="filter-bar" data-group="subcategory"></div>
       </div>
-      <div class="table-container">
-        <table class="wr-history-table">
-          <thead>
-            <tr>
-              <th>WR #</th>
-              <th>Date</th>
-              <th>Links</th>
-              <th>Time</th>
-              <th>Runner</th>
-              <th>Version</th>
-              <th>Comment</th>
-              <th>Details</th>
-            </tr>
-          </thead>
-          <tbody id="table-content"></tbody>
-        </table>
-      </div>
+      <div
+        class="runners-container page-container"
+        id="runners-container"
+      ></div>
       <dialog class="card-modal run-modal" id="run-modal">
         <button class="btn close-modal-btn icon" id="close-run-modal-btn">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
