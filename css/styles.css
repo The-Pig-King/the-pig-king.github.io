@@ -264,6 +264,11 @@ header {
 
 .game-switcher-select {
   font-weight: bold;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+.game-switcher-select:hover {
+  filter: brightness(1.1);
 }
 
 body.slime-rancher .game-switcher-select {
@@ -427,6 +432,9 @@ body.slime-rancher-2 .game-switcher-select {
 
   border-radius: 1rem;
 }
+a .icon:hover {
+  filter: brightness(0.8);
+}
 
 .database {
   fill: var(--database-color);
@@ -457,7 +465,6 @@ body.slime-rancher-2 .game-switcher-select {
 
 .nav-icon {
   width: 3rem;
-  display: block;
 }
 
 /* Media Queries */
@@ -540,11 +547,5 @@ body.slime-rancher-2 .game-switcher-select {
 
   .card-modal .card-style-name {
     font-size: 2rem;
-  }
-}
-
-@media (min-width: 1166px) {
-  .difference-label {
-    margin-bottom: -1rem;
   }
 }

@@ -716,8 +716,7 @@ export const initWrHistory = (
         in
         <span class="run-time">${formatTime(run.primary_t)}</span>
         by
-        <span 
-          class="runner-name">
+        <span>
           <img class="country-flag"
             src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
             title="${countryName}" alt="${countryName}">
@@ -890,6 +889,7 @@ export const initWrHistory = (
         }
       </div>
       <div class="runner-modal-filters"></div>
+      <div class="section-label runner-records-label">Records</div>
       <div class="runner-records"></div>
     `;
 

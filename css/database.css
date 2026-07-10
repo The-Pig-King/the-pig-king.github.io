@@ -226,6 +226,7 @@
 }
 
 .card-container .card:hover {
+  cursor: pointer;
   background-color: color-mix(in srgb, var(--frame-color) 95%, white);
 }
 
@@ -315,16 +316,23 @@
   color: var(--source-color, white);
   font-weight: bold;
 
-  cursor: pointer;
   font-size: 0.75rem;
   padding: 0.3rem 0;
   user-select: none;
 }
+.location-source summary:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
 
-.location-source .location-tags {
+.location-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem;
+}
+.location-tag:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
 }
 
 .location-tag {
@@ -387,6 +395,9 @@
   align-items: center;
   justify-content: center;
 }
+.details-icon:hover {
+  filter: brightness(0.8);
+}
 
 .detail-object {
   color: inherit;
@@ -420,6 +431,8 @@
 
 .loaded-text {
   margin: 0.5rem auto;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .loaded-text:last-of-type {

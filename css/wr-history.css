@@ -12,6 +12,10 @@
 }
 
 /* WR History */
+.runs-count {
+  font-weight: bold;
+}
+
 .random-runner-btn {
   background-color: color-mix(in srgb, var(--frame-color) 50%, white);
 }
@@ -47,6 +51,7 @@
 }
 
 .run-table-row:hover {
+  cursor: pointer;
   background-color: color-mix(in srgb, var(--frame-color) 95%, white);
 }
 
@@ -157,9 +162,9 @@
   grid-template-areas:
     'runner-main runner-links runner-links'
     'runner-modal-filters runner-modal-filters runner-modal-filters'
+    'runner-records-label runner-records-label runner-records-label'
     'runner-records runner-records runner-records';
 
-  gap: 1rem;
   align-items: center;
   justify-items: center;
   text-align: center;
@@ -216,6 +221,12 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+.runner-name:not(.runner-name-row .runner-name) {
+  cursor: pointer;
+}
+.runner-name:hover:not(.runner-name-row .runner-name) {
+  filter: brightness(0.8);
+}
 .runner-location-row {
   grid-area: runner-flag;
   align-self: end;
@@ -225,6 +236,9 @@
 }
 .runner-links {
   grid-area: runner-links;
+}
+.runner-records-label {
+  grid-area: runner-records-label;
 }
 .runner-records {
   grid-area: runner-records;
@@ -243,6 +257,10 @@
   background-color: color-mix(in srgb, var(--frame-color) 90%, white);
   padding: 0.3rem 0.75rem;
   border-radius: 1rem;
+}
+.runner-record-row:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
 }
 .runner-record-category {
   flex: 1.5 1 0;
@@ -277,6 +295,10 @@
 .table-icon {
   width: 2rem;
   fill: white;
+}
+.table-icon:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
 }
 
 .youtube {
@@ -343,11 +365,6 @@
   position: relative;
 }
 
-.detail-icon:hover {
-  cursor: pointer;
-  filter: brightness(0.7);
-}
-
 .detail-container {
   display: none;
   position: absolute;
@@ -388,4 +405,10 @@
 .hour {
   fill: grey;
   color: grey;
+}
+
+@media (min-width: 1166px) {
+  .difference-label {
+    margin-bottom: -1rem;
+  }
 }
