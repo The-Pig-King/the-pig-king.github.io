@@ -913,7 +913,10 @@ export const initWrHistory = (
         }
       </div>
       <div class="runner-modal-filters"></div>
-      <div class="section-label runner-records-label">Records</div>
+      <div class="section-label runner-records-label">
+        <span id="runner-records-count"></span>
+        <span>records</span>
+      </div>
       <div class="runner-records"></div>
     `;
 
@@ -982,6 +985,9 @@ export const initWrHistory = (
       `
         )
         .join('');
+
+      modal.querySelector('#runner-records-count').textContent =
+        runnerRecords.length;
 
       // Open run modal
       recordsContainer.querySelectorAll('.runner-record-row').forEach((row) => {
