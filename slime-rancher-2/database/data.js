@@ -4850,7 +4850,7 @@ const rawCards = [
     },
   },
   {
-    name: '#1 Slime Stage',
+    name: 'Slime Stage',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeStage.png',
     'sr-icon': '/assets/games/slime-rancher/gadgets/iconCurioSlimeStage.png',
     tags: ['gadget', 'common', 'utility'],
@@ -4863,46 +4863,46 @@ const rawCards = [
         'lava-dust': '5',
       },
       variants: [
-        'prismatic-#1-slime-stage',
-        'pastel-#1-slime-stage',
-        'monochromatic-#1-slime-stage',
+        'prismatic-slime-stage',
+        'pastel-slime-stage',
+        'monochromatic-slime-stage',
       ],
     },
   },
   {
-    name: 'Prismatic #1 Slime Stage',
+    name: 'Prismatic Slime Stage',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeStagePrismatic.png',
     tags: ['gadget', 'common', 'utility', 'variant'],
     details: {
       price: {
         'rainbow-coin': '5',
       },
-      original: ['#1-slime-stage'],
-      variants: ['pastel-#1-slime-stage', 'monochromatic-#1-slime-stage'],
+      original: ['slime-stage'],
+      variants: ['pastel-slime-stage', 'monochromatic-slime-stage'],
     },
   },
   {
-    name: 'Pastel #1 Slime Stage',
+    name: 'Pastel Slime Stage',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeStagePastel.png',
     tags: ['gadget', 'common', 'utility', 'variant'],
     details: {
       price: {
         newbucks: '250',
       },
-      original: ['#1-slime-stage'],
-      variants: ['prismatic-#1-slime-stage', 'monochromatic-#1-slime-stage'],
+      original: ['slime-stage'],
+      variants: ['prismatic-slime-stage', 'monochromatic-slime-stage'],
     },
   },
   {
-    name: 'Monochromatic #1 Slime Stage',
+    name: 'Monochromatic Slime Stage',
     icon: '/assets/games/slime-rancher-2/gadgets/iconGadgetSlimeStageMonochromatic.png',
     tags: ['gadget', 'common', 'utility', 'variant'],
     details: {
       price: {
         newbucks: '250',
       },
-      original: ['#1-slime-stage'],
-      variants: ['prismatic-#1-slime-stage', 'pastel-#1-slime-stage'],
+      original: ['slime-stage'],
+      variants: ['prismatic-slime-stage', 'pastel-slime-stage'],
     },
   },
   {
