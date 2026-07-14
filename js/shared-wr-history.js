@@ -4,6 +4,7 @@ export const initWrHistory = (
   nonRecordsToRemove,
   filterRuns,
   titleCaseSlug,
+  formatDate,
   getRunCategoryKey,
   getRunRuleSetKey,
   getRunSubcategoryKey
@@ -302,9 +303,23 @@ export const initWrHistory = (
     return icons[hostname] ?? defaultVideoIcon;
   };
 
-  const renderRunsCount = (runsCount) => {
-    document.getElementById('runs-count').textContent = runsCount;
+  const getVisibleRunners = () => {
+    const seenIds = new Set();
+    const visible = [];
+    worldRecords.forEach((run) => {
+      const runnerId = run.players_full?.[0]?.id;
+      if (!runnerId || seenIds.has(runnerId)) return;
+      seenIds.add(runnerId);
+      const runner = fullRunnerData.find((r) => r.id === runnerId);
+      if (runner) visible.push(runner);
+    });
+    return visible;
   };
+
+  const getCountryFlagHtml = (countryCode, countryName) => `
+  <img class="country-flag"
+    src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
+    title="${countryName}" alt="${countryName}">`;
 
   const tableContent = document.getElementById('table-content');
 
@@ -351,7 +366,7 @@ export const initWrHistory = (
     tr.innerHTML = `
     <td>${run.wrNumber}</td>
     <td class='date-column'>
-      ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
+      ${formatDate(run.date)}
       ${run.daysDifference != null ? `<br><span class="${run.daysDifferenceColor} difference-label">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
     </td>
     <td>
@@ -367,11 +382,7 @@ export const initWrHistory = (
       ${run.timeDifference !== '' ? `<br><span class="${run.timeDifferenceColor} difference-label">${formatTimeDifference(run.timeDifference)}</span>` : ''}
     </td>
     <td>
-      <img
-        class="country-flag"
-        src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
-        title="${countryName}"
-        alt="${countryName}">
+      ${getCountryFlagHtml(countryCode, countryName)}
       ${playerNameHtml}
     </td>
     <td>${run.version}</td>
@@ -398,6 +409,8 @@ export const initWrHistory = (
   };
 
   const renderRuns = (runs) => {
+    document.getElementById('runs-count').textContent = runs.length;
+
     tableContent.innerHTML = '';
     if (runs.length === 0) {
       return;
@@ -416,6 +429,117 @@ export const initWrHistory = (
     runs.forEach((run) => {
       tableContent.appendChild(renderRun(run));
     });
+  };
+
+  const renderRunnerCard = (runner, latestRun, oldestRun, recordCount) => {
+    const card = document.createElement('div');
+    card.classList.add('runner-card');
+    card.setAttribute('id', runner.id);
+    card.setAttribute('tabindex', '0');
+
+    const runnerName = runner.names?.international ?? '';
+    const countryCode = runner.location?.country?.code ?? '';
+    const countryName = runner.location?.country?.names?.international ?? '';
+
+    const style = runner['name-style'];
+    let runnerNameHtml = runnerName;
+    if (style?.style === 'gradient') {
+      runnerNameHtml = `
+      <span
+        class="player-gradient runner-name"
+        style="background-image: linear-gradient(90deg, ${style['color-from'].light}, ${style['color-to'].light});">
+        ${runnerName}
+      </span>`;
+    } else if (style?.style === 'solid') {
+      runnerNameHtml = `<span style="color:${style.color.light}">${runnerName}</span>`;
+    }
+
+    card.innerHTML = `
+      <img class="runner-pfp"
+            src='https://www.speedrun.com/static/user/${runner.id}/image'
+            onerror="this.style.visibility='hidden'">
+      <div class="runner-name-row">${runnerNameHtml}</div>
+      <div class="runner-location-row">
+        ${getCountryFlagHtml(countryCode, countryName)}
+        ${countryName ? `<span class="runner-country">${countryName}</span>` : ''}
+      </div>
+        <div class="runner-record-count">
+          ${recordCount} record${recordCount === 1 ? '' : 's'}
+        </div>
+        <div class="runner-record-dates">
+          <div class="runner-latest-record">        
+            ${
+              latestRun?.date
+                ? `
+                  <span class="section-label">Latest record: </span>    
+                  <span class="runner-card-latest-date">
+                    ${formatDate(latestRun.date)}
+                  </span>`
+                : ''
+            }
+          </div>
+          <div class="runner-oldest-record"> 
+            ${
+              oldestRun?.date
+                ? `
+                  <span class="section-label">Oldest record: </span>    
+                  <span class="runner-card-latest-date">
+                    ${formatDate(oldestRun.date)}
+                  </span>`
+                : ''
+            }
+          </div>
+        </div>
+      `;
+
+    return card;
+  };
+
+  const renderRunners = (runs) => {
+    const runnersContent = document.getElementById('runners-content');
+    runnersContent.innerHTML = '';
+
+    const runnerOrder = [];
+    const runsByRunner = new Map();
+
+    runs.forEach((run) => {
+      const playerId = run.players_full?.[0]?.id;
+      if (!playerId) return;
+
+      if (!runsByRunner.has(playerId)) {
+        runnerOrder.push(playerId);
+        runsByRunner.set(playerId, []);
+      }
+      runsByRunner.get(playerId).push(run);
+    });
+
+    document.getElementById('runners-count').textContent = runnerOrder.length;
+
+    if (runnerOrder.length === 0) {
+      return;
+    }
+
+    runnerOrder.forEach((playerId) => {
+      const runner = fullRunnerData.find((r) => r.id === playerId);
+      if (!runner) return;
+
+      const runnerRuns = runsByRunner.get(playerId);
+      const latestRun = runnerRuns.reduce((a, b) =>
+        new Date(a.date) > new Date(b.date) ? a : b
+      );
+      const oldestRun = runnerRuns.reduce((a, b) =>
+        new Date(a.date) < new Date(b.date) ? a : b
+      );
+
+      runnersContent.appendChild(
+        renderRunnerCard(runner, latestRun, oldestRun, runnerRuns.length)
+      );
+    });
+  };
+
+  const renderPage = (runs) => {
+    if (currentPage === 'records') renderRuns(runs);
+    if (currentPage === 'runners') renderRunners(runs);
   };
 
   const filterWrs = (runs) => {
@@ -604,10 +728,7 @@ export const initWrHistory = (
     worldRecords = addProperties(worldRecords);
     worldRecords = sortWrs(worldRecords);
 
-    const runsCount = worldRecords.length;
-
-    renderRunsCount(runsCount);
-    renderRuns(worldRecords);
+    renderPage(worldRecords);
 
     // Sort state tracking for controlling difference label css
     tableContent.classList.toggle(
@@ -741,36 +862,14 @@ export const initWrHistory = (
         <span class="run-time">${formatTime(run.primary_t)}</span>
         by
         <span>
-          <img class="country-flag"
-            src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
-            title="${countryName}" alt="${countryName}">
+          ${getCountryFlagHtml(countryCode, countryName)}
           ${playerNameHtml}
         </span>
       </div>
-      <div class="wr-number">
-          ${`
-            <svg 
-            class="currentWr wr-number-icon"
-            xmlns="http://www.w3.org/2000/svg" 
-            viewBox="0 0 640 640">
-              <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
-              https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-              <path d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 
-              478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 
-              368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 
-              512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 
-              576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 
-              438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 
-              72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 
-              117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 
-              158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 
-              254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/>
-            </svg>`}
-        #${run.wrNumber}
-      </div>
+      <div class="wr-number">${icons.currentWr}#${run.wrNumber}</div>
       <div class="run-date">
         <div class="section-label">Date</div>
-        ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
+        ${run.date ? formatDate(run.date) : ''}
       </div>
       <div class="run-version">
         <div class="section-label">Version</div>
@@ -783,7 +882,7 @@ export const initWrHistory = (
               <div class="section-label">Next Record</div>
               <div>${formatTime(nextWR.primary_t)}</div>
               ${nextWR.timeDifference !== '' ? `<div class="${nextWR.timeDifferenceColor}">${formatTimeDifference(nextWR.timeDifference)}</div>` : ''}
-              <div class="run-date">${nextWR.date ? new Date(nextWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
+              <div class="run-date">${formatDate(nextWR.date)}</div>
               ${nextWR.daysDifference != null ? `<span class="${nextWR.daysDifferenceColor}">${nextWR.daysDifference} day${nextWR.daysDifference === 1 ? '' : 's'}</span>` : ''}
             </div>`
           : `
@@ -805,7 +904,7 @@ export const initWrHistory = (
               <div class="section-label">Previous Record</div>
               <div>${formatTime(previousWR.primary_t)}</div>
               ${run.timeDifference !== '' ? `<div class="${run.timeDifferenceColor}">${formatTimeDifference(run.timeDifference)}</div>` : ''}
-              <div class="run-date">${previousWR.date ? new Date(previousWR.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}</div>
+              <div class="run-date">${formatDate(previousWR.date)}</div>
               ${run.daysDifference != null ? `<span class="${run.daysDifferenceColor}">${run.daysDifference} day${run.daysDifference === 1 ? '' : 's'}</span>` : ''}
             </div>`
           : ''
@@ -900,15 +999,12 @@ export const initWrHistory = (
       <div class="runner-main">
         <img class="runner-pfp"
               src='https://www.speedrun.com/static/user/${runner.id}/image'
-              onerror="this.style.display='none'">
+              onerror="this.style.visibility='hidden'">
         <div class="runner-name-row">
           ${runnerNameHtml}
         </div>
         <div class="runner-location-row">
-          <img
-            class="country-flag"
-            src="${countryCode ? `https://www.speedrun.com/images/flags/${countryCode}.png` : ''}"
-            title="${countryName}" alt="${countryName}">
+          ${getCountryFlagHtml(countryCode, countryName)}
           ${countryName ? `<span class="runner-country">${countryName}</span>` : ''}
         </div>
       </div>
@@ -967,29 +1063,9 @@ export const initWrHistory = (
         <div class="runner-record-row ${run.status}" tabindex="0" data-id="${run.id}">
           <span class="runner-record-category">${getRunFullCategoryLabel(run)}</span>
           <span class="runner-record-time">${formatTime(run.primary_t)}</span>
-          <span class="wr-number">
-              ${`
-                <svg 
-                class="currentWr wr-number-icon"
-                xmlns="http://www.w3.org/2000/svg" 
-                viewBox="0 0 640 640">
-                  <!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - 
-                  https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                  <path d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 
-                  478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 
-                  368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 
-                  512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 
-                  576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 
-                  438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 
-                  72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 
-                  117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 
-                  158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 
-                  254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/>
-                </svg>`}
-            #${run.wrNumber}
-          </span>
+          <span class="wr-number">${icons.currentWr}#${run.wrNumber}</span>
           <span class="runner-record-date">
-            ${run.date ? new Date(run.date.slice(0, 10)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}
+            ${formatDate(run.date)}
           </span>
         </div>
       `
@@ -1120,6 +1196,13 @@ export const initWrHistory = (
       return;
     }
 
+    const runnerCard = e.target.closest('.runner-card');
+    if (runnerCard) {
+      e.preventDefault();
+      runnerCard.click();
+      return;
+    }
+
     const row = e.target.closest('.run-table-row');
     if (!row) return;
 
@@ -1132,14 +1215,20 @@ export const initWrHistory = (
     if (e.target.closest('.table-icon')) return;
     if (e.target.closest('.detail-container')) return;
 
+    const runnerCardEl = e.target.closest('.runner-card');
     const runnerNameEl = e.target.closest('.runner-name');
     const cardElement =
       e.target.closest('.run-table-row') ||
+      runnerCardEl ||
       (runnerNameEl && e.target.closest('.run'));
     if (!cardElement) return;
 
     let clickedCard;
-    if (runnerNameEl) {
+    if (runnerCardEl) {
+      clickedCard = fullRunnerData.find(
+        (runner) => runner.id === cardElement.id
+      );
+    } else if (runnerNameEl) {
       const run = fullData.find((run) => cardElement.id === run.id);
       const runnerId = run?.players_full?.[0]?.id;
       clickedCard = fullRunnerData.find((runner) => runner.id === runnerId);
@@ -1212,16 +1301,7 @@ export const initWrHistory = (
     )
       return;
 
-    const seenIds = new Set();
-    const visibleRunners = [];
-    worldRecords.forEach((run) => {
-      const runnerId = run.players_full?.[0]?.id;
-      if (!runnerId || seenIds.has(runnerId)) return;
-      seenIds.add(runnerId);
-
-      const runner = fullRunnerData.find((r) => r.id === runnerId);
-      if (runner) visibleRunners.push(runner);
-    });
+    const visibleRunners = getVisibleRunners();
 
     const currentId = runnerModalContent.id;
     const currentIndex = visibleRunners.findIndex(
@@ -1271,6 +1351,7 @@ export const initWrHistory = (
       currentPage = btn.textContent.trim().toLowerCase();
       showPage(currentPage);
       updateURL();
+      updateUI();
     });
   });
 
@@ -1311,29 +1392,29 @@ export const initWrHistory = (
 
   const filterBtns = document.querySelectorAll('.filter-btn');
 
+  const syncFilterButtonsUI = () => {
+    filterBtns.forEach((btn) => {
+      const group = btn.closest('.filter-bar').dataset.group;
+      const value = btn.dataset.category;
+      btn.classList.toggle('toggledOn', state[group]?.filters.has(value));
+    });
+
+    const activeCat = [...state.category.filters][0];
+    subcategoryFilterBars.forEach((bar) => {
+      bar.style.display = bar.classList.contains(`${activeCat}-subcategory`)
+        ? 'block'
+        : 'none';
+    });
+  };
+
   const resetFiltersBtns = document.querySelectorAll('.reset-filters-btn');
   resetFiltersBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      // Restore state to default
       Object.keys(state).forEach((group) => {
         state[group].filters = new Set(defaultState[group].filters);
       });
 
-      // Set button toggles
-      filterBtns.forEach((filterBtn) => {
-        const group = filterBtn.closest('.filter-bar').dataset.group;
-        const value = filterBtn.dataset.category;
-        filterBtn.classList.toggle(
-          'toggledOn',
-          state[group].filters.has(value)
-        );
-      });
-
-      subcategoryFilterBars.forEach((bar) => {
-        const subcat = [...state.category.filters][0] + '-subcategory';
-        bar.style.display = bar.classList.contains(subcat) ? 'block' : 'none';
-      });
-
+      syncFilterButtonsUI();
       updateUI();
     });
   });
@@ -1387,16 +1468,7 @@ export const initWrHistory = (
 
   const randomRunnerBtn = document.getElementById('random-runner-btn');
   randomRunnerBtn.addEventListener('click', () => {
-    const seenIds = new Set();
-    const visibleRunners = [];
-    worldRecords.forEach((run) => {
-      const runnerId = run.players_full?.[0]?.id;
-      if (!runnerId || seenIds.has(runnerId)) return;
-      seenIds.add(runnerId);
-
-      const runner = fullRunnerData.find((r) => r.id === runnerId);
-      if (runner) visibleRunners.push(runner);
-    });
+    const visibleRunners = getVisibleRunners();
 
     const randomRunner =
       visibleRunners[Math.floor(Math.random() * visibleRunners.length)];
@@ -1515,17 +1587,6 @@ export const initWrHistory = (
       state[group].filters.clear();
       value.split(',').forEach((v) => state[group].filters.add(v));
     }
-
-    filterBtns.forEach((btn) => {
-      const group = btn.closest('.filter-bar').dataset.group;
-      const value = btn.dataset.category;
-      btn.classList.toggle('toggledOn', state[group].filters.has(value));
-    });
-
-    subcategoryFilterBars.forEach((bar) => {
-      const subcat = [...state.category.filters][0] + '-subcategory';
-      bar.style.display = bar.classList.contains(subcat) ? 'block' : 'none';
-    });
   }
 
   filterBtns.forEach((btn) => {
@@ -1534,26 +1595,8 @@ export const initWrHistory = (
       const value = btn.dataset.category;
       const { filters } = state[group];
 
-      btn
-        .closest('.filter-bar')
-        .querySelectorAll('.filter-btn')
-        .forEach((b) => {
-          b.classList.remove('toggledOn');
-          filters.delete(b.dataset.category);
-        });
-      btn.classList.add('toggledOn');
+      filters.clear();
       filters.add(value);
-
-      subcategoryFilterBars.forEach((bar) => {
-        bar.style.display = 'none';
-      });
-
-      subcategoryFilterBars.forEach((bar) => {
-        const subcat = [...state.category.filters][0] + '-subcategory';
-        if (bar.classList.contains(subcat)) {
-          bar.style.display = 'block';
-        }
-      });
 
       if (group === 'category') {
         if (!subcategoryStore[value]) {
@@ -1567,21 +1610,14 @@ export const initWrHistory = (
           subcategoryStore[value] = defaults;
         }
         state.subcategory.filters = subcategoryStore[value];
-
-        document
-          .querySelectorAll('.filter-bar[data-group="subcategory"] .filter-btn')
-          .forEach((subBtn) => {
-            subBtn.classList.toggle(
-              'toggledOn',
-              state.subcategory.filters.has(subBtn.dataset.category)
-            );
-          });
       }
 
+      syncFilterButtonsUI();
       updateUI();
     });
   });
 
+  syncFilterButtonsUI();
   updateUI();
 
   if (runParam) {

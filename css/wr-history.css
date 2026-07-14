@@ -12,10 +12,6 @@
 }
 
 /* WR History */
-.records-container {
-  display: none;
-}
-
 .runs-count {
   font-weight: bold;
 }
@@ -110,7 +106,7 @@
   display: flex;
   gap: 0.2rem;
 }
-.wr-number-icon {
+.wr-number svg {
   width: 1rem;
 }
 .run-date {
@@ -409,6 +405,71 @@
 .hour {
   fill: grey;
   color: grey;
+}
+
+/* Runners page */
+.runners-content {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 14rem));
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.runner-card {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    'runner-pfp runner-name'
+    'runner-pfp runner-flag'
+    'runner-record-count runner-record-count'
+    'runner-record-dates runner-record-dates';
+
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+  border: 0.15rem solid color-mix(in srgb, var(--frame-color) 70%, white);
+  border-radius: 1rem;
+  background-color: var(--frame-color);
+  padding: 0.5rem;
+
+  font-size: 1rem;
+}
+
+.runner-record-count {
+  grid-area: runner-record-count;
+}
+.runner-record-dates {
+  grid-area: runner-record-dates;
+  display: flex;
+  gap: 1rem;
+}
+.runner-latest-record,
+.runner-oldest-record {
+  display: flex;
+  flex-direction: column;
+}
+.runner-latest-record {
+  grid-area: runner-latest-record;
+}
+.runner-oldest-record {
+  grid-area: runner-oldest-record;
+}
+
+@media (max-width: 600px) {
+  .runners-content {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .runner-pfp {
+    width: 56px;
+    height: 56px;
+  }
 }
 
 @media (min-width: 1166px) {

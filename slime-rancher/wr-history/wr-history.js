@@ -1,5 +1,6 @@
 import { initWrHistory } from '../../js/shared-wr-history.js';
 import { titleCaseSlug } from '../../js/main.js';
+import { formatDate } from '../../js/main.js';
 
 const data = await fetch('data.json').then((r) => r.json());
 
@@ -1138,6 +1139,7 @@ initWrHistory(
   nonRecordsToRemove,
   filterRuns,
   titleCaseSlug,
+  formatDate,
   getRunCategoryKey,
   getRunRuleSetKey,
   getRunSubcategoryKey

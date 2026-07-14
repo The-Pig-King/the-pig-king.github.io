@@ -1,7 +1,8 @@
 export const originalDocumentTitle = document.title;
 
-// input-string to Input String
+// "input-string" to "Input String"
 export const titleCaseSlug = (str) => {
+  // Make roman numerals fully capitalized (II instead of Ii)
   const romans = new Set([
     'I',
     'Ii',
@@ -23,6 +24,15 @@ export const titleCaseSlug = (str) => {
     .join(' ');
 };
 
+export const formatDate = (dateStr) =>
+  dateStr
+    ? new Date(dateStr.slice(0, 10)).toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      })
+    : '';
+
 // Set year in footer
 const year = document.getElementById('year');
 const startYear = 2026;
@@ -36,14 +46,9 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
-    const date = new Date(data[0].commit.committer.date);
-
-    document.getElementById('last-updated').textContent =
-      date.toLocaleDateString('en-GB', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric',
-      });
+    document.getElementById('last-updated').textContent = formatDate(
+      data[0].commit.committer.date
+    );
   })
   .catch(() => {
     document.getElementById('last-updated').textContent = 'Unavailable';
@@ -77,14 +82,13 @@ async function initGameSwitcher() {
     const select = document.createElement('select');
     select.className = 'btn game-switcher-select';
     select.setAttribute('aria-label', 'Switch game');
+    select.dataset.sisterPath = sisterPath;
+    select.dataset.currentPath = path;
 
-    [
-      { game: currentGame, href: path },
-      { game: sisterGame, href: sisterPath },
-    ].forEach(({ game, href }) => {
+    [{ game: currentGame }, { game: sisterGame }].forEach(({ game }) => {
       const opt = document.createElement('option');
       opt.classList.add(`${game}-background`);
-      opt.value = href;
+      opt.value = game;
       opt.textContent = GAMES[game];
       if (game === currentGame) {
         opt.selected = true;
@@ -94,7 +98,16 @@ async function initGameSwitcher() {
     });
 
     select.addEventListener('change', (e) => {
-      window.location.href = e.target.value;
+      const mode = new URLSearchParams(window.location.search).get('mode');
+      const preservedSearch = mode ? `?mode=${mode}` : '';
+
+      const targetGame = e.target.value;
+      const targetPath =
+        targetGame === currentGame
+          ? select.dataset.currentPath
+          : select.dataset.sisterPath;
+
+      window.location.href = `${targetPath}${preservedSearch}`;
     });
 
     titleEl.replaceWith(select);
