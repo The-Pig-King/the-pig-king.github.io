@@ -412,7 +412,6 @@ export const initWrHistory = (
     document.getElementById('runs-count').textContent = runs.length;
 
     tableContent.innerHTML = '';
-    console.log(runs.length);
     if (runs.length === 0) {
       return;
     }
@@ -994,13 +993,12 @@ export const initWrHistory = (
       runnerNameHtml = `<span style="color:${style.color.light}">${runnerName}</span>`;
     }
 
-    const activeCategory = [...state.category.filters][0];
-
     const modalState = {
       category: { filters: new Set(state.category.filters) },
       'rule-set': { filters: new Set(state['rule-set'].filters) },
-      subcategory: { filters: new Set(subcategoryStore[activeCategory] ?? []) },
+      subcategory: { filters: new Set(state.subcategory.filters) },
     };
+    console.log(modalState);
 
     modal.innerHTML = `
       <div class="runner-main">
@@ -1418,7 +1416,12 @@ export const initWrHistory = (
   resetFiltersBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       Object.keys(state).forEach((group) => {
-        state[group].filters = new Set(defaultState[group].filters);
+        if (group === 'subcategory') {
+          const category = [...state.category.filters][0];
+          state.subcategory.filters = new Set(subcategoryStore[category] ?? []);
+        } else {
+          state[group].filters = new Set(defaultState[group].filters);
+        }
       });
 
       syncFilterButtonsUI();
@@ -1526,7 +1529,7 @@ export const initWrHistory = (
   });
 
   let activeCategory = [...state.category.filters][0];
-  state.subcategory.filters = subcategoryStore[activeCategory] ?? new Set();
+  state.subcategory.filters = new Set(subcategoryStore[activeCategory] ?? []);
 
   subcategoryFilterBars.forEach((bar) => {
     bar.style.display = bar.classList.contains(`${activeCategory}-subcategory`)
@@ -1535,13 +1538,18 @@ export const initWrHistory = (
   });
 
   const defaultState = {};
+
   Object.keys(state).forEach((group) => {
     if (group === 'subcategory') {
-      defaultState[group] = {
-        filters: new Set(subcategoryStore[activeCategory] ?? []),
-      };
+      defaultState[group] = {};
+
+      Object.keys(subcategoryStore).forEach((category) => {
+        defaultState[group][category] = new Set(subcategoryStore[category]);
+      });
     } else {
-      defaultState[group] = { filters: new Set(state[group].filters) };
+      defaultState[group] = {
+        filters: new Set(state[group].filters),
+      };
     }
   });
 
@@ -1572,7 +1580,9 @@ export const initWrHistory = (
         .split(',')
         .forEach((v) => state.category.filters.add(v));
       activeCategory = [...state.category.filters][0];
-      state.subcategory.filters = subcategoryStore[activeCategory] ?? new Set();
+      state.subcategory.filters = new Set(
+        subcategoryStore[activeCategory] ?? []
+      );
       subcategoryStore[activeCategory] = state.subcategory.filters;
     }
 
@@ -1616,7 +1626,7 @@ export const initWrHistory = (
             .forEach((b) => defaults.add(b.dataset.category));
           subcategoryStore[value] = defaults;
         }
-        state.subcategory.filters = subcategoryStore[value];
+        state.subcategory.filters = new Set(subcategoryStore[value]);
       }
 
       syncFilterButtonsUI();
