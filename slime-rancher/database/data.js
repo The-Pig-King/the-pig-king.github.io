@@ -1810,15 +1810,13 @@ const rawCards = [
       'range-exchange': ['the-ranch'],
     },
     details: {
-      'fav-of': ['hunter-slime'],
-    },
-    details: {
       chickadoo: [
         'chickadoo',
         'stony-chickadoo',
         'briar-chickadoo',
         'painted-chickadoo',
       ],
+      'fav-of': ['hunter-slime'],
     },
   },
   {
@@ -2696,7 +2694,7 @@ const rawCards = [
     },
   },
   {
-    name: 'Chime C#',
+    name: 'Chime C-Sharp',
     icon: '/assets/games/slime-rancher/chimes/iconEchoNote2.png',
     tags: ['chime', 'event', 'rare'],
     locations: {
@@ -2724,7 +2722,7 @@ const rawCards = [
     },
   },
   {
-    name: 'Chime D#',
+    name: 'Chime D-Sharp',
     icon: '/assets/games/slime-rancher/chimes/iconEchoNote4.png',
     tags: ['chime', 'event', 'rare'],
     locations: {
@@ -2766,7 +2764,7 @@ const rawCards = [
     },
   },
   {
-    name: 'Chime F#',
+    name: 'Chime F-Sharp',
     icon: '/assets/games/slime-rancher/chimes/iconEchoNote7.png',
     tags: ['chime', 'event', 'rare'],
     locations: {
@@ -2794,7 +2792,7 @@ const rawCards = [
     },
   },
   {
-    name: 'Chime G#',
+    name: 'Chime G-Sharp',
     icon: '/assets/games/slime-rancher/chimes/iconEchoNote9.png',
     tags: ['chime', 'event', 'rare'],
     locations: {
@@ -2822,7 +2820,7 @@ const rawCards = [
     },
   },
   {
-    name: 'Chime A#',
+    name: 'Chime A-Sharp',
     icon: '/assets/games/slime-rancher/chimes/iconEchoNote11.png',
     tags: ['chime', 'event', 'rare'],
     locations: {
@@ -2867,17 +2865,6 @@ const rawCards = [
     name: 'Pink Ornament',
     icon: '/assets/games/slime-rancher/ornaments/iconOrnamentPink.png',
     tags: ['ornament', 'event', 'common'],
-    locations: {
-      crate: [
-        'the-dry-reef',
-        'the-moss-blanket',
-        'the-indigo-quarry',
-        'the-ancient-ruins',
-        'the-glass-desert',
-        'the-wilds',
-        'the-slime-sea',
-      ],
-    },
     locations: {
       crate: [
         'the-dry-reef',

@@ -1498,7 +1498,7 @@ const rawCards = [
     },
     details: {
       diet: ['veggie'],
-      'fav-food': ['turbo-taters'],
+      'fav-food': ['turbo-tater'],
       'food-limit': ['30'],
       slime: ['hyper-slime'],
       drops: {
@@ -1927,8 +1927,8 @@ const rawCards = [
         'sea-chickadoo',
         'stony-chickadoo',
         'briar-chickadoo',
-        'thundercluck-chickadoo',
-        'pained-chickadoo',
+        'thunder-chickadoo',
+        'painted-chickadoo',
         'candied-chickadoo',
       ],
     },
