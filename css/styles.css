@@ -93,6 +93,11 @@ button {
   cursor: pointer;
 }
 
+button img,
+button svg {
+  display: block;
+}
+
 .btn {
   background-color: var(--frame-color);
   border: var(--border-thin) color-mix(in srgb, var(--frame-color) 70%, white);
@@ -205,6 +210,45 @@ summary:focus-visible,
 .frame-navs {
   border-radius: 1rem;
   margin: 0.3rem;
+}
+
+.filters-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+}
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.advanced-filter-bar {
+  display: none;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.2em;
+  flex-wrap: wrap;
+}
+.filter-group div {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.top-group {
+  gap: 0.5rem 2rem;
+  background-color: var(--main-color);
 }
 
 /* Header */
