@@ -219,7 +219,8 @@
   grid-area: runner-name;
   align-self: start;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: bold;
+  min-width: 0;
 }
 .runner-name:not(.runner-name-row .runner-name) {
   cursor: pointer;

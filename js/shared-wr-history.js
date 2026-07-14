@@ -412,6 +412,7 @@ export const initWrHistory = (
     document.getElementById('runs-count').textContent = runs.length;
 
     tableContent.innerHTML = '';
+    console.log(runs.length);
     if (runs.length === 0) {
       return;
     }
@@ -533,6 +534,8 @@ export const initWrHistory = (
   };
 
   const filterWrs = (runs) => {
+    if (runs.length === 0) return [];
+
     // Keep fastest of a single day (speedrun.com only tracks day, not time)
     const fastest = runs.reduce((acc, run) => {
       if (!acc[run.date] || run.primary_t < acc[run.date].primary_t) {
@@ -632,6 +635,8 @@ export const initWrHistory = (
   };
 
   const addProperties = (runs) => {
+    if (runs.length === 0) return runs;
+
     // Add wrNumber
     for (let i = 0; i < runs.length; i++) {
       runs[i].wrNumber = i + 1;
