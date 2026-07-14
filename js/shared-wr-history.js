@@ -432,6 +432,30 @@ export const initWrHistory = (
     const countryName = runner.location?.country?.names?.international ?? '';
 
     const style = runner['name-style'];
+    const runnerPrimaryColor =
+      style.style === 'gradient' ? style['color-from'].dark : style.color.dark;
+    // Darker or lighter version of primary color
+    const runnerSecondaryColor =
+      '#' +
+      runnerPrimaryColor
+        .slice(1)
+        .match(/.{2}/g)
+        .map((c) =>
+          Math.max(
+            0,
+            Math.min(
+              255,
+              parseInt(c, 16) +
+                (parseInt(runnerPrimaryColor.slice(1), 16) > 0x7f7f7f
+                  ? -60
+                  : 60)
+            )
+          )
+            .toString(16)
+            .padStart(2, '0')
+        )
+        .join('');
+
     let runnerNameHtml = runnerName;
     if (style?.style === 'gradient') {
       runnerNameHtml = `
@@ -446,8 +470,7 @@ export const initWrHistory = (
 
     card.innerHTML = `
       <img class="runner-pfp"
-            src='https://www.speedrun.com/static/user/${runner.id}/image'
-            onerror="this.style.visibility='hidden'">
+          src="https://www.speedrun.com/static/user/${runner.id}/image">
       <div class="runner-name-row">${runnerNameHtml}</div>
       <div class="runner-location-row">
         ${getCountryFlagHtml(countryCode, countryName)}
@@ -481,6 +504,12 @@ export const initWrHistory = (
           </div>
         </div>
       `;
+
+    // Fallback to svg if there's no img
+    const img = card.querySelector('.runner-pfp');
+    img.onerror = () => {
+      img.outerHTML = `<svg class="runner-pfp" style="background-color:${runnerSecondaryColor};" fill="${runnerPrimaryColor}" viewBox="0 0 24 24"><path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>`;
+    };
 
     return card;
   };
@@ -981,6 +1010,30 @@ export const initWrHistory = (
     const countryName = runner.location?.country?.names?.international ?? '';
 
     const style = runner['name-style'];
+    const runnerPrimaryColor =
+      style.style === 'gradient' ? style['color-from'].dark : style.color.dark;
+    // Darker or lighter version of primary color
+    const runnerSecondaryColor =
+      '#' +
+      runnerPrimaryColor
+        .slice(1)
+        .match(/.{2}/g)
+        .map((c) =>
+          Math.max(
+            0,
+            Math.min(
+              255,
+              parseInt(c, 16) +
+                (parseInt(runnerPrimaryColor.slice(1), 16) > 0x7f7f7f
+                  ? -60
+                  : 60)
+            )
+          )
+            .toString(16)
+            .padStart(2, '0')
+        )
+        .join('');
+
     let runnerNameHtml = runnerName;
     if (style?.style === 'gradient') {
       runnerNameHtml = `
@@ -998,13 +1051,11 @@ export const initWrHistory = (
       'rule-set': { filters: new Set(state['rule-set'].filters) },
       subcategory: { filters: new Set(state.subcategory.filters) },
     };
-    console.log(modalState);
 
     modal.innerHTML = `
       <div class="runner-main">
         <img class="runner-pfp"
-              src='https://www.speedrun.com/static/user/${runner.id}/image'
-              onerror="this.style.visibility='hidden'">
+            src="https://www.speedrun.com/static/user/${runner.id}/image">
         <div class="runner-name-row">
           ${runnerNameHtml}
         </div>
@@ -1030,6 +1081,12 @@ export const initWrHistory = (
       </div>
       <div class="runner-records"></div>
     `;
+
+    // Fallback to svg if there's no img
+    const img = modal.querySelector('.runner-pfp');
+    img.onerror = () => {
+      img.outerHTML = `<svg class="runner-pfp" style="background-color:${runnerSecondaryColor};" fill="${runnerPrimaryColor}" viewBox="0 0 24 24"><path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>`;
+    };
 
     const filtersContainer = modal.querySelector('.runner-modal-filters');
     const recordsContainer = modal.querySelector('.runner-records');
@@ -1476,15 +1533,17 @@ export const initWrHistory = (
     openModal(randomRun);
   });
 
-  const randomRunnerBtn = document.getElementById('random-runner-btn');
-  randomRunnerBtn.addEventListener('click', () => {
-    const visibleRunners = getVisibleRunners();
+  const randomRunnerBtns = document.querySelectorAll('.random-runner-btn');
+  randomRunnerBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      console.log('click');
+      const visibleRunners = getVisibleRunners();
 
-    const randomRunner =
-      visibleRunners[Math.floor(Math.random() * visibleRunners.length)];
-    openModal(randomRunner);
+      const randomRunner =
+        visibleRunners[Math.floor(Math.random() * visibleRunners.length)];
+      openModal(randomRunner);
+    });
   });
-
   // Apply filter button colors
   filterBtns.forEach((btn) => {
     if (btn.dataset.category === 'style') {
