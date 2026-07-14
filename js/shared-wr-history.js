@@ -416,16 +416,6 @@ export const initWrHistory = (
       return;
     }
 
-    // Add data
-    const fastestRun = runs.reduce((a, b) =>
-      a.primary_t < b.primary_t ? a : b
-    );
-
-    fastestRun.details = {
-      currentWr: 'Current World Record',
-      ...fastestRun.details,
-    };
-
     runs.forEach((run) => {
       tableContent.appendChild(renderRun(run));
     });
@@ -642,10 +632,22 @@ export const initWrHistory = (
   };
 
   const addProperties = (runs) => {
+    // Add wrNumber
     for (let i = 0; i < runs.length; i++) {
       runs[i].wrNumber = i + 1;
     }
 
+    // Add currentWr detail
+    const fastestRun = runs.reduce((a, b) =>
+      a.primary_t < b.primary_t ? a : b
+    );
+
+    fastestRun.details = {
+      currentWr: 'Current World Record',
+      ...fastestRun.details,
+    };
+
+    // Add date and time difference
     let bestTime = Infinity;
     let prevDate = null;
     return runs.filter((run) => {
