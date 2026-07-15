@@ -11,3 +11,7 @@ npm-debug.log*
 
 # Large unprocessed data
 raw_data.json
+
+# Data processing scripts
+clean_data.py
+fetch_data.py

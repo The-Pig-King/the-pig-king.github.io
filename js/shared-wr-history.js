@@ -901,7 +901,13 @@ export const initWrHistory = (
         ${playerName}
       </span>`;
     } else if (style?.style === 'solid') {
-      playerNameHtml = `<span style="color:${style.color.light}">${playerName}</span>`;
+      playerNameHtml = `
+      <span 
+        tabindex='0'
+        class="runner-name"
+        style="color:${style.color.light}">
+        ${playerName}
+      </span>`;
     }
 
     const currentId = runModalContent.id;
