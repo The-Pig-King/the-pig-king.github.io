@@ -511,6 +511,15 @@ a .icon:hover {
   width: 3rem;
 }
 
+.section-label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgb(173, 173, 173);
+  margin-bottom: 0.2rem;
+}
+
 @media (min-width: 768px) {
   .icon {
     width: 2.5rem;

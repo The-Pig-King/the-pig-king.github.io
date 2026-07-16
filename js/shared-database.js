@@ -407,6 +407,7 @@ export const initDatabase = (
           </div>
 
           <div class="card-location-tags" role="button">
+            ${card.locations ? '<div class="section-label">Source</div>' : ''}
             ${
               card.locations
                 ? Object.entries(card.locations)
@@ -456,7 +457,7 @@ export const initDatabase = (
                     .map(
                       ([category, details]) => `
                     <div class="details-group">
-                      <div class="details-name">
+                      <div class="section-label">
                         ${titleCaseSlug(category)}
                       </div>
                       <div class="details">

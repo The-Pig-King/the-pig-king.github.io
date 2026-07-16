@@ -332,16 +332,12 @@
   align-items: center;
 }
 
-.details-name {
-  width: 100%;
-
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
+.section-label {
+  padding-top: 0.5rem;
 }
 
-.details-name:not(:first-of-type) {
-  padding-top: 0.5rem;
+.card-location-tags .section-label {
+  width: 100%;
 }
 
 .details {
