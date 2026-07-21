@@ -2808,7 +2808,7 @@ const rawCards = [
   },
   {
     name: 'Drone Archive Key Blueprint',
-    icon: '/assets/games/slime-rancher-2/upgrades/iconArchiveKey.png',
+    icon: '/assets/games/slime-rancher-2/upgrades/iconArchiveKeyBlueprint.png',
     tags: ['upgrade-part', 'common'],
   },
   {
@@ -3652,7 +3652,7 @@ const rawCards = [
         'music-box',
         'air-net',
         'solar-shield',
-        'plort-collector',
+        'corral-plort-collector',
       ],
     },
   },
@@ -3755,7 +3755,7 @@ const rawCards = [
     name: 'Remove Crops',
     icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenClearCrop.png',
     'sr-icon':
-      '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenClearCrop.png',
+      '/assets/games/slime-rancher/plot-buildings/iconPatchGardenClearCrop.png',
     tags: ['plot-building', 'common', 'building-upgrade'],
     details: {
       price: {
@@ -10530,6 +10530,7 @@ const rawCards = [
   {
     name: 'Newbucks',
     icon: '/assets/games/slime-rancher-2/misc/iconNewbuck.png',
+    'sr-icon': '/assets/games/slime-rancher/misc/iconNewBuck.png',
     tags: ['misc', 'common'],
     locations: {
       pot: [

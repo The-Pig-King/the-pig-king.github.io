@@ -407,7 +407,7 @@ export const initDatabase = (
           </div>
 
           <div class="card-location-tags" role="button">
-            ${card.locations ? '<div class="section-label">Source</div>' : ''}
+            ${card.locations ? '<div class="section-label">Source Location</div>' : ''}
             ${
               card.locations
                 ? Object.entries(card.locations)
@@ -875,7 +875,9 @@ export const initDatabase = (
   updateUI();
 
   if (cardParam) {
-    openModal(cards.find((c) => c.name === cardParam));
+    openModal(
+      cards.find((c) => c.name.toLowerCase() === cardParam.toLowerCase())
+    );
 
     if (state.style.filters.has('secret')) {
       document

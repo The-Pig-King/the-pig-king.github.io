@@ -4414,7 +4414,7 @@ const rawCards = [
   },
   {
     name: 'Remove Crops',
-    icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenClearCrop.png',
+    icon: '/assets/games/slime-rancher/plot-buildings/iconPatchGardenClearCrop.png',
     'sr2-icon':
       '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenClearCrop.png',
     tags: ['plot-building', 'common', 'building-upgrade'],
@@ -6843,6 +6843,7 @@ const rawCards = [
   {
     name: 'Newbucks',
     icon: '/assets/games/slime-rancher/misc/iconNewBuck.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/misc/iconNewbuck.png',
     tags: ['misc', 'common'],
     locations: {
       crate: [
