@@ -3618,6 +3618,7 @@ const rawCards = [
   },
   {
     name: 'Corral Plort Collector',
+    'sister-name': 'Plort Collector',
     icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralCollector.png',
     'sr-icon':
       '/assets/games/slime-rancher/plot-buildings/iconPatchCorralCollector.png',
@@ -3734,6 +3735,7 @@ const rawCards = [
   },
   {
     name: 'Growth Amplifier',
+    'sister-name': 'Garden Deluxe Upgrade',
     icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenDeluxe.png',
     'sr-icon':
       '/assets/games/slime-rancher/plot-buildings/iconPatchGardenDeluxe.png',
@@ -3832,6 +3834,7 @@ const rawCards = [
   },
   {
     name: 'Elder Collector',
+    'sister-name': 'Coop Deluxe Upgrade',
     icon: '/assets/games/slime-rancher-2/plot-buildings/iconPatchCoopDeluxe.png',
     'sr-icon':
       '/assets/games/slime-rancher/plot-buildings/iconPatchCoopDeluxe.png',
@@ -4333,7 +4336,6 @@ const rawCards = [
   {
     name: 'Sanctuary Room 1',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconNewRoom.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room'],
     details: {
       price: {
@@ -4344,7 +4346,6 @@ const rawCards = [
   {
     name: 'Sanctuary Room 2',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconNewRoom.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room'],
     details: {
       price: {
@@ -4355,7 +4356,6 @@ const rawCards = [
   {
     name: 'Sanctuary Room 3',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconNewRoom.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room'],
     details: {
       price: {
@@ -4366,7 +4366,6 @@ const rawCards = [
   {
     name: 'Sanctuary Room 4',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconNewRoom.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room'],
     details: {
       price: {
@@ -4377,7 +4376,6 @@ const rawCards = [
   {
     name: 'Sanctuary Room 5',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconNewRoom.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room'],
     details: {
       price: {
@@ -4388,7 +4386,6 @@ const rawCards = [
   {
     name: 'Default Room',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconThemeDefaultSanctuary.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room-theme'],
     details: {
       'usable-in-plot-rooms': ['yes'],
@@ -4397,7 +4394,6 @@ const rawCards = [
   {
     name: 'Snowy Room',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconThemeIce.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room-theme'],
     details: {
       price: {
@@ -4409,7 +4405,6 @@ const rawCards = [
   {
     name: 'Magma Room',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconThemeMagma.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room-theme'],
     details: {
       price: {
@@ -4421,7 +4416,6 @@ const rawCards = [
   {
     name: 'Mossy Room',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconThemeMoss.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room-theme'],
     details: {
       price: {
@@ -4433,7 +4427,6 @@ const rawCards = [
   {
     name: 'Dark Room',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconThemeCave.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room-theme'],
     details: {
       price: {
@@ -4445,7 +4438,6 @@ const rawCards = [
   {
     name: 'Sticky Room',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconThemeHoney.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'room-theme'],
     details: {
       price: {
@@ -4457,7 +4449,6 @@ const rawCards = [
   {
     name: 'Default Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconDefaultEndcap.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       seats: ['0'],
@@ -4466,7 +4457,6 @@ const rawCards = [
   {
     name: 'Sanctuary Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapSanctuarystairs.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       seats: ['3'],
@@ -4475,7 +4465,6 @@ const rawCards = [
   {
     name: 'Magma Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapMagma.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4487,7 +4476,6 @@ const rawCards = [
   {
     name: 'Snowy Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapSnow.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4499,7 +4487,6 @@ const rawCards = [
   {
     name: 'Mossy Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapMoss.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4511,7 +4498,6 @@ const rawCards = [
   {
     name: 'Musical Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapMusic.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4523,7 +4509,6 @@ const rawCards = [
   {
     name: 'Spooky Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapSpooky.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4535,7 +4520,6 @@ const rawCards = [
   {
     name: 'Carnival Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapCarnival.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4547,7 +4531,6 @@ const rawCards = [
   {
     name: 'Island Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapIslandpng.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4559,7 +4542,6 @@ const rawCards = [
   {
     name: 'Grotto Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapWater.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4571,7 +4553,6 @@ const rawCards = [
   {
     name: 'Sleepy Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapCloud.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4583,7 +4564,6 @@ const rawCards = [
   {
     name: 'Rainbow Fields Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapRainbowFields.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4595,7 +4575,6 @@ const rawCards = [
   {
     name: 'Alien Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapUfo.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4607,7 +4586,6 @@ const rawCards = [
   {
     name: 'Honey Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapHoney.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {
@@ -4619,7 +4597,6 @@ const rawCards = [
   {
     name: 'Ice Throne Alcove',
     icon: '/assets/games/slime-rancher-2/sanctuary-upgrades/iconEndcapIceThrone.png',
-    'sr-icon': '/assets/games/slime-rancher/zones/iconZoneSea.png',
     tags: ['sanctuary-upgrade', 'common', 'alcove-theme'],
     details: {
       price: {

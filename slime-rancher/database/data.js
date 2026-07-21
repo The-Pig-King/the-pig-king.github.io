@@ -4256,6 +4256,7 @@ const rawCards = [
   },
   {
     name: 'Plort Collector',
+    'sister-name': 'Corral Plort Collector',
     icon: '/assets/games/slime-rancher/plot-buildings/iconPatchCorralCollector.png',
     'sr2-icon':
       '/assets/games/slime-rancher-2/plot-buildings/iconPatchCorralCollector.png',
@@ -4393,7 +4394,8 @@ const rawCards = [
     },
   },
   {
-    name: 'Deluxe Upgrade',
+    name: 'Garden Deluxe Upgrade',
+    'sister-name': 'Growth Amplifier',
     icon: '/assets/games/slime-rancher/plot-buildings/iconPatchGardenDeluxe.png',
     'sr2-icon':
       '/assets/games/slime-rancher-2/plot-buildings/iconPatchGardenDeluxe.png',
@@ -4493,7 +4495,8 @@ const rawCards = [
     },
   },
   {
-    name: 'Deluxe Upgrade',
+    name: 'Coop Deluxe Upgrade',
+    'sister-name': 'Elder Collector',
     icon: '/assets/games/slime-rancher/plot-buildings/iconPatchCoopDeluxe.png',
     'sr2-icon':
       '/assets/games/slime-rancher-2/plot-buildings/iconPatchCoopDeluxe.png',
@@ -4824,6 +4827,7 @@ const rawCards = [
   {
     name: 'The Slime Sea',
     icon: '/assets/games/slime-rancher/zones/iconZoneSea.png',
+    'sr2-icon': '/assets/games/slime-rancher-2/zones/iconZoneSea.png',
     tags: ['zone', 'common'],
     details: {
       'gadget-sites': ['11'],

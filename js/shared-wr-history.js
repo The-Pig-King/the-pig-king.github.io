@@ -520,7 +520,6 @@ export const initWrHistory = (
     for (const runnerId of runnerIds) {
       runners.push(fullRunnerData.find((r) => r.id === runnerId));
     }
-    console.log(runners);
 
     switch (runnersSortSelect.value) {
       case 'latest-record':

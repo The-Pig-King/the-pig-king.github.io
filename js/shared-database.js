@@ -552,6 +552,10 @@ export const initDatabase = (
     // No card matches
     if (!cards || cards.length === 0) {
       cardContainer.innerHTML = '';
+
+      document.querySelectorAll('.loaded-text').forEach((el) => {
+        el.textContent = ``;
+      });
       return;
     }
 
