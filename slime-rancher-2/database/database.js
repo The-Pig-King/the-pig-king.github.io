@@ -94,6 +94,7 @@ export const tagGroups = {
   'shadow-pot': 'source',
   'exchange-station': 'source',
   'treasure-pod': 'source',
+  'shadow-plort-door': 'source',
   gadget: 'source',
   gordo: 'source',
   'spawn-largo': 'source',

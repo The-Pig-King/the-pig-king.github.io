@@ -2180,6 +2180,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['ember-valley'],
+      'treasure-pod': ['ember-valley'],
     },
   },
   {
@@ -2197,6 +2198,7 @@ const rawCards = [
         'the-rainbow-fields',
       ],
       'golden-pot': ['the-rainbow-fields'],
+      'treasure-pod': ['the-rainbow-fields'],
     },
   },
   {
@@ -2207,6 +2209,7 @@ const rawCards = [
     locations: {
       spawn: ['starlight-strand', 'ember-valley'],
       'golden-pot': ['starlight-strand'],
+      'treasure-pod': ['ember-valley'],
     },
   },
   {
@@ -2216,6 +2219,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['ember-valley'],
+      'treasure-pod': ['ember-valley'],
     },
   },
   {
@@ -2225,6 +2229,7 @@ const rawCards = [
     tags: ['resource', 'common', 'node'],
     locations: {
       spawn: ['starlight-strand', 'ember-valley'],
+      'treasure-pod': ['starlight-strand'],
     },
   },
   {
@@ -2235,6 +2240,7 @@ const rawCards = [
     locations: {
       spawn: ['starlight-strand'],
       'golden-pot': ['starlight-strand'],
+      'treasure-pod': ['starlight-strand'],
     },
   },
   {
@@ -2252,6 +2258,7 @@ const rawCards = [
         'the-rainbow-fields',
       ],
       'golden-pot': ['the-rainbow-fields'],
+      'treasure-pod': ['the-rainbow-fields'],
     },
   },
   {
@@ -2261,6 +2268,7 @@ const rawCards = [
     locations: {
       spawn: ['starlight-strand', 'ember-valley'],
       'golden-pot': ['starlight-strand', 'ember-valley'],
+      'treasure-pod': ['ember-valley'],
     },
   },
   {
@@ -2283,6 +2291,11 @@ const rawCards = [
         'ember-valley',
         'waterworks',
         'lava-depths',
+      ],
+      'treasure-pod': [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'ember-valley',
       ],
     },
   },
@@ -2312,6 +2325,7 @@ const rawCards = [
     locations: {
       spawn: ['powderfall-bluffs', 'the-terrarium'],
       'golden-pot': ['powderfall-bluffs', 'the-terrarium'],
+      'treasure-pod': ['powderfall-bluffs'],
     },
   },
   {
@@ -2754,6 +2768,10 @@ const rawCards = [
     name: 'Heart Cell',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentHeartCell.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'treasure-pod': ['the-rainbow-fields', 'ember-valley'],
+      'shadow-plort-door': ['lava-depths'],
+    },
     details: {
       price: {
         'shadow-plort': '25',
@@ -2764,6 +2782,14 @@ const rawCards = [
     name: 'Power Chip',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentEnergyChip.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'treasure-pod': [
+        'the-rainbow-fields',
+        'starlight-strand',
+        'powderfall-bluffs',
+      ],
+      'shadow-plort-door': ['waterworks'],
+    },
     details: {
       price: {
         'shadow-plort': '25',
@@ -2774,11 +2800,17 @@ const rawCards = [
     name: 'Dash Boot Module',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentDashBootModule.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'treasure-pod': ['starlight-strand'],
+    },
   },
   {
     name: 'Jetpack Drive',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentJetpackDrive.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'treasure-pod': ['ember-valley'],
+    },
   },
   {
     name: 'Storage Cell',
@@ -2786,6 +2818,8 @@ const rawCards = [
     tags: ['upgrade-part', 'common'],
     locations: {
       'exchange-station': ['the-prismacore'],
+      'treasure-pod': ['starlight-strand', 'ember-valley', 'powderfall-bluffs'],
+      'shadow-plort-door': ['waterworks', 'lava-depths', 'the-terrarium'],
     },
     details: {
       price: {
@@ -2800,11 +2834,17 @@ const rawCards = [
     name: 'Vac Tank',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentVacTank.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'treasure-pod': ['ember-valley'],
+    },
   },
   {
     name: 'Tank Liner',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentVacTank.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'treasure-pod': ['the-rainbow-fields', 'starlight-strand'],
+    },
   },
   {
     name: 'Drone Archive Key Blueprint',
@@ -2815,6 +2855,9 @@ const rawCards = [
     name: 'Golden Sureshot Module',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentGoldenSureshot.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'treasure-pod': ['starlight-strand', 'ember-valley', 'powderfall-bluffs'],
+    },
   },
   {
     name: 'Shadow Sureshot Module',
@@ -2830,6 +2873,9 @@ const rawCards = [
     name: 'Regen Module',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentRegenModule.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'shadow-plort-door': ['dream-land'],
+    },
     details: {
       price: {
         'rainbow-coin': '15',
@@ -2841,6 +2887,9 @@ const rawCards = [
     name: 'Injector Module',
     icon: '/assets/games/slime-rancher-2/upgrades/iconShopComponentInjectorModule.png',
     tags: ['upgrade-part', 'common'],
+    locations: {
+      'shadow-plort-door': ['dream-land'],
+    },
     details: {
       price: {
         'rainbow-coin': '15',
