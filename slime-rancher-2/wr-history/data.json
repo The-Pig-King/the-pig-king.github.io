@@ -3446,6 +3446,61 @@
     ]
   },
   {
+    "id": "m34r5n6z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/m34r5n6z",
+    "category": "all-gordos",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=WRSnMnJuzJA"
+        }
+      ]
+    },
+    "comment": "Old run but haven't been able to finish a faster run so dealing with the awful end for now\n\nMod Note: Start Time: 37.483, End Time: 38:17.65, Frame Rate: 60, Time: 37:40.167",
+    "status": "verified",
+    "date": "2026-03-25",
+    "primary_t": 2260.167,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.1.1",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "ywoq5k0m",
     "weblink": "https://www.speedrun.com/slime_rancher_2/runs/ywoq5k0m",
     "category": "any",
@@ -3701,6 +3756,61 @@
             "code": "ar",
             "names": {
               "international": "Argentina",
+              "japanese": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "mrp1k98z",
+    "weblink": "https://www.speedrun.com/slime_rancher_2/runs/mrp1k98z",
+    "category": "9kvvg83k",
+    "videos": {
+      "links": [
+        {
+          "uri": "https://www.youtube.com/watch?v=LL2Zwx332fs"
+        }
+      ]
+    },
+    "comment": "Late submission but around the best you can do, possible few seconds lower probably\n\nMod Note: Start Time: 39.317, End Time: 4:38.033, Frame Rate: 60, Time: 3:58.717",
+    "status": "verified",
+    "date": "2026-04-20",
+    "primary_t": 238.717,
+    "platform": null,
+    "subcategory": "glitched",
+    "version": "1.2.0",
+    "players_full": [
+      {
+        "id": "5j5nwkqj",
+        "names": {
+          "international": "Crispy_John",
+          "japanese": null
+        },
+        "pronouns": "He/Him",
+        "weblink": "https://www.speedrun.com/users/Crispy_John",
+        "name-style": {
+          "style": "gradient",
+          "color-from": {
+            "light": "#4646CE",
+            "dark": "#6666EE"
+          },
+          "color-to": {
+            "light": "#EF8239",
+            "dark": "#EF8241"
+          }
+        },
+        "assets": {
+          "icon": {},
+          "supporterIcon": null,
+          "image": {}
+        },
+        "location": {
+          "country": {
+            "code": "nz",
+            "names": {
+              "international": "New Zealand",
               "japanese": null
             }
           }
