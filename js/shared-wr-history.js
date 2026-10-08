@@ -474,7 +474,7 @@ export const initWrHistory = (
 
     card.innerHTML = `
       <img class="runner-pfp"
-          src="https://www.speedrun.com/static/user/${runner.id}/image">
+          src="https://www.speedrun.com/static/user/${runner.id}/image.png">
       <div class="runner-name-row">${runnerNameHtml}</div>
       <div class="runner-location-row">
         ${getCountryFlagHtml(countryCode, countryName)}
@@ -1100,7 +1100,7 @@ export const initWrHistory = (
     modal.innerHTML = `
       <div class="runner-main">
         <img class="runner-pfp"
-            src="https://www.speedrun.com/static/user/${runner.id}/image">
+            src="https://www.speedrun.com/static/user/${runner.id}/image.png">
         <div class="runner-name-row">
           ${runnerNameHtml}
         </div>
