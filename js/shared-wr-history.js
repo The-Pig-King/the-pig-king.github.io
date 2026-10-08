@@ -9,6 +9,10 @@ export const initWrHistory = (
   getRunRuleSetKey,
   getRunSubcategoryKey
 ) => {
+  // Remove non-records
+  const removeIds = new Set(nonRecordsToRemove);
+  data = data.filter((run) => !removeIds.has(run.id));
+
   const dataById = new Map(data.map((run) => [run.id, run]));
   additionalData.forEach((run) => dataById.set(run.id, run));
   const fullData = [...dataById.values()];
@@ -782,11 +786,6 @@ export const initWrHistory = (
   let worldRecords;
 
   const updateUI = () => {
-    // Remove some non-records
-    nonRecordsToRemove.forEach((run) => {
-      data.splice(data.indexOf(data.find((e) => e.id === run)), 1);
-    });
-
     worldRecords = filterRuns(state, data);
     worldRecords = filterWrs(worldRecords);
     worldRecords = filterRuns(state, addAdditionalData(worldRecords));
